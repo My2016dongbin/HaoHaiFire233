@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:background="@color/c12"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电话选择"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:textColor="@color/c7"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/phone_choose_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="确认"
+                        android:background="@drawable/bg_button"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/c12"/>
+                </LinearLayout>
+
+
+
+
+
+
+            </FrameLayout>
+
+            <RadioGroup
+                android:id="@+id/rg_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/rb_phone1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15650161960 高贵胜"
+                    android:textSize="15sp"
+                    android:textColor="@color/c7"/>
+
+                <RadioButton
+                    android:id="@+id/rb_phone2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15192698918 赵志鹏"
+                    android:textSize="15sp"
+                    android:textColor="@color/c7"/>
+
+                <RadioButton
+                    android:id="@+id/rb_phone3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13869866569 刘文昊"
+                    android:textSize="15sp"
+                    android:textColor="@color/c7"/>
+
+                <RadioButton
+                    android:id="@+id/rb_phone4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19853208820 曹聪"
+                    android:textSize="15sp"
+                    android:textColor="@color/c7"/>
+            </RadioGroup>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

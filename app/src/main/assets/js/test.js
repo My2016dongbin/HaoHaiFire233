@@ -1,0 +1,58 @@
+
+        <!--注册事件监听，初始化-->
+        function setupWebViewJavascriptBridge(callback) {
+               if (window.WebViewJavascriptBridge) {
+                   callback(WebViewJavascriptBridge)
+               } else {
+                   document.addEventListener(
+                       'WebViewJavascriptBridgeReady'
+                       , function() {
+                           callback(WebViewJavascriptBridge)
+                       },
+                       false
+                   );
+               }
+           }
+
+           setupWebViewJavascriptBridge(function(bridge) {
+               //默认接收
+               bridge.init(function(message, responseCallback) {
+                   document.getElementById("show").innerHTML = '默认接收到Java的数据： +++1' + message;
+
+                   var responseData = 'js默认接收完毕，并回传数据给java';
+                   responseCallback(responseData); //回传数据给java
+               });
+
+               //指定接收，参数functionInJs 与java保持一致
+               bridge.registerHandler("functionInJs", function(data, responseCallback) {
+                   document.getElementById("show").innerHTML = '指定接收到Java的数据：++2 ' + data;
+
+                   var responseData = 'js指定接收完毕，并回传数据给java';
+                   responseCallback(responseData); //回传数据给java
+               });
+           })
+
+
+
+
+ //js传递数据给java
+    function jsToJavaDefault() {
+       var data = '发送数据给java默认接收';
+       window.WebViewJavascriptBridge.send(
+           data
+           , function(responseData) { //处理java回传的数据
+              document.getElementById("show").innerHTML = responseData;
+           }
+       );
+   }
+
+   function jsToJavaSpec() {
+       var data='发送数据给java指定接收';
+       window.WebViewJavascriptBridge.callHandler(
+           'submitFromWeb' //指定接收参数 submitFromWeb与java一致
+           ,data
+           , function(responseData) { //处理java回传的数据
+              document.getElementById("show").innerHTML = responseData;
+           }
+       );
+   }

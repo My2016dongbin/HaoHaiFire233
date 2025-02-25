@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c12">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="报警信息列表"
+            android:textSize="16sp"
+            android:textColor="@color/c7" />
+        <LinearLayout
+            android:id="@+id/fenlei_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_gravity="right|center_vertical">
+            <TextView
+                android:id="@+id/fenlei_View"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="按时间分类"
+                android:textColor="@color/c6"
+                android:layout_marginRight="5dp"
+                android:textSize="15sp"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/ic_down"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/tire_info_background" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查询完毕，共 "
+            android:textSize="14sp"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/fire_count_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="15sp"
+            android:textColor="@color/c29"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 条报警数据"
+            android:textSize="14sp"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fire_info_listview"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

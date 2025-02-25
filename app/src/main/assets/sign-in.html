@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新用户注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/sign-in.css">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+   
+
+    
+</head>
+<body>
+    <div class="sign-box">
+        <h3>新用户注册</h3>
+        <form id="Register">
+            <ul>
+                <li>
+                    <label for="">
+                        <span class="label-name">登录ID：</span>
+                        <input type="text" id="UserName" autofocus="autofocus" name="UserName"><span class="error-notice"></span>
+                    </label>
+                </li>
+                <li>
+                    <label for="">
+                        <span class="label-name">真实姓名：</span>
+                        <input type="text" id="TrueName" name="TrueName"><span class="error-notice"></span>
+                    </label>
+                </li>
+                <li>
+                    <label for="">
+                        <span class="label-name">联系电话：</span>
+                        <input type="text" id="MobileNumber" name="MobileNumber"><span class="error-notice"></span>
+                    </label>
+                </li>
+                <li>
+                    <label for="">
+                        <span class="label-name">机构类型：</span>
+                        <input type="radio" id="Organization1" value="company" name="OrganizationType" checked="checked"><span class="radio-content">公司</span>
+                        <input type="radio" id="Organization2" value="government" name="OrganizationType"><span class="radio-content">政府</span>
+                        <input type="radio" id="Organization3" value="personal" name="OrganizationType"><span class="radio-content">个人</span><span class="error-notice"></span>
+                    </label>
+                </li>
+                <li>
+                    <label for="">
+                        <span class="label-name">机构名称：</span>
+                        <input type="text" id="OrganizationName" name="OrganizationName"><span class="error-notice"></span>
+                    </label>
+                </li>
+
+                <li>
+                    <label for="">
+                        <span class="label-name">申请地区级别：</span>
+
+                        <input type="radio" class="radioLevel" id="Level1" name="AdministrativeLevel" value="province"><span class="radio-content">省</span>
+                        <input type="radio" class="radioLevel" id="Level2" name="AdministrativeLevel" value="city"><span class="radio-content">市</span>
+                        <input type="radio" class="radioLevel" id="Level3" name="AdministrativeLevel" value="county"><span class="radio-content">县</span><span class="error-notice"></span>
+
+                    </label>
+                </li>
+                <li data-toggle="distpicker" id="distpicker">
+                    <span class="label-name">申请地区：</span>
+                    <select class="form-control" type="text" style="width:63px;height:auto" id="AdministrativeProvince" name="AdministrativeProvince"></select> <span class="radio-content">省</span>
+                    <select class="form-control" type="text" style="width:63px;height:auto" id="AdministrativeCity" name="AdministrativeCity"></select><span id="citylabel" class="radio-content">市</span>
+                    <select class="form-control" type="text" style="width:63px;height:auto" id="AdministrativeCounty" name="AdministrativeCounty"></select><span id="Countylabel" class="radio-content">县</span>
+                </li>
+            </ul>
+            <p>提示：请填写真实联系电话，账号申请后将在3日内进行电话确认审核。</p>
+
+            <div class="button-box">
+                <a href="javascript:checkAccountInfo();" class="button">确认无误，注册</a>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="js/sign-in.js"></script>
+    <script type="text/javascript" src="js/distpicker.data.js"></script>
+    <script type="text/javascript" src="js/distpicker.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

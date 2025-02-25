@@ -1,0 +1,220 @@
+apply plugin: 'com.android.application'
+
+def VERSION_CODE = 47
+def VERSION_NAME = "3.1.7"
+def keystoreFilepath = ''
+def keyfile = file('s.keystore.temp')
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+keystoreFilepath = properties.getProperty("keystore.path")
+
+if (keystoreFilepath) {
+    keyfile = file(keystoreFilepath)
+}
+
+
+android {
+
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    defaultConfig {
+        applicationId "com.hht.hsatellitemobile"
+        minSdkVersion 16
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            //根据需要 自行选择添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                XG_ACCESS_ID : "1500017161",
+                XG_ACCESS_KEY: "AIHFKDXTCVPN",
+                HW_APPID: "103066123"
+        ]
+
+        signingConfigs {
+            config {
+                keyAlias 'haohai'
+                keyPassword 'haohaiadmin'
+                storeFile file('../app/sign.jks')
+                storePassword 'haohaiadmin'
+            }
+        }
+
+    /*    manifestPlaceholders = [
+                JPUSH_PKGNAME: "com.hht.hsatellitemobile",
+                JPUSH_APPKEY : "94ce478179d509fb3ff9421f", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+*/
+
+
+        buildTypes {
+            debug {
+                println("====== buildTypes.debug ======")
+                signingConfig signingConfigs.debug
+            }
+            release {
+                //是否混淆
+                minifyEnabled false
+                //是否移除无用资源
+                zipAlignEnabled true
+                //混淆配置
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                //签名文件存在，则签名
+                if (keyfile.exists()) {
+                    println("WITH -> buildTypes -> release: using jks key")
+                    signingConfig signingConfigs.config
+                } else {
+                    println("WITH -> buildTypes -> release: using default key")
+                }
+                applicationVariants.all { variant ->
+                    variant.outputs.each { output ->
+                        def outputFile = output.outputFile
+                        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                            // 输出apk名称为ruijie_v1.0_wandoujia.apk
+                           /* def fileName = "haohai_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"*/
+                            def fileName = "haohai_v${defaultConfig.versionName}.apk"
+                            output.outputFile = new File(outputFile.parent, fileName)
+                        }
+                    }
+                }
+                signingConfig signingConfigs.config
+            }
+        }
+        lintOptions {
+            abortOnError false
+        }
+
+
+        productFlavors {
+            /*  kuan {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "kuan"]
+            }*/
+            xiaomi {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+            }
+            /*   qh360 {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qh360"]
+            }
+            baidu {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
+            }
+            wandoujia {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
+            }
+            oppo {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "oppo"]
+            }
+            vivo {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "vivo"]
+            }
+            huawei {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "huawei"]
+            }
+            yingyongbao {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yingyongbao"]
+            }
+            anzhi {
+                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "anzhi"]
+            }*/
+        }
+
+        /*  manifestPlaceholders = [
+
+                  XG_ACCESS_ID : "2100341107",
+                  XG_ACCESS_KEY: "AB99HCG27Y4T",
+                  //如果需要华为通道，则加上华为的APPID
+                  HW_APPID     : "",
+                  //如果需要加入小米通道，则加上应用包名
+                  PACKAGE_NAME : "com.hht.hsatellitemobile"
+          ]
+  */
+    }
+    packagingOptions {
+        doNotStrip '*/mips/*.so'
+        doNotStrip '*/mips64/*.so'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //将so库打包到apk中
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':hhlibrary')
+    compile('com.zhihu.android:matisse:0.4.3', {
+        exclude group: 'com.android.support'
+    })
+    //信鸽推送 增加以下依赖
+    //  compile 'com.tencent.xinge:xinge:4.3.2-xgotherpush-release'
+    /*    compile 'com.tencent.xinge:mipush:4.3.2-xiaomi-release'
+        compile 'com.tencent.xinge:xgmz:4.3.2-meizu-release'
+        compile 'com.tencent.xinge:xghw:4.3.2-huawei-release'*/
+    // 此处以JPush 3.3.4 版本为例。
+    // 此处以JCore 2.1.2 版本为例。
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.squareup.okhttp3:okhttp:(insert latest version)'
+    compile 'com.android.support:appcompat-v7:26.0.1'
+
+    // 注意：分包之后不会有默认的Header和Footer需要手动添加！还是原来的三种方法！
+    compile  'com.scwang.smart:refresh-layout-kernel:2.0.1'      //核心必须依赖
+    compile  'com.scwang.smart:refresh-header-classics:2.0.1'    //经典刷新头
+    compile  'com.scwang.smart:refresh-header-radar:2.0.1'       //雷达刷新头
+    compile  'com.scwang.smart:refresh-header-falsify:2.0.1'     //虚拟刷新头
+    compile  'com.scwang.smart:refresh-header-material:2.0.1'    //谷歌刷新头
+    compile  'com.scwang.smart:refresh-header-two-level:2.0.1'   //二级刷新头
+    compile  'com.scwang.smart:refresh-footer-ball:2.0.1'        //球脉冲加载
+    compile  'com.scwang.smart:refresh-footer-classics:2.0.1'    //经典加载
+
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.lzyzsd:jsbridge:1.0.4'
+//    compile 'com.github.wendux:DSBridge-Android:3.0-SNAPSHOT'
+    compile project(':dsbridge')
+   // compile 'com.github.wendux:DSBridge-Android:x5-3.0-SNAPSHOT'
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.1@aar'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'ch.ielse:imagewatcher:1.0.3'
+    compile 'com.tencent.wup:wup:1.0.0.E-Release'
+    compile 'com.tencent.jg:jg:1.1'
+    compile 'com.tencent.mid:mid:4.0.7-Release'
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.1'
+    compile 'com.tencent.jg:jg:1.1'
+    compile 'com.tencent.tpns:tpns:1.2.0.3-release'
+    compile 'com.tencent.tpns:xiaomi:1.2.1.1-release'  //小米推送
+    compile 'com.tencent.tpns:huawei:1.2.1.1-release'  //华为推送
+
+    compile 'com.github.chrisbanes:PhotoView:2.0.0'
+/*    compile 'cn.jiguang.sdk:jpush:3.3.4'
+    compile 'cn.jiguang.sdk:jcore:2.1.2'*/
+    testCompile 'junit:junit:4.12'
+}

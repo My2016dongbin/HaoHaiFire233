@@ -1,0 +1,21 @@
+    BaseWebActivity封装
+
+        //设置是否显示标题栏
+        showTitleBar(true);
+        //是否显示左侧文字
+        showBackwardView(R.string.web_title, true);
+        //设置标题栏背景色
+        setTitleBgColor(R.color.web_top);
+        //设置状态栏颜色
+        setStatus(R.color.web_top);
+        //添加左侧图标，
+        setLeftIcon(R.drawable.ic_cha);
+        //文字颜色
+        setTitleColor(R.color.c7);
+        //左侧返回按钮监听
+        setLeftIconlistener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });

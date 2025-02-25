@@ -1,0 +1,325 @@
+/* 登录页 1920*1080*/
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+body,html{
+  font-family: "微软雅黑";
+  font-size: 14px;
+  height: 100%;
+  background: #07101f url(../images/bg-login19-earth-1.png) no-repeat top;
+/*   overflow: hidden; */
+}
+.login-container{
+  width: 590px;
+  height: 570px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background: url(../images/bg-login-box19-earth.png) no-repeat top;
+  padding:380px 0 0 1010px;
+  
+}
+.login-box{
+  width: 420px;
+  height: 410px;
+  padding:40px 20px 0 20px;
+}
+.login-box > p{
+  font-size: 16px;
+  color: #424242;
+}
+.login-box > input{
+  width: 368px;
+  height: 60px;
+  border:1px solid #3b9bed;
+  background: rgba(255,255,255,.2);
+  text-indent: 10px;
+  padding-left: 50px;
+  outline: none;
+  margin-top:30px;
+  font-size: 16px;
+  color: #424242;
+  background: rgba(255,255,255,.2) url(../images/user-name.png) no-repeat 15px;
+}
+.login-box > input.keyword{
+  background: rgba(255,255,255,.2) url(../images/keyword.png) no-repeat 15px;
+}
+.notice{
+  color: #ff7979;
+  line-height: 50px;
+}
+.remember{
+  float: right;
+  line-height: 50px;
+  color: #FFF;
+}
+.remember > input{
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.button{
+  width: 420px;
+  height: 70px;
+  border-radius: 2px;
+  background: #3b9bed;
+  color: #FFF;
+  font-size: 24px;
+  line-height: 70px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+.button:hover{
+  background: #3492e3;
+}
+.bottom-info{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background:rgba(8,8,8,.25);
+  text-align: center;
+  font-size: 14px;
+  color: #cfcfcf;
+  position: absolute;
+  bottom: 0;
+}
+.app-download{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  background: #F8F8FA;
+  border-radius: 0 4px 4px  0 ;
+  height: 120px;
+  padding: 5px;
+  cursor: pointer;
+}
+.download-img{
+  width: 120px;
+  height: 120px;
+  display: none;
+  float: left: 
+}
+.download-notice{
+  width: 50px;
+  height: 130px;
+  text-align: center;
+  padding: 15px 0 0 0;
+  float: left;
+}
+.app-download:hover .download-img{
+  display: block;
+  float: left;
+}
+.sign{
+  float: right;
+  margin-right: 5px;
+
+}
+.sign > a{
+  color: #4A90E2;
+}
+.sign > a:hover{
+  color: #0070C9;
+}
+.sign-box{
+  width: 300px;
+  height: 350px;
+  border-radius: 4px;
+  box-shadow: 0 0 4px 10px #000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+/*分辨率 1200-1600 */
+@media screen and (max-width: 1600px) {
+    body {
+        background:#0b0e16 url(../images/bg-login16-earth-1.png) no-repeat top;
+        min-width: 1200px;
+    }
+    .login-container{
+        width: 470px;
+        height: 450px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        background: url(../images/bg-login-box16-earth.png) no-repeat top;
+        padding:200px 0 0 730px;
+      }
+    .login-box{
+        width: 380px;
+        height: 305px;
+        padding:35px 15px 0 15px;
+      }
+      .login-box > p{
+        font-size: 14px;
+        color: #424242;
+      }
+      .login-box > input{
+        width: 330px;
+        height: 50px;
+        border:none;
+        background: rgba(255,255,255,.2);
+        text-indent: 10px;
+        padding-left: 50px;
+        outline: none;
+        margin-top:30px;
+        font-size: 14px;
+        color: #424242;
+        border:1px solid #3b9bed;
+        background: rgba(255,255,255,.2) url(../images/user-name1.png) no-repeat 15px;
+      }
+      .login-box > input.keyword{
+        background: rgba(255,255,255,.2) url(../images/keyword1.png) no-repeat 15px;
+      }
+      .notice{
+        color: #ff7979;
+        line-height: 50px;
+      }
+      .remember{
+        float: right;
+        line-height: 50px;
+        color: #FFF;
+      }
+      .remember > input{
+        width: 18px;
+        height: 18px;
+        box-sizing: border-box;
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+      .button{
+        width: 380px;
+        height: 60px;
+        border-radius: 2px;
+        background: #3b9bed;
+        color: #FFF;
+        font-size: 18px;
+        line-height: 60px;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+      }
+      .bottom-info{
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        background:rgba(8,8,8,.25);
+        text-align: center;
+        font-size: 14px;
+        color: #cfcfcf;
+        position: absolute;
+        bottom: 0;
+}
+}
+/* 手机 */
+@media only screen and (max-width: 750px){
+  body{
+    /* background:#0b0e16 url(../images/bg-login6-earth.png) no-repeat top left; */
+    background: #FFF;
+    background-size: 100%;
+    overflow:hidden;
+    min-width: 350px;
+    overflow: hidden;
+  }
+  .login-container{
+    width: 350px!important;
+    height: 430px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    /* background: url(../images/bg-login-box6-earth.png) no-repeat top,url('../images/bg-earth.png') no-repeat center; */
+    background: url('../images/logo-phone.png') no-repeat top;
+    padding: 0;
+  }
+  .login-box{
+    width: 320px;
+    height: 300px;
+    margin-top: 100px;
+  }
+  .login-box > p{
+    font-size: 14px;
+    color: #111111;
+  }
+  .login-box > input{
+    width: 270px;
+    height: 40px;
+    border-radius: 2px;
+    background: rgba(255,255,255,.2);
+    text-indent: 10px;
+    padding-left: 50px;
+    outline: none;
+    margin-top:25px;
+    font-size: 14px;
+    color: #424242;
+    border:1px solid #3b9bed;
+    background: rgba(255,255,255,.7) url(../images/user-name1.png) no-repeat 15px;
+  }
+  .login-box > input.keyword{
+    background: rgba(255,255,255,.7) url(../images/keyword1.png) no-repeat 15px;
+  }
+  .notice{
+    color: #ff7979;
+    line-height: 50px;
+  }
+  .remember{
+    float: right;
+    line-height: 50px;
+    color: #B3B3B3;
+  }
+  .remember > input{
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  .button{
+    width: 320px;
+    height: 50px;
+    border-radius: 2px;
+    background: #3b9bed;
+    color: #FFF;
+    font-size: 18px;
+    line-height: 50px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+  }
+  .bottom-info{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background:#FFF;
+    text-align: center;
+    font-size: 12px;
+    color: #cfcfcf;
+    position: absolute;
+    bottom: 0;
+  }
+  .app-download{
+    display: none;
+  }
+ /*  .sign{
+    display: none;
+  } */
+}

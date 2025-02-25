@@ -1,0 +1,103 @@
+使用说明  (原文https://github.com/yipianfengye/android-adDialog) 在此基础上新增点击边缘是否可关闭，点击边缘监听事件，自动轮播，圆角等功能
+
+显示一个默认广告弹窗，支持单广告活动、多广告活动，当弹窗显示多广告是默认显示底部小圆圈，当显示单活动时默认不显示底部小圆圈；
+
+默认支持弹窗从上，下，左，右，左上，右上，左下，右下等八个方向弹出，更可以设置从任意指定的角度（0-360）弹出；
+
+默认继承了弹性动画效果，可以设定弹性动画弹性参数，动画速度等；
+
+支持对弹窗背景透明色的更改，支持对弹窗透明，支持设置弹窗背景全屏显示或者是只在内容区域显示；
+
+支持设定弹窗宽高比，支持设置弹窗距离屏幕两侧距离，支持设置关闭按钮是否显示；
+
+支持对关闭按钮点击事件的回调，对每一项广告活动点击事件的回调等；
+
+支持对ViewPager滑动动画效果的设定，支持自定义ViewPager滑动动画效果；
+
+API说明：
+
+所有的设置参数均返回AdManager对象，所以可以直接链式调用。
+
+AdManager adManager = new AdManager(MainActivity.this, advList);
+aDMamager.
+/**
+ * 设置弹窗背景全屏显示还是在内容区域显示
+ */
+.setOverScreen(true)
+/**
+ * 设置ViewPager的滑动动画
+ */
+.setPageTransformer(new DepthPageTransformer())
+/**
+ * 设置弹窗距离屏幕两侧的距离（单位dp）
+ */
+.setPadding(100)
+/**
+ * 设置弹窗的宽高比
+ */
+.setWidthPerHeight(0.75f)
+/**
+ * 设置弹窗的背景色（当弹窗背景设置透明时，此设置失效）
+ */
+.setBackViewColor(Color.parseColor("#AA333333"))
+/**
+ * 设置弹窗背景是否透明
+ */
+.setAnimBackViewTransparent(true)
+/**
+ * 设置弹窗关闭图标是否可见(默认true)
+ */
+.setDialogCloseable(false)
+/**
+ * 设置点击边缘是否可关闭(默认true)
+ */
+.setDialogOutCloseable(false)
+/**
+ * 设置弹窗弹性滑动弹性值
+ */
+.setBounciness(15)
+/**
+ * 设置弹窗弹性滑动速度值
+ */
+.setSpeed(5)
+/**
+ * 设定弹窗点击事件回调
+ */
+.setOnImageClickListener(new AdManager.OnImageClickListener() {})
+/**
+ * 设定关闭按钮点击事件回调
+ */
+.setOnCliseClickListener(new OnClickListener() {})
+/**
+ * 开始执行弹窗的显示操作，可传值为0-360，0表示从右开始弹出，逆时针方向，也可以传入自定义的方向值
+ */
+.showAdDialog(AdConstant.ANIM_UP_TO_DOWN)
+使用方式：
+导入此moudle，将该moudle中的Application类中的初始化操作添加到项目中，
+在代码中初始化数据
+/**
+     * 初始化数据
+     */
+    private void initData() {
+        advList = new ArrayList<>();
+        AdInfo adInfo = new AdInfo();
+        adInfo.setActivityImg("https://raw.githubusercontent.com/yipianfengye/android-adDialog/master/images/testImage1.png");
+        advList.add(adInfo);
+
+        adInfo = new AdInfo();
+        adInfo.setActivityImg("https://raw.githubusercontent.com/yipianfengye/android-adDialog/master/images/testImage2.png");
+        advList.add(adInfo);
+    }
+这里只要是初始化图片的UI地址信息，方便我们的后续下载操作。
+
+执行弹窗的初始化与现实操作
+/**
+ * 创建广告活动管理对象
+ */
+AdManager adManager = new AdManager(MainActivity.this, advList);
+adManager.setOverScreen(true)
+         .setPageTransformer(new DepthPageTransformer());
+/**
+ * 执行弹窗的显示操作
+ */
+adManager.showAdDialog(AdConstant.ANIM_DOWN_TO_UP);

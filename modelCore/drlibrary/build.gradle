@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+
+def VERSION_CODE = 1
+def VERSION_NAME = "1.0"
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //将so库打包到apk中
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []
+        }
+/*        instrumentTest.setRoot('tests')
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')*/
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    compile project(':hhlibrary')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+}

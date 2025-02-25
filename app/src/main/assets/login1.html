@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+  <title>慧眼卫星遥感</title>
+  <link rel="stylesheet" href="css/login.css">
+    <script type="text/javascript" src="js/dsbridge.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/dsbridge/dist/dsbridge.js"> </script>-->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <span class="sign"><a href="sign-in.html" target="_blank">注册</a></span>
+      <p>请输入您的用户名和密码：</p>
+      <input type="text" id="username" placeholder="用户名" autofocus="autofocus">
+      <input class="keyword" id="password" type="password" placeholder="密码">
+      <span class="remember"><input type="checkbox" class="mima" id="RememberPwd">记住密码</span>
+      <span class="notice" id="sysInfo">-</span>
+      <a id="btnSumit" href="javascript:checkUserInfo();" class="button">登录</a>
+    </div>
+  </div>
+  <div class="app-download">
+    <div class="download-img">
+      <img src="images/download-img.png" alt="">
+    </div>
+    <div class="download-notice">下<br />载<br>A<br>P<br>P</div>
+    <div class="clear"></div>
+  </div>
+  <footer class="bottom-info">
+    技术支持：青岛浩海网络科技股份有限公司
+  </footer>
+  <script type="text/javascript" language="javascript">
+      checkIP();
+      readUserInfo();
+
+      $("body").keydown(function () {
+          if (event.keyCode == "13") {//keyCode=13是回车键
+              checkUserInfo();
+          }
+      });
+  </script>
+</body>
+</html>

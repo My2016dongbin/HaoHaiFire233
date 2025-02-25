@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c12">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="地面火警信息列表"
+        android:textSize="16sp"
+        android:textColor="@color/c7"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/ground_fire_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+</LinearLayout>
