@@ -1,5 +1,5 @@
-﻿//var baseUrl="http://web.ehaohai.com:2019";
-var baseUrl="http://192.168.1.160:2022";//2025
+﻿var baseUrl="http://web.ehaohai.com:2019";
+//var baseUrl="http://192.168.1.160:2022";//2025
 
 var feedbackUrl="http://web.ehaohai.com:10172";
 
@@ -259,6 +259,59 @@ var QueryParam;
 
 /*获取热点信息*/
 function QueryFireInfo(param) {
+    $('.warning-num').hide();
+    $('.page').hide();
+    $('#fireListUl').html("");
+    $('#DataLoading').html("正在加载数据...");
+    $('#DataLoading').show(10);
+
+    $.ajax({
+        type: "get",
+        //url: "/api/Values/Get/5?Token=" + $("#myToken").html(),
+      //  alert(sessionStorage.myToken);
+    //    alert(param);
+        url: loginUrl + sessionStorage.myToken,
+        data: param,
+        dataType: "jsonp",    //跨域json请求一定是jsonp
+        success: function (data, status) {
+            $("#alarmCount").text(data.total);
+            ClearMarker(map, sourceMarker);
+            if (data.rows.length > 0) {
+                $('#DataLoading').hide(10);
+                $('.warning-num').show();
+                $('.page').show();
+                ShowJsonData(data);
+                //初始化分页控件
+                InitPage(data.total,param.page, param.rows)
+            }
+            else {
+                $('#DataLoading').html("无数据！");
+                $('.warning-num').hide();
+                $('.page').hide();
+            }
+
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            // reLogin();
+           //  alert("QueryFireInfo");
+           //  alert(XMLHttpRequest.status);
+          //   alert(XMLHttpRequest.readyState);
+           //  alert(textStatus);
+             dsBridge.call("queryFireError","1");
+         //    dsBridge.call("requestError","1");  //地图请求输出错误
+            //sessionStorage.clear();
+            //$(location).attr('href', 'login.html');
+            //$('#DataLoading').html("数据加载失败,请重新登陆尝试！")
+        },
+        complete: function () {
+
+        }
+    });
+}
+
+
+/*获取热点信息loadMore*/
+function QueryFireInfoMore(param) {
     $('.warning-num').hide();
     $('.page').hide();
     $('#fireListUl').html("");
@@ -856,8 +909,8 @@ function reLogin() {
     let username =storage.getItem("name");
 
     let password = storage.getItem("pass");
-//    let url = "http://web.ehaohai.com:2019/api/Account/Login";
-    let url = "http://192.168.1.160:2022/api/Account/Login";//2025
+    let url = "http://web.ehaohai.com:2019/api/Account/Login";
+//    let url = "http://192.168.1.160:2022/api/Account/Login";//2025
     let data={ userName: username, password: password };
 
     $.ajax({

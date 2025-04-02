@@ -1726,7 +1726,17 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             public void onRefresh(RefreshLayout refreshlayout) {
                 refreshlayout.finishRefresh(2000);
                 //bingo did
-                getFireFromService(currentFireFindTime);
+                Setting setting = new DbConfig(getApplicationContext()).getSetting();
+                dWebView.callHandler("huodian", new Object[]{currentFireFindTime,setting.getWeixing(),setting.getTiankong(),setting.getDimian(),setting.getDimao(),setting.getNumber(),setting.getJingwai(),setting.getHuanchong().equals("0")?false:true},new OnReturnValue<String>() {
+                    @Override
+                    public void onValue(String retValue) {
+                        searchDialog.hide();
+                        isJush = false;
+                        isopenFireDialog = true;
+                        getFireFromService(currentFireFindTime);
+
+                    }
+                });
             }
         });
         refreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
@@ -1738,7 +1748,17 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                 if(isGaoji){
                     findFirePost();
                 }else{
-                    getFireFromService(currentFireFindTime);
+                    Setting setting = new DbConfig(getApplicationContext()).getSetting();
+                    dWebView.callHandler("huodian_more", new Object[]{currentFireFindTime,setting.getWeixing(),setting.getTiankong(),setting.getDimian(),setting.getDimao(),page,setting.getNumber(),setting.getJingwai(),setting.getHuanchong().equals("0")?false:true},new OnReturnValue<String>() {
+                        @Override
+                        public void onValue(String retValue) {
+                            searchDialog.hide();
+                            isJush = false;
+                            isopenFireDialog = true;
+                            getFireFromService(currentFireFindTime);
+
+                        }
+                    });
                 }
             }
         });
@@ -4059,9 +4079,10 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         RequestParams params = new RequestParams(RequestUtils.REQUEST_URL + "Satellite/GetListByPutTime");
         // params.addBodyParameter("reqJson", jsonObject.toString());
 
+        Setting setting = new DbConfig(this).getSetting();
         params.addParameter("Token",new DbConfig(this).getUser().getToken());
         params.addParameter("page",page);//bingo did
-        params.addParameter("rows",rows);
+        params.addParameter("rows",setting.getNumber());
         params.addParameter("sort","ObservationDateTime");
         params.addParameter("order","desc");
         params.addParameter("hour",0);
@@ -4428,7 +4449,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         Setting setting = new DbConfig(this).getSetting();
         params.addParameter("Token",new DbConfig(this).getUser().getToken());
         params.addParameter("page",page);//bingo did
-        params.addParameter("rows",rows);
+        params.addParameter("rows",setting.getNumber());
        // params.addParameter("rows",setting.getNumber());
 
         params.addParameter("sort","ObservationDateTime");

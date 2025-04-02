@@ -39,6 +39,11 @@ dsBridge.register('huodian', function (hour,weixing,tiankong,dimian,dimao,number
     HourQueryTwo(hour,weixing,tiankong,dimian,dimao,number,jingwai,huanchong);
     return "chenggong";
 });
+//andoird请求不同时间段之内的火点信息 设置好的默认参数查询-分页后上拉加载
+dsBridge.register('huodian_more', function (hour,weixing,tiankong,dimian,dimao,number,jingwai,huanchong,responseCallback) {
+    HourQueryTwoMore(hour,weixing,tiankong,dimian,dimao,number,jingwai,huanchong);
+    return "chenggong";
+});
 //andoird请求高级查询的的火点信息
 dsBridge.register('huodian_gaoji', function (startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,isChooseHuanchong,isCountry,shengId,shiId,responseCallback) {
     HourQueryOne(startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,isChooseHuanchong,isCountry,shengId,shiId);
@@ -150,6 +155,25 @@ function HourQueryTwo (hour,weixing,tiankong,dimian,dimao,number,jingwai,huancho
 
       }
       QueryFireInfo(QueryParam);
+}
+
+function HourQueryTwoMore (hour,weixing,tiankong,dimian,dimao,page,number,jingwai,huanchong)
+{
+    QueryParam = {
+          page: 1, //请求页数
+          rows: number*page, //每页行数  暂用累加单页数量查询未用缓存上页数据
+          sort: 'ObservationDateTime', //  排序字段
+          order: 'desc',
+          hour: hour,
+          satellite: weixing,
+          sky: tiankong,
+          ground: dimian,
+          landtype: dimao,
+          isbuffer: huanchong,
+          Country:jingwai,
+
+      }
+      QueryFireInfoMore(QueryParam);
 }
 
 

@@ -1,6 +1,6 @@
 ﻿var Token = "";
-//var loginUrl = "http://web.ehaohai.com:2019/api/Account/Login";
-var loginUrl = "http://192.168.1.160:2022/api/Account/Login";//2025
+var loginUrl = "http://web.ehaohai.com:2019/api/Account/Login";
+//var loginUrl = "http://192.168.1.160:2022/api/Account/Login";//2025
 
 
 function checkIP()

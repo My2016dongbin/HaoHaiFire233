@@ -1,7 +1,7 @@
-//var loginUrl = "http://web.ehaohai.com:2019/api/Satellite/GetListByPutTime?Token=";
-var loginUrl = "http://192.168.1.160:2022/api/Satellite/GetListByPutTime?Token=";//2025
-//var GetRegionURL = "http://web.ehaohai.com:2019/api/Satellite/GetRegionPolygon?Token=";
-var GetRegionURL = "http://192.168.1.160:2022/api/Satellite/GetRegionPolygon?Token=";//2025
+var loginUrl = "http://web.ehaohai.com:2019/api/Satellite/GetListByPutTime?Token=";
+//var loginUrl = "http://192.168.1.160:2022/api/Satellite/GetListByPutTime?Token=";//2025
+var GetRegionURL = "http://web.ehaohai.com:2019/api/Satellite/GetRegionPolygon?Token=";
+//var GetRegionURL = "http://192.168.1.160:2022/api/Satellite/GetRegionPolygon?Token=";//2025
 
 //判定轮询消息条数是人为原因还是时间原因
 let isTime = true;
