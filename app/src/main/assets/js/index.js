@@ -277,6 +277,14 @@ function QueryFireInfo(param) {
             $("#alarmCount").text(data.total);
             ClearMarker(map, sourceMarker);
             if (data.rows.length > 0) {
+//            console.log("loginByPassword1: param---html 00" + JSON.stringify(param));
+//            console.log("loginByPassword1: param---html 0" + JSON.stringify(data.rows[0]));
+//            console.log("loginByPassword1: param---html 1" + JSON.stringify(data.rows[1]));
+//            console.log("loginByPassword1: param---html 2" + JSON.stringify(data.rows[2]));
+//            console.log("loginByPassword1: param---html 3" + JSON.stringify(data.rows[3]));
+//            console.log("loginByPassword1: param---html 4" + JSON.stringify(data.rows[4]));
+//            console.log("loginByPassword1: param---html ", data.rows);
+//            console.log("loginByPassword1: param---html" + data.rows.length);
                 $('#DataLoading').hide(10);
                 $('.warning-num').show();
                 $('.page').show();

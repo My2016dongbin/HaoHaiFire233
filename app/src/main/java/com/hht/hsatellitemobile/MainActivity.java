@@ -4443,7 +4443,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         isGaoji = false;
         Log.e(TAG, "jpush5" );
         reloginState = 1;
-        RequestParams params = new RequestParams(RequestUtils.REQUEST_URL + "Satellite/GetListByPutTime");
+        final RequestParams params = new RequestParams(RequestUtils.REQUEST_URL + "Satellite/GetListByPutTime");
         // params.addBodyParameter("reqJson", jsonObject.toString());
 
         Setting setting = new DbConfig(this).getSetting();
@@ -4465,7 +4465,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             params.addParameter("satellite",setting.getWeixing());
             params.addParameter("sky",setting.getTiankong());
             params.addParameter("ground",setting.getDimian());
-            params.addParameter("landtype",setting.getDimian());
+            params.addParameter("landtype",setting.getDimao());
             params.addParameter("isbuffer",setting.getHuanchong().equals("0")? false : true);
             params.addParameter("Country",setting.getJingwai());
         }else {
@@ -4491,11 +4491,14 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     total = jsonObject.getString("total");
                     if (!total.equals("0")){
                         JSONArray fireInfoJsonArray = jsonObject.getJSONArray("rows");
+//                        Log.e(TAG, "loginByPassword1: param---Android" + fireInfoJsonArray.length());
 
+//                        Log.e(TAG, "loginByPassword1: param---Android " + "00" + " " + params.toString());
                         for (int i = 0; i < fireInfoJsonArray.length(); i++) {
                             try {
 
                                 JSONObject fireObj = fireInfoJsonArray.getJSONObject(i);
+//                                Log.e(TAG, "loginByPassword1: param---Android " + i + " " + fireObj);
                                 String id = fireObj.getString("Id");
                                 String longitude = fireObj.getString("Longitude");
                                 String latitude = fireObj.getString("Latitude");
