@@ -45,8 +45,13 @@ dsBridge.register('huodian_more', function (hour,weixing,tiankong,dimian,dimao,n
     return "chenggong";
 });
 //andoird请求高级查询的的火点信息
-dsBridge.register('huodian_gaoji', function (startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,isChooseHuanchong,isCountry,shengId,shiId,responseCallback) {
-    HourQueryOne(startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,isChooseHuanchong,isCountry,shengId,shiId);
+dsBridge.register('huodian_gaoji', function (startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,number,isChooseHuanchong,isCountry,shengId,shiId,quId,responseCallback) {
+    HourQueryOne(startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,number,isChooseHuanchong,isCountry,shengId,shiId,quId);
+    return "chenggong";
+});
+//andoird请求高级查询的的火点信息-分页后上拉加载
+dsBridge.register('huodian_gaoji_more', function (startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,page,number,isChooseHuanchong,isCountry,shengId,shiId,quId,responseCallback) {
+    HourQueryOneMore(startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,page,number,isChooseHuanchong,isCountry,shengId,shiId,quId);
     return "chenggong";
 });
 
@@ -96,7 +101,7 @@ function HourQuery(hour)
     QueryParam = {
         page: 1, //请求页数
         rows: 500, //每页行数
-        sort: 'ObservationDateTime', //  排序字段
+        sort: 'PutStorageTime', //  排序字段
         order: 'desc',
 
         hour: hour,
@@ -112,14 +117,13 @@ function HourQuery(hour)
     QueryFireInfo(QueryParam);
 }
 
-function HourQueryOne(startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,isChooseHuanchong,isCountry,shengId,shiId)
+function HourQueryOne(startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,number,isChooseHuanchong,isCountry,shengId,shiId,quId)
 {
     QueryParam = {
         page: 1, //请求页数
-        rows: 500, //每页行数
-        sort: 'ObservationDateTime', //  排序字段
+        rows: number, //每页行数
+        sort: 'PutStorageTime', //  排序字段
         order: 'desc',
-
         hour: 0,
         startTime: startTimeStr,
         endTime: endTimeStr,
@@ -131,6 +135,32 @@ function HourQueryOne(startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,di
         Country:isCountry,
         Province:shengId,
         City:shiId,
+        county:quId,
+    }
+    QueryFireInfo(QueryParam);
+
+
+}
+
+function HourQueryOneMore(startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,page,number,isChooseHuanchong,isCountry,shengId,shiId,quId)
+{
+    QueryParam = {
+        page: 1, //请求页数
+        rows: page*number, //每页行数
+        sort: 'PutStorageTime', //  排序字段
+        order: 'desc',
+        hour: 0,
+        startTime: startTimeStr,
+        endTime: endTimeStr,
+        satellite: satellite,
+        sky: tiankongStr,
+        ground: dimianStr,
+        landtype: dimaoStr,
+        isbuffer: isChooseHuanchong,
+        Country:isCountry,
+        Province:shengId,
+        City:shiId,
+        county:quId,
     }
     QueryFireInfo(QueryParam);
 
@@ -143,7 +173,7 @@ function HourQueryTwo (hour,weixing,tiankong,dimian,dimao,number,jingwai,huancho
     QueryParam = {
           page: 1, //请求页数
           rows: number, //每页行数
-          sort: 'ObservationDateTime', //  排序字段
+          sort: 'PutStorageTime', //  排序字段
           order: 'desc',
           hour: hour,
           satellite: weixing,
@@ -162,7 +192,7 @@ function HourQueryTwoMore (hour,weixing,tiankong,dimian,dimao,page,number,jingwa
     QueryParam = {
           page: 1, //请求页数
           rows: number*page, //每页行数  暂用累加单页数量查询未用缓存上页数据
-          sort: 'ObservationDateTime', //  排序字段
+          sort: 'PutStorageTime', //  排序字段
           order: 'desc',
           hour: hour,
           satellite: weixing,
@@ -173,7 +203,7 @@ function HourQueryTwoMore (hour,weixing,tiankong,dimian,dimao,page,number,jingwa
           Country:jingwai,
 
       }
-      QueryFireInfoMore(QueryParam);
+      QueryFireInfo(QueryParam);
 }
 
 

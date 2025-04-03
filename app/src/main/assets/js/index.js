@@ -259,6 +259,7 @@ var QueryParam;
 
 /*获取热点信息*/
 function QueryFireInfo(param) {
+            console.log("loginByPassword1: param---html 00" + JSON.stringify(param));
     $('.warning-num').hide();
     $('.page').hide();
     $('#fireListUl').html("");
@@ -277,14 +278,13 @@ function QueryFireInfo(param) {
             $("#alarmCount").text(data.total);
             ClearMarker(map, sourceMarker);
             if (data.rows.length > 0) {
-//            console.log("loginByPassword1: param---html 00" + JSON.stringify(param));
 //            console.log("loginByPassword1: param---html 0" + JSON.stringify(data.rows[0]));
 //            console.log("loginByPassword1: param---html 1" + JSON.stringify(data.rows[1]));
 //            console.log("loginByPassword1: param---html 2" + JSON.stringify(data.rows[2]));
 //            console.log("loginByPassword1: param---html 3" + JSON.stringify(data.rows[3]));
 //            console.log("loginByPassword1: param---html 4" + JSON.stringify(data.rows[4]));
 //            console.log("loginByPassword1: param---html ", data.rows);
-//            console.log("loginByPassword1: param---html" + data.rows.length);
+            console.log("loginByPassword1: param---html" + data.rows.length);
                 $('#DataLoading').hide(10);
                 $('.warning-num').show();
                 $('.page').show();
@@ -300,6 +300,8 @@ function QueryFireInfo(param) {
 
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log("loginByPassword1: param---html 00error");
+            console.log("loginByPassword1: param---html 00error" + JSON.stringify(errorThrown));
             // reLogin();
            //  alert("QueryFireInfo");
            //  alert(XMLHttpRequest.status);
@@ -317,58 +319,6 @@ function QueryFireInfo(param) {
     });
 }
 
-
-/*获取热点信息loadMore*/
-function QueryFireInfoMore(param) {
-    $('.warning-num').hide();
-    $('.page').hide();
-    $('#fireListUl').html("");
-    $('#DataLoading').html("正在加载数据...");
-    $('#DataLoading').show(10);
-
-    $.ajax({
-        type: "get",
-        //url: "/api/Values/Get/5?Token=" + $("#myToken").html(),
-      //  alert(sessionStorage.myToken);
-    //    alert(param);
-        url: loginUrl + sessionStorage.myToken,
-        data: param,
-        dataType: "jsonp",    //跨域json请求一定是jsonp
-        success: function (data, status) {
-            $("#alarmCount").text(data.total);
-            ClearMarker(map, sourceMarker);
-            if (data.rows.length > 0) {
-                $('#DataLoading').hide(10);
-                $('.warning-num').show();
-                $('.page').show();
-                ShowJsonData(data);
-                //初始化分页控件
-                InitPage(data.total,param.page, param.rows)
-            }
-            else {
-                $('#DataLoading').html("无数据！");
-                $('.warning-num').hide();
-                $('.page').hide();
-            }
-
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-            // reLogin();
-           //  alert("QueryFireInfo");
-           //  alert(XMLHttpRequest.status);
-          //   alert(XMLHttpRequest.readyState);
-           //  alert(textStatus);
-             dsBridge.call("queryFireError","1");
-         //    dsBridge.call("requestError","1");  //地图请求输出错误
-            //sessionStorage.clear();
-            //$(location).attr('href', 'login.html');
-            //$('#DataLoading').html("数据加载失败,请重新登陆尝试！")
-        },
-        complete: function () {
-
-        }
-    });
-}
 
 /*获取热点信息*/
 function GetFireInfo(hh, startDate, endDate) {

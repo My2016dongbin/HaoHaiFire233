@@ -4009,20 +4009,36 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             dimaoStr = "ALL";
         }else {
             if (dimaoLindiChoose){
-                dimaoStr = dimaoStr + ",Woodland";
+                if(dimaoStr.isEmpty()){
+                    dimaoStr = dimaoStr + "Woodland";
+                }else{
+                    dimaoStr = dimaoStr + ",Woodland";
+                }
             }
             if (dimaoCaodiChoose){
-                dimaoStr = dimaoStr + ",Grassland";
+                if(dimaoStr.isEmpty()){
+                    dimaoStr = dimaoStr + "Grassland";
+                }else{
+                    dimaoStr = dimaoStr + ",Grassland";
+                }
             }
             if (dimaoNongtianChoose){
-                dimaoStr = dimaoStr + ",Farmland";
+                if(dimaoStr.isEmpty()){
+                    dimaoStr = dimaoStr + "Farmland";
+                }else{
+                    dimaoStr = dimaoStr + ",Farmland";
+                }
             }
             if (dimaoQitaChoose){
-                dimaoStr = dimaoStr + ",Otherland";
+                if(dimaoStr.isEmpty()){
+                    dimaoStr = dimaoStr + "Otherland";
+                }else{
+                    dimaoStr = dimaoStr + ",Otherland";
+                }
             }
-            if (dimaoLindiChoose || dimaoCaodiChoose || dimaoNongtianChoose || dimaoQitaChoose){
-                dimaoStr =  dimaoStr.substring(1,dimaoStr.length());
-            }
+//            if (dimaoLindiChoose || dimaoCaodiChoose || dimaoNongtianChoose || dimaoQitaChoose){
+//                dimaoStr =  dimaoStr.substring(1,dimaoStr.length());
+//            }
 
         }
 
@@ -4064,26 +4080,38 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         }
 
 
+        Setting setting = new DbConfig(this).getSetting();
         showDialogProgress(gaojiFindDialog,"正在查询中..");
-        dWebView.callHandler("huodian_gaoji", new Object[]{startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,isChooseHuanchong,isCountry,shengId,shiId},new OnReturnValue<String>() {
-            @Override
-            public void onValue(String retValue) {
-                //searchDialog.hide();
-               // Toast.makeText(MainActivity.this, "已显示查询的火点信息", Toast.LENGTH_SHORT).show();
-               // getFireFromService(120);
-           //     fireInfoListDialog.show();
-            }
-        });
+        if(isLoadMore){
+            dWebView.callHandler("huodian_gaoji_more", new Object[]{startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,page,setting.getNumber(),isChooseHuanchong,isCountry,shengId,shiId,quId},new OnReturnValue<String>() {
+                @Override
+                public void onValue(String retValue) {
+                    //searchDialog.hide();
+                    // Toast.makeText(MainActivity.this, "已显示查询的火点信息", Toast.LENGTH_SHORT).show();
+                    // getFireFromService(120);
+                    //     fireInfoListDialog.show();
+                }
+            });
+        }else{
+            dWebView.callHandler("huodian_gaoji", new Object[]{startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,setting.getNumber(),isChooseHuanchong,isCountry,shengId,shiId,quId},new OnReturnValue<String>() {
+                @Override
+                public void onValue(String retValue) {
+                    //searchDialog.hide();
+                    // Toast.makeText(MainActivity.this, "已显示查询的火点信息", Toast.LENGTH_SHORT).show();
+                    // getFireFromService(120);
+                    //     fireInfoListDialog.show();
+                }
+            });
+        }
 
         reloginState = 0;
         RequestParams params = new RequestParams(RequestUtils.REQUEST_URL + "Satellite/GetListByPutTime");
         // params.addBodyParameter("reqJson", jsonObject.toString());
 
-        Setting setting = new DbConfig(this).getSetting();
         params.addParameter("Token",new DbConfig(this).getUser().getToken());
         params.addParameter("page",page);//bingo did
         params.addParameter("rows",setting.getNumber());
-        params.addParameter("sort","ObservationDateTime");
+        params.addParameter("sort","PutStorageTime");
         params.addParameter("order","desc");
         params.addParameter("hour",0);
         params.addParameter("startTime",startTimeStr);
@@ -4098,7 +4126,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         params.addParameter("City",shiId);
         params.addParameter("county",quId);
         params.setConnectTimeout(10000);
-        Log.e(TAG, "findFirePost: huodian " + params );
+        Log.e(TAG, "loginByPassword1: param---gaoji" + params);
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -4452,7 +4480,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         params.addParameter("rows",setting.getNumber());
        // params.addParameter("rows",setting.getNumber());
 
-        params.addParameter("sort","ObservationDateTime");
+        params.addParameter("sort","PutStorageTime");
         params.addParameter("order","desc");
         params.addParameter("hour",hours);
         params.addParameter("startTime","");
