@@ -241,13 +241,14 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             switch (what){
                 case DIALOG_FIRE_SHOW:
                     String id = data.getString("id");
-                    FireInfo fireInfo = new FireInfo();
+                    getFireInfo(id);
+                    /*FireInfo fireInfo = new FireInfo();
                     for (int i = 0; i < fireInfoList.size(); i++) {
                         if (fireInfoList.get(i).getId().equals(id)) {
                             fireInfo = fireInfoList.get(i);
                         }
-                    }
-                    currentFire = fireInfo;
+                    }*/
+                    /*currentFire = fireInfo;
                     currentFireId = fireInfo.getId();
                     currentFireLa = fireInfo.getLatitude();
                     currentFireLo = fireInfo.getLongitude();
@@ -390,7 +391,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
 
 
 
-                    fireDialog.show();
+                    fireDialog.show();*/
                     break;
                 case MAP_ERROR_SHOW:
                   //  chaoshiButton.setVisibility(View.VISIBLE);
@@ -455,6 +456,220 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
 
         }
     };
+
+    private void getFireInfo(String id) {
+        RequestParams params = new RequestParams(RequestUtils.REQUEST_URL + "Satellite/GetFireInfoById");
+        params.addParameter("Token",token);
+        params.addParameter("id",id);
+        x.http().get(params, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                Log.e("GetFireInfoById",result);
+
+                JSONObject fireObj = null;
+                try {
+                    fireObj = new JSONObject(result);
+                    String id = fireObj.getString("Id");
+                    String longitude = fireObj.getString("Longitude");
+                    String latitude = fireObj.getString("Latitude");
+                    int observationFrequency = fireObj.getInt("ObservationFrequency");
+                    String observationDateTime = fireObj.getString("ObservationDateTime");
+//                                int strength = fireObj.getInt("Strength");
+//                                int strengthLevel = fireObj.getInt("StrengthLevel");
+                    double woodland = fireObj.getDouble("Woodland");
+                    double grassland = fireObj.getDouble("Grassland");
+                    double farmland = fireObj.getDouble("Farmland");
+                    double otherland = fireObj.getDouble("Otherland");
+                    double area = fireObj.getDouble("Area");
+                    double credibility = fireObj.getDouble("Credibility");
+                    double pixelArea = fireObj.getDouble("PixelArea");
+                    int pixelNumber = fireObj.getInt("PixelNumber");
+                    String country = fireObj.getString("Country");
+                    String countryCode = fireObj.getString("CountryCode");
+                    String province = fireObj.getString("Province");
+                    String provinceCode = fireObj.getString("ProvinceCode");
+                    String city = fireObj.getString("City");
+                    String cityCode = fireObj.getString("CityCode");
+                    String county = fireObj.getString("County");
+                    String countyCode = fireObj.getString("CountyCode");
+                    String formattedAddress = fireObj.getString("FormattedAddress");
+                    String visibleLightImageAddress = fireObj.getString("VisibleLightImageAddress");
+                    String irImageAddress = fireObj.getString("IRImageAddress");
+                    String satellite = fireObj.getString("Satellite");
+                    String putStorageTime = fireObj.getString("PutStorageTime");
+                    String dataSourceFile = fireObj.getString("DataSourceFile");
+                    String fireNo = fireObj.getString("FireNo");
+                    String districtNum = fireObj.getString("DistrictNum");
+                    FireInfo fireInfo = new FireInfo(id,longitude,latitude,observationFrequency,observationDateTime,0,0,woodland,grassland,farmland,otherland,area,credibility,pixelArea,
+                            pixelNumber,country,countryCode,province,provinceCode,city,cityCode,county,countyCode,formattedAddress,visibleLightImageAddress,irImageAddress,satellite,
+                            putStorageTime,dataSourceFile,fireNo,districtNum);
+
+                    currentFire = fireInfo;
+                    currentFireId = fireInfo.getId();
+                    currentFireLa = fireInfo.getLatitude();
+                    currentFireLo = fireInfo.getLongitude();
+                    Log.e(TAG, "handleMessage: ----" + fireInfo.toString());
+                    //  fireAddressText.setText(fireInfo.getFormattedAddress());
+                    Log.e(TAG, "initJpushFireData:边境热源=" + fireInfo.getFormattedAddress()+"--");
+                    if (currentFire.getFormattedAddress()==null || currentFire.getFormattedAddress().isEmpty()){
+
+                        fireAddressText.setText("边境热源");
+                    }else {
+                        fireAddressText.setText(fireInfo.getFormattedAddress());
+                    }
+                    try {
+                        fireTimeText.setText(fireInfo.getObservationDateTime().replace("T","  "));
+                        jingWeiText.setText(NumberUtils.saveOneBitTwo(Double.parseDouble(fireInfo.getLongitude()))  + "  " +  NumberUtils.saveOneBitTwo(Double.parseDouble(fireInfo.getLatitude())));
+                    }catch (Exception e){
+                        fireTimeText.setText(" ");
+                        jingWeiText.setText(" ");
+
+                    }
+
+                    kexinText.setText(fireInfo.getCredibility() +"");
+                    mianjiText.setText(fireInfo.getArea() +"");
+                    cishuText.setText(fireInfo.getObservationFrequency() +"");
+                    //leixingText.setText("林地(" + fireInfo.getWoodland() * 100 +"%)草地(" + fireInfo.getGrassland() * 100 + "%)农田(" + fireInfo.getFarmland() * 100 + "%)其他(" + fireInfo.getOtherland() + "%)"  );
+                    leixingText.setText("林地(" + getTwoDouble(fireInfo.getWoodland() * 100) +"%)草地(" + getTwoDouble(fireInfo.getGrassland() * 100) + "%)农田(" + getTwoDouble(fireInfo.getFarmland() * 100) + "%)其他(" + getTwoDouble(fireInfo.getOtherland() *100 )+ "%)"  );
+
+                    shujuyuanText.setText(fireInfo.getSatellite());
+                    huodianCodeText.setText(fireInfo.getFireNo());
+                    xiangyuanmianjiView.setText(fireInfo.getPixelArea()+"");
+                    xiangyuanshuView.setText(fireInfo.getPixelNumber()+"");
+
+                    Log.e(TAG, "handleMessage:Noaa " + fireInfo.getVisibleLightImageAddress());
+                    Log.e(TAG, "handleMessage:Noaa " + fireInfo.getiRImageAddress());
+
+                    try {
+                        Log.e(TAG, "WTF: " + fireInfo.getVisibleLightImageAddress() );
+                        if (fireInfo.getVisibleLightImageAddress().equals("null") || fireInfo.getVisibleLightImageAddress().equals("") || fireInfo.getVisibleLightImageAddress().length()==0){
+                            huodianOneImage.setVisibility(View.GONE);
+                        }else {
+                            huodianOneImage.setVisibility(View.VISIBLE);
+                            if (fireInfo.getVisibleLightImageAddress().indexOf("http") != -1){       //包含http地址 直接加载
+                                Glide.with(getApplicationContext()).load(fireInfo.getVisibleLightImageAddress()).placeholder(R.drawable.ic_jaizai).into(huodianOneImage);
+                                final FireInfo finalFireInfo = fireInfo;
+                                RxViewAction.clickNoDouble(huodianOneImage).subscribe(new Action1<Void>() {
+                                    @Override
+                                    public void call(Void aVoid) {
+                                        Log.e(TAG, "call: bingo 图片"  );
+                                        Log.e(TAG, "call: bingo 图片"  );
+                                        Intent intent = new Intent(MainActivity.this, PicActivity.class);
+                                        intent.putExtra("pic", finalFireInfo.getVisibleLightImageAddress());
+                                        startActivity(intent);
+                                    }
+                                });
+                            }else {             //NOAA  用的地址 http://219.239.221.19    其他卫星用的地址：http://27.223.18.10:2018
+                                if (fireInfo.getSatellite().indexOf("NOAA") != -1){
+                                    Glide.with(getApplicationContext()).load("http://219.239.221.19" + fireInfo.getVisibleLightImageAddress()).placeholder(R.drawable.ic_jaizai).into(huodianOneImage);
+                                    final FireInfo finalFireInfo1 = fireInfo;
+                                    RxViewAction.clickNoDouble(huodianOneImage).subscribe(new Action1<Void>() {
+                                        @Override
+                                        public void call(Void aVoid) {
+                                            Log.e(TAG, "call: bingo 图片"  );
+                                            Log.e(TAG, "call: bingo 图片"  );
+                                            Intent intent = new Intent(MainActivity.this, PicActivity.class);
+                                            intent.putExtra("pic", "http://219.239.221.19" + finalFireInfo1.getVisibleLightImageAddress());
+                                            startActivity(intent);
+                                        }
+                                    });
+                                }else {
+                                    Glide.with(getApplicationContext()).load("http://web.ehaohai.com:2018" + fireInfo.getVisibleLightImageAddress()).placeholder(R.drawable.ic_jaizai).into(huodianOneImage);
+                                    final FireInfo finalFireInfo2 = fireInfo;
+                                    RxViewAction.clickNoDouble(huodianOneImage).subscribe(new Action1<Void>() {
+                                        @Override
+                                        public void call(Void aVoid) {
+                                            Log.e(TAG, "call: bingo 图片"  );
+                                            Log.e(TAG, "call: bingo 图片"  );
+                                            Intent intent = new Intent(MainActivity.this, PicActivity.class);
+                                            intent.putExtra("pic", "http://web.ehaohai.com:2018" + finalFireInfo2.getVisibleLightImageAddress());
+                                            startActivity(intent);
+                                        }
+                                    });
+                                }
+                            }
+                        }
+
+                        if (fireInfo.getiRImageAddress().equals("null") || fireInfo.getiRImageAddress().equals("")){
+                            huodianTwoImage.setVisibility(View.GONE);
+                        }else {
+                            huodianTwoImage.setVisibility(View.VISIBLE);
+                            if (fireInfo.getiRImageAddress().indexOf("http") != -1){       //包含http地址 直接加载
+                                Glide.with(getApplicationContext()).load(fireInfo.getiRImageAddress())
+                                        .placeholder(R.drawable.ic_jaizai)
+                                        .into(huodianTwoImage);
+                                final FireInfo finalFireInfo5 = fireInfo;
+                                RxViewAction.clickNoDouble(huodianTwoImage).subscribe(new Action1<Void>() {
+                                    @Override
+                                    public void call(Void aVoid) {
+                                        Log.e(TAG, "call: bingo 图片"  );
+                                        Log.e(TAG, "call: bingo 图片"  );
+                                        Intent intent = new Intent(MainActivity.this, PicActivity.class);
+                                        intent.putExtra("pic", finalFireInfo5.getiRImageAddress());
+                                        startActivity(intent);
+                                    }
+                                });
+                            }else {             //NOAA  用的地址 http://219.239.221.19    其他卫星用的地址：http://27.223.18.10:2018
+                                if (fireInfo.getSatellite().indexOf("NOAA") != -1){
+                                    Glide.with(getApplicationContext()).load("http://219.239.221.19" + fireInfo.getiRImageAddress()).placeholder(R.drawable.ic_jaizai).into(huodianTwoImage);
+                                    final FireInfo finalFireInfo6 = fireInfo;
+                                    RxViewAction.clickNoDouble(huodianTwoImage).subscribe(new Action1<Void>() {
+                                        @Override
+                                        public void call(Void aVoid) {
+                                            Log.e(TAG, "call: bingo 图片"  );
+                                            Log.e(TAG, "call: bingo 图片"  );
+                                            Intent intent = new Intent(MainActivity.this, PicActivity.class);
+                                            intent.putExtra("pic", "http://219.239.221.19" + finalFireInfo6.getiRImageAddress());
+                                            startActivity(intent);
+                                        }
+                                    });
+                                }else {
+                                    Glide.with(getApplicationContext()
+                                    ).load("http://web.ehaohai.com:2018" + fireInfo.getiRImageAddress()).placeholder(R.drawable.ic_jaizai).into(huodianTwoImage);
+                                    final FireInfo finalFireInfo3 = fireInfo;
+                                    RxViewAction.clickNoDouble(huodianTwoImage).subscribe(new Action1<Void>() {
+                                        @Override
+                                        public void call(Void aVoid) {
+                                            Log.e(TAG, "call: bingo 图片"  );
+                                            Log.e(TAG, "call: bingo 图片"  );
+                                            Intent intent = new Intent(MainActivity.this, PicActivity.class);
+                                            intent.putExtra("pic", "http://web.ehaohai.com:2018" + finalFireInfo3.getiRImageAddress());
+                                            startActivity(intent);
+                                        }
+                                    });
+                                }
+                            }
+                        }
+                    }catch (Exception e){
+
+                    }
+
+
+
+
+                    fireDialog.show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
+    }
 
 
     private Dialog mapChooseDialog;
