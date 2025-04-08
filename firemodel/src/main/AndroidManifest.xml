@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.haohai.platform.firelibrary">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name=".ui.activity.FireAddActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.activity.FireMapActivity" />
+        <activity
+            android:name=".ui.activity.HiddenDangerActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.activity.FireListActivity" />
+        <activity
+            android:name=".ui.activity.FireMissionListActivity"
+            android:launchMode="singleTask" />
+        <!-- Mqtt服务 -->
+        <service android:name="org.eclipse.paho.android.service.MqttService" />
+        <service
+            android:name=".ui.service.MQTTService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name="com.amap.api.location.APSService" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".ui.activity.WeiXingSettingActivity" />
+        <activity android:name=".ui.activity.FireMissionInfoActivity" />
+        <activity android:name=".ui.activity.GPSNaviActivity" />
+        <activity android:name=".ui.activity.FireSceneActivity"></activity>
+
+    </application>
+
+</manifest>

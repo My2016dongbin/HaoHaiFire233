@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/gongzuo_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="工作汇报"
+        android:textColor="@color/c7"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/kaoqin_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="考勤管理"
+        android:textColor="@color/c7"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/qingjia_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="请假流程"
+        android:textColor="@color/c7"
+        android:gravity="center"/>
+</LinearLayout>

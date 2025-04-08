@@ -1,0 +1,32 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="grid_expected_size">120dp</dimen>
+    <dimen name="text_16_sp">10sp</dimen>
+
+    <dimen name="TabHeight">48dp</dimen>
+
+    <dimen name="LargeTextSize">16dp</dimen>
+    <dimen name="BasicTextSize">15dp</dimen>
+    <dimen name="TitleTextSize">18dp</dimen>
+    <dimen name="SmallTextSize">14dp</dimen>
+    <dimen name="SmallerTextSize">13dp</dimen>
+    <dimen name="LargestTextSize">30dp</dimen>
+    <dimen name="ChattingTextSize">16dp</dimen>
+    <dimen name="ChattingContentMinHeight">49dp</dimen>
+    <dimen name="PreferenceItemHeight">42dp</dimen>
+    <dimen name="ConversationItemHeight">58dp</dimen>
+    <dimen name="LargeAvatarSize">56dp</dimen>
+
+    <!--收益-->
+    <dimen name="income_textsize">14sp</dimen>
+    <dimen name="income_titlesize">24sp</dimen>
+    <!--提现-->
+    <dimen name="putforward_textsize">14sp</dimen>
+    <dimen name="putforward_titlesize">24sp</dimen>
+    <dimen name="putforward_smalltextsize">12sp</dimen>
+    <dimen name="putforward_marginTop">15sp</dimen>
+    <dimen name="putforward_marginMid">10sp</dimen>
+    <dimen name="putforward_marginBottom">10sp</dimen>
+</resources>

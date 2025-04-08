@@ -8,10 +8,28 @@ android {
     buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion rootProject.minSdkVersion
         targetSdkVersion rootProject.targetSdkVersion
         versionCode VERSION_CODE
         versionName VERSION_NAME
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+        ndk {
+            //设置支持的SO库架构
+            /*abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64","armeabi"*/
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+        }
+        manifestPlaceholders = [
+                XG_ACCESS_ID : "1500015815",
+                XG_ACCESS_KEY : "AO3YNOCJ0AK2",
+                HW_APPID: "103450845"
+
+        ]
+
     }
     buildTypes {
         release {
@@ -35,23 +53,54 @@ dependencies {
     compile system_dependencies.rxbinding
     compile system_dependencies.glide
     compile system_dependencies.gson
-    compile system_dependencies.fresco
-    compile system_dependencies.indexablere
+    // compile  system_dependencies.fresco
     compile system_dependencies.xutils
     compile('me.drakeet.multitype:multitype:2.2.2', {
         exclude group: 'com.android.support'
     })
 
+    //com.nineoldandroids:library动画兼容库
+    //fresco图片加载库(需要在项目的Application中自行初始化操作)
+    //flyco.pageindicator 轮播指示灯库
+    //rebound Android弹性动画库
+    //Materialicons是Google推出的图标库,属于MaterialDesign工程的一部分
+    compile('com.zhihu.android:matisse:0.4.3', {
+        exclude group: 'com.android.support'
+    })
+    compile('ch.ielse:imagewatcher:1.0.3', {
+        exclude group: 'com.android.support'
+    })
+    //路由
+    
 
     compile 'com.zhy:okhttputils:2.6.2'
     compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
     compile 'de.hdodenhof:circleimageview:2.1.0'
-//    compile 'id.zelory:compressor:2.1.0'
+    compile 'id.zelory:compressor:2.1.0'
     compile 'com.baoyz.swipemenulistview:library:1.3.0'
-    compile 'com.nineoldandroids:library:2.4.0'//com.nineoldandroids:library动画兼容库
-    compile 'com.facebook.fresco:fresco:0.12.0'//fresco图片加载库(需要在项目的Application中自行初始化操作)
-    compile 'com.flyco.pageindicator:FlycoPageIndicator_Lib:1.0.0@aar'//flyco.pageindicator 轮播指示灯库
-    compile 'com.facebook.rebound:rebound:0.3.8'//rebound Android弹性动画库
-    compile 'com.malinskiy:materialicons:1.0.2'//Materialicons是Google推出的图标库,属于MaterialDesign工程的一部分
-    testCompile 'junit:junit:4.12'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    compile 'com.flyco.pageindicator:FlycoPageIndicator_Lib:1.0.0@aar'
+    compile 'com.facebook.rebound:rebound:0.3.8'
+    compile 'com.malinskiy:materialicons:1.0.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'junit:junit:4.12'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.1@aar'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.alibaba:arouter-api:1.3.1'
+//    compile 'com.github.wendux:DSBridge-Android:3.0-SNAPSHOT'
+    compile project(':dsbridge')
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+
+    compile 'com.tencent.jg:jg:1.1'     //腾讯推送
+    compile 'com.tencent.tpns:tpns:1.2.0.3-release' //腾讯推送
+
+    compile 'com.tencent.tpns:xiaomi:1.2.1.0-release'//小米推送
+    compile 'com.tencent.tpns:huawei:1.2.1.0-release'  //华为推送
+    compile 'com.tencent.tpns:meizu:1.2.2.0-release'//meizu 推送
+    compile 'com.tencent.tpns:oppo:1.2.2.0-release'//oppo 推送
+    compile 'com.rxjava.rxhttp:rxhttp:1.1.6'
+    annotationProcessor 'com.rxjava.rxhttp:rxhttp-compiler:1.1.6'
+
 }

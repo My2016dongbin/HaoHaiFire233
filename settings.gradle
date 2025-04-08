@@ -1,2 +1,1 @@
-include ':app', ':hhlibrary', ':disasterreduction', ':modelCore:drlibrary'
-include ':dsbridge'
+include ':app', ':hhlibrary', ':platformmodel', ':videolibrary', ':firemodel', ':mapmodel', ':chatimmodel', ':appnaturalresource', ':dsbridge'
