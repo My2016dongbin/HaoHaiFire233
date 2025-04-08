@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c1"
+    android:orientation="vertical"
+    tools:context="com.haohai.platform.platformmodel.ui.acticity.LeaveFlowInfoActivity">
+
+    <com.ruyiruyi.rylibrary.cell.ActionBar
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/c12"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/touxiang_image"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_launcher"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/xingming_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="姓名"
+                        android:textSize="15sp"
+                        android:textColor="@color/c7"/>
+                    <TextView
+                        android:id="@+id/bumen_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="部门"
+                        android:layout_marginTop="8dp"
+                        android:textSize="13sp"
+                        android:textColor="@color/c6"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/shijian_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时间"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="8dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/c6"/>
+
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/c2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/c12"
+                android:padding="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请假流程"
+                    android:layout_marginTop="8dp"
+                    android:textSize="17sp"
+                    android:textColor="@color/c7"/>
+
+                <TextView
+                    android:id="@+id/qingjiashijian_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请假时间:213213213123"
+                    android:layout_marginTop="8dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/c6"/>
+                <TextView
+                    android:id="@+id/jieshushijian_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="时间"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="8dp"
+                    android:textSize="13sp"
+                    android:textColor="@color/c6"/>
+
+                <TextView
+                    android:id="@+id/qingjialiyou_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="请假理由:12312"
+                    android:textColor="@color/c6"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="审批流程"
+                android:layout_marginTop="8dp"
+                android:background="@color/c12"
+                android:padding="10dp"
+                android:textSize="17sp"
+                android:textColor="@color/c7"/>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/leave_flow_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

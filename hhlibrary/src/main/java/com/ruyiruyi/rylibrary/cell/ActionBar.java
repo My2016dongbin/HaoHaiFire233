@@ -75,16 +75,16 @@ public class ActionBar extends FrameLayout {
 
     private void initView(Context context) {
         content = new FrameLayout(context);
-        content.setBackgroundColor(0xff7ad6f2);
-        addView(content,LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT,130));
+        content.setBackgroundColor(0xff283345);
+        addView(content,LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT,200));
 
         backgroundLayout = new FrameLayout(context);
         content.addView(backgroundLayout, LayoutHelper.createFrame(200,LayoutHelper.MATCH_PARENT,Gravity.CENTER_VERTICAL,20,0,0,0));
 
         backButtonImageView = new ImageView(context);
-        backButtonImageView.setScaleType(ImageView.ScaleType.CENTER);
+        backButtonImageView.setScaleType(ImageView.ScaleType.FIT_XY);
         backButtonImageView.setImageResource(R.drawable.ic_back);
-        backgroundLayout.addView(backButtonImageView, LayoutHelper.createFrame(60,60,Gravity.CENTER_VERTICAL,20,0,0,0));
+        backgroundLayout.addView(backButtonImageView, LayoutHelper.createFrame(60,60,Gravity.CENTER_VERTICAL,20,40,0,0));
 
         RxViewAction.clickNoDouble(backgroundLayout)
                 .subscribe(new Action1<Void>() {
@@ -96,14 +96,14 @@ public class ActionBar extends FrameLayout {
 
 
         titleView = new TextView(context);
-        titleView.setTextSize(20);
+        titleView.setTextSize(17);
         titleView.setText("");
         titleView.setTextColor(Color.WHITE);
-        content.addView(titleView,LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT,LayoutHelper.WRAP_CONTENT,Gravity.CENTER));
+        content.addView(titleView,LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT,LayoutHelper.WRAP_CONTENT,Gravity.CENTER,0,40,0,0));
 
         imageView = new ImageView(context);
         imageView.setVisibility(GONE);
-        content.addView(imageView,LayoutHelper.createFrame(60,60,Gravity.CENTER_VERTICAL|Gravity.RIGHT,0,0,20,0));
+        content.addView(imageView,LayoutHelper.createFrame(60,60,Gravity.CENTER_VERTICAL|Gravity.RIGHT,0,40,40,0));
         RxViewAction.clickNoDouble(imageView)
                 .subscribe(new Action1<Void>() {
                     @Override
@@ -116,7 +116,8 @@ public class ActionBar extends FrameLayout {
         rightView = new TextView(context);
         rightView.setVisibility(GONE);
         rightView.setTextColor(Color.WHITE);
-        content.addView(rightView,LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT,LayoutHelper.WRAP_CONTENT,Gravity.CENTER_VERTICAL|Gravity.RIGHT,0,0,20,0));
+
+        content.addView(rightView,LayoutHelper.createFrame(LayoutHelper.WRAP_CONTENT,LayoutHelper.WRAP_CONTENT,Gravity.CENTER_VERTICAL|Gravity.RIGHT,0,40,20,0));
         RxViewAction.clickNoDouble(rightView)
                 .subscribe(new Action1<Void>() {
                     @Override

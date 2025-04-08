@@ -6,6 +6,6 @@
         android:drawable="@drawable/ic_huitiao"/>
     <item
         android:id="@android:id/progress"
-        android:drawable="@drawable/ic_chengtiao"/>
+        android:drawable="@drawable/ic_lantiao"/>
 
 </layer-list>

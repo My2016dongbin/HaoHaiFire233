@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/theme_primary_top">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="视频监控"
+            android:textColor="@color/c12"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/list_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_list_button" />
+
+
+        <ImageView
+            android:id="@+id/add_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="20dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_jia" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/video">
+
+        <LinearLayout
+            android:id="@+id/video_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="235dp"
+            android:background="@color/video"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/yi_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/video1_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_video_choose_no">
+
+                    <com.haohai.ledge.videolibrary.video.MultiSampleVideo
+                        android:id="@+id/video1_player"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="1dp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/video1_add_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_add_video" />
+
+                    <FrameLayout
+                        android:id="@+id/video_click1_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/video2_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_video_choose_no"
+                    android:visibility="gone">
+
+                    <com.haohai.ledge.videolibrary.video.MultiSampleVideo
+                        android:id="@+id/video2_player"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:padding="1dp" />
+                    <ImageView
+                        android:id="@+id/video2_add_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_add_video" />
+                    <FrameLayout
+                        android:id="@+id/video_click2_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/video3_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_video_choose_no"
+                    android:visibility="gone">
+
+                    <com.haohai.ledge.videolibrary.video.MultiSampleVideo
+                        android:id="@+id/video3_player"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:padding="1dp" />
+                    <ImageView
+                        android:id="@+id/video3_add_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_add_video" />
+                    <FrameLayout
+                        android:id="@+id/video_click3_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/si_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:id="@+id/video4_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_video_choose_no">
+
+                    <com.haohai.ledge.videolibrary.video.MultiSampleVideo
+                        android:id="@+id/video4_player"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:padding="1dp" />
+                    <ImageView
+                        android:id="@+id/video4_add_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_add_video" />
+                    <FrameLayout
+                        android:id="@+id/video_click4_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/video5_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_video_choose_no">
+
+                    <com.haohai.ledge.videolibrary.video.MultiSampleVideo
+                        android:id="@+id/video5_player"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:padding="1dp" />
+                    <ImageView
+                        android:id="@+id/video5_add_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_add_video" />
+                    <FrameLayout
+                        android:id="@+id/video_click5_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/video6_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_video_choose_no">
+
+                    <com.haohai.ledge.videolibrary.video.MultiSampleVideo
+                        android:id="@+id/video6_player"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:padding="1dp" />
+                    <ImageView
+                        android:id="@+id/video6_add_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_add_video" />
+                    <FrameLayout
+                        android:id="@+id/video_click6_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/jiu_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <FrameLayout
+                    android:id="@+id/video7_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_video_choose_no">
+
+                    <com.haohai.ledge.videolibrary.video.MultiSampleVideo
+                        android:id="@+id/video7_player"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:padding="1dp" />
+                    <ImageView
+                        android:id="@+id/video7_add_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_add_video" />
+                    <FrameLayout
+                        android:id="@+id/video_click7_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/video8_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_video_choose_no">
+
+                    <com.haohai.ledge.videolibrary.video.MultiSampleVideo
+                        android:id="@+id/video8_player"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:padding="1dp" />
+                    <ImageView
+                        android:id="@+id/video8_add_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_add_video" />
+                    <FrameLayout
+                        android:id="@+id/video_click8_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/video9_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_video_choose_no">
+
+                    <com.haohai.ledge.videolibrary.video.MultiSampleVideo
+                        android:id="@+id/video9_player"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:padding="1dp" />
+                    <ImageView
+                        android:id="@+id/video9_add_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_add_video" />
+                    <FrameLayout
+                        android:id="@+id/video_click9_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="235dp"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#283345"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal"
+                android:padding="2dp">
+
+
+                <ImageView
+                    android:id="@+id/yi_view"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_one_selected"
+                    android:text="1"
+                    android:textColor="@color/c12"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/si_view"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_four"
+                    android:text="4"
+                    android:textColor="@color/c12"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/jiu_view"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_sixteen"
+                    android:text="9"
+                    android:textColor="@color/c12"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_button_bg"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <LinearLayout
+                    android:id="@+id/center_layout"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="190dp"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/zuoshang_button"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/ic_button"
+                            android:drawableTop="@drawable/ic_left_top"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="12dp"
+                            android:text="左上"
+                            android:textColor="@color/c12"
+                            android:textSize="13sp" />
+
+
+                        <Button
+                            android:id="@+id/shang_button"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/ic_button"
+                            android:drawableTop="@drawable/ic_top"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="12dp"
+                            android:text="上"
+                            android:textColor="@color/c12"
+                            android:textSize="13sp" />
+
+
+                        <Button
+                            android:id="@+id/youshang_button"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/ic_button"
+                            android:drawableTop="@drawable/ic_right_top"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="12dp"
+                            android:text="右上"
+                            android:textColor="@color/c12"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="195dp"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/zuo_button"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/ic_button"
+                            android:drawableTop="@drawable/ic_left"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="12dp"
+                            android:text="左"
+                            android:textColor="@color/c12"
+                            android:textSize="13sp" />
+
+
+                        <Button
+                            android:id="@+id/xunhang_button"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/ic_button"
+                            android:paddingBottom="8dp"
+                            android:layout_gravity="center_vertical"
+                            android:paddingTop="12dp"
+
+                            />
+                        <!-- android:drawableTop="@drawable/ic_xunhang"
+                            android:gravity="center"
+                            android:text="巡航"
+                            android:textColor="@color/c12"
+                            android:textSize="13sp"-->
+
+
+                        <Button
+                            android:id="@+id/you_button"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/ic_button"
+                            android:drawableTop="@drawable/ic_right_jiantou"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="12dp"
+                            android:text="右"
+                            android:textColor="@color/c12"
+                            android:textSize="13sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="185dp"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+
+                        <Button
+                            android:id="@+id/zuoxia_button"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/ic_button"
+                            android:drawableTop="@drawable/ic_left_bottom"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="12dp"
+                            android:text="左下"
+                            android:textColor="@color/c12"
+                            android:textSize="13sp" />
+
+
+                        <Button
+                            android:id="@+id/xia_button"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/ic_button"
+                            android:drawableTop="@drawable/ic_bottom"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="12dp"
+                            android:text="下"
+                            android:textColor="@color/c12"
+                            android:textSize="13sp" />
+
+
+                        <Button
+                            android:id="@+id/youxia_button"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="@drawable/ic_button"
+                            android:drawableTop="@drawable/ic_right_bottom"
+                            android:gravity="center"
+                            android:paddingBottom="8dp"
+                            android:paddingTop="12dp"
+                            android:text="右下"
+                            android:textColor="@color/c12"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/left_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/center_layout"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/lajin_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/ic_button"
+                        android:drawableTop="@drawable/ic_zoom_in"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="12dp"
+                        android:text="拉近"
+                        android:textColor="@color/c12"
+                        android:textSize="13sp" />
+
+                    <Button
+                        android:id="@+id/jieping_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/ic_button"
+                        />
+                    <!-- android:drawableTop="@drawable/ic_printscreen"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="12dp"
+                        android:text="截屏"
+                        android:textColor="@color/c12"
+                        android:textSize="13sp"-->
+
+                    <Button
+                        android:id="@+id/jujiao_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/ic_button"
+                        android:drawableTop="@drawable/ic_jujiao"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="12dp"
+                        android:text="聚焦"
+                        android:textColor="@color/c12"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/right_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/center_layout"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/layuan_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/ic_button"
+                        android:drawableTop="@drawable/ic_zoom_out"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="12dp"
+                        android:text="拉远"
+                        android:textColor="@color/c12"
+                        android:textSize="13sp" />
+
+                    <Button
+                        android:id="@+id/luxiang_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/ic_button"
+                      />
+
+                    <!--   android:drawableTop="@drawable/ic_luxiang1"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="12dp"
+                        android:text="录像"
+                        android:textColor="@color/c12"
+                        android:textSize="13sp"-->
+
+                    <Button
+                        android:id="@+id/yichu_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/ic_button"
+                        android:drawableTop="@drawable/ic_yichu"
+                        android:gravity="center"
+                        android:paddingBottom="8dp"
+                        android:paddingTop="12dp"
+                        android:text="移除视频"
+                        android:textColor="@color/c12"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>
