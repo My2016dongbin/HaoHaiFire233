@@ -20,11 +20,15 @@ import android.widget.Toast;
 
 import com.hht.hsatellitemobile.db.DbConfig;
 import com.hht.hsatellitemobile.db.model.User;
+import com.hht.hsatellitemobile.ui.activity.LoginActivity;
 import com.hht.hsatellitemobile.utils.RequestUtils;
+import com.tencent.android.tpush.XGPushManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.xutils.DbManager;
 import org.xutils.common.Callback;
+import org.xutils.ex.DbException;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
@@ -34,6 +38,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import static com.hht.hsatellitemobile.ui.activity.LoginActivity.yingjiTags;
 
 public class TrackService extends Service {
     private static final String TAG = TrackService.class.getSimpleName();
@@ -226,7 +232,6 @@ public class TrackService extends Service {
         }
 
         RequestParams params = new RequestParams(RequestUtils.REQUEST_URL + "Position/UpdateUserPosition");
-       // RequestParams params = new RequestParams("http://192.168.1.144:2019/api/Position/UpdateUserPosition");
         params.setAsJsonContent(true);
         params.setBodyContent(jsonObject.toString());
 
@@ -244,7 +249,10 @@ public class TrackService extends Service {
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-                Log.e(TAG, "onError: 请求失败" );
+                Log.e(TAG, "onError: 请求失败" + ex.toString() );
+                if(ex.toString().contains("Token不符")){
+                    outLogin();
+                }
             }
 
             @Override
@@ -259,6 +267,45 @@ public class TrackService extends Service {
         });
     }
 
+    private void outLogin() {
+        Intent intent1= new Intent();
+        intent1.setAction("out_login");
+        sendBroadcast(intent1);
+
+        cleanTags();
+        //JPushInterface.cleanTags(getApplicationContext(),1001);
+        //登录失效 更新本地User信息
+        DbConfig dbConfig = new DbConfig(getApplicationContext());
+        User user = dbConfig.getUser();
+        user.setIsLogin("0");
+        DbManager db = dbConfig.getDbManager();
+
+        try {
+            db.saveOrUpdate(user);
+        } catch (DbException e) {
+
+        }
+        //即将跳转登录界面
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        intent.putExtra("isLoginOut",true);
+        startActivity(intent);
+    }
+
+    private void cleanTags() {
+        try{
+            String username = new DbConfig(this).getUser().getUsername();
+            if(username!=null && username.equals("山东省应急管理厅")){
+                String[] tags = yingjiTags.split(",");
+                for (int i = 0; i < tags.length; i++) {
+                    XGPushManager.cleanTags(this,tags[i]);
+                }
+            }else{
+                XGPushManager.cleanTags(this,new DbConfig(this).getUser().getPushTag());
+            }
+        }catch (Exception e){
+            Log.e("Exception", "cleanTags");
+        }
+    }
 
 
 }

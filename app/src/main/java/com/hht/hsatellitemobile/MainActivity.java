@@ -11,16 +11,18 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.media.AudioManager;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
-import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.os.Bundle;
 import android.os.PowerManager;
 import android.support.annotation.IdRes;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -45,29 +47,29 @@ import android.widget.Toast;
 
 import com.baoyz.widget.PullRefreshLayout;
 import com.bumptech.glide.Glide;
-import com.hht.hsatellitemobile.db.DbConfig;
-import com.hht.hsatellitemobile.db.model.Area;
 import com.hht.hsatellitemobile.db.model.Setting;
-import com.hht.hsatellitemobile.db.model.User;
-import com.hht.hsatellitemobile.ui.activity.FeedBackActivity;
 import com.hht.hsatellitemobile.ui.activity.LoginActivity;
 import com.hht.hsatellitemobile.ui.activity.PicActivity;
 import com.hht.hsatellitemobile.ui.activity.SettingActivity;
-import com.hht.hsatellitemobile.ui.activity.base.HhBaseActivity;
-import com.hht.hsatellitemobile.ui.multitype.FireInfo;
-import com.hht.hsatellitemobile.ui.multitype.FireInfoList;
-import com.hht.hsatellitemobile.ui.multitype.FireInfoViewBinder;
 import com.hht.hsatellitemobile.ui.multitype.GroundFire;
 import com.hht.hsatellitemobile.ui.multitype.GroundFireViewBinder;
 import com.hht.hsatellitemobile.ui.service.AlarmPointService;
 import com.hht.hsatellitemobile.ui.service.TrackService;
-import com.hht.hsatellitemobile.utils.JsApi;
 import com.hht.hsatellitemobile.utils.NotificationsUtils;
-import com.hht.hsatellitemobile.utils.RequestUtils;
 import com.ruyiruyi.rylibrary.android.rx.rxbinding.RxViewAction;
 import com.ruyiruyi.rylibrary.cell.downcell.CommonProgressDialog;
 import com.ruyiruyi.rylibrary.ui.cell.WheelView;
 import com.ruyiruyi.rylibrary.utils.NumberUtils;
+import com.hht.hsatellitemobile.db.DbConfig;
+import com.hht.hsatellitemobile.db.model.User;
+import com.hht.hsatellitemobile.ui.activity.FeedBackActivity;
+import com.hht.hsatellitemobile.ui.activity.base.HhBaseActivity;
+import com.hht.hsatellitemobile.db.model.Area;
+import com.hht.hsatellitemobile.ui.multitype.FireInfo;
+import com.hht.hsatellitemobile.ui.multitype.FireInfoList;
+import com.hht.hsatellitemobile.ui.multitype.FireInfoViewBinder;
+import com.hht.hsatellitemobile.utils.JsApi;
+import com.hht.hsatellitemobile.utils.RequestUtils;
 import com.scwang.smart.refresh.footer.ClassicsFooter;
 import com.scwang.smart.refresh.header.ClassicsHeader;
 import com.scwang.smart.refresh.layout.SmartRefreshLayout;
@@ -99,11 +101,13 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import java.util.Timer;
-
+import java.util.TimerTask;
 import me.drakeet.multitype.MultiTypeAdapter;
 import pl.droidsonroids.gif.GifImageView;
 import rx.functions.Action1;
@@ -241,14 +245,13 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             switch (what){
                 case DIALOG_FIRE_SHOW:
                     String id = data.getString("id");
-                    getFireInfo(id);
-                    /*FireInfo fireInfo = new FireInfo();
+                    FireInfo fireInfo = new FireInfo();
                     for (int i = 0; i < fireInfoList.size(); i++) {
                         if (fireInfoList.get(i).getId().equals(id)) {
                             fireInfo = fireInfoList.get(i);
                         }
-                    }*/
-                    /*currentFire = fireInfo;
+                    }
+                    currentFire = fireInfo;
                     currentFireId = fireInfo.getId();
                     currentFireLa = fireInfo.getLatitude();
                     currentFireLo = fireInfo.getLongitude();
@@ -391,11 +394,15 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
 
 
 
-                    fireDialog.show();*/
+                    fireDialog.show();
                     break;
                 case MAP_ERROR_SHOW:
                   //  chaoshiButton.setVisibility(View.VISIBLE);
                     User user = new DbConfig(getApplicationContext()).getUser();
+                    if(user==null || Objects.equals(user.getIsLogin(), "0")){
+                        finish();
+
+                    }
                     Setting setting = new DbConfig(getApplicationContext()).getSetting();
                     if (startType.equals("JPUSH")){
                         loadingImage.setVisibility(View.GONE);
@@ -411,6 +418,9 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             }
                         });*/
                     }else {
+                        Log.e(TAG, "handleMessage: " + user.getUsername() + user.getPassword()+user.getToken()+currentFireFindTime+
+                                setting.getWeixing()+setting.getTiankong()+setting.getDimian()+setting.getDimao()+setting.getNumber()+
+                                setting.getJingwai()+setting.getHuanchong() );
                         isJush = false;
                         dWebView.callHandler("abc", new Object[]{user.getUsername(), user.getPassword(),user.getToken(),currentFireFindTime,
                                 setting.getWeixing(),setting.getTiankong(),setting.getDimao(),setting.getDimao(),setting.getNumber(),
@@ -456,220 +466,6 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
 
         }
     };
-
-    private void getFireInfo(String id) {
-        RequestParams params = new RequestParams(RequestUtils.REQUEST_URL + "Satellite/GetFireInfoById");
-        params.addParameter("Token",token);
-        params.addParameter("id",id);
-        x.http().get(params, new Callback.CommonCallback<String>() {
-            @Override
-            public void onSuccess(String result) {
-                Log.e("GetFireInfoById",result);
-
-                JSONObject fireObj = null;
-                try {
-                    fireObj = new JSONObject(result);
-                    String id = fireObj.getString("Id");
-                    String longitude = fireObj.getString("Longitude");
-                    String latitude = fireObj.getString("Latitude");
-                    int observationFrequency = fireObj.getInt("ObservationFrequency");
-                    String observationDateTime = fireObj.getString("ObservationDateTime");
-//                                int strength = fireObj.getInt("Strength");
-//                                int strengthLevel = fireObj.getInt("StrengthLevel");
-                    double woodland = fireObj.getDouble("Woodland");
-                    double grassland = fireObj.getDouble("Grassland");
-                    double farmland = fireObj.getDouble("Farmland");
-                    double otherland = fireObj.getDouble("Otherland");
-                    double area = fireObj.getDouble("Area");
-                    double credibility = fireObj.getDouble("Credibility");
-                    double pixelArea = fireObj.getDouble("PixelArea");
-                    int pixelNumber = fireObj.getInt("PixelNumber");
-                    String country = fireObj.getString("Country");
-                    String countryCode = fireObj.getString("CountryCode");
-                    String province = fireObj.getString("Province");
-                    String provinceCode = fireObj.getString("ProvinceCode");
-                    String city = fireObj.getString("City");
-                    String cityCode = fireObj.getString("CityCode");
-                    String county = fireObj.getString("County");
-                    String countyCode = fireObj.getString("CountyCode");
-                    String formattedAddress = fireObj.getString("FormattedAddress");
-                    String visibleLightImageAddress = fireObj.getString("VisibleLightImageAddress");
-                    String irImageAddress = fireObj.getString("IRImageAddress");
-                    String satellite = fireObj.getString("Satellite");
-                    String putStorageTime = fireObj.getString("PutStorageTime");
-                    String dataSourceFile = fireObj.getString("DataSourceFile");
-                    String fireNo = fireObj.getString("FireNo");
-                    String districtNum = fireObj.getString("DistrictNum");
-                    FireInfo fireInfo = new FireInfo(id,longitude,latitude,observationFrequency,observationDateTime,0,0,woodland,grassland,farmland,otherland,area,credibility,pixelArea,
-                            pixelNumber,country,countryCode,province,provinceCode,city,cityCode,county,countyCode,formattedAddress,visibleLightImageAddress,irImageAddress,satellite,
-                            putStorageTime,dataSourceFile,fireNo,districtNum);
-
-                    currentFire = fireInfo;
-                    currentFireId = fireInfo.getId();
-                    currentFireLa = fireInfo.getLatitude();
-                    currentFireLo = fireInfo.getLongitude();
-                    Log.e(TAG, "handleMessage: ----" + fireInfo.toString());
-                    //  fireAddressText.setText(fireInfo.getFormattedAddress());
-                    Log.e(TAG, "initJpushFireData:边境热源=" + fireInfo.getFormattedAddress()+"--");
-                    if (currentFire.getFormattedAddress()==null || currentFire.getFormattedAddress().isEmpty()){
-
-                        fireAddressText.setText("边境热源");
-                    }else {
-                        fireAddressText.setText(fireInfo.getFormattedAddress());
-                    }
-                    try {
-                        fireTimeText.setText(fireInfo.getObservationDateTime().replace("T","  "));
-                        jingWeiText.setText(NumberUtils.saveOneBitTwo(Double.parseDouble(fireInfo.getLongitude()))  + "  " +  NumberUtils.saveOneBitTwo(Double.parseDouble(fireInfo.getLatitude())));
-                    }catch (Exception e){
-                        fireTimeText.setText(" ");
-                        jingWeiText.setText(" ");
-
-                    }
-
-                    kexinText.setText(fireInfo.getCredibility() +"");
-                    mianjiText.setText(fireInfo.getArea() +"");
-                    cishuText.setText(fireInfo.getObservationFrequency() +"");
-                    //leixingText.setText("林地(" + fireInfo.getWoodland() * 100 +"%)草地(" + fireInfo.getGrassland() * 100 + "%)农田(" + fireInfo.getFarmland() * 100 + "%)其他(" + fireInfo.getOtherland() + "%)"  );
-                    leixingText.setText("林地(" + getTwoDouble(fireInfo.getWoodland() * 100) +"%)草地(" + getTwoDouble(fireInfo.getGrassland() * 100) + "%)农田(" + getTwoDouble(fireInfo.getFarmland() * 100) + "%)其他(" + getTwoDouble(fireInfo.getOtherland() *100 )+ "%)"  );
-
-                    shujuyuanText.setText(fireInfo.getSatellite());
-                    huodianCodeText.setText(fireInfo.getFireNo());
-                    xiangyuanmianjiView.setText(fireInfo.getPixelArea()+"");
-                    xiangyuanshuView.setText(fireInfo.getPixelNumber()+"");
-
-                    Log.e(TAG, "handleMessage:Noaa " + fireInfo.getVisibleLightImageAddress());
-                    Log.e(TAG, "handleMessage:Noaa " + fireInfo.getiRImageAddress());
-
-                    try {
-                        Log.e(TAG, "WTF: " + fireInfo.getVisibleLightImageAddress() );
-                        if (fireInfo.getVisibleLightImageAddress().equals("null") || fireInfo.getVisibleLightImageAddress().equals("") || fireInfo.getVisibleLightImageAddress().length()==0){
-                            huodianOneImage.setVisibility(View.GONE);
-                        }else {
-                            huodianOneImage.setVisibility(View.VISIBLE);
-                            if (fireInfo.getVisibleLightImageAddress().indexOf("http") != -1){       //包含http地址 直接加载
-                                Glide.with(getApplicationContext()).load(fireInfo.getVisibleLightImageAddress()).placeholder(R.drawable.ic_jaizai).into(huodianOneImage);
-                                final FireInfo finalFireInfo = fireInfo;
-                                RxViewAction.clickNoDouble(huodianOneImage).subscribe(new Action1<Void>() {
-                                    @Override
-                                    public void call(Void aVoid) {
-                                        Log.e(TAG, "call: bingo 图片"  );
-                                        Log.e(TAG, "call: bingo 图片"  );
-                                        Intent intent = new Intent(MainActivity.this, PicActivity.class);
-                                        intent.putExtra("pic", finalFireInfo.getVisibleLightImageAddress());
-                                        startActivity(intent);
-                                    }
-                                });
-                            }else {             //NOAA  用的地址 http://219.239.221.19    其他卫星用的地址：http://27.223.18.10:2018
-                                if (fireInfo.getSatellite().indexOf("NOAA") != -1){
-                                    Glide.with(getApplicationContext()).load("http://219.239.221.19" + fireInfo.getVisibleLightImageAddress()).placeholder(R.drawable.ic_jaizai).into(huodianOneImage);
-                                    final FireInfo finalFireInfo1 = fireInfo;
-                                    RxViewAction.clickNoDouble(huodianOneImage).subscribe(new Action1<Void>() {
-                                        @Override
-                                        public void call(Void aVoid) {
-                                            Log.e(TAG, "call: bingo 图片"  );
-                                            Log.e(TAG, "call: bingo 图片"  );
-                                            Intent intent = new Intent(MainActivity.this, PicActivity.class);
-                                            intent.putExtra("pic", "http://219.239.221.19" + finalFireInfo1.getVisibleLightImageAddress());
-                                            startActivity(intent);
-                                        }
-                                    });
-                                }else {
-                                    Glide.with(getApplicationContext()).load("http://web.ehaohai.com:2018" + fireInfo.getVisibleLightImageAddress()).placeholder(R.drawable.ic_jaizai).into(huodianOneImage);
-                                    final FireInfo finalFireInfo2 = fireInfo;
-                                    RxViewAction.clickNoDouble(huodianOneImage).subscribe(new Action1<Void>() {
-                                        @Override
-                                        public void call(Void aVoid) {
-                                            Log.e(TAG, "call: bingo 图片"  );
-                                            Log.e(TAG, "call: bingo 图片"  );
-                                            Intent intent = new Intent(MainActivity.this, PicActivity.class);
-                                            intent.putExtra("pic", "http://web.ehaohai.com:2018" + finalFireInfo2.getVisibleLightImageAddress());
-                                            startActivity(intent);
-                                        }
-                                    });
-                                }
-                            }
-                        }
-
-                        if (fireInfo.getiRImageAddress().equals("null") || fireInfo.getiRImageAddress().equals("")){
-                            huodianTwoImage.setVisibility(View.GONE);
-                        }else {
-                            huodianTwoImage.setVisibility(View.VISIBLE);
-                            if (fireInfo.getiRImageAddress().indexOf("http") != -1){       //包含http地址 直接加载
-                                Glide.with(getApplicationContext()).load(fireInfo.getiRImageAddress())
-                                        .placeholder(R.drawable.ic_jaizai)
-                                        .into(huodianTwoImage);
-                                final FireInfo finalFireInfo5 = fireInfo;
-                                RxViewAction.clickNoDouble(huodianTwoImage).subscribe(new Action1<Void>() {
-                                    @Override
-                                    public void call(Void aVoid) {
-                                        Log.e(TAG, "call: bingo 图片"  );
-                                        Log.e(TAG, "call: bingo 图片"  );
-                                        Intent intent = new Intent(MainActivity.this, PicActivity.class);
-                                        intent.putExtra("pic", finalFireInfo5.getiRImageAddress());
-                                        startActivity(intent);
-                                    }
-                                });
-                            }else {             //NOAA  用的地址 http://219.239.221.19    其他卫星用的地址：http://27.223.18.10:2018
-                                if (fireInfo.getSatellite().indexOf("NOAA") != -1){
-                                    Glide.with(getApplicationContext()).load("http://219.239.221.19" + fireInfo.getiRImageAddress()).placeholder(R.drawable.ic_jaizai).into(huodianTwoImage);
-                                    final FireInfo finalFireInfo6 = fireInfo;
-                                    RxViewAction.clickNoDouble(huodianTwoImage).subscribe(new Action1<Void>() {
-                                        @Override
-                                        public void call(Void aVoid) {
-                                            Log.e(TAG, "call: bingo 图片"  );
-                                            Log.e(TAG, "call: bingo 图片"  );
-                                            Intent intent = new Intent(MainActivity.this, PicActivity.class);
-                                            intent.putExtra("pic", "http://219.239.221.19" + finalFireInfo6.getiRImageAddress());
-                                            startActivity(intent);
-                                        }
-                                    });
-                                }else {
-                                    Glide.with(getApplicationContext()
-                                    ).load("http://web.ehaohai.com:2018" + fireInfo.getiRImageAddress()).placeholder(R.drawable.ic_jaizai).into(huodianTwoImage);
-                                    final FireInfo finalFireInfo3 = fireInfo;
-                                    RxViewAction.clickNoDouble(huodianTwoImage).subscribe(new Action1<Void>() {
-                                        @Override
-                                        public void call(Void aVoid) {
-                                            Log.e(TAG, "call: bingo 图片"  );
-                                            Log.e(TAG, "call: bingo 图片"  );
-                                            Intent intent = new Intent(MainActivity.this, PicActivity.class);
-                                            intent.putExtra("pic", "http://web.ehaohai.com:2018" + finalFireInfo3.getiRImageAddress());
-                                            startActivity(intent);
-                                        }
-                                    });
-                                }
-                            }
-                        }
-                    }catch (Exception e){
-
-                    }
-
-
-
-
-                    fireDialog.show();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-            }
-
-            @Override
-            public void onError(Throwable ex, boolean isOnCallback) {
-
-            }
-
-            @Override
-            public void onCancelled(CancelledException cex) {
-
-            }
-
-            @Override
-            public void onFinished() {
-
-            }
-        });
-    }
 
 
     private Dialog mapChooseDialog;
@@ -732,8 +528,12 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
     private ImageView weixingNPPImage;
     private LinearLayout weixingHima8Layout;
     private ImageView weixingHima8Image;
+    private LinearLayout weixingNOAA18Layout;
+    private ImageView weixingNOAA18Image;
     private LinearLayout weixingNOAA19Layout;
+    private LinearLayout weixingNOAA15Layout;
     private LinearLayout weixingNOAA20Layout;
+    private LinearLayout weixingMODISLayout;
     private LinearLayout weixingGK2aLayout;
     private ImageView weixingNOAA19Image;
     public boolean weixingAllChoose = true;
@@ -741,8 +541,11 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
     public boolean weixingFY4Choose = true;
     public boolean weixingFY3Choose = true;
     public boolean weixingHIMA8Choose = true;
+    public boolean weixingNOAA18Choose = true;
     public boolean weixingNOAA19Choose = true;
+    public boolean weixingNOAA15Choose = true;
     public boolean weixingNOAA20Choose = true;
+    public boolean weixingMODISChoose = true;
     public boolean weixingGK2aChoose = true;
     private LinearLayout tiankongAllLayout;
     private ImageView tiankongAllImage;
@@ -806,9 +609,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
     public List<Area> shengList;
     public List<String> shengStrList;
     public List<Area> shiList;
-    public List<Area> quList;
     public List<String> shiStrList;
-    public List<String> quStrList;
     private WheelView areaWy;
     public String companyName = "";
     public String provinceNo = "";
@@ -821,10 +622,8 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
     public int currentChooseArea = 0;  //当前在选择省还是市   0选择省  1选择市
     public String currentChooseSheng = "";
     public String currentChooseShi = "";
-    public String currentChooseQu = "";
     public int shengSelectIndex = 0;
     public int shiSelectIndex = 0;
-    public int quSelectIndex = 0;
     public boolean isChooseSheng = false;
     private LinearLayout jingwanLayout;
     private ImageView jingwaiImage;
@@ -845,8 +644,11 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
     private TextView weixingFY4Text;
     private TextView weixingNppText;
     private TextView weixingHima8Text;
+    private TextView weixingNoaa18Text;
     private TextView weixingNOAA19Te;
+    private TextView weixingNOAA15Te;
     private TextView weixingNOAA20Te;
+    private TextView weixingMODISTe;
     private TextView weixingGK2aTe;
     private TextView tiankongAllText;
     private TextView tiankongWurenjiText;
@@ -944,6 +746,12 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        User user = new DbConfig(this).getUser();
+        if (user == null || user.getIsLogin().equals("0")) {
+            //startActivity(new Intent(this, LoginActivity.class));
+            finish();
+            return;
+        }
         /**
          * 开始用户轨迹更新服务
          */
@@ -952,18 +760,13 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         Intent intent = getIntent();
         bundle = intent.getExtras();
         // token = bundle.getString("token");
-        token = new DbConfig(this).getUser().getToken();
+        token = user.getToken();
         startType = bundle.getString("START_TYPE");
 
         Log.e(TAG, "jpush" + startType );
-        User user = new DbConfig(this).getUser();
         if (user!=null){
             String username = user.getUsername();
             Log.e(TAG, "onCreate: username=======" + username);
-        }
-        if (user.getIsLogin().equals("0")) {
-            startActivity(new Intent(this, LoginActivity.class));
-            finish();
         }
 
         gaojiFindDialog = new ProgressDialog(this);
@@ -973,10 +776,8 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         fireInfoList = new ArrayList<>();
         shengList = new ArrayList<>();
         shiList = new ArrayList<>();
-        quList = new ArrayList<>();
         shengStrList = new ArrayList<>();
         shiStrList = new ArrayList<>();
-        quStrList = new ArrayList<>();
         currentFire = new FireInfo();
         groundFireList = new ArrayList<>();
         groundNewFireList = new ArrayList<>();
@@ -1174,9 +975,10 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         Log.e(TAG, "onRestart: ---");
         hasActivity = true;
         User user = new DbConfig(this).getUser();
-        if (user.getIsLogin().equals("0")) {
-            startActivity(new Intent(this, LoginActivity.class));
+        if (user == null || user.getIsLogin().equals("0")) {
+//            startActivity(new Intent(this, LoginActivity.class));
             finish();
+            return;
         }
         boolean isJpush = user.isJpush();
         if (isJpush){     //极光推送打开app   根据火警id查出火警详情 判断火警发生时间距现在时间的小时  查询出时间内的所有火警展示  缩放到当前火警
@@ -1757,7 +1559,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                .subscribe(new Action1<Void>() {
                    @Override
                    public void call(Void aVoid) {
-                       currentFireFindTime = 3;
+                       currentFireFindTime = 1;
                        showDialogProgress(gaojiFindDialog,"查询中...");
                        Setting setting = new DbConfig(getApplicationContext()).getSetting();
                        dWebView.callHandler("huodian", new Object[]{1,setting.getWeixing(),setting.getTiankong(),setting.getDimian(),setting.getDimao(),setting.getNumber(),setting.getJingwai(),setting.getHuanchong().equals("0")?false:true},new OnReturnValue<String>() {
@@ -1941,17 +1743,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             public void onRefresh(RefreshLayout refreshlayout) {
                 refreshlayout.finishRefresh(2000);
                 //bingo did
-                Setting setting = new DbConfig(getApplicationContext()).getSetting();
-                dWebView.callHandler("huodian", new Object[]{currentFireFindTime,setting.getWeixing(),setting.getTiankong(),setting.getDimian(),setting.getDimao(),setting.getNumber(),setting.getJingwai(),setting.getHuanchong().equals("0")?false:true},new OnReturnValue<String>() {
-                    @Override
-                    public void onValue(String retValue) {
-                        searchDialog.hide();
-                        isJush = false;
-                        isopenFireDialog = true;
-                        getFireFromService(currentFireFindTime);
-
-                    }
-                });
+                getFireFromService(currentFireFindTime);
             }
         });
         refreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
@@ -1963,17 +1755,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                 if(isGaoji){
                     findFirePost();
                 }else{
-                    Setting setting = new DbConfig(getApplicationContext()).getSetting();
-                    dWebView.callHandler("huodian_more", new Object[]{currentFireFindTime,setting.getWeixing(),setting.getTiankong(),setting.getDimian(),setting.getDimao(),page,setting.getNumber(),setting.getJingwai(),setting.getHuanchong().equals("0")?false:true},new OnReturnValue<String>() {
-                        @Override
-                        public void onValue(String retValue) {
-                            searchDialog.hide();
-                            isJush = false;
-                            isopenFireDialog = true;
-                            getFireFromService(currentFireFindTime);
-
-                        }
-                    });
+                    getFireFromService(currentFireFindTime);
                 }
             }
         });
@@ -2024,7 +1806,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         WindowManager wmGaoji = (WindowManager) this
                 .getSystemService(Context.WINDOW_SERVICE);
         int heightGaoji = wmGaoji.getDefaultDisplay().getHeight();
-        gaojiLp.height = (int) (heightGaoji * 0.8);
+        gaojiLp.height = (int) (heightGaoji * 0.88);
         gaojiDialogWindow.setAttributes(gaojiLp);
         gaojiDialog.setCanceledOnTouchOutside(true);
 
@@ -2469,7 +2251,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                         });
                        /* dWebView.callHandler("huodian_jpush", new Object[]{120},new OnReturnValue<String>() {
                             @Override
-                            public void onValue(String retValue) {x
+                            public void onValue(String retValue) {
                                 searchDialog.hide();
                                 Toast.makeText(MainActivity.this, "已显示5天之内的火点信息", Toast.LENGTH_SHORT).show();
                                 isopenFireDialog = true;
@@ -2926,9 +2708,9 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 if (isChooseStarTime){
-                    gaojiStartimeText.append("  " + parseNumber(chooseHour) + ":" + parseNumber(chooseMinute));
+                    gaojiStartimeText.append("  " + chooseHour + ":" + chooseMinute);
                 }else {
-                    gaojiEndTimeText.append("  " + parseNumber(chooseHour) + ":" + parseNumber(chooseMinute));
+                    gaojiEndTimeText.append("  " + chooseHour + ":" + chooseMinute);
                 }
                 dialog.dismiss();
             }
@@ -2945,7 +2727,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         View dialogView = View.inflate(this, R.layout.dialog_time, null);
         final TimePicker timePicker = (TimePicker) dialogView.findViewById(R.id.timepicker);
         Calendar date = Calendar.getInstance();
-        int hour = date.get(Calendar.HOUR_OF_DAY);
+        int hour = date.get(Calendar.HOUR);
         int minute = date.get(Calendar.MINUTE);
       /*  String endData = year1 - 10 + "-" + month1 + "-" + day1;
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -2995,17 +2777,9 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);
         day = calendar.get(Calendar.DAY_OF_MONTH);
-        chooseHour = calendar.get(Calendar.HOUR_OF_DAY);
+        chooseHour = calendar.get(Calendar.HOUR);
         chooseMinute = calendar.get(Calendar.MINUTE);
 
-    }
-
-    private String parseNumber(int number){
-        if(number > 9){
-            return ""+number;
-        }else{
-            return "0"+number;
-        }
     }
 
 
@@ -3051,12 +2825,18 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         weixingHima8Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_himawar8_layout));
      //   weixingHima8Image = ((ImageView) gaojiInflater.findViewById(R.id.weixing_himawar8_image));
         weixingHima8Text = ((TextView) gaojiInflater.findViewById(R.id.weixing_himawar8_text));
+        weixingNOAA18Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_noaa18_layout));
+      //  weixingNOAA18Image = ((ImageView) gaojiInflater.findViewById(R.id.weixing_noaa18_image));
+        weixingNoaa18Text = ((TextView) gaojiInflater.findViewById(R.id.weixing_noaa18_text));
         weixingNOAA19Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_noaa19_layout));
-        weixingNOAA20Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_noaa20_layout));
-        weixingGK2aLayout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_gk2a_layout));
-     //   weixingNOAA19Image = ((ImageView) gaojiInflater.findViewById(R.id.weixing_noaa19_image));
         weixingNOAA19Te = ((TextView) gaojiInflater.findViewById(R.id.weixing_noaa19_text));
+        weixingNOAA15Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_noaa15_layout));
+        weixingNOAA15Te = ((TextView) gaojiInflater.findViewById(R.id.weixing_noaa15_text));
+        weixingNOAA20Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_noaa20_layout));
         weixingNOAA20Te = ((TextView) gaojiInflater.findViewById(R.id.weixing_noaa20_text));
+        weixingMODISLayout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_modis_layout));
+        weixingMODISTe = ((TextView) gaojiInflater.findViewById(R.id.weixing_modis_text));
+        weixingGK2aLayout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_gk2a_layout));
         weixingGK2aTe = ((TextView) gaojiInflater.findViewById(R.id.weixing_gk2a_text));
 
         //天空监测
@@ -3159,6 +2939,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                         weixingFY4Image.setImageResource(R.drawable.choose);
                         weixingFY3Image.setImageResource(R.drawable.choose);
                         weixingHima8Image.setImageResource(R.drawable.choose);
+                        weixingNOAA18Image.setImageResource(R.drawable.choose);
                         weixingNOAA19Image.setImageResource(R.drawable.choose);*/
                         weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
                         weixingAllText.setTextColor(getResources().getColor(R.color.c12));
@@ -3170,10 +2951,16 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                         weixingFY3Text.setTextColor(getResources().getColor(R.color.c12));
                         weixingHima8Text.setBackgroundResource(R.drawable.bg_text_lan);
                         weixingHima8Text.setTextColor(getResources().getColor(R.color.c12));
+                        weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_lan);
+                        weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c12));
                         weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_lan);
                         weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c12));
+                        weixingNOAA15Te.setBackgroundResource(R.drawable.bg_text_lan);
+                        weixingNOAA15Te.setTextColor(getResources().getColor(R.color.c12));
                         weixingNOAA20Te.setBackgroundResource(R.drawable.bg_text_lan);
                         weixingNOAA20Te.setTextColor(getResources().getColor(R.color.c12));
+                        weixingMODISTe.setBackgroundResource(R.drawable.bg_text_lan);
+                        weixingMODISTe.setTextColor(getResources().getColor(R.color.c12));
                         weixingGK2aTe.setBackgroundResource(R.drawable.bg_text_lan);
                         weixingGK2aTe.setTextColor(getResources().getColor(R.color.c12));
 
@@ -3183,8 +2970,11 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                         weixingFY4Choose = true;
                         weixingHIMA8Choose = true;
                         weixingNOAA19Choose = true;
+                        weixingNOAA15Choose = true;
                         weixingNOAA20Choose = true;
+                        weixingMODISChoose = true;
                         weixingGK2aChoose = true;
+                        weixingNOAA18Choose = true;
 
                         //天空初始化
                        // tiankongAllImage.setImageResource(R.drawable.choose_no);
@@ -3254,10 +3044,8 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                         //区域重置
                         currentChooseSheng = "";
                         currentChooseShi = "";
-                        currentChooseQu = "";
                         shengSelectIndex = 0;
                         shiSelectIndex = 0;
-                        quSelectIndex = 0;
                         isChooseSheng = false;
                         shengText.setText("请选择省");
                         shiText.setText("请选择市");
@@ -3277,36 +3065,6 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
 
 
 
-        provinceNo = new DbConfig(getApplicationContext()).getUser().getProvinceNo();
-        cityNo = new DbConfig(getApplicationContext()).getUser().getCityNo();
-        if (provinceNo.equals("null")){  //全国权限  0
-            currentQuanxian = 0;
-            //   getAllAre();
-        } else {
-            if (!cityNo.equals("null")){     //市权限  2
-                currentQuanxian = 2;
-            }else {         //省权限1
-                currentQuanxian = 1;
-            }
-        }
-
-        //全国省市账号权限默认值匹配
-        if(currentQuanxian == 0){
-            //全国账号
-        }
-        if(currentQuanxian == 1){
-            //省账号
-            shengText.setText(new DbConfig(getApplicationContext()).getUser().getProvinceName());
-            shengText.setTextColor(getResources().getColor(R.color.c3));
-        }
-        if(currentQuanxian == 2){
-            //市账号
-            shengText.setText(new DbConfig(getApplicationContext()).getUser().getProvinceName());
-            shiText.setText(new DbConfig(getApplicationContext()).getUser().getCityName());
-            shiText.setTextColor(getResources().getColor(R.color.c3));
-        }
-
-
         /**
          * 省市的点击
          */
@@ -3314,17 +3072,14 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                 .subscribe(new Action1<Void>() {
                     @Override
                     public void call(Void aVoid) {
-                        if(currentQuanxian ==0){
-                            currentChooseArea = 0;
-                            getAllAre();
-                        }
+                        currentChooseArea = 0;
+                        getAllAre();
                     }
                 });
         RxViewAction.clickNoDouble(shiText)
                 .subscribe(new Action1<Void>() {
                     @Override
                     public void call(Void aVoid) {
-                        if(currentQuanxian ==0 || currentQuanxian == 1){
                         Log.e(TAG, "call: shi");
                         currentChooseArea = 1;
                         String id = "";
@@ -3344,38 +3099,9 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                         }else {
                             getShengAre(new DbConfig(getApplicationContext()).getUser().getProvinceNo());
                         }
-                        }
 
                     }
                 });
-        RxViewAction.clickNoDouble(quText)
-                .subscribe(new Action1<Void>() {
-                    @Override
-                    public void call(Void aVoid) {
-                        Log.e(TAG, "call: qu");
-                        currentChooseArea = 2;
-                        String id = "";
-                        if (currentQuanxian == 0 || currentQuanxian == 1){
-                            Log.e(TAG, "call: +  id ==" +shiText.getText().toString());
-                            if (shiText.getText().toString().equals("请选择市")){
-                                Toast.makeText(MainActivity.this, "请先选择市", Toast.LENGTH_SHORT).show();
-                            }else {
-                                for (int i = 0; i < shiList.size(); i++) {
-                                    if (shiList.get(i).getName().equals(currentChooseShi)) {
-                                        id = shiList.get(i).getId();
-                                    }
-
-                                }
-                                Log.e(TAG, "call: +  id ==" +id);
-                                getShiAre(id);
-                            }
-                        }else {
-                            getShiAre(new DbConfig(getApplicationContext()).getUser().getCityNo());
-                        }
-
-                    }
-                });
-
 
         /**
          * 时间点击
@@ -3858,13 +3584,17 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             weixingFY4Choose = false;
                             weixingHIMA8Choose = false;
                             weixingNOAA19Choose = false;
+                            weixingNOAA18Choose = false;
+                            weixingNOAA15Choose = false;
                             weixingNOAA20Choose = false;
+                            weixingMODISChoose = false;
                             weixingGK2aChoose = false;
 /*                            weixingAllImage.setImageResource(R.drawable.choose_no);
                             weixingNPPImage.setImageResource(R.drawable.choose_no);
                             weixingFY3Image.setImageResource(R.drawable.choose_no);
                             weixingFY4Image.setImageResource(R.drawable.choose_no);
                             weixingHima8Image.setImageResource(R.drawable.choose_no);
+                            weixingNOAA18Image.setImageResource(R.drawable.choose_no);
                             weixingNOAA19Image.setImageResource(R.drawable.choose_no);*/
                             weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingAllText.setTextColor(getResources().getColor(R.color.c6));
@@ -3876,10 +3606,16 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             weixingFY3Text.setTextColor(getResources().getColor(R.color.c6));
                             weixingHima8Text.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingHima8Text.setTextColor(getResources().getColor(R.color.c6));
+                            weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c6));
                             weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c6));
+                            weixingNOAA15Te.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingNOAA15Te.setTextColor(getResources().getColor(R.color.c6));
                             weixingNOAA20Te.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingNOAA20Te.setTextColor(getResources().getColor(R.color.c6));
+                            weixingMODISTe.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingMODISTe.setTextColor(getResources().getColor(R.color.c6));
                             weixingGK2aTe.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingGK2aTe.setTextColor(getResources().getColor(R.color.c6));
 
@@ -3890,13 +3626,17 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             weixingFY4Choose = true;
                             weixingHIMA8Choose = true;
                             weixingNOAA19Choose = true;
+                            weixingNOAA18Choose = true;
+                            weixingNOAA15Choose = true;
                             weixingNOAA20Choose = true;
+                            weixingMODISChoose = true;
                             weixingGK2aChoose = true;
                          /*   weixingAllImage.setImageResource(R.drawable.choose);
                             weixingNPPImage.setImageResource(R.drawable.choose);
                             weixingFY3Image.setImageResource(R.drawable.choose);
                             weixingFY4Image.setImageResource(R.drawable.choose);
                             weixingHima8Image.setImageResource(R.drawable.choose);
+                            weixingNOAA18Image.setImageResource(R.drawable.choose);
                             weixingNOAA19Image.setImageResource(R.drawable.choose);*/
                             weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingAllText.setTextColor(getResources().getColor(R.color.c12));
@@ -3908,10 +3648,16 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             weixingFY3Text.setTextColor(getResources().getColor(R.color.c12));
                             weixingHima8Text.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingHima8Text.setTextColor(getResources().getColor(R.color.c12));
+                            weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c12));
                             weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c12));
+                            weixingNOAA15Te.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingNOAA15Te.setTextColor(getResources().getColor(R.color.c12));
                             weixingNOAA20Te.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingNOAA20Te.setTextColor(getResources().getColor(R.color.c12));
+                            weixingMODISTe.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingMODISTe.setTextColor(getResources().getColor(R.color.c12));
                             weixingGK2aTe.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingGK2aTe.setTextColor(getResources().getColor(R.color.c12));
                         }
@@ -3928,7 +3674,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             weixingNppText.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingNppText.setTextColor(getResources().getColor(R.color.c6));
                             if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingGK2aChoose){   //判断全部未选中
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose || !weixingNOAA15Choose || !weixingNOAA20Choose || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
                                 weixingAllChoose = false;
                               //  weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -3939,7 +3685,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                       //      weixingNPPImage.setImageResource(R.drawable.choose);
                             weixingNppText.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingNppText.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA19Choose && weixingNOAA20Choose && weixingGK2aChoose){
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose && weixingNOAA15Choose && weixingNOAA20Choose && weixingMODISChoose && weixingGK2aChoose){
                                 weixingAllChoose = true;
                            //     weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -3959,7 +3705,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             weixingFY3Text.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingFY3Text.setTextColor(getResources().getColor(R.color.c6));
                             if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA19Choose|| !weixingNOAA20Choose|| !weixingGK2aChoose){   //判断全部未选中
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose || !weixingNOAA15Choose || !weixingNOAA20Choose || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
                                 weixingAllChoose = false;
                              //   weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -3970,7 +3716,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                            // weixingFY3Image.setImageResource(R.drawable.choose);
                             weixingFY3Text.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingFY3Text.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA19Choose && weixingNOAA20Choose && weixingGK2aChoose){
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose && weixingNOAA15Choose && weixingNOAA20Choose && weixingMODISChoose && weixingGK2aChoose){
                                 weixingAllChoose = true;
                         //        weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -3990,7 +3736,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             weixingFY4Text.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingFY4Text.setTextColor(getResources().getColor(R.color.c6));
                             if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA19Choose|| !weixingNOAA20Choose|| !weixingGK2aChoose){   //判断全部未选中
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose || !weixingNOAA15Choose || !weixingNOAA20Choose || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
                                 weixingAllChoose = false;
                                // weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -4001,7 +3747,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                         //    weixingFY4Image.setImageResource(R.drawable.choose);
                             weixingFY4Text.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingFY4Text.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA19Choose && weixingNOAA20Choose && weixingGK2aChoose){
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose && weixingNOAA15Choose && weixingNOAA20Choose && weixingMODISChoose && weixingGK2aChoose){
                                 weixingAllChoose = true;
                                // weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -4021,7 +3767,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             weixingHima8Text.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingHima8Text.setTextColor(getResources().getColor(R.color.c6));
                             if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingGK2aChoose){   //判断全部未选中
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose || !weixingNOAA15Choose || !weixingNOAA20Choose || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
                                 weixingAllChoose = false;
                              //   weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -4032,7 +3778,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                       //      weixingHima8Image.setImageResource(R.drawable.choose);
                             weixingHima8Text.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingHima8Text.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA19Choose && weixingNOAA20Choose && weixingGK2aChoose){
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose && weixingNOAA15Choose && weixingNOAA20Choose && weixingMODISChoose && weixingGK2aChoose){
                                 weixingAllChoose = true;
                              //   weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -4042,6 +3788,36 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     }
                 });
 
+        RxViewAction.clickNoDouble(weixingNOAA18Layout)
+                .subscribe(new Action1<Void>() {
+                    @Override
+                    public void call(Void aVoid) {
+                        if (weixingNOAA18Choose){  //从已选中变为未选中
+                            weixingNOAA18Choose = false;
+                       //     weixingNOAA18Image.setImageResource(R.drawable.choose_no);
+                            weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c6));
+                            if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose || !weixingNOAA15Choose || !weixingNOAA20Choose || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
+                                weixingAllChoose = false;
+                         //       weixingAllImage.setImageResource(R.drawable.choose_no);
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c6));
+                            }
+                        }else {
+                            weixingNOAA18Choose = true;
+                         //   weixingNOAA18Image.setImageResource(R.drawable.choose);
+                            weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c12));
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose && weixingNOAA15Choose && weixingNOAA20Choose && weixingMODISChoose && weixingGK2aChoose){
+                                weixingAllChoose = true;
+                          //      weixingAllImage.setImageResource(R.drawable.choose);
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c12));
+                            }
+                        }
+                    }
+                });
 
         RxViewAction.clickNoDouble(weixingNOAA19Layout)
                 .subscribe(new Action1<Void>() {
@@ -4053,7 +3829,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c6));
                             if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingGK2aChoose){   //判断全部未选中
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose || !weixingNOAA15Choose || !weixingNOAA20Choose || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
                                 weixingAllChoose = false;
                              //   weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -4064,7 +3840,37 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                         //    weixingNOAA19Image.setImageResource(R.drawable.choose);
                             weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA19Choose && weixingNOAA20Choose && weixingGK2aChoose){
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose && weixingNOAA15Choose && weixingNOAA20Choose && weixingMODISChoose && weixingGK2aChoose){
+                                weixingAllChoose = true;
+                     //           weixingAllImage.setImageResource(R.drawable.choose);
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c12));
+                            }
+                        }
+                    }
+                });
+        RxViewAction.clickNoDouble(weixingNOAA15Layout)
+                .subscribe(new Action1<Void>() {
+                    @Override
+                    public void call(Void aVoid) {
+                        if (weixingNOAA15Choose){  //从已选中变为未选中
+                            weixingNOAA15Choose = false;
+                      //      weixingNOAA15Image.setImageResource(R.drawable.choose_no);
+                            weixingNOAA15Te.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingNOAA15Te.setTextColor(getResources().getColor(R.color.c6));
+                            if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose || !weixingNOAA15Choose || !weixingNOAA20Choose || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
+                                weixingAllChoose = false;
+                             //   weixingAllImage.setImageResource(R.drawable.choose_no);
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c6));
+                            }
+                        }else {     //从未选中变为已选中
+                            weixingNOAA15Choose = true;
+                        //    weixingNOAA15Image.setImageResource(R.drawable.choose);
+                            weixingNOAA15Te.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingNOAA15Te.setTextColor(getResources().getColor(R.color.c12));
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose && weixingNOAA15Choose && weixingNOAA20Choose && weixingMODISChoose && weixingGK2aChoose){
                                 weixingAllChoose = true;
                      //           weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -4079,11 +3885,11 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     public void call(Void aVoid) {
                         if (weixingNOAA20Choose){  //从已选中变为未选中
                             weixingNOAA20Choose = false;
-                      //      weixingNOAA19Image.setImageResource(R.drawable.choose_no);
+                      //      weixingNOAA20Image.setImageResource(R.drawable.choose_no);
                             weixingNOAA20Te.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingNOAA20Te.setTextColor(getResources().getColor(R.color.c6));
                             if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingGK2aChoose){   //判断全部未选中
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose || !weixingNOAA15Choose || !weixingNOAA20Choose || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
                                 weixingAllChoose = false;
                              //   weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -4091,10 +3897,40 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             }
                         }else {     //从未选中变为已选中
                             weixingNOAA20Choose = true;
-                        //    weixingNOAA19Image.setImageResource(R.drawable.choose);
+                        //    weixingNOAA20Image.setImageResource(R.drawable.choose);
                             weixingNOAA20Te.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingNOAA20Te.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA19Choose && weixingNOAA20Choose && weixingGK2aChoose){
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose && weixingNOAA15Choose && weixingNOAA20Choose && weixingMODISChoose && weixingGK2aChoose){
+                                weixingAllChoose = true;
+                     //           weixingAllImage.setImageResource(R.drawable.choose);
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c12));
+                            }
+                        }
+                    }
+                });
+        RxViewAction.clickNoDouble(weixingMODISLayout)
+                .subscribe(new Action1<Void>() {
+                    @Override
+                    public void call(Void aVoid) {
+                        if (weixingMODISChoose){  //从已选中变为未选中
+                            weixingMODISChoose = false;
+                      //      weixingMODISImage.setImageResource(R.drawable.choose_no);
+                            weixingMODISTe.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingMODISTe.setTextColor(getResources().getColor(R.color.c6));
+                            if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose || !weixingNOAA15Choose || !weixingNOAA20Choose || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
+                                weixingAllChoose = false;
+                             //   weixingAllImage.setImageResource(R.drawable.choose_no);
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c6));
+                            }
+                        }else {     //从未选中变为已选中
+                            weixingMODISChoose = true;
+                        //    weixingMODISImage.setImageResource(R.drawable.choose);
+                            weixingMODISTe.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingMODISTe.setTextColor(getResources().getColor(R.color.c12));
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose && weixingNOAA15Choose && weixingNOAA20Choose && weixingMODISChoose && weixingGK2aChoose){
                                 weixingAllChoose = true;
                      //           weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -4109,11 +3945,11 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     public void call(Void aVoid) {
                         if (weixingGK2aChoose){  //从已选中变为未选中
                             weixingGK2aChoose = false;
-                      //      weixingNOAA19Image.setImageResource(R.drawable.choose_no);
+                      //      weixingGK2aImage.setImageResource(R.drawable.choose_no);
                             weixingGK2aTe.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingGK2aTe.setTextColor(getResources().getColor(R.color.c6));
                             if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingGK2aChoose){   //判断全部未选中
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose || !weixingNOAA15Choose || !weixingNOAA20Choose || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
                                 weixingAllChoose = false;
                              //   weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -4121,10 +3957,10 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             }
                         }else {     //从未选中变为已选中
                             weixingGK2aChoose = true;
-                        //    weixingNOAA19Image.setImageResource(R.drawable.choose);
+                        //    weixingGK2aImage.setImageResource(R.drawable.choose);
                             weixingGK2aTe.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingGK2aTe.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA19Choose && weixingNOAA20Choose && weixingGK2aChoose){
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose && weixingNOAA15Choose && weixingNOAA20Choose && weixingMODISChoose && weixingGK2aChoose){
                                 weixingAllChoose = true;
                      //           weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -4163,18 +3999,27 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                 satellite = satellite + ",FY-3";
             }
             if (weixingHIMA8Choose){
-                satellite = satellite + ",Himawari-9";
+                satellite = satellite + ",Himawari-8";
+            }
+            if (weixingNOAA18Choose){
+                satellite = satellite + ",NOAA-18";
             }
             if (weixingNOAA19Choose){
                 satellite = satellite + ",NOAA-19";
             }
+            if (weixingNOAA15Choose){
+                satellite = satellite + ",NOAA-15";
+            }
             if (weixingNOAA20Choose){
                 satellite = satellite + ",NOAA-20";
             }
-            if (weixingGK2aChoose){
-                satellite = satellite + ",GK2a";
+            if (weixingMODISChoose){
+                satellite = satellite + ",MODIS";
             }
-            if (weixingNPPChoose || weixingFY3Choose || weixingFY4Choose || weixingHIMA8Choose || weixingNOAA19Choose || weixingNOAA20Choose || weixingGK2aChoose){
+            if (weixingGK2aChoose){
+                satellite = satellite + ",Gk2a";
+            }
+            if (weixingNPPChoose || weixingFY3Choose || weixingFY4Choose || weixingHIMA8Choose || weixingNOAA18Choose || weixingNOAA19Choose || weixingNOAA15Choose || weixingNOAA20Choose || weixingMODISChoose || weixingGK2aChoose){
                 satellite = satellite.substring(1,satellite.length());
             }
 
@@ -4224,36 +4069,20 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             dimaoStr = "ALL";
         }else {
             if (dimaoLindiChoose){
-                if(dimaoStr.isEmpty()){
-                    dimaoStr = dimaoStr + "Woodland";
-                }else{
-                    dimaoStr = dimaoStr + ",Woodland";
-                }
+                dimaoStr = dimaoStr + ",Woodland";
             }
             if (dimaoCaodiChoose){
-                if(dimaoStr.isEmpty()){
-                    dimaoStr = dimaoStr + "Grassland";
-                }else{
-                    dimaoStr = dimaoStr + ",Grassland";
-                }
+                dimaoStr = dimaoStr + ",Grassland";
             }
             if (dimaoNongtianChoose){
-                if(dimaoStr.isEmpty()){
-                    dimaoStr = dimaoStr + "Farmland";
-                }else{
-                    dimaoStr = dimaoStr + ",Farmland";
-                }
+                dimaoStr = dimaoStr + ",Farmland";
             }
             if (dimaoQitaChoose){
-                if(dimaoStr.isEmpty()){
-                    dimaoStr = dimaoStr + "Otherland";
-                }else{
-                    dimaoStr = dimaoStr + ",Otherland";
-                }
+                dimaoStr = dimaoStr + ",Otherland";
             }
-//            if (dimaoLindiChoose || dimaoCaodiChoose || dimaoNongtianChoose || dimaoQitaChoose){
-//                dimaoStr =  dimaoStr.substring(1,dimaoStr.length());
-//            }
+            if (dimaoLindiChoose || dimaoCaodiChoose || dimaoNongtianChoose || dimaoQitaChoose){
+                dimaoStr =  dimaoStr.substring(1,dimaoStr.length());
+            }
 
         }
 
@@ -4270,7 +4099,6 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         //区域
         String shengId = "";
         String shiId = "";
-        String quId = "";
         if (isChooseSheng){
 
             for (int i = 0; i < shengList.size(); i++) {
@@ -4286,47 +4114,27 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                 }
             }
         }
-        if (!quText.getText().equals("请选择区")){
-            for (int i = 0; i < quList.size(); i++) {
-                if (quList.get(i).getName().equals(quText.getText().toString())) {
-                    quId = quList.get(i).getId();
-                }
-            }
-        }
 
 
-        Setting setting = new DbConfig(this).getSetting();
         showDialogProgress(gaojiFindDialog,"正在查询中..");
-        if(isLoadMore){
-            dWebView.callHandler("huodian_gaoji_more", new Object[]{startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,page,setting.getNumber(),isChooseHuanchong,isCountry,shengId,shiId,quId},new OnReturnValue<String>() {
-                @Override
-                public void onValue(String retValue) {
-                    //searchDialog.hide();
-                    // Toast.makeText(MainActivity.this, "已显示查询的火点信息", Toast.LENGTH_SHORT).show();
-                    // getFireFromService(120);
-                    //     fireInfoListDialog.show();
-                }
-            });
-        }else{
-            dWebView.callHandler("huodian_gaoji", new Object[]{startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,setting.getNumber(),isChooseHuanchong,isCountry,shengId,shiId,quId},new OnReturnValue<String>() {
-                @Override
-                public void onValue(String retValue) {
-                    //searchDialog.hide();
-                    // Toast.makeText(MainActivity.this, "已显示查询的火点信息", Toast.LENGTH_SHORT).show();
-                    // getFireFromService(120);
-                    //     fireInfoListDialog.show();
-                }
-            });
-        }
+        dWebView.callHandler("huodian_gaoji", new Object[]{startTimeStr,endTimeStr,satellite,tiankongStr,dimianStr,dimaoStr,isChooseHuanchong,isCountry,shengId,shiId},new OnReturnValue<String>() {
+            @Override
+            public void onValue(String retValue) {
+                //searchDialog.hide();
+               // Toast.makeText(MainActivity.this, "已显示查询的火点信息", Toast.LENGTH_SHORT).show();
+               // getFireFromService(120);
+           //     fireInfoListDialog.show();
+            }
+        });
 
         reloginState = 0;
-        RequestParams params = new RequestParams(RequestUtils.REQUEST_URL + "Satellite/GetListByPutTime");
+        RequestParams params = new RequestParams(RequestUtils.REQUEST_URL + "Satellite/GetList");
         // params.addBodyParameter("reqJson", jsonObject.toString());
 
         params.addParameter("Token",new DbConfig(this).getUser().getToken());
         params.addParameter("page",page);//bingo did
-        params.addParameter("rows",setting.getNumber());
-        params.addParameter("sort","PutStorageTime");
+        params.addParameter("rows",rows);
+        params.addParameter("sort","ObservationDateTime");
         params.addParameter("order","desc");
         params.addParameter("hour",0);
         params.addParameter("startTime",startTimeStr);
@@ -4339,9 +4147,8 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         params.addParameter("Country",isCountry);
         params.addParameter("Province",shengId);
         params.addParameter("City",shiId);
-        params.addParameter("county",quId);
         params.setConnectTimeout(10000);
-        Log.e(TAG, "loginByPassword1: param---gaoji" + params);
+        Log.e(TAG, "findFirePost: huodian " + params );
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -4364,8 +4171,8 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                                 String latitude = fireObj.getString("Latitude");
                                 int observationFrequency = fireObj.getInt("ObservationFrequency");
                                 String observationDateTime = fireObj.getString("ObservationDateTime");
-//                                int strength = fireObj.getInt("Strength");
-//                                int strengthLevel = fireObj.getInt("StrengthLevel");
+                                int strength = fireObj.getInt("Strength");
+                                int strengthLevel = fireObj.getInt("StrengthLevel");
                                 double woodland = fireObj.getDouble("Woodland");
                                 double grassland = fireObj.getDouble("Grassland");
                                 double farmland = fireObj.getDouble("Farmland");
@@ -4390,7 +4197,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                                 String dataSourceFile = fireObj.getString("DataSourceFile");
                                 String fireNo = fireObj.getString("FireNo");
                                 String districtNum = fireObj.getString("DistrictNum");
-                                FireInfo fireInfo = new FireInfo(id,longitude,latitude,observationFrequency,observationDateTime,0,0,woodland,grassland,farmland,otherland,area,credibility,pixelArea,
+                                FireInfo fireInfo = new FireInfo(id,longitude,latitude,observationFrequency,observationDateTime,strength,strengthLevel,woodland,grassland,farmland,otherland,area,credibility,pixelArea,
                                         pixelNumber,country,countryCode,province,provinceCode,city,cityCode,county,countyCode,formattedAddress,visibleLightImageAddress,irImageAddress,satellite,
                                         putStorageTime,dataSourceFile,fireNo,districtNum);
                                 fireInfoList.add(fireInfo);
@@ -4400,7 +4207,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
 
 
                         }
-                        Log.e(TAG, "onSuccess: 火点2 fireInfoList.size() " + fireInfoList.size() );
+                        Log.e(TAG, "onSuccess: 火点2" );
                         gaojiDialog.hide();
                         initFireData();
                     }else {
@@ -4441,10 +4248,8 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         areaWy.setIsLoop(false);
         if (currentChooseArea == 0){
             areaWy.setItems(strList, shengSelectIndex);//init selected position is 0 初始选中位置为0
-        }else if (currentChooseArea == 1){
-            areaWy.setItems(strList, shiSelectIndex);//init selected position is 0 初始选中位置为0
         }else {
-            areaWy.setItems(strList, quSelectIndex);//init selected position is 0 初始选中位置为0
+            areaWy.setItems(strList, shiSelectIndex);//init selected position is 0 初始选中位置为0
         }
 
         areaWy.setOnItemSelectedListener(new WheelView.OnItemSelectedListener() {
@@ -4455,17 +4260,20 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     currentChooseSheng = areaWy.getSelectedItem();
                     shengSelectIndex = areaWy.getSelectedPosition();
                     shengText.setText(currentChooseSheng);
-                }else if (currentChooseArea == 1){
-                    //选择市
+                }else {                          //选择市
                     currentChooseShi = areaWy.getSelectedItem();
                     shiSelectIndex = areaWy.getSelectedPosition();
                     shiText.setText(currentChooseShi);
-                }else {
-                    //选择区
-                    currentChooseQu = areaWy.getSelectedItem();
-                    quSelectIndex = areaWy.getSelectedPosition();
-                    quText.setText(currentChooseQu);
                 }
+                //  currentCity = city.getSelectedPosition();
+               /* currentShengPosition = shengWv.getSelectedPosition();
+                currentSheng = shengWv.getSelectedItem();
+                getShi();
+                ;
+                shiWv.setItems(shiList, currentShiPosition);
+                currentShi = shiWv.getSelectedItem();
+                getXian();
+                xianWv.setItems(xianList, currentXianPosition);*/
             }
         });
         new AlertDialog.Builder(this)
@@ -4598,70 +4406,6 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         });
     }
 
-    private void getShiAre(String id) {
-        RequestParams params = new RequestParams(RequestUtils.REQUEST_URL + "Account/GetAreaListByParentId");
-        // params.addBodyParameter("reqJson", jsonObject.toString());
-        params.addParameter("Token",token);
-        params.addParameter("parentId",id);
-        params.setConnectTimeout(100000);
-        Log.e(TAG, "shi: shi---" + params);
-        x.http().get(params, new Callback.CommonCallback<String>() {
-            @Override
-            public void onSuccess(String result) {
-                Log.e(TAG, "onSuccess:shi----- " + result);
-                try {
-                    quList.clear();
-                    quStrList.clear();
-                    Log.e(TAG, "onSuccess: 1" );
-                    JSONArray jsonArray = new JSONArray(result);
-                    Log.e(TAG, "onSuccess: 2" );
-                    quStrList.add("请选择区");
-                    for (int i = 0; i < jsonArray.length(); i++) {
-
-                        JSONObject area = jsonArray.getJSONObject(i);
-                        String id = area.getString("Id");
-                        String name = area.getString("Name");
-                        String parentId = area.getString("ParentId");
-                        quList.add(new Area(id,name,parentId));
-                        quStrList.add(name);
-                    }
-                    Log.e(TAG, "onSuccess: 3" );
-                    showAreaDialog(quStrList);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-              /*  JSONObject jsonObject = null;
-                try {
-                    jsonObject = new JSONObject(result);
-                    String type = jsonObject.getString("type");
-                    String value = jsonObject.getString("value");
-                    if (type.equals("1")){
-                        String token = jsonObject.getString("message");
-
-                        getUserInfo(token);
-                    }
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }*/
-            }
-
-            @Override
-            public void onError(Throwable ex, boolean isOnCallback) {
-             //   Toast.makeText(MainActivity.this, "网络异常，请检查网络链接14", Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onCancelled(CancelledException cex) {
-
-            }
-
-            @Override
-            public void onFinished() {
-            }
-        });
-    }
-
     /**
      * 注册火警信息item
      */
@@ -4686,16 +4430,16 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         isGaoji = false;
         Log.e(TAG, "jpush5" );
         reloginState = 1;
-        final RequestParams params = new RequestParams(RequestUtils.REQUEST_URL + "Satellite/GetListByPutTime");
+        RequestParams params = new RequestParams(RequestUtils.REQUEST_URL + "Satellite/GetList");
         // params.addBodyParameter("reqJson", jsonObject.toString());
 
         Setting setting = new DbConfig(this).getSetting();
         params.addParameter("Token",new DbConfig(this).getUser().getToken());
         params.addParameter("page",page);//bingo did
-        params.addParameter("rows",setting.getNumber());
+        params.addParameter("rows",rows);
        // params.addParameter("rows",setting.getNumber());
 
-        params.addParameter("sort","PutStorageTime");
+        params.addParameter("sort","ObservationDateTime");
         params.addParameter("order","desc");
         params.addParameter("hour",hours);
         params.addParameter("startTime","");
@@ -4708,7 +4452,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             params.addParameter("satellite",setting.getWeixing());
             params.addParameter("sky",setting.getTiankong());
             params.addParameter("ground",setting.getDimian());
-            params.addParameter("landtype",setting.getDimao());
+            params.addParameter("landtype",setting.getDimian());
             params.addParameter("isbuffer",setting.getHuanchong().equals("0")? false : true);
             params.addParameter("Country",setting.getJingwai());
         }else {
@@ -4734,23 +4478,18 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     total = jsonObject.getString("total");
                     if (!total.equals("0")){
                         JSONArray fireInfoJsonArray = jsonObject.getJSONArray("rows");
-//                        Log.e(TAG, "loginByPassword1: param---Android" + fireInfoJsonArray.length());
 
-//                        Log.e(TAG, "loginByPassword1: param---Android " + "00" + " " + params.toString());
                         for (int i = 0; i < fireInfoJsonArray.length(); i++) {
                             try {
 
                                 JSONObject fireObj = fireInfoJsonArray.getJSONObject(i);
-//                                Log.e(TAG, "loginByPassword1: param---Android " + i + " " + fireObj);
                                 String id = fireObj.getString("Id");
                                 String longitude = fireObj.getString("Longitude");
                                 String latitude = fireObj.getString("Latitude");
                                 int observationFrequency = fireObj.getInt("ObservationFrequency");
                                 String observationDateTime = fireObj.getString("ObservationDateTime");
-//                                int strength = fireObj.getInt("Strength");
-//                                int strengthLevel = fireObj.getInt("StrengthLevel");
-                                int strength = 0;
-                                int strengthLevel = 0;
+                                int strength = fireObj.getInt("Strength");
+                                int strengthLevel = fireObj.getInt("StrengthLevel");
                                 double woodland = fireObj.getDouble("Woodland");
                                 double grassland = fireObj.getDouble("Grassland");
                                 double farmland = fireObj.getDouble("Farmland");
@@ -5018,6 +4757,8 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         xiangyuanmianjiView.setText(currentFire.getPixelArea()+"");
         xiangyuanshuView.setText(currentFire.getPixelNumber()+"");
 
+        Log.e(TAG, "onFireInfoClick:Noaa---- " + currentFire.getVisibleLightImageAddress() );
+        Log.e(TAG, "onFireInfoClick:Noaa---- " + currentFire.getiRImageAddress() );
 
         try {
             if (currentFire.getVisibleLightImageAddress().equals("null")){
@@ -5246,9 +4987,9 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                 items.add(fireInfoList.get(i));
             }
         }
-
-        Log.e(TAG, "initFireData: 火点4");
-        assertAllRegistered(adapter,items);
+        if(!items.isEmpty()){
+            assertAllRegistered(adapter,items);
+        }
         adapter.notifyDataSetChanged();
     }
 
@@ -5324,6 +5065,8 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         xiangyuanmianjiView.setText(fireInfo.getPixelArea()+"");
         xiangyuanshuView.setText(fireInfo.getPixelNumber()+"");
 
+        Log.e(TAG, "onFireInfoClick:Noaa---- " + fireInfo.getVisibleLightImageAddress() );
+        Log.e(TAG, "onFireInfoClick:Noaa---- " + fireInfo.getiRImageAddress() );
 
         if (fireInfo.getVisibleLightImageAddress().equals("null")||fireInfo.getVisibleLightImageAddress().length()==0){
             huodianOneImage.setVisibility(View.GONE);
@@ -5724,12 +5467,30 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         }
     }
 
+    private void cleanTags() {
+        try{
+            String username = new DbConfig(this).getUser().getUsername();
+            if(username!=null && username.equals("山东省应急管理厅")){
+                String[] tags = yingjiTags.split(",");
+                for (int i = 0; i < tags.length; i++) {
+                    XGPushManager.cleanTags(this,tags[i]);
+                }
+            }else{
+                XGPushManager.cleanTags(this,new DbConfig(this).getUser().getPushTag());
+            }
+        }catch (Exception e){
+            Log.e("Exception", "cleanTags");
+        }
+    }
 
     @Override
     protected void onPause() {
         super.onPause();
         DbConfig dbConfig = new DbConfig(this);
         User user = dbConfig.getUser();
+        if(user == null){
+            return;
+        }
         user.setJpush(false);
         user.setJpushStr("");
         DbManager db = dbConfig.getDbManager();
@@ -5794,7 +5555,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         @Override
         public void onReceive(Context context, Intent intent) {
             Log.e(TAG, "onReceive: MainActivity销毁了");
-            MainActivity.this.onDestroy();
+            finish();
         }
     }
     //通过继承 BroadcastReceiver建立动态广播接收器

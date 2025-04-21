@@ -170,14 +170,13 @@ public class LaunchActivity extends HhBaseActivity {
             isHasPermission = false;
             Toast.makeText(this, "请授权相机权限", Toast.LENGTH_SHORT).show();
             finish();
-            finish();
         }
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
             isHasPermission = false;
             Toast.makeText(this, "请授权定位权限", Toast.LENGTH_SHORT).show();
-
+            finish();
         }
     }
 
@@ -204,6 +203,7 @@ public class LaunchActivity extends HhBaseActivity {
             Log.e(TAG, "goHome: 每用户");
             startActivity(new Intent(getApplicationContext(),LoginActivity.class));
         }
+        finish();
     }
 
     //跳转至授权页面

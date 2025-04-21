@@ -37,7 +37,6 @@ import org.xutils.x;
 
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Objects;
 import java.util.Set;
 
 import rx.functions.Action1;
@@ -69,8 +68,11 @@ public class LoginActivity extends HhBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        boolean isLoginOut = getIntent().getBooleanExtra("isLoginOut",false);
+        if(isLoginOut){
+            outLoginDialog("您的账号已在其他设备登录");
+        }
 
-        cleanTags();
         codeDialog = new ProgressDialog(this);
         initView();
     }
@@ -136,7 +138,7 @@ public class LoginActivity extends HhBaseActivity {
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                Log.e(TAG, "onSuccess: Account/Login " + result);
+                Log.e(TAG, "onSuccess: " + result);
                 JSONObject jsonObject = null;
                 try {
                     jsonObject = new JSONObject(result);
@@ -254,17 +256,12 @@ public class LoginActivity extends HhBaseActivity {
                     final String countyName = jsonObject.getString("CountyName");
 
 
-                    //RequestParams requestParams = new RequestParams(RequestUtils.REQUEST_URL + "Account/GetLandTypeRole");
-                    RequestParams requestParams = new RequestParams(RequestUtils.REQUEST_URL + "SatelliteFireAlarmConfig/GetFireAlarmConfigByUser");
+                    RequestParams requestParams = new RequestParams(RequestUtils.REQUEST_URL + "Account/GetLandTypeRole");
                     requestParams.addParameter("token",token);
                     requestParams.addParameter("userId",userId);
-                    Log.e(TAG, "onSuccess: role token " + token  );
-                    Log.e(TAG, "onSuccess: role userId " + userId  );
-                    Log.e(TAG, "onSuccess: role params " + requestParams.toString()  );
                     x.http().get(requestParams, new CommonCallback<String>() {
                         @Override
                         public void onSuccess(String result) {
-                            Log.e(TAG, "onSuccess: role result " + result  );
                             try{
                                 JSONObject obj = new JSONObject(result);
                                 Log.e(TAG, "onSuccess: role " + obj.toString()  );
@@ -276,34 +273,18 @@ public class LoginActivity extends HhBaseActivity {
                                     for (int i = 0; i < yingJiTagList.length; i++) {
                                         tagSet.add(yingJiTagList[i]);
                                     }
-                                    if(obj.getString("LandType") == null || Objects.equals(obj.getString("LandType"), "null") || Objects.equals(obj.getString("LandType"), "ALL")){
+                                    if(obj.getBoolean("FarmLand")){
                                         tagSet.add("Farmland");
+                                    }
+                                    if(obj.getBoolean("WoodLand")){
                                         tagSet.add("Woodland");
+                                    }
+                                    if(obj.getBoolean("GrassLand")){
                                         tagSet.add("Grassland");
+                                    }
+                                    if(obj.getBoolean("OtherLand")){
                                         tagSet.add("Otherland");
-                                    }else{
-                                        if(obj.getString("LandType").contains("Farmland")){
-                                            tagSet.add("Farmland");
-                                        }
-                                        if(obj.getString("LandType").contains("Woodland")){
-                                            tagSet.add("Woodland");
-                                        }
-                                        if(obj.getString("LandType").contains("Grassland")){
-                                            tagSet.add("Grassland");
-                                        }
-                                        if(obj.getString("LandType").contains("Otherland")){
-                                            tagSet.add("Otherland");
-                                        }
                                     }
-                                    if(obj.getString("Delay") == null || Objects.equals(obj.getString("Delay"), "ALL") || Objects.equals(obj.getString("Delay"), "0") || Objects.equals(obj.getString("Delay"), "") || Objects.equals(obj.getString("Delay"), "null")){
-                                        tagSet.add("Delay_ALL");
-                                    }else{
-                                        int delay = Integer.parseInt(obj.getString("Delay"));
-                                        for (int i = 0; i < delay; i++) {
-                                            tagSet.add("Delay_" + i);
-                                        }
-                                    }
-
                                     tagString = tagSet.toString();
                                     XGPushManager.setTags(getApplicationContext(),"setTag",tagSet);
                                     Log.e(TAG, "onSuccess: tagSet " + tagSet.toString() );
@@ -326,35 +307,18 @@ public class LoginActivity extends HhBaseActivity {
                                         tagSet.add(countyNo);
                                         normalTag = countyNo;
                                     }
-                                    if(obj.getString("LandType") == null || Objects.equals(obj.getString("LandType"), "null") || Objects.equals(obj.getString("LandType"), "ALL")){
+                                    if(obj.getBoolean("FarmLand")){
                                         tagSet.add("Farmland");
+                                    }
+                                    if(obj.getBoolean("WoodLand")){
                                         tagSet.add("Woodland");
+                                    }
+                                    if(obj.getBoolean("GrassLand")){
                                         tagSet.add("Grassland");
+                                    }
+                                    if(obj.getBoolean("OtherLand")){
                                         tagSet.add("Otherland");
-                                    }else{
-                                        if(obj.getString("LandType").contains("Farmland")){
-                                            tagSet.add("Farmland");
-                                        }
-                                        if(obj.getString("LandType").contains("Woodland")){
-                                            tagSet.add("Woodland");
-                                        }
-                                        if(obj.getString("LandType").contains("Grassland")){
-                                            tagSet.add("Grassland");
-                                        }
-                                        if(obj.getString("LandType").contains("Otherland")){
-                                            tagSet.add("Otherland");
-                                        }
                                     }
-                                    if(obj.getString("Delay") == null || Objects.equals(obj.getString("Delay"), "ALL") || Objects.equals(obj.getString("Delay"), "0") || Objects.equals(obj.getString("Delay"), "") || Objects.equals(obj.getString("Delay"), "null")){
-                                        tagSet.add("Delay_ALL");
-                                    }else{
-                                        int delay = Integer.parseInt(obj.getString("Delay"));
-                                        for (int i = 0; i < delay; i++) {
-                                            tagSet.add("Delay_" + i);
-                                        }
-                                    }
-
-
                                     tagSet.add("test20230411");
                                     tagString = tagSet.toString();
                                     XGPushManager.setTags(getApplicationContext(),"setTag",tagSet);
@@ -367,12 +331,12 @@ public class LoginActivity extends HhBaseActivity {
                                     @Override
                                     public void onSuccess(Object data, int flag) {
                                         //token在设备卸载重装的时候有可能会变
-                                        Log.d("TPush", "注册成功，设备token为：" + data);
+                                        Log.e("TPush", "注册成功，设备token为：" + data);
                                     }
 
                                     @Override
                                     public void onFail(Object data, int errCode, String msg) {
-                                        Log.d("TPush", "注册失败，错误码：" + errCode + ",错误信息：" + msg);
+                                        Log.e("TPush", "注册失败，错误码：" + errCode + ",错误信息：" + msg);
                                     }
                                 });
 
@@ -413,13 +377,13 @@ public class LoginActivity extends HhBaseActivity {
                                 startActivity(intent);
 
                             }catch(Exception e){
-
+                                Log.e(TAG, "onSuccess: e " + e.toString() );
                             }
                         }
 
                         @Override
                         public void onError(Throwable ex, boolean isOnCallback) {
-                            Log.e(TAG, "onError: error " + ex.toString() );
+
                         }
 
                         @Override
@@ -437,7 +401,6 @@ public class LoginActivity extends HhBaseActivity {
 
 
                 } catch (JSONException e) {
-                    Log.e(TAG, "onSuccess: userMeg=========== error" + e.toString());
                     e.printStackTrace();
                 }
             }
@@ -470,7 +433,7 @@ public class LoginActivity extends HhBaseActivity {
         View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_error, null);
         TextView error_text = (TextView) dialogView.findViewById(R.id.error_text);
         error_text.setText(error);
-        dialog.setTitle("慧眼卫星");
+        dialog.setTitle(getResources().getString(R.string.app_name));
         dialog.setIcon(R.drawable.ic_icon_start);
         dialog.setView(dialogView);
         dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {

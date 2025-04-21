@@ -1,10 +1,13 @@
-﻿var baseUrl="http://web.ehaohai.com:2019";
-//var baseUrl="http://192.168.1.160:2022";//2025
+﻿//var baseUrl="http://web.ehaohai.com:2019";
+//
+//var feedbackUrl="http://web.ehaohai.com:10172
 
-var feedbackUrl="http://web.ehaohai.com:10172";
+var baseUrl="http://www.wxfirealarm.com:2019";
+
+var feedbackUrl="http://www.wxfirealarm.com:2019";
 
 //查询火点接口
-var loginUrl = baseUrl+"/api/Satellite/GetListByPutTime?Token=";
+var loginUrl = baseUrl+"/api/Satellite/GetList?Token=";
 //查询区域边界点接口
 var GetRegionURL = baseUrl+"/api/Satellite/GetRegionPolygon?Token="
 //获取用户信息接口
@@ -163,7 +166,7 @@ var alarmState = 1;//0：关闭 1:开启 2：有火警
 function startInterval() {
     alarmState = 1;
     $("#alartImg").attr('src', "images/alartOn.png");
-    start = setInterval("GetFireInfoInterval(1)", 10000);
+    start = setInterval("GetFireInfoInterval(0.25)", 10000);
 }
 
 
@@ -259,7 +262,6 @@ var QueryParam;
 
 /*获取热点信息*/
 function QueryFireInfo(param) {
-            console.log("loginByPassword1: param---html 00" + JSON.stringify(param));
     $('.warning-num').hide();
     $('.page').hide();
     $('#fireListUl').html("");
@@ -278,13 +280,6 @@ function QueryFireInfo(param) {
             $("#alarmCount").text(data.total);
             ClearMarker(map, sourceMarker);
             if (data.rows.length > 0) {
-//            console.log("loginByPassword1: param---html 0" + JSON.stringify(data.rows[0]));
-//            console.log("loginByPassword1: param---html 1" + JSON.stringify(data.rows[1]));
-//            console.log("loginByPassword1: param---html 2" + JSON.stringify(data.rows[2]));
-//            console.log("loginByPassword1: param---html 3" + JSON.stringify(data.rows[3]));
-//            console.log("loginByPassword1: param---html 4" + JSON.stringify(data.rows[4]));
-//            console.log("loginByPassword1: param---html ", data.rows);
-            console.log("loginByPassword1: param---html" + data.rows.length);
                 $('#DataLoading').hide(10);
                 $('.warning-num').show();
                 $('.page').show();
@@ -300,8 +295,6 @@ function QueryFireInfo(param) {
 
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-            console.log("loginByPassword1: param---html 00error");
-            console.log("loginByPassword1: param---html 00error" + JSON.stringify(errorThrown));
             // reLogin();
            //  alert("QueryFireInfo");
            //  alert(XMLHttpRequest.status);
@@ -318,7 +311,6 @@ function QueryFireInfo(param) {
         }
     });
 }
-
 
 /*获取热点信息*/
 function GetFireInfo(hh, startDate, endDate) {
@@ -868,7 +860,6 @@ function reLogin() {
 
     let password = storage.getItem("pass");
     let url = "http://web.ehaohai.com:2019/api/Account/Login";
-//    let url = "http://192.168.1.160:2022/api/Account/Login";//2025
     let data={ userName: username, password: password };
 
     $.ajax({

@@ -4,7 +4,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.os.Bundle;
-import android.util.ArraySet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,10 +20,6 @@ import com.tencent.android.tpush.XGPushManager;
 
 import org.xutils.DbManager;
 import org.xutils.ex.DbException;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 import static com.hht.hsatellitemobile.ui.activity.LoginActivity.yingjiTags;
 
@@ -82,7 +77,7 @@ public class HhBaseActivity extends BaseActivity {
         View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_error, null);
         TextView error_text = (TextView) dialogView.findViewById(R.id.error_text);
         error_text.setText(error);
-        dialog.setTitle("慧眼卫星");
+        dialog.setTitle(getResources().getString(R.string.app_name));
         dialog.setIcon(R.mipmap.ic_launcher);
         dialog.setView(dialogView);
         dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
@@ -117,47 +112,14 @@ public class HhBaseActivity extends BaseActivity {
 
 
     public void outLoginDialog(String msg) {
-      //  XGPushManager.delAccount(getApplicationContext(),"geyang");
-     //   XGPushManager.unregisterPush(this);
-        //*/解绑信鸽手机号
-        /*XGPushManager.delAccount(getApplicationContext(),new DbConfig(getApplicationContext()).getPhone() );
-        //反注册
-        XGPushManager.unregisterPush(this);*/
-
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_error, null);
         TextView error_text = (TextView) dialogView.findViewById(R.id.error_text);
         error_text.setText(msg);
-        dialog.setTitle("慧眼卫星");
+        dialog.setTitle(getResources().getString(R.string.app_name));
         dialog.setIcon(R.mipmap.ic_launcher);
         dialog.setView(dialogView);
         dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-
-                Intent intent1= new Intent();
-                intent1.setAction("out_login");
-                sendBroadcast(intent1);
-
-                cleanTags();
-                //JPushInterface.cleanTags(getApplicationContext(),1001);
-                //登录失效 更新本地User信息
-                DbConfig dbConfig = new DbConfig(getApplicationContext());
-                User user = dbConfig.getUser();
-                user.setIsLogin("0");
-                DbManager db = dbConfig.getDbManager();
-
-                try {
-                    db.saveOrUpdate(user);
-                } catch (DbException e) {
-
-                }
-                //即将跳转登录界面
-              //  finish();
-                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-            }
-        });
-        dialog.setNegativeButton("取消",new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
@@ -167,9 +129,8 @@ public class HhBaseActivity extends BaseActivity {
         dialog.show();
     }
 
-    protected void cleanTags() {
+    private void cleanTags() {
         try{
-            XGPushManager.clearLocalNotifications(getApplicationContext());
             String username = new DbConfig(this).getUser().getUsername();
             if(username!=null && username.equals("山东省应急管理厅")){
                 String[] tags = yingjiTags.split(",");
@@ -179,14 +140,6 @@ public class HhBaseActivity extends BaseActivity {
             }else{
                 XGPushManager.cleanTags(this,new DbConfig(this).getUser().getPushTag());
             }
-
-            String tagSet = new DbConfig(this).getUser().getTagSet();
-            String[] split = tagSet.split(",");
-            for (int i = 0; i < split.length; i++) {
-                String tag = split[i];
-                XGPushManager.cleanTags(this,tag);
-            }
-
         }catch (Exception e){
             Log.e("Exception", "cleanTags");
         }
@@ -238,7 +191,7 @@ public class HhBaseActivity extends BaseActivity {
         View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_error, null);
         TextView error_text = (TextView) dialogView.findViewById(R.id.error_text);
         error_text.setText(error);
-        dialog.setTitle("慧眼卫星");
+        dialog.setTitle(getResources().getString(R.string.app_name));
         dialog.setIcon(R.mipmap.ic_launcher);
         dialog.setView(dialogView);
         dialog.setButton(DialogInterface.BUTTON_POSITIVE, "确定", new DialogInterface.OnClickListener() {

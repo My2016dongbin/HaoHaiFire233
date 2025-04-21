@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
-def VERSION_CODE = 49
-def VERSION_NAME = "3.1.9"
+def VERSION_CODE = 2
+def VERSION_NAME = "1.0.2"
 def keystoreFilepath = ''
 def keyfile = file('s.keystore.temp')
 
@@ -83,7 +83,7 @@ android {
                         if (outputFile != null && outputFile.name.endsWith('.apk')) {
                             // 输出apk名称为ruijie_v1.0_wandoujia.apk
                            /* def fileName = "haohai_v${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"*/
-                            def fileName = "haohai_v${defaultConfig.versionName}.apk"
+                            def fileName = "lincao_v${defaultConfig.versionName}.apk"
                             output.outputFile = new File(outputFile.parent, fileName)
                         }
                     }

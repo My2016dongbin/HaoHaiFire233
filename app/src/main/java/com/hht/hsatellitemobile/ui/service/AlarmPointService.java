@@ -56,7 +56,7 @@ public class AlarmPointService extends Service {
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
      //   NotificationChannel mChannel = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-      //      mChannel = new NotificationChannel(channelId, "慧眼卫星", NotificationManager.IMPORTANCE_HIGH);
+      //      mChannel = new NotificationChannel(channelId, getResources().getString(R.string.app_name), NotificationManager.IMPORTANCE_HIGH);
       //       notificationManager.createNotificationChannel(mChannel);
             builder = new Notification.Builder(this.getApplicationContext(),channelId);
             notification = new Notification.Builder(getApplicationContext(), channelId).build();

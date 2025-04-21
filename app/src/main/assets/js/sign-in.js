@@ -1,8 +1,7 @@
 ﻿var Token = "";
 var loginUrl = "http://web.ehaohai.com:2019/api/Register/RegisterAccount";
-//var loginUrl = "http://192.168.1.160:2022/api/Register/RegisterAccount";
 var localUrl = "http://web.ehaohai.com:2019/api/Register/Create";
-//var localUrl = "http://192.168.1.160:2022/api/Register/Create";
+//var localUrl = "http://27.223.18.10:2019/api/Register/Create";
 
 function checkIP() {
     $.ajax({

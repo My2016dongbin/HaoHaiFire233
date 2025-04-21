@@ -29,16 +29,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.google.gson.Gson;
-import com.hht.hsatellitemobile.R;
-import com.hht.hsatellitemobile.db.DbConfig;
-import com.hht.hsatellitemobile.ui.activity.base.HhBaseActivity;
-import com.hht.hsatellitemobile.ui.cell.MessagePicturesLayout;
-import com.hht.hsatellitemobile.ui.model.FeedBack;
-import com.hht.hsatellitemobile.utils.GifSizeFilter;
-import com.hht.hsatellitemobile.utils.ImagPagerUtil;
-import com.hht.hsatellitemobile.utils.OKHttpHelper;
-import com.hht.hsatellitemobile.utils.RequestUtils;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -47,12 +37,21 @@ import com.ruyiruyi.rylibrary.android.rx.rxbinding.RxViewAction;
 import com.ruyiruyi.rylibrary.cell.ActionBar;
 import com.ruyiruyi.rylibrary.image.ImageUtils;
 import com.tbruyelle.rxpermissions2.RxPermissions;
+import com.hht.hsatellitemobile.R;
+import com.hht.hsatellitemobile.db.DbConfig;
+import com.hht.hsatellitemobile.ui.activity.base.HhBaseActivity;
+import com.hht.hsatellitemobile.ui.cell.MessagePicturesLayout;
+import com.hht.hsatellitemobile.utils.GifSizeFilter;
+import com.hht.hsatellitemobile.utils.ImagPagerUtil;
+import com.hht.hsatellitemobile.utils.OKHttpHelper;
+import com.hht.hsatellitemobile.utils.RequestUtils;
 import com.zhihu.matisse.Matisse;
 import com.zhihu.matisse.MimeType;
 import com.zhihu.matisse.engine.impl.GlideEngine;
 import com.zhihu.matisse.filter.Filter;
 import com.zhihu.matisse.internal.entity.CaptureStrategy;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -102,7 +101,7 @@ public class FeedBackActivity extends HhBaseActivity implements MessagePicturesL
     private String jingweiStr;
     private TextView zhenshiFireText;
     private TextView wubaoFireText;
-    private List<String> imglist;
+    private List<Object> imglist;
     public int currentFireState = 1;  //1 是，0 否
 
     @Override
@@ -290,57 +289,33 @@ public class FeedBackActivity extends HhBaseActivity implements MessagePicturesL
             }
         }
 
-        /*JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("FireAlarmId",id);
-            jsonObject.put("fire_id",id);
             jsonObject.put("Longitude",longitude);
-            jsonObject.put("longitude",longitude);
             jsonObject.put("Latitude",latitude);
-            jsonObject.put("latitude",latitude);
             jsonObject.put("IsReal",currentFireState);
-            jsonObject.put("is_real",currentFireState);
             jsonObject.put("Address",dizhiEdit.getText().toString());
-            jsonObject.put("address",dizhiEdit.getText().toString());
             jsonObject.put("description",huoqingEdit.getText().toString());
-            jsonObject.put("pic_path3",huoqingEdit.getText().toString());
             jsonObject.put("UserName",new DbConfig(this).getUser().getUsername());
-            jsonObject.put("operation_user",new DbConfig(this).getUser().getUsername());
             if (imglist.size()>0){
-                jsonObject.put("pic_path1",imglist.get(0));
+                jsonObject.put("pic_path1",imglist.get(0).toString());
                 if (imglist.size()>1){
-                    jsonObject.put("pic_path2",imglist.get(1));
+                    jsonObject.put("pic_path2",imglist.get(1).toString());
                 }
             }
         } catch (JSONException e) {
-        }*/
-        FeedBack feedBack = new FeedBack();
-        feedBack.setFire_id(id);
-        feedBack.setLongitude(longitude);
-        feedBack.setLatitude(latitude);
-        feedBack.setIs_real(currentFireState);
-        feedBack.setAddress(dizhiEdit.getText().toString());
-        feedBack.setPic_path3(huoqingEdit.getText().toString());
-        feedBack.setOperation_user(new DbConfig(this).getUser().getUsername());
-        if (imglist.size()>0){
-            feedBack.setPic_path1(imglist.get(0));
-            Log.e(TAG, "postDataService: imglist.get(0) = " + imglist.get(0) );
-            if (imglist.size()>1){
-                feedBack.setPic_path2(imglist.get(1));
-                Log.e(TAG, "postDataService: imglist.get(1) = " + imglist.get(1) );
-            }
         }
-        String toJson = new Gson().toJson(feedBack);
 
-        //  RequestParams params = new RequestParams(RequestUtils.REQUEST_URL_FANKUI);
+      //  RequestParams params = new RequestParams(RequestUtils.REQUEST_URL_FANKUI);
         RequestParams params = new RequestParams(RequestUtils.REQUEST_URL+"Satellite/InsertFireFeedback");
         params.setAsJsonContent(true);
-        params.setBodyContent(toJson);
+        params.setBodyContent(jsonObject.toString());
         params.addBodyParameter("token",new DbConfig(this).getUser().getToken());
         Log.e(TAG, "postDataService:反馈---11 ");
         params.setConnectTimeout(10000);
         Log.e(TAG, "反馈---" + params);
-        Log.e(TAG, "反馈---" + toJson);
+        Log.e(TAG, "反馈---" + jsonObject.toString());
         x.http().post(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -406,6 +381,100 @@ public class FeedBackActivity extends HhBaseActivity implements MessagePicturesL
         });*/
     }
 
+    private void okHttpPostData(){
+        Log.e(TAG, "okHttpPostData: 1" );
+
+        for (int i = 0; i < uriChooseList.size(); i++) {
+            try {
+                Uri uri = uriChooseList.get(i);
+                int degree = ImageUtils.readPictureDegree(uri.toString());
+                Bitmap photo = ImageUtils.getBitmapFormUri(getApplicationContext(), uri);
+                if (i == 0){
+                    evaluateOne = rotaingImageView(degree, photo);
+                }else if (i == 1){
+                    evaluateTwo = rotaingImageView(degree, photo);
+                }else if (i == 2){
+                    evaluateThree = rotaingImageView(degree, photo);
+                }
+            } catch (IOException e) {
+
+            }
+        }
+        Log.e(TAG, "okHttpPostData: 2" );
+
+        Map<String, String> params = new HashMap<String, String>();
+
+        params.put("Longitude", longitude+"");
+        params.put("FireAlarmId",id);
+        params.put("Latitude", latitude+"");
+        params.put("Address", dizhiEdit.getText().toString());
+        params.put("description", dizhiEdit.getText().toString());
+        params.put("UserName", new DbConfig(this).getUser().getUsername());
+        Log.e(TAG, "okHttpPostData: 3" );
+        if (evaluateOne!=null){
+            String evaluateOne = ImageUtils.savePhoto(this.evaluateOne, this.getObbDir().getAbsolutePath(),"evaluateOne");
+            Log.e(TAG, "okHttpPostData:image-- " + compressImage(evaluateOne,"png") );
+            params.put("imgUrl1", compressImage(evaluateOne,"png"));
+        }
+        if (evaluateTwo!=null){
+            String evaluateTwo = ImageUtils.savePhoto(this.evaluateTwo, this.getObbDir().getAbsolutePath(),"evaluateTwo");
+            params.put("imgUrl2", compressImage(evaluateTwo,"png"));
+        }
+        if (evaluateThree!=null){
+            String evaluateThree = ImageUtils.savePhoto(this.evaluateThree, this.getObbDir().getAbsolutePath(),"evaluateThree");
+            params.put("imgUrl2", compressImage(evaluateThree,"png"));
+        }
+        Log.e(TAG, "okHttpPostData:params===== " + params);
+        OKHttpHelper.postAsync(RequestUtils.REQUEST_URL_FANKUI, params, new OKHttpHelper.DataCallBack() {
+            @Override
+            public void requestFailure(Request request, IOException e) {
+                Log.i("上传失败", "失败" + request.toString() + e.toString());
+               /* waitingDialog.cancel();
+                normalDialog.setMessage("网络异常，请重试！");
+                normalDialog.setPositiveButton("确定",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        });
+                normalDialog.show();*/
+            }
+            @Override
+            public void requestSuccess(String result) throws Exception {
+                Log.i("上传成功", result);
+              /*  Intent intent = new Intent(FireFeedbackActivity.this, Main2Activity.class);
+                waitingDialog.cancel();
+                JSONObject json = new JSONObject(result);
+                String status=json.getString("result");
+                String message;
+                if(status.equals("1")){
+                    message="上传成功，确定返回？";
+                }else{
+                    message="上传失失败,详细信息："+json.getString("message");
+                }
+                normalDialog.setMessage(message);
+                normalDialog.setPositiveButton("确定",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                startActivity(intent);
+                            }
+                        });
+                normalDialog.setNegativeButton("关闭",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //...To-do
+                            }
+                        });
+                // 显示
+                normalDialog.show();*/
+            }
+        });
+
+
+
+    }
 
     private void showBigImage(int phoneNum) {
         ArrayList<String> picList = new ArrayList<>();
@@ -771,7 +840,7 @@ public class FeedBackActivity extends HhBaseActivity implements MessagePicturesL
             @Override
             public void onSuccess(String result) {
                 Log.e(TAG, "onSuccess:------------- " + result);
-                imglist.add(result.replaceAll("\"",""));
+                imglist.add(result);
             }
 
             @Override

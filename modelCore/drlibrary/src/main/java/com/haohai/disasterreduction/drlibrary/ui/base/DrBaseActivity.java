@@ -69,7 +69,7 @@ public class DrBaseActivity extends BaseActivity {
         View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_error, null);
         TextView error_text = (TextView) dialogView.findViewById(R.id.error_text);
         error_text.setText(error);
-        dialog.setTitle("慧眼卫星");
+        dialog.setTitle(getResources().getString(R.string.app_name));
    //     dialog.setIcon(R.mipmap.ic_launcher);
         dialog.setView(dialogView);
         dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
@@ -113,7 +113,7 @@ public class DrBaseActivity extends BaseActivity {
         View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_error, null);
         TextView error_text = (TextView) dialogView.findViewById(R.id.error_text);
         error_text.setText(msg);
-        dialog.setTitle("慧眼卫星");
+        dialog.setTitle(getResources().getString(R.string.app_name));
     //    dialog.setIcon(R.mipmap.ic_launcher);
         dialog.setView(dialogView);
         dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
@@ -192,7 +192,7 @@ public class DrBaseActivity extends BaseActivity {
         View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_error, null);
         TextView error_text = (TextView) dialogView.findViewById(R.id.error_text);
         error_text.setText(error);
-        dialog.setTitle("慧眼卫星");
+        dialog.setTitle(getResources().getString(R.string.app_name));
        // dialog.setIcon(R.mipmap.ic_launcher);
         dialog.setView(dialogView);
         dialog.setButton(DialogInterface.BUTTON_POSITIVE, "确定", new DialogInterface.OnClickListener() {
