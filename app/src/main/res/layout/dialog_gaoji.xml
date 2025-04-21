@@ -158,7 +158,7 @@
                                 android:paddingLeft="15dp"
                                 android:paddingRight="15dp"
                                 android:paddingTop="3dp"
-                                android:text="Himawari-9"
+                                android:text="Himawari-8"
                                 android:textColor="@color/c12"
                                 android:textSize="13sp" />
                         </LinearLayout>
@@ -170,11 +170,34 @@
                         android:layout_marginTop="10dp"
                         android:orientation="horizontal">
 
+                        <LinearLayout
+                            android:id="@+id/weixing_noaa18_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/weixing_noaa18_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:background="@drawable/bg_text_lan"
+                                android:paddingBottom="3dp"
+                                android:paddingLeft="15dp"
+                                android:paddingRight="15dp"
+                                android:paddingTop="3dp"
+                                android:text="NOAA-18"
+                                android:textColor="@color/c12"
+                                android:textSize="13sp" />
+                        </LinearLayout>
 
                         <LinearLayout
                             android:id="@+id/weixing_noaa19_layout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
                             android:gravity="center"
                             android:orientation="horizontal">
 
@@ -190,70 +213,6 @@
                                 android:paddingRight="15dp"
                                 android:paddingTop="3dp"
                                 android:text="NOAA-19"
-                                android:textColor="@color/c12"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:id="@+id/weixing_noaa20_layout"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="30dp"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-
-
-                            <TextView
-                                android:id="@+id/weixing_noaa20_text"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="2dp"
-                                android:background="@drawable/bg_text_lan"
-                                android:paddingBottom="3dp"
-                                android:paddingLeft="15dp"
-                                android:paddingRight="15dp"
-                                android:paddingTop="3dp"
-                                android:text="NOAA-20"
-                                android:textColor="@color/c12"
-                                android:textSize="13sp" />
-                        </LinearLayout>
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal">
-
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:orientation="horizontal">
-
-
-                        <LinearLayout
-                            android:id="@+id/weixing_gk2a_layout"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:orientation="horizontal">
-
-
-                            <TextView
-                                android:id="@+id/weixing_gk2a_text"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="2dp"
-                                android:background="@drawable/bg_text_lan"
-                                android:paddingBottom="3dp"
-                                android:paddingLeft="15dp"
-                                android:paddingRight="15dp"
-                                android:paddingTop="3dp"
-                                android:text="GK2a"
                                 android:textColor="@color/c12"
                                 android:textSize="13sp" />
                         </LinearLayout>
@@ -772,7 +731,7 @@
                             android:id="@+id/sheng_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="请选择省"
+                            android:hint="请选择省"
                             android:inputType="text"
                             android:paddingBottom="5dp"
                             android:paddingLeft="5dp"
@@ -799,7 +758,7 @@
                             android:id="@+id/shi_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="请选择市"
+                            android:hint="请选择市"
                             android:inputType="text"
                             android:paddingBottom="5dp"
                             android:paddingLeft="5dp"
@@ -826,7 +785,7 @@
                             android:id="@+id/qu_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="请选择区"
+                            android:hint="请选择区"
                             android:inputType="text"
                             android:paddingBottom="5dp"
                             android:paddingLeft="5dp"

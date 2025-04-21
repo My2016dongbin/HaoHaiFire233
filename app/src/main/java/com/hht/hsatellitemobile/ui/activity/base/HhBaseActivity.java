@@ -4,7 +4,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.os.Bundle;
-import android.util.ArraySet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,10 +20,6 @@ import com.tencent.android.tpush.XGPushManager;
 
 import org.xutils.DbManager;
 import org.xutils.ex.DbException;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
 
 import static com.hht.hsatellitemobile.ui.activity.LoginActivity.yingjiTags;
 
@@ -167,9 +162,8 @@ public class HhBaseActivity extends BaseActivity {
         dialog.show();
     }
 
-    protected void cleanTags() {
+    private void cleanTags() {
         try{
-            XGPushManager.clearLocalNotifications(getApplicationContext());
             String username = new DbConfig(this).getUser().getUsername();
             if(username!=null && username.equals("山东省应急管理厅")){
                 String[] tags = yingjiTags.split(",");
@@ -179,14 +173,6 @@ public class HhBaseActivity extends BaseActivity {
             }else{
                 XGPushManager.cleanTags(this,new DbConfig(this).getUser().getPushTag());
             }
-
-            String tagSet = new DbConfig(this).getUser().getTagSet();
-            String[] split = tagSet.split(",");
-            for (int i = 0; i < split.length; i++) {
-                String tag = split[i];
-                XGPushManager.cleanTags(this,tag);
-            }
-
         }catch (Exception e){
             Log.e("Exception", "cleanTags");
         }

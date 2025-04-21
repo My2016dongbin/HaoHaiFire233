@@ -361,7 +361,7 @@ function buildPopupString(fireJsonData, featureId)
                     $("#fire-Satellite").html(jsonStr[ps][p].Satellite);
                     $("#fire-No").html(jsonStr[ps][p].FireNo);
 
-                    if (jsonStr[ps][p].Satellite == "NOAA-19") {
+                    if (jsonStr[ps][p].Satellite == "NOAA-18" || jsonStr[ps][p].Satellite == "NOAA-19") {
                         if (jsonStr[ps][p].VisibleLightImageAddress != null) {
                             $("#VISImage-phone").attr('src', "http://219.239.221.19" + jsonStr[ps][p].VisibleLightImageAddress);
                         }

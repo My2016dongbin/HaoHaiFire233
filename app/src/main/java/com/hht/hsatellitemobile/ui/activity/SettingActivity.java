@@ -90,18 +90,17 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
     private ImageView weixingNPPImage;
     private LinearLayout weixingHima8Layout;
     private ImageView weixingHima8Image;
+    private LinearLayout weixingNOAA18Layout;
+    private ImageView weixingNOAA18Image;
     private LinearLayout weixingNOAA19Layout;
-    private LinearLayout weixingNOAA20Layout;
-    private LinearLayout weixingGK2aLayout;
     private ImageView weixingNOAA19Image;
     public boolean weixingAllChoose = true;
     public boolean weixingNPPChoose = true;
     public boolean weixingFY4Choose = true;
     public boolean weixingFY3Choose = true;
     public boolean weixingHIMA8Choose = true;
+    public boolean weixingNOAA18Choose = true;
     public boolean weixingNOAA19Choose = true;
-    public boolean weixingNOAA20Choose = true;
-    public boolean weixingGK2aChoose = true;
     private LinearLayout tiankongAllLayout;
     private ImageView tiankongAllImage;
     private LinearLayout tiankongWurenjiLayout;
@@ -196,9 +195,8 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
     private TextView weixingFY4Text;
     private TextView weixingNppText;
     private TextView weixingHima8Text;
+    private TextView weixingNoaa18Text;
     private TextView weixingNOAA19Te;
-    private TextView weixingNOAA20Te;
-    private TextView weixingGK2aTe;
     private TextView tiankongAllText;
     private TextView tiankongWurenjiText;
     private TextView tiankongXuanfuqiText;
@@ -281,12 +279,10 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
             weixingFY3Text.setTextColor(getResources().getColor(R.color.c12));
             weixingHima8Text.setBackgroundResource(R.drawable.bg_text_lan);
             weixingHima8Text.setTextColor(getResources().getColor(R.color.c12));
+            weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_lan);
+            weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c12));
             weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_lan);
             weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c12));
-            weixingNOAA20Te.setBackgroundResource(R.drawable.bg_text_lan);
-            weixingNOAA20Te.setTextColor(getResources().getColor(R.color.c12));
-            weixingGK2aTe.setBackgroundResource(R.drawable.bg_text_lan);
-            weixingGK2aTe.setTextColor(getResources().getColor(R.color.c12));
 
             weixingAllChoose = true;
             weixingNPPChoose = true;
@@ -294,8 +290,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
             weixingFY3Choose = true;
             weixingHIMA8Choose = true;
             weixingNOAA19Choose = true;
-            weixingNOAA20Choose = true;
-            weixingGK2aChoose = true;
+            weixingNOAA18Choose = true;
         }else {
             weixingAllChoose = false;
             weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -330,7 +325,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                 weixingFY3Choose = false;
             }
 
-            if (weixing.indexOf("Himawari-9") != -1){
+            if (weixing.indexOf("Himawari-8") != -1){
                 weixingHima8Text.setBackgroundResource(R.drawable.bg_text_lan);
                 weixingHima8Text.setTextColor(getResources().getColor(R.color.c12));
                 weixingHIMA8Choose = true;
@@ -338,6 +333,16 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                 weixingHima8Text.setBackgroundResource(R.drawable.bg_text_hui);
                 weixingHima8Text.setTextColor(getResources().getColor(R.color.c6));
                 weixingHIMA8Choose = false;
+            }
+
+            if (weixing.indexOf("NOAA-18") != -1){
+                weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_lan);
+                weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c12));
+                weixingNOAA18Choose = true;
+            }else {
+                weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_hui);
+                weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c6));
+                weixingNOAA18Choose = false;
             }
 
             if (weixing.indexOf("NOAA-19") != -1){
@@ -348,26 +353,6 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                 weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_hui);
                 weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c6));
                 weixingNOAA19Choose = false;
-            }
-
-            if (weixing.indexOf("NOAA-20") != -1){
-                weixingNOAA20Te.setBackgroundResource(R.drawable.bg_text_lan);
-                weixingNOAA20Te.setTextColor(getResources().getColor(R.color.c12));
-                weixingNOAA20Choose = true;
-            }else {
-                weixingNOAA20Te.setBackgroundResource(R.drawable.bg_text_hui);
-                weixingNOAA20Te.setTextColor(getResources().getColor(R.color.c6));
-                weixingNOAA20Choose = false;
-            }
-
-            if (weixing.indexOf("GK2a") != -1){
-                weixingGK2aTe.setBackgroundResource(R.drawable.bg_text_lan);
-                weixingGK2aTe.setTextColor(getResources().getColor(R.color.c12));
-                weixingGK2aChoose = true;
-            }else {
-                weixingGK2aTe.setBackgroundResource(R.drawable.bg_text_hui);
-                weixingGK2aTe.setTextColor(getResources().getColor(R.color.c6));
-                weixingGK2aChoose = false;
             }
         }
 
@@ -488,7 +473,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
             dimaoAllChoose = false;
             dimaoAllText.setBackgroundResource(R.drawable.bg_text_hui);
             dimaoAllText.setTextColor(getResources().getColor(R.color.c6));
-            if (dimao.indexOf("Woodland") != -1){//Woodland Grassland Farmland Otherland
+            if (dimao.indexOf("林地") != -1){
                 dimaoLindiText.setBackgroundResource(R.drawable.bg_text_lan);
                 dimaoLindiText.setTextColor(getResources().getColor(R.color.c12));
                 dimaoLindiChoose = true;
@@ -498,7 +483,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                 dimaoLindiChoose = false;
             }
 
-            if (dimao.indexOf("Grassland") != -1){
+            if (dimao.indexOf("草地") != -1){
                 dimaoCaodiText.setBackgroundResource(R.drawable.bg_text_lan);
                 dimaoCaodiText.setTextColor(getResources().getColor(R.color.c12));
                 dimaoCaodiChoose = true;
@@ -508,7 +493,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                 dimaoCaodiChoose = false;
             }
 
-            if (dimao.indexOf("Farmland") != -1){
+            if (dimao.indexOf("农田") != -1){
                 dimaoNongtianText.setBackgroundResource(R.drawable.bg_text_lan);
                 dimaoNongtianText.setTextColor(getResources().getColor(R.color.c12));
                 dimaoNongtianChoose = true;
@@ -518,7 +503,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                 dimaoNongtianChoose = false;
             }
 
-            if (dimao.indexOf("Otherland") != -1){
+            if (dimao.indexOf("其他") != -1){
                 dimaoQitaText.setBackgroundResource(R.drawable.bg_text_lan);
                 dimaoQitaText.setTextColor(getResources().getColor(R.color.c12));
                 dimaoQitaChoose = true;
@@ -761,13 +746,12 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
         weixingHima8Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_himawar8_layout));
         //   weixingHima8Image = ((ImageView) gaojiInflater.findViewById(R.id.weixing_himawar8_image));
         weixingHima8Text = ((TextView) gaojiInflater.findViewById(R.id.weixing_himawar8_text));
+        weixingNOAA18Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_noaa18_layout));
+        //  weixingNOAA18Image = ((ImageView) gaojiInflater.findViewById(R.id.weixing_noaa18_image));
+        weixingNoaa18Text = ((TextView) gaojiInflater.findViewById(R.id.weixing_noaa18_text));
         weixingNOAA19Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_noaa19_layout));
-        weixingNOAA20Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_noaa20_layout));
-        weixingGK2aLayout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_gk2a_layout));
         //   weixingNOAA19Image = ((ImageView) gaojiInflater.findViewById(R.id.weixing_noaa19_image));
         weixingNOAA19Te = ((TextView) gaojiInflater.findViewById(R.id.weixing_noaa19_text));
-        weixingNOAA20Te = ((TextView) gaojiInflater.findViewById(R.id.weixing_noaa20_text));
-        weixingGK2aTe = ((TextView) gaojiInflater.findViewById(R.id.weixing_gk2a_text));
 
         //天空监测
         tiankongAllLayout = ((LinearLayout) gaojiInflater.findViewById(R.id.tiankong_all_layout));
@@ -962,6 +946,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                         weixingFY4Image.setImageResource(R.drawable.choose);
                         weixingFY3Image.setImageResource(R.drawable.choose);
                         weixingHima8Image.setImageResource(R.drawable.choose);
+                        weixingNOAA18Image.setImageResource(R.drawable.choose);
                         weixingNOAA19Image.setImageResource(R.drawable.choose);*/
                         weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
                         weixingAllText.setTextColor(getResources().getColor(R.color.c12));
@@ -973,12 +958,10 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                         weixingFY3Text.setTextColor(getResources().getColor(R.color.c12));
                         weixingHima8Text.setBackgroundResource(R.drawable.bg_text_lan);
                         weixingHima8Text.setTextColor(getResources().getColor(R.color.c12));
+                        weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_lan);
+                        weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c12));
                         weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_lan);
                         weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c12));
-                        weixingNOAA20Te.setBackgroundResource(R.drawable.bg_text_lan);
-                        weixingNOAA20Te.setTextColor(getResources().getColor(R.color.c12));
-                        weixingGK2aTe.setBackgroundResource(R.drawable.bg_text_lan);
-                        weixingGK2aTe.setTextColor(getResources().getColor(R.color.c12));
 
                         weixingAllChoose = true;
                         weixingNPPChoose = true;
@@ -986,8 +969,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                         weixingFY4Choose = true;
                         weixingHIMA8Choose = true;
                         weixingNOAA19Choose = true;
-                        weixingNOAA20Choose = true;
-                        weixingGK2aChoose = true;
+                        weixingNOAA18Choose = true;
 
                         //天空初始化
                         // tiankongAllImage.setImageResource(R.drawable.choose_no);
@@ -1608,13 +1590,13 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                             weixingFY4Choose = false;
                             weixingHIMA8Choose = false;
                             weixingNOAA19Choose = false;
-                            weixingNOAA20Choose = false;
-                            weixingGK2aChoose = false;
+                            weixingNOAA18Choose = false;
 /*                            weixingAllImage.setImageResource(R.drawable.choose_no);
                             weixingNPPImage.setImageResource(R.drawable.choose_no);
                             weixingFY3Image.setImageResource(R.drawable.choose_no);
                             weixingFY4Image.setImageResource(R.drawable.choose_no);
                             weixingHima8Image.setImageResource(R.drawable.choose_no);
+                            weixingNOAA18Image.setImageResource(R.drawable.choose_no);
                             weixingNOAA19Image.setImageResource(R.drawable.choose_no);*/
                             weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingAllText.setTextColor(getResources().getColor(R.color.c6));
@@ -1626,12 +1608,10 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                             weixingFY3Text.setTextColor(getResources().getColor(R.color.c6));
                             weixingHima8Text.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingHima8Text.setTextColor(getResources().getColor(R.color.c6));
+                            weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c6));
                             weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c6));
-                            weixingNOAA20Te.setBackgroundResource(R.drawable.bg_text_hui);
-                            weixingNOAA20Te.setTextColor(getResources().getColor(R.color.c6));
-                            weixingGK2aTe.setBackgroundResource(R.drawable.bg_text_hui);
-                            weixingGK2aTe.setTextColor(getResources().getColor(R.color.c6));
 
                         }else {
                             weixingAllChoose = true;
@@ -1640,13 +1620,13 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                             weixingFY4Choose = true;
                             weixingHIMA8Choose = true;
                             weixingNOAA19Choose = true;
-                            weixingNOAA20Choose = true;
-                            weixingGK2aChoose = true;
+                            weixingNOAA18Choose = true;
                          /*   weixingAllImage.setImageResource(R.drawable.choose);
                             weixingNPPImage.setImageResource(R.drawable.choose);
                             weixingFY3Image.setImageResource(R.drawable.choose);
                             weixingFY4Image.setImageResource(R.drawable.choose);
                             weixingHima8Image.setImageResource(R.drawable.choose);
+                            weixingNOAA18Image.setImageResource(R.drawable.choose);
                             weixingNOAA19Image.setImageResource(R.drawable.choose);*/
                             weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingAllText.setTextColor(getResources().getColor(R.color.c12));
@@ -1658,12 +1638,10 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                             weixingFY3Text.setTextColor(getResources().getColor(R.color.c12));
                             weixingHima8Text.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingHima8Text.setTextColor(getResources().getColor(R.color.c12));
+                            weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c12));
                             weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c12));
-                            weixingNOAA20Te.setBackgroundResource(R.drawable.bg_text_lan);
-                            weixingNOAA20Te.setTextColor(getResources().getColor(R.color.c12));
-                            weixingGK2aTe.setBackgroundResource(R.drawable.bg_text_lan);
-                            weixingGK2aTe.setTextColor(getResources().getColor(R.color.c12));
                         }
                     }
                 });
@@ -1678,7 +1656,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                             weixingNppText.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingNppText.setTextColor(getResources().getColor(R.color.c6));
                             if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingGK2aChoose){   //判断全部未选中
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose){   //判断全部未选中
                                 weixingAllChoose = false;
                                 //  weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -1689,7 +1667,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                             //      weixingNPPImage.setImageResource(R.drawable.choose);
                             weixingNppText.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingNppText.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA19Choose && weixingNOAA20Choose && weixingGK2aChoose){
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose){
                                 weixingAllChoose = true;
                                 //     weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -1709,7 +1687,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                             weixingFY3Text.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingFY3Text.setTextColor(getResources().getColor(R.color.c6));
                             if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingGK2aChoose){   //判断全部未选中
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose){   //判断全部未选中
                                 weixingAllChoose = false;
                                 //   weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -1720,7 +1698,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                             // weixingFY3Image.setImageResource(R.drawable.choose);
                             weixingFY3Text.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingFY3Text.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA19Choose && weixingNOAA20Choose && weixingGK2aChoose){
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose){
                                 weixingAllChoose = true;
                                 //        weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -1740,7 +1718,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                             weixingFY4Text.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingFY4Text.setTextColor(getResources().getColor(R.color.c6));
                             if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingGK2aChoose){   //判断全部未选中
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose){   //判断全部未选中
                                 weixingAllChoose = false;
                                 // weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -1751,7 +1729,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                             //    weixingFY4Image.setImageResource(R.drawable.choose);
                             weixingFY4Text.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingFY4Text.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA19Choose && weixingNOAA20Choose && weixingGK2aChoose){
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose){
                                 weixingAllChoose = true;
                                 // weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -1771,7 +1749,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                             weixingHima8Text.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingHima8Text.setTextColor(getResources().getColor(R.color.c6));
                             if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingGK2aChoose){   //判断全部未选中
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose){   //判断全部未选中
                                 weixingAllChoose = false;
                                 //   weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -1782,7 +1760,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                             //      weixingHima8Image.setImageResource(R.drawable.choose);
                             weixingHima8Text.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingHima8Text.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA19Choose && weixingNOAA20Choose && weixingGK2aChoose){
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose){
                                 weixingAllChoose = true;
                                 //   weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -1792,6 +1770,36 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                     }
                 });
 
+        RxViewAction.clickNoDouble(weixingNOAA18Layout)
+                .subscribe(new Action1<Void>() {
+                    @Override
+                    public void call(Void aVoid) {
+                        if (weixingNOAA18Choose){  //从已选中变为未选中
+                            weixingNOAA18Choose = false;
+                            //     weixingNOAA18Image.setImageResource(R.drawable.choose_no);
+                            weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c6));
+                            if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose){   //判断全部未选中
+                                weixingAllChoose = false;
+                                //       weixingAllImage.setImageResource(R.drawable.choose_no);
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c6));
+                            }
+                        }else {
+                            weixingNOAA18Choose = true;
+                            //   weixingNOAA18Image.setImageResource(R.drawable.choose);
+                            weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c12));
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose){
+                                weixingAllChoose = true;
+                                //      weixingAllImage.setImageResource(R.drawable.choose);
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c12));
+                            }
+                        }
+                    }
+                });
 
         RxViewAction.clickNoDouble(weixingNOAA19Layout)
                 .subscribe(new Action1<Void>() {
@@ -1803,7 +1811,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                             weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c6));
                             if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingGK2aChoose){   //判断全部未选中
+                                    || !weixingNOAA18Choose || !weixingNOAA19Choose){   //判断全部未选中
                                 weixingAllChoose = false;
                                 //   weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -1814,71 +1822,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                             //    weixingNOAA19Image.setImageResource(R.drawable.choose);
                             weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA19Choose && weixingNOAA20Choose && weixingGK2aChoose){
-                                weixingAllChoose = true;
-                                //           weixingAllImage.setImageResource(R.drawable.choose);
-                                weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
-                                weixingAllText.setTextColor(getResources().getColor(R.color.c12));
-                            }
-                        }
-                    }
-                });
-
-
-        RxViewAction.clickNoDouble(weixingNOAA20Layout)
-                .subscribe(new Action1<Void>() {
-                    @Override
-                    public void call(Void aVoid) {
-                        if (weixingNOAA20Choose){  //从已选中变为未选中
-                            weixingNOAA20Choose = false;
-                            //      weixingNOAA19Image.setImageResource(R.drawable.choose_no);
-                            weixingNOAA20Te.setBackgroundResource(R.drawable.bg_text_hui);
-                            weixingNOAA20Te.setTextColor(getResources().getColor(R.color.c6));
-                            if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingGK2aChoose){   //判断全部未选中
-                                weixingAllChoose = false;
-                                //   weixingAllImage.setImageResource(R.drawable.choose_no);
-                                weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
-                                weixingAllText.setTextColor(getResources().getColor(R.color.c6));
-                            }
-                        }else {     //从未选中变为已选中
-                            weixingNOAA20Choose = true;
-                            //    weixingNOAA19Image.setImageResource(R.drawable.choose);
-                            weixingNOAA20Te.setBackgroundResource(R.drawable.bg_text_lan);
-                            weixingNOAA20Te.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA19Choose && weixingNOAA20Choose && weixingGK2aChoose){
-                                weixingAllChoose = true;
-                                //           weixingAllImage.setImageResource(R.drawable.choose);
-                                weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
-                                weixingAllText.setTextColor(getResources().getColor(R.color.c12));
-                            }
-                        }
-                    }
-                });
-
-
-        RxViewAction.clickNoDouble(weixingGK2aLayout)
-                .subscribe(new Action1<Void>() {
-                    @Override
-                    public void call(Void aVoid) {
-                        if (weixingGK2aChoose){  //从已选中变为未选中
-                            weixingGK2aChoose = false;
-                            //      weixingNOAA19Image.setImageResource(R.drawable.choose_no);
-                            weixingGK2aTe.setBackgroundResource(R.drawable.bg_text_hui);
-                            weixingGK2aTe.setTextColor(getResources().getColor(R.color.c6));
-                            if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingGK2aChoose){   //判断全部未选中
-                                weixingAllChoose = false;
-                                //   weixingAllImage.setImageResource(R.drawable.choose_no);
-                                weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
-                                weixingAllText.setTextColor(getResources().getColor(R.color.c6));
-                            }
-                        }else {     //从未选中变为已选中
-                            weixingGK2aChoose = true;
-                            //    weixingNOAA19Image.setImageResource(R.drawable.choose);
-                            weixingGK2aTe.setBackgroundResource(R.drawable.bg_text_lan);
-                            weixingGK2aTe.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA19Choose && weixingNOAA20Choose && weixingGK2aChoose){
+                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose){
                                 weixingAllChoose = true;
                                 //           weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -1912,18 +1856,15 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                 satellite = satellite + ",FY-3";
             }
             if (weixingHIMA8Choose){
-                satellite = satellite + ",Himawari-9";
+                satellite = satellite + ",Himawari-8";
+            }
+            if (weixingNOAA18Choose){
+                satellite = satellite + ",NOAA-18";
             }
             if (weixingNOAA19Choose){
                 satellite = satellite + ",NOAA-19";
             }
-            if (weixingNOAA20Choose){
-                satellite = satellite + ",NOAA-20";
-            }
-            if (weixingGK2aChoose){
-                satellite = satellite + ",GK2a";
-            }
-            if (weixingNPPChoose || weixingFY3Choose || weixingFY4Choose || weixingHIMA8Choose || weixingNOAA19Choose || weixingNOAA20Choose || weixingGK2aChoose){
+            if (weixingNPPChoose || weixingFY3Choose || weixingFY4Choose || weixingHIMA8Choose || weixingNOAA18Choose || weixingNOAA19Choose){
                 satellite.substring(1,satellite.length());
             }
 
@@ -1985,41 +1926,25 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
             XGPushManager.setTags(getApplicationContext(),"setTag",tagSet);
         }else {
             if (dimaoLindiChoose){
-                if(dimaoStr.isEmpty()){
-                    dimaoStr = dimaoStr + "Woodland";
-                }else{
-                    dimaoStr = dimaoStr + ",Woodland";
-                }
+                dimaoStr = dimaoStr + ",林地";
                 tagSet.add("Woodland");
             }else{
                 XGPushManager.cleanTags(getApplicationContext(),"Woodland");
             }
             if (dimaoCaodiChoose){
-                if(dimaoStr.isEmpty()){
-                    dimaoStr = dimaoStr + "Grassland";
-                }else{
-                    dimaoStr = dimaoStr + ",Grassland";
-                }
+                dimaoStr = dimaoStr + ",草地";
                 tagSet.add("Grassland");
             }else{
                 XGPushManager.cleanTags(getApplicationContext(),"Grassland");
             }
             if (dimaoNongtianChoose){
-                if(dimaoStr.isEmpty()){
-                    dimaoStr = dimaoStr + "Farmland";
-                }else{
-                    dimaoStr = dimaoStr + ",Farmland";
-                }
+                dimaoStr = dimaoStr + ",农田";
                 tagSet.add("Farmland");
             }else{
                 XGPushManager.cleanTags(getApplicationContext(),"Farmland");
             }
             if (dimaoQitaChoose){
-                if(dimaoStr.isEmpty()){
-                    dimaoStr = dimaoStr + "Otherland";
-                }else{
-                    dimaoStr = dimaoStr + ",Otherland";
-                }
+                dimaoStr = dimaoStr + ",其他";
                 tagSet.add("Otherland");
             }else{
                 XGPushManager.cleanTags(getApplicationContext(),"Otherland");
