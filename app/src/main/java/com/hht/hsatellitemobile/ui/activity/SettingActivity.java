@@ -488,7 +488,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
             dimaoAllChoose = false;
             dimaoAllText.setBackgroundResource(R.drawable.bg_text_hui);
             dimaoAllText.setTextColor(getResources().getColor(R.color.c6));
-            if (dimao.indexOf("Woodland") != -1){//Woodland Grassland Farmland Otherland
+            if (dimao.indexOf("林地") != -1){
                 dimaoLindiText.setBackgroundResource(R.drawable.bg_text_lan);
                 dimaoLindiText.setTextColor(getResources().getColor(R.color.c12));
                 dimaoLindiChoose = true;
@@ -498,7 +498,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                 dimaoLindiChoose = false;
             }
 
-            if (dimao.indexOf("Grassland") != -1){
+            if (dimao.indexOf("草地") != -1){
                 dimaoCaodiText.setBackgroundResource(R.drawable.bg_text_lan);
                 dimaoCaodiText.setTextColor(getResources().getColor(R.color.c12));
                 dimaoCaodiChoose = true;
@@ -508,7 +508,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                 dimaoCaodiChoose = false;
             }
 
-            if (dimao.indexOf("Farmland") != -1){
+            if (dimao.indexOf("农田") != -1){
                 dimaoNongtianText.setBackgroundResource(R.drawable.bg_text_lan);
                 dimaoNongtianText.setTextColor(getResources().getColor(R.color.c12));
                 dimaoNongtianChoose = true;
@@ -518,7 +518,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                 dimaoNongtianChoose = false;
             }
 
-            if (dimao.indexOf("Otherland") != -1){
+            if (dimao.indexOf("其他") != -1){
                 dimaoQitaText.setBackgroundResource(R.drawable.bg_text_lan);
                 dimaoQitaText.setTextColor(getResources().getColor(R.color.c12));
                 dimaoQitaChoose = true;
@@ -1985,41 +1985,25 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
             XGPushManager.setTags(getApplicationContext(),"setTag",tagSet);
         }else {
             if (dimaoLindiChoose){
-                if(dimaoStr.isEmpty()){
-                    dimaoStr = dimaoStr + "Woodland";
-                }else{
-                    dimaoStr = dimaoStr + ",Woodland";
-                }
+                dimaoStr = dimaoStr + ",林地";
                 tagSet.add("Woodland");
             }else{
                 XGPushManager.cleanTags(getApplicationContext(),"Woodland");
             }
             if (dimaoCaodiChoose){
-                if(dimaoStr.isEmpty()){
-                    dimaoStr = dimaoStr + "Grassland";
-                }else{
-                    dimaoStr = dimaoStr + ",Grassland";
-                }
+                dimaoStr = dimaoStr + ",草地";
                 tagSet.add("Grassland");
             }else{
                 XGPushManager.cleanTags(getApplicationContext(),"Grassland");
             }
             if (dimaoNongtianChoose){
-                if(dimaoStr.isEmpty()){
-                    dimaoStr = dimaoStr + "Farmland";
-                }else{
-                    dimaoStr = dimaoStr + ",Farmland";
-                }
+                dimaoStr = dimaoStr + ",农田";
                 tagSet.add("Farmland");
             }else{
                 XGPushManager.cleanTags(getApplicationContext(),"Farmland");
             }
             if (dimaoQitaChoose){
-                if(dimaoStr.isEmpty()){
-                    dimaoStr = dimaoStr + "Otherland";
-                }else{
-                    dimaoStr = dimaoStr + ",Otherland";
-                }
+                dimaoStr = dimaoStr + ",其他";
                 tagSet.add("Otherland");
             }else{
                 XGPushManager.cleanTags(getApplicationContext(),"Otherland");

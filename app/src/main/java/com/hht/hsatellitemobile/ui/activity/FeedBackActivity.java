@@ -406,6 +406,100 @@ public class FeedBackActivity extends HhBaseActivity implements MessagePicturesL
         });*/
     }
 
+    private void okHttpPostData(){
+        Log.e(TAG, "okHttpPostData: 1" );
+
+        for (int i = 0; i < uriChooseList.size(); i++) {
+            try {
+                Uri uri = uriChooseList.get(i);
+                int degree = ImageUtils.readPictureDegree(uri.toString());
+                Bitmap photo = ImageUtils.getBitmapFormUri(getApplicationContext(), uri);
+                if (i == 0){
+                    evaluateOne = rotaingImageView(degree, photo);
+                }else if (i == 1){
+                    evaluateTwo = rotaingImageView(degree, photo);
+                }else if (i == 2){
+                    evaluateThree = rotaingImageView(degree, photo);
+                }
+            } catch (IOException e) {
+
+            }
+        }
+        Log.e(TAG, "okHttpPostData: 2" );
+
+        Map<String, String> params = new HashMap<String, String>();
+
+        params.put("Longitude", longitude+"");
+        params.put("FireAlarmId",id);
+        params.put("Latitude", latitude+"");
+        params.put("Address", dizhiEdit.getText().toString());
+        params.put("description", dizhiEdit.getText().toString());
+        params.put("UserName", new DbConfig(this).getUser().getUsername());
+        Log.e(TAG, "okHttpPostData: 3" );
+        if (evaluateOne!=null){
+            String evaluateOne = ImageUtils.savePhoto(this.evaluateOne, this.getObbDir().getAbsolutePath(),"evaluateOne");
+            Log.e(TAG, "okHttpPostData:image-- " + compressImage(evaluateOne,"png") );
+            params.put("imgUrl1", compressImage(evaluateOne,"png"));
+        }
+        if (evaluateTwo!=null){
+            String evaluateTwo = ImageUtils.savePhoto(this.evaluateTwo, this.getObbDir().getAbsolutePath(),"evaluateTwo");
+            params.put("imgUrl2", compressImage(evaluateTwo,"png"));
+        }
+        if (evaluateThree!=null){
+            String evaluateThree = ImageUtils.savePhoto(this.evaluateThree, this.getObbDir().getAbsolutePath(),"evaluateThree");
+            params.put("imgUrl2", compressImage(evaluateThree,"png"));
+        }
+        Log.e(TAG, "okHttpPostData:params===== " + params);
+        OKHttpHelper.postAsync(RequestUtils.REQUEST_URL_FANKUI, params, new OKHttpHelper.DataCallBack() {
+            @Override
+            public void requestFailure(Request request, IOException e) {
+                Log.i("上传失败", "失败" + request.toString() + e.toString());
+               /* waitingDialog.cancel();
+                normalDialog.setMessage("网络异常，请重试！");
+                normalDialog.setPositiveButton("确定",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                            }
+                        });
+                normalDialog.show();*/
+            }
+            @Override
+            public void requestSuccess(String result) throws Exception {
+                Log.i("上传成功", result);
+              /*  Intent intent = new Intent(FireFeedbackActivity.this, Main2Activity.class);
+                waitingDialog.cancel();
+                JSONObject json = new JSONObject(result);
+                String status=json.getString("result");
+                String message;
+                if(status.equals("1")){
+                    message="上传成功，确定返回？";
+                }else{
+                    message="上传失失败,详细信息："+json.getString("message");
+                }
+                normalDialog.setMessage(message);
+                normalDialog.setPositiveButton("确定",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                startActivity(intent);
+                            }
+                        });
+                normalDialog.setNegativeButton("关闭",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //...To-do
+                            }
+                        });
+                // 显示
+                normalDialog.show();*/
+            }
+        });
+
+
+
+    }
 
     private void showBigImage(int phoneNum) {
         ArrayList<String> picList = new ArrayList<>();

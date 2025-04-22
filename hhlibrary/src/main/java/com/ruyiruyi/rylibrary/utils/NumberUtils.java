@@ -15,7 +15,7 @@ public class NumberUtils {
      */
     public static Double saveOneBitTwo(Double d){
         BigDecimal bd = new BigDecimal(d);
-        Double tem = bd.setScale(2,BigDecimal.ROUND_FLOOR).doubleValue();
+        Double tem = bd.setScale(6,BigDecimal.ROUND_FLOOR).doubleValue();
         return tem;
     }
 
