@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/c12"
+    android:layout_centerHorizontal="true"
+    android:orientation="vertical">
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:calendarTextColor="@color/theme_primary"
+        android:calendarViewShown="false"
+        android:datePickerMode="calendar" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="right"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/quantian_view"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:text="全天"
+            android:textColor="@color/c12"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:background="@drawable/bg_button_lan_yuanjiao"/>
+
+        <TextView
+            android:id="@+id/shangwu_view"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:text="上午"
+            android:textColor="@color/c12"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_button_hui_yuanjiao"/>
+
+        <TextView
+            android:id="@+id/xiawu_view"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:text="下午"
+            android:textColor="@color/c12"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/bg_button_hui_yuanjiao"/>
+    </LinearLayout>
+</LinearLayout>
