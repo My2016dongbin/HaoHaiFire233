@@ -80,11 +80,7 @@ public abstract class BaseActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         if (Build.VERSION.SDK_INT >= 21) {
-            try{
-                unregisterReceiver(oBaseActiviy_Broad);//注销广播
-            }catch(Exception e){
-
-            }
+            unregisterReceiver(oBaseActiviy_Broad);//注销广播
         }
     }
 

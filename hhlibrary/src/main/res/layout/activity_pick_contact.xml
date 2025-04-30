@@ -29,7 +29,7 @@
             />
     </LinearLayout>
 
-    <me.yokeyword.indexablerv.IndexableLayout
+    <!--<me.yokeyword.indexablerv.IndexableLayout
         android:id="@+id/indexableLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -38,6 +38,6 @@
         app:indexBar_textColor="@color/gray1"
         app:indexBar_layout_width="40dp"
         app:indexBar_textSize="14sp"
-        app:indexBar_textSpace="5dp" />
+        app:indexBar_textSpace="5dp" />-->
 
 </LinearLayout>

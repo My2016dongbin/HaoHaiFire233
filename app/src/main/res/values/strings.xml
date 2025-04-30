@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">慧眼卫星</string>
+<!--    <string name="app_name">阿坝州铁塔慧眼</string>
+    <string name="app_title">阿坝州铁塔慧眼</string>-->
+
+<!--    <string name="app_name">森林防火检查系统</string>
+    <string name="app_title">新乡森林防火检查系统</string>-->
+
+    <string name="app_name">穆棱市秸秆</string>
+    <string name="app_title">穆棱市秸秆</string>
 </resources>

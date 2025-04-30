@@ -63,6 +63,11 @@ public class HomeTabsCell extends LinearLayout implements ViewPager.OnPageChange
     public void addView(int iconResId,CharSequence name){
         addView(iconResId, 0, name);
     }
+
+
+    public void addCenterButtonView(int iconResId , int selectedIconResId,CharSequence name){
+
+    }
     public void addView(int iconResId , int selectedIconResId,CharSequence name){
         final HomeTabCell cell = new HomeTabCell(getContext());
         cell.setClickable(true);

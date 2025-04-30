@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+def VERSION_CODE = 1
+def VERSION_NAME = "1.0"
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
+        multiDexEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //根据需要 自行选择添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':hhlibrary')
+    // 基础功能 (必需)
+    compile 'com.netease.nimlib:basesdk:7.8.1'
+    // 聊天室需要
+    compile 'com.netease.nimlib:chatroom:7.8.1'
+
+    // 通过云信来集成小米等厂商推送需要
+    compile 'com.netease.nimlib:push:7.8.1'
+
+    // 超大群需要
+    compile 'com.netease.nimlib:superteam:7.8.1'
+
+    // 全文检索插件
+    compile 'com.netease.nimlib:lucene:7.8.1'
+}

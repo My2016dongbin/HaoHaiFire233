@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_list_layout"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_primary_list">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/theme_primary_list">
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15sp"
+            android:src="@drawable/ic_jiankong"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="摄像机列表"
+            android:textSize="15sp"
+            android:textColor="#568ED1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="40dp"/>
+        <ImageView
+            android:id="@+id/list_dialog_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_list_button" />
+    </FrameLayout>
+    <ListView
+        android:id="@+id/listView"
+        style="@style/videolistviewstyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_primary_list"/>
+</LinearLayout>

@@ -24,13 +24,40 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class com.baidu.** {*;}
--keep class mapsdkvi.com.** {*;}
--dontwarn com.baidu.**
+-keep public class com.alibaba.android.arouter.routes.**{*;}
+-keep public class com.alibaba.android.arouter.facade.**{*;}
+-keep class * implements com.alibaba.android.arouter.facade.template.ISyringe{*;}
+
+# 如果使用了 byType 的方式获取 Service，需添加下面规则，保护接口
+-keep interface * implements com.alibaba.android.arouter.facade.template.IProvider
+
+# 如果使用了 单类注入，即不定义接口实现 IProvider，需添加下面规则，保护实现
+# -keep class * implements com.alibaba.android.arouter.facade.template.IProvider
+
+-dontwarn com.netease.**
+-keep class com.netease.** {*;}
+
+#如果你使用全文检索插件，需要加入
+-dontwarn org.apache.lucene.**
+-keep class org.apache.lucene.** {*;}
+
+-keep class com.xiaomi.**{*;}
+-keep public class * extends com.xiaomi.mipush.sdk.PushMessageReceiver
+
+-ignorewarning
+-keepattributes *Annotation*
+-keepattributes Exceptions
+-keepattributes InnerClasses
+-keepattributes Signature
+-keepattributes SourceFile,LineNumberTable
+-keep class com.hianalytics.android.**{*;}
+-keep class com.huawei.updatesdk.**{*;}
+-keep class com.huawei.hms.**{*;}
+-keep class com.huawei.android.hms.agent.**{*;}
+
+-dontwarn com.meizu.cloud.pushsdk.**
+-keep class com.meizu.cloud.pushsdk.**{*;}
 
 -keep public class * extends android.app.Service
--keep public class * extends android.content.BroadcastReceiver
--keep class com.tencent.android.tpush.** {*;}
--keep class com.tencent.tpns.baseapi.** {*;}
--keep class com.tencent.tpns.mqttchannel.** {*;}
--keep class com.tencent.tpns.dataacquisition.** {*;}
+-keep class com.heytap.mcssdk.** {*;}
+-keep class com.heytap.msp.push.** { *;}
