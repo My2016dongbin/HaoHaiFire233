@@ -1,0 +1,16 @@
+syntax = "proto3";message GpsBean {
+
+                      message GpsContent {
+
+                          string phoneNumber = 1;
+                          PointLonLat points = 2;
+                          string GpsTime = 3;
+                      }
+                      message PointLonLat {
+                          double lon = 1;
+                          double lat = 2;
+                          double alt = 3;
+                      }
+}
+option java_package = "com.bean";
+package bean;

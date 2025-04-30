@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hht.hsatellitemobile">
+    package="com.skyline.terraexplorer"
+    android:versionCode="1733"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="22"
+        tools:overrideLibrary="com.vilyever.socketclient" />
 
     <permission
-        android:name="com.hht.hsatellitemobile.permission.JPUSH_MESSAGE"
+        android:name="com.skyline.terraexplorer.permission.JPUSH_MESSAGE"
         android:protectionLevel="signature" />
 
-    <!-- Required -->
-    <uses-permission android:name="com.hht.hsatellitemobile.permission.JPUSH_MESSAGE" />
+    <uses-feature
+        android:glEsVersion="0x00010000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.skyline.terraexplorer.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -36,53 +53,222 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
-    <application
-        android:name=".MyApplication"
+    <application xmlns:tools="http://schemas.android.com/tools"
+        android:name=".TEApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_wanggehua"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppBaseTheme"
+        android:value="25.3.1"
+        tools:replace="android:value">
+        <provider
+            android:name=".SearchSuggestionProvider"
+            android:authorities="com.skyline.terraexplorer.SearchSuggestionProvider"
+            android:exported="false" />
 
-        <!-- 百度地图key -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="sB9vChxdwdi1ursvHySYDmRSziBhgjQq" />
+            android:value="3FWFYymKn1tQ4nxkA5wh89NGinGzmipb" />
+
+        <!-- 高德地图 key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="719841fd12fa36fb0767ede379e5af7f" />
+
+        <service android:name="com.amap.api.location.APSService" />
+
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".SearchActivity" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".controllers.TEMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
-            android:launchMode="singleTop" /> <!-- android:launchMode="singleTask" -->
-        <activity
-            android:name=".ui.activity.LoginActivity"
-            android:launchMode="singleTop" />
-        <activity android:name=".ui.activity.base.HhBaseActivity" />
-        <activity android:name=".ui.activity.LaunchActivity">
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".controllers.TutorialActivity"
+            android:label="@string/mm_more_tutorial"
+            android:parentActivityName=".controllers.TEMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.TEMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="登录"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".controllers.LaunchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data
-                    android:scheme="satellite"
-                    android:host="launch" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.RegisterActivity"
-            android:windowSoftInputMode="stateVisible|adjustPan" />
-        <activity android:name=".ui.activity.FeedBackActivity" />
-        <activity android:name=".ui.activity.TestActivity" />
+            android:name=".controllers.EditFavoriteActivity"
+            android:label="@string/title_activity_favorites"
+            android:parentActivityName=".controllers.TEMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.TEMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.EditFavoriteSelectIconActivity"
+            android:label="@string/title_activity_favorites_icons"
+            android:parentActivityName=".controllers.EditFavoriteActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.EditFavoriteActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.SearchActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_search"
+            android:launchMode="singleTop"
+            android:parentActivityName=".controllers.TEMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.TEMainActivity" />
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
 
-        <service android:name=".ui.service.AlarmPointService" />
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".controllers.PlacesActivity"
+            android:label="@string/title_activity_places"
+            android:parentActivityName=".controllers.TEMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.TEMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.LayersActivity"
+            android:label="@string/title_activity_layers"
+            android:parentActivityName=".controllers.TEMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.TEMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.ResourceSelectActivity"
+            android:label="@string/tool_res_title"
+            android:parentActivityName=".controllers.TEMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.TEMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.PresentationStepsActivity"
+            android:label="@string/title_activity_layers"
+            android:parentActivityName=".controllers.TEMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.TEMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.AboutActivity"
+            android:label="@string/mm_more_about"
+            android:parentActivityName=".controllers.TEMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.TEMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".controllers.TEMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.TEMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.ProjectsActivity"
+            android:label="@string/title_activity_projects"
+            android:parentActivityName=".controllers.TEMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.TEMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.FeatureAttributesActivity"
+            android:label="@string/title_activity_attributes"
+            android:parentActivityName=".controllers.TEMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.TEMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.WhiteboardListActivity"
+            android:label="@string/title_activity_whiteboards"
+            android:parentActivityName=".controllers.TEMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.TEMainActivity" />
+        </activity>
+        <activity
+            android:name=".controllers.TerrainProfileActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_terrain_profile"
+            android:parentActivityName=".controllers.TEMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.TEMainActivity" />
+        </activity>
+        <activity android:name="com.skyline.test.plan.PlanManagementActivity" />
+
+        <service
+            android:name="com.skyline.test.net.DownloadService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name="com.skyline.test.plan.OnlineFragment$MyBrocaseRecevicer"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.skyline.test.onlinefragment.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.skyline.test.plan.WordActivity" />
+        <activity android:name="com.skyline.test.query.ResourceListActivity" />
+        <activity android:name="com.skyline.test.places1.PlacesActivity1" />
+        <activity android:name="com.skyline.test.myview.EditPlaceActivity" />
+        <activity android:name="com.skyline.test.query.ResourceQueryActivity" />
+        <activity android:name="com.skyline.test.query.ResourceQueryActivity1" />
+        <activity android:name="com.skyline.test.places1.Place2Activity" />
+        <activity android:name="com.skyline.test.myview.ServerAddressActivity" />
+
+        <service android:name="com.skyline.test.socket.NettyService" />
+
+        <activity
+            android:name="com.skyline.test.myview.SignUp_Activity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.hht.hsatellitemobile.fileProvider"
+            android:authorities="com.skyline.terraexplorer.fileProvider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -90,69 +276,40 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <!-- 信鸽 -->
-        <!--
-        <receiver
-            android:name=".ui.xinge.MessageReceiver"
-            android:exported="true">
-            <intent-filter>
+        <activity
+            android:name=".controllers.GPSNaviActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity
+            android:name=".controllers.EmulatorActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
+        <activity android:name=".controllers.TestActivity" />
+        <activity
+            android:name="com.amap.api.maps.offlinemap.OfflineMapActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".controllers.base.HhBaseActivity" />
+        <activity android:name=".controllers.base.BaseActivity" />
+        <activity
+            android:name=".controllers.SettingAppActivity"
+            android:label="@string/app_setting"
+            android:parentActivityName=".controllers.TEMainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".controllers.TEMainActivity" />
+        </activity>
+        <activity android:name=".controllers.ResourceCheckActivity" />
+        <activity android:name=".controllers.HiddenDangerActivity" />
 
-                &lt;!&ndash; 接收消息透传 &ndash;&gt;
-                <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
-                &lt;!&ndash; 监听注册、反注册、设置/删除标签、通知被点击等处理结果 &ndash;&gt;
-                <action android:name="com.tencent.android.tpush.action.FEEDBACK" />
-            </intent-filter>
-        </receiver>
-        &lt;!&ndash; 默认的自定义广播接收器，用于自定义处理魅族push消息广播，receiver的name为自定义的广播接收类 start &ndash;&gt;
-        <receiver android:name=".ui.xinge.MzPushMessageReceiver">
-            <intent-filter>
+        <receiver android:name=".receiver.NetworkConnectChangedReceiver" />
 
-                &lt;!&ndash; 接收push消息 &ndash;&gt;
-                <action android:name="com.meizu.flyme.push.intent.MESSAGE" />
-                &lt;!&ndash; 接收register消息 &ndash;&gt;
-                <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" />
-                &lt;!&ndash; 接收unregister消息 &ndash;&gt;
-                <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK" />
-                <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
-                <action android:name="com.meizu.c2dm.intent.RECEIVE" />
+        <activity android:name=".controllers.base.HBaseActivity" />
+        <activity android:name=".controllers.CheckPlanActivity" />
 
-                <category android:name="com.hht.hsatellitemobile" />
-            </intent-filter>
-        </receiver>
-        -->
-        <!--
-            <service
-            android:name="cn.jpush.android.service.PushService"
-            android:process=":multiprocess"
-            tools:node="replace"></service>
-        -->
         <service
-            android:name=".ui.MediaService"
-            android:enabled="true"
-            android:exported="true" />
-
-        <activity android:name=".ui.activity.SettingActivity" />
-
-        <!--以下是腾讯推送配置-->
-
-       <!-- <meta-data
-            android:name="XG_SERVER_SUFFIX"
-            android:value="tpns.sh.tencent.com" />-->
-
-        <receiver android:name=".tpns.MessageReceiver">
-            <intent-filter>
-                <!-- 接收消息透传 -->
-                <action android:name="com.tencent.android.xg.vip.action.PUSH_MESSAGE" />
-                <!-- 监听注册、反注册、设置/删除标签、通知被点击等处理结果 -->
-                <action android:name="com.tencent.android.xg.vip.action.FEEDBACK" />
-            </intent-filter>
-        </receiver>
-        <!--以上是腾讯推送配置-->
-
-        <!-- 以上是极光配置 -->
-<!--
-        <service
-            android:name=".jipush.JPushSservice"
+            android:name=".jpush.JPushSservice"
             android:enabled="true"
             android:exported="false"
             android:process=":pushcore">
@@ -160,20 +317,6 @@
                 <action android:name="cn.jiguang.user.service.action" />
             </intent-filter>
         </service>
-
-        <receiver
-            android:name=".jipush.JPushRecycle"
-            android:enabled="true"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
-
-                <category android:name="com.hht.hsatellitemobile" />
-            </intent-filter>
-        </receiver>
-
-        &lt;!&ndash; Required SDK 核心功能 &ndash;&gt;
-        &lt;!&ndash; 可配置 android:process 参数将 PushService 放在其他进程中 &ndash;&gt;
         <service
             android:name="cn.jpush.android.service.PushService"
             android:enabled="true"
@@ -185,50 +328,26 @@
                 <action android:name="cn.jpush.android.intent.PUSH_TIME" />
             </intent-filter>
         </service>
-
-        &lt;!&ndash;
-                &lt;!&ndash; since 3.0.9 Required SDK 核心功能&ndash;&gt;
-                <provider
-                    android:authorities="com.hht.hsatellitemobile.DataProvider"
-                    android:name="cn.jpush.android.service.DataProvider"
-                    android:exported="true"
-                    />
-        &ndash;&gt;
-
-
-        &lt;!&ndash; since 1.8.0 option 可选项。用于同一设备中不同应用的 JPush 服务相互拉起的功能。 &ndash;&gt;
-        &lt;!&ndash; 若不启用该功能可删除该组件，或把 enabled 设置成 false ；App 不会被其他 App 拉起，但会拉起其他的 App。 &ndash;&gt;
-        <service
-            android:name="cn.jpush.android.service.DaemonService"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="cn.jpush.android.intent.DaemonService" />
-
-                <category android:name="com.hht.hsatellitemobile" />
-            </intent-filter>
-        </service>
-
-        &lt;!&ndash; since 3.1.0 Required SDK 核心功能 &ndash;&gt;
+        <!-- since 3.1.0 Required SDK 核心功能 -->
         <provider
             android:name="cn.jpush.android.service.DownloadProvider"
-            android:authorities="com.hht.hsatellitemobile.DownloadProvider"
+            android:authorities="com.skyline.terraexplorer.DownloadProvider"
             android:exported="true" />
 
-        &lt;!&ndash; Required SDK 核心功能 &ndash;&gt;
+        <!-- Required SDK 核心功能 -->
         <receiver
             android:name="cn.jpush.android.service.PushReceiver"
             android:enabled="true">
             <intent-filter android:priority="1000">
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
 
-                <category android:name="com.hht.hsatellitemobile" />
+                <category android:name="com.skyline.terraexplorer" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT" />
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
-            &lt;!&ndash; Optional &ndash;&gt;
+            <!-- Optional -->
             <intent-filter>
                 <action android:name="android.intent.action.PACKAGE_ADDED" />
                 <action android:name="android.intent.action.PACKAGE_REMOVED" />
@@ -237,7 +356,7 @@
             </intent-filter>
         </receiver>
 
-        &lt;!&ndash; Required SDK 核心功能 &ndash;&gt;
+        <!-- Required SDK 核心功能 -->
         <activity
             android:name="cn.jpush.android.ui.PushActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -247,10 +366,10 @@
                 <action android:name="cn.jpush.android.ui.PushActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="com.hht.hsatellitemobile" />
+                <category android:name="com.skyline.terraexplorer" />
             </intent-filter>
         </activity>
-        &lt;!&ndash; SDK 核心功能 &ndash;&gt;
+        <!-- SDK 核心功能 -->
         <activity
             android:name="cn.jpush.android.ui.PopWinActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -258,28 +377,28 @@
             android:theme="@style/MyDialogStyle">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="com.hht.hsatellitemobile" />
+                <category android:name="com.skyline.terraexplorer" />
             </intent-filter>
         </activity>
 
-        &lt;!&ndash; 注意此配置在 JPush 3.2.0 及以前版本是必须配置，3.2.0 以后版本已废弃此配置 &ndash;&gt;
+        <!-- 注意此配置在 JPush 3.2.0 及以前版本是必须配置，3.2.0 以后版本已废弃此配置 -->
 
 
-        &lt;!&ndash; Since JCore2.0.0 Required SDK核心功能 &ndash;&gt;
-        &lt;!&ndash; 可配置android:process参数将Service放在其他进程中；android:enabled属性不能是false &ndash;&gt;
-        &lt;!&ndash; 这个是自定义Service，要继承极光JCommonService，可以在更多手机平台上使得推送通道保持的更稳定 &ndash;&gt;
+        <!-- Since JCore2.0.0 Required SDK核心功能 -->
+        <!-- 可配置android:process参数将Service放在其他进程中；android:enabled属性不能是false -->
+        <!-- 这个是自定义Service，要继承极光JCommonService，可以在更多手机平台上使得推送通道保持的更稳定 -->
 
 
-        &lt;!&ndash; Required SDK 核心功能 &ndash;&gt;
+        <!-- Required SDK 核心功能 -->
         <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
 
-        &lt;!&ndash; Required since 3.0.7 &ndash;&gt;
-        &lt;!&ndash; 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 &ndash;&gt;
-        &lt;!&ndash; 3.3.0开始所有事件将通过该类回调 &ndash;&gt;
-        &lt;!&ndash; 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter &ndash;&gt;
+        <!-- Required since 3.0.7 -->
+        <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 3.3.0开始所有事件将通过该类回调 -->
+        <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
 
 
-        &lt;!&ndash; Required SDK核心功能 since 3.3.0 &ndash;&gt;
+        <!-- Required SDK核心功能 since 3.3.0 -->
         <activity
             android:name="cn.jpush.android.service.JNotifyActivity"
             android:exported="true"
@@ -288,51 +407,91 @@
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.JNotifyActivity" />
 
-                <category android:name="com.hht.hsatellitemobile" />
+                <category android:name="com.skyline.terraexplorer" />
             </intent-filter>
         </activity>
 
-        &lt;!&ndash; User defined. 用户自定义的广播接收器 &ndash;&gt;
-        <receiver
-            android:name=".jipush.MyJPushReceiver"
-            android:enabled="true">
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
 
-                &lt;!&ndash; Required 用户注册SDK的intent &ndash;&gt;
-                <action android:name="cn.jpush.android.intent.REGISTRATION" />
-                &lt;!&ndash; Required 用户接收SDK消息的intent &ndash;&gt;
-                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
-                &lt;!&ndash; Required 用户接收SDK通知栏信息的intent &ndash;&gt;
-                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
-                &lt;!&ndash; Required 用户打开自定义通知栏的intent &ndash;&gt;
-                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
-                &lt;!&ndash; 接收网络变化 连接/断开 since 1.6.3 &ndash;&gt;
-                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <category android:name="com.skyline.terraexplorer" />
+            </intent-filter>
+        </service>
 
-                <category android:name="com.hht.hsatellitemobile" />
+        <receiver
+            android:name=".jpush.JPushRecycle"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
+                <category android:name="com.skyline.terraexplorer" />
             </intent-filter>
         </receiver>
-        &lt;!&ndash; Required. For publish channel feature &ndash;&gt;
-        &lt;!&ndash; JPUSH_CHANNEL 是为了方便开发者统计 APK 分发渠道。 &ndash;&gt;
-        &lt;!&ndash; 例如: &ndash;&gt;
-        &lt;!&ndash; 发到 Google Play 的 APK 可以设置为 google-play; &ndash;&gt;
-        &lt;!&ndash; 发到其他市场的 APK 可以设置为 xxx-market。 &ndash;&gt;
+
+        <!-- User defined. 用户自定义的广播接收器 -->
+        <receiver
+            android:name=".jpush.MyJPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.WakedReceiver" />
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="com.skyline.terraexplorer" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".controllers.base.GPSnewActivity" />
+        <activity
+            android:name="com.amap.api.navi.AmapRouteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".controllers.DownMapActivity" />
+        <activity android:name=".controllers.SurroundResourceActivity" />
+        <activity android:name=".controllers.ResourceSearchActivity" />
+        <activity
+            android:name="com.zhihu.matisse.internal.ui.AlbumPreviewActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".controllers.ResourceSelectNewActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".controllers.ComprehensiveCheckActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".controllers.ComprehensiveCheckHomeActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".controllers.ResourceAddActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".controllers.BaiduiMapActivity" />
+        <activity android:name=".controllers.ComprehensiveCheckListActivity" />
+        <activity android:name=".controllers.ComprehensiveCheckEditActivity" />
 
         <service
-            android:name=".jipush.BackgroundMp3Service"
+            android:name=".service.TrackService"
             android:enabled="true"
-            android:exported="true"
-            android:label="123213" />-->
-        <!-- 以上是极光配置 -->
-        <activity android:name=".ui.activity.AddFireActivity" />
-        <activity android:name=".ui.activity.base.HhBaseFullActivity" />
-        <activity android:name=".ui.activity.FireMapActivity" />
-        <activity android:name=".ui.activity.PicActivity" />
+            android:exported="true" />
 
-        <service
-            android:name=".ui.service.TrackService"
-            android:enabled="true"
-            android:exported="true"></service>
+        <activity
+            android:name=".controllers.ResourceEditActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".controllers.MyPicDialogActivity"
+            android:theme="@style/dialogstyle" />
+        <activity android:name=".controllers.ResourceErrorActivity"></activity>
     </application>
 
 </manifest>

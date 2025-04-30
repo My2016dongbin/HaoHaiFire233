@@ -3,12 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/disasterreduction/disasterreduction.iml" filepath="$PROJECT_DIR$/disasterreduction/disasterreduction.iml" />
-      <module fileurl="file://$PROJECT_DIR$/modelCore/drlibrary/drlibrary.iml" filepath="$PROJECT_DIR$/modelCore/drlibrary/drlibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dsbridge/dsbridge.iml" filepath="$PROJECT_DIR$/dsbridge/dsbridge.iml" />
-      <module fileurl="file://$PROJECT_DIR$/hhlibrary/hhlibrary.iml" filepath="$PROJECT_DIR$/hhlibrary/hhlibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/huiyanweixing.iml" filepath="$PROJECT_DIR$/huiyanweixing.iml" />
-      <module fileurl="file://$PROJECT_DIR$/modelCore/modelCore.iml" filepath="$PROJECT_DIR$/modelCore/modelCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/qd-grid-app.iml" filepath="$PROJECT_DIR$/qd-grid-app.iml" />
     </modules>
   </component>
 </project>

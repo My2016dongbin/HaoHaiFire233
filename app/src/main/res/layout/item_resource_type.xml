@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/resource_type_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/c1"
+    android:layout_height="40dp">
+
+    <TextView
+        android:id="@+id/resource_type_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="资源点名称"
+        android:textColor="@color/c7"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"/>
+    <ImageView
+        android:id="@+id/open_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_open_down"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="10dp"
+        />
+</FrameLayout>

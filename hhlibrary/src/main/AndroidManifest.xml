@@ -1,15 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.ruyiruyi.rylibrary">
 
-    <application
+    package="com.haohai.hhlibrary">
 
-        android:allowBackup="true"
-        android:label="@string/app_name"
+    <application android:allowBackup="true" android:label="@string/app_name"
         android:supportsRtl="true">
-        <activity android:name=".base.BaseActivity"/>
-        <activity android:name=".base.BaseWebActivity">
-        </activity>
+
     </application>
+
+    <!-- 高德地图 key -->
+    <meta-data
+        android:name="com.amap.api.v2.apikey"
+        android:value="719841fd12fa36fb0767ede379e5af7f" />
+
+    <service android:name="com.amap.api.location.APSService" />
 
 </manifest>

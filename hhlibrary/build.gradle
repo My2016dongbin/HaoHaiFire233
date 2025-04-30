@@ -1,17 +1,17 @@
 apply plugin: 'com.android.library'
 
-def VERSION_CODE = 1
-def VERSION_NAME = "1.0"
-
 android {
-    compileSdkVersion rootProject.compileSdkVersion
-    buildToolsVersion rootProject.buildToolsVersion
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion rootProject.targetSdkVersion
-        versionCode VERSION_CODE
-        versionName VERSION_NAME
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -19,39 +19,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    def system_dependencies = rootProject.ext.system_dependencies
-    compile system_dependencies.appcompat_v7
-    compile system_dependencies.support_v4
-    compile system_dependencies.cardview_v7
-    compile system_dependencies.palette_v7
-    compile system_dependencies.recyclerview_v7
-    compile system_dependencies.design
-    compile system_dependencies.rxjava
-    compile system_dependencies.rxandroid
-    compile system_dependencies.rxbinding
-    compile system_dependencies.glide
-    compile system_dependencies.gson
-    compile system_dependencies.fresco
-    compile system_dependencies.indexablere
-    compile system_dependencies.xutils
-    compile('me.drakeet.multitype:multitype:2.2.2', {
-        exclude group: 'com.android.support'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
     })
-
-
-    compile 'com.zhy:okhttputils:2.6.2'
-    compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
-    compile 'de.hdodenhof:circleimageview:2.1.0'
-//    compile 'id.zelory:compressor:2.1.0'
-    compile 'com.baoyz.swipemenulistview:library:1.3.0'
-    compile 'com.nineoldandroids:library:2.4.0'//com.nineoldandroids:library动画兼容库
-    compile 'com.facebook.fresco:fresco:0.12.0'//fresco图片加载库(需要在项目的Application中自行初始化操作)
-    compile 'com.flyco.pageindicator:FlycoPageIndicator_Lib:1.0.0@aar'//flyco.pageindicator 轮播指示灯库
-    compile 'com.facebook.rebound:rebound:0.3.8'//rebound Android弹性动画库
-    compile 'com.malinskiy:materialicons:1.0.2'//Materialicons是Google推出的图标库,属于MaterialDesign工程的一部分
+    compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
 }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.skyline.terraexplorer.controllers.BaiduiMapActivity">
+
+    <com.skyline.terraexplorer.views.ActionBar
+        android:id="@+id/map_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/ll_map_bottom"
+            android:clickable="true" />
+
+        <LinearLayout
+            android:id="@+id/ll_map_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/state"
+                android:layout_marginTop="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:textSize="14sp"
+                android:textColor="@color/c7"
+                android:layout_marginLeft="15dp"
+                android:text="点击、长按、双击地图以获取经纬度和地图状态" />
+
+            <TextView
+                android:id="@+id/state2"
+                android:layout_width="fill_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="15dp"
+                android:gravity="left|top"
+                android:lines="2"
+                android:text="点击、长按、双击地图以获取经纬度和地图状态"
+                android:textColor="@color/c6"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_map"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:onClick="mapclick"
+                android:clickable="true"
+                android:text="确认选择"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

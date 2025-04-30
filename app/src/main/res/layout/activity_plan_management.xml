@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_plan_management"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF"
+    tools:context="com.skyline.test.plan.PlanManagementActivity">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/title_name">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/header_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/plan_management" />
+
+            <TextView
+                android:id="@+id/header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预案管理"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_large" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/plan_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:clickable="true"
+            android:background="@drawable/selector_rl_back">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:paddingRight="10dp"
+                android:src="@drawable/title_back" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <com.skyline.test.others.PagerSlidingTabStrip
+        android:id="@+id/activity_plan_psts"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+    </com.skyline.test.others.PagerSlidingTabStrip>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_plan_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

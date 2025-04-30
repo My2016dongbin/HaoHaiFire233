@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/title_name">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView_titile_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:padding="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tool_resource_query" />
+
+            <TextView
+                android:id="@+id/textView_header_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="框选查询"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_large" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout_query_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/selector_rl_back"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:paddingRight="10dp"
+                android:src="@drawable/title_back" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.yydcdut.sdlv.SlideAndDragListView
+        android:id="@+id/slideAndDragListView"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_height="match_parent">
+
+    </com.yydcdut.sdlv.SlideAndDragListView>
+</LinearLayout>

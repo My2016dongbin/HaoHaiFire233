@@ -1,0 +1,128 @@
+﻿{
+  "kml": {
+    "Document": {
+      "Placemark": [
+        {
+          "name": "城阳区森林消防专业队",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.51297074453,36.3121953297055,0
+        "
+          }
+        },
+        {
+          "name": "黄岛区东区森林消防专业队",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0943047483,36.0176077304,0
+        "
+          }
+        },
+        {
+          "name": "黄岛区西区森林消防专业队",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0253665447,35.8360698044,0
+        "
+          }
+        },
+        {
+          "name": "黄岛区古镇口森林消防专业队",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9843662977,35.7368984589,0
+        "
+          }
+        },
+        {
+          "name": "即墨市森林消防专业队",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.7069444444,36.4627777777,0
+        "
+          }
+        },
+        {
+          "name": "胶州市森林消防专业队",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9115921673,36.1384884378,0
+        "
+          }
+        },
+        {
+          "name": "莱西市森林消防专业队",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.2800777777,37.0935861111,0
+        "
+          }
+        },
+        {
+          "name": "莱西市森林消防专业队",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.2470027777,37.0611416666,0
+        "
+          }
+        },
+        {
+          "name": "崂山区森林消防专业队",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5713140963,36.1279271141,0
+        "
+          }
+        },
+        {
+          "name": "平度市森林消防大队一中队",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.001559212153,36.9795524530457,0
+        "
+          }
+        },
+        {
+          "name": "平度市森林消防大队二中队",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.071464877375,36.9589674586303,0
+        "
+          }
+        },
+        {
+          "name": "平度市森林消防大队三中队",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.089235382923,36.9051506347184,0
+        "
+          }
+        }
+      ]
+    }
+  }
+}

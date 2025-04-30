@@ -10,14 +10,14 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="horizontal">
-        <com.ruyiruyi.rylibrary.ui.cell.WheelView
+        <com.skyline.terraexplorer.views.WheelView
             android:id="@+id/wheel_view_area"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            app:textColorCenter="@color/theme_primary"
+            app:textColorCenter="@color/colorPrimary"
             app:lineSpaceingDimens="10dp"
             app:itemVisibleNum="5"
-            app:lineColor="@color/theme_primary"
+            app:lineColor="@color/colorPrimary"
             app:textSizeCenter="12dp"
             app:textSizeOuter="10dp"
             app:isLoop="true"

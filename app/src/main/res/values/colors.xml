@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#7ad6f2</color>
-    <color name="colorPrimaryDark">#7ad6f2</color>
-    <color name="colorAccent">#7ad6f2</color>
+    <color name="colorPrimary">#4A90E2</color>
+    <color name="theme_primary">#4A90E2</color>
+    <color name="red">#ED1C24</color>
+    <color name="black">#3D3D3F</color>
+    <color name="gray">#C3C3C3</color>
+    <color name="grayA">#7F7F7F</color>
+    <color name="translate">#00000000</color>
+    <color name="colorBlue">#2980b9</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorGrey">#cccccc</color>
+    <color name="colorBlue_press">#6653EC</color>
+
 
 
     <color name="c1">#f1f1f1</color>
@@ -37,6 +46,7 @@
     <color name="c30">#ff8989</color>
     <color name="c31">#000000</color>
     <color name="c32">#00faf8f8</color>
+    <color name="c33">#FFA200</color>
     <color name="map">#4a90e2</color>
     <color name="tire_info_background">#dec30f24</color>
     <color name="activity_bg">#FFF1F1F1</color>

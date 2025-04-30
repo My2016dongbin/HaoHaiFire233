@@ -1,0 +1,68 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* proguard-project.txt
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets\
+* libs\armeabi-v7a\lib3ds.so => app\src\main\jniLibs\armeabi-v7a\lib3ds.so
+* libs\armeabi-v7a\lib7zip.so => app\src\main\jniLibs\armeabi-v7a\lib7zip.so
+* libs\armeabi-v7a\libCore.so => app\src\main\jniLibs\armeabi-v7a\libCore.so
+* libs\armeabi-v7a\libgdal.so => app\src\main\jniLibs\armeabi-v7a\libgdal.so
+* libs\armeabi-v7a\libgisplg.so => app\src\main\jniLibs\armeabi-v7a\libgisplg.so
+* libs\armeabi-v7a\libgnustl_shared.so => app\src\main\jniLibs\armeabi-v7a\libgnustl_shared.so
+* libs\armeabi-v7a\libMptDll.so => app\src\main\jniLibs\armeabi-v7a\libMptDll.so
+* libs\armeabi-v7a\libMPTFile.so => app\src\main\jniLibs\armeabi-v7a\libMPTFile.so
+* libs\armeabi-v7a\libmptplg.so => app\src\main\jniLibs\armeabi-v7a\libmptplg.so
+* libs\armeabi-v7a\libOGRPlugin.so => app\src\main\jniLibs\armeabi-v7a\libOGRPlugin.so
+* libs\armeabi-v7a\libOpenGL.so => app\src\main\jniLibs\armeabi-v7a\libOpenGL.so
+* libs\armeabi-v7a\libprjplg.so => app\src\main\jniLibs\armeabi-v7a\libprjplg.so
+* libs\armeabi-v7a\libsl_png.so => app\src\main\jniLibs\armeabi-v7a\libsl_png.so
+* libs\armeabi-v7a\libSLLogger.so => app\src\main\jniLibs\armeabi-v7a\libSLLogger.so
+* libs\armeabi-v7a\libSLLoggerLib.so => app\src\main\jniLibs\armeabi-v7a\libSLLoggerLib.so
+* libs\armeabi-v7a\libSLStrings.so => app\src\main\jniLibs\armeabi-v7a\libSLStrings.so
+* libs\armeabi-v7a\libTerra.so => app\src\main\jniLibs\armeabi-v7a\libTerra.so
+* libs\armeabi-v7a\libTerraCommon.so => app\src\main\jniLibs\armeabi-v7a\libTerraCommon.so
+* libs\armeabi-v7a\libTerraExplorerJNI.so => app\src\main\jniLibs\armeabi-v7a\libTerraExplorerJNI.so
+* libs\armeabi-v7a\libTerraExplorerX.so => app\src\main\jniLibs\armeabi-v7a\libTerraExplorerX.so
+* libs\armeabi-v7a\libTESWQ.so => app\src\main\jniLibs\armeabi-v7a\libTESWQ.so
+* libs\armeabi-v7a\libtiff.so => app\src\main\jniLibs\armeabi-v7a\libtiff.so
+* libs\armeabi-v7a\libWFSPlugin.so => app\src\main\jniLibs\armeabi-v7a\libWFSPlugin.so
+* libs\commons-jexl-2.1.1.jar => app\libs\commons-jexl-2.1.1.jar
+* libs\tileviewlib-1.0.11.jar => app\libs\tileviewlib-1.0.11.jar
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+* src\com\skyline\core\vssver.scc => app\src\main\resources\com\skyline\core\vssver.scc
+* src\com\skyline\teapi\vssver.scc => app\src\main\resources\com\skyline\teapi\vssver.scc
+* src\com\skyline\terraexplorer\controllers\vssver.scc => app\src\main\resources\com\skyline\terraexplorer\controllers\vssver.scc
+* src\com\skyline\terraexplorer\models\vssver.scc => app\src\main\resources\com\skyline\terraexplorer\models\vssver.scc
+* src\com\skyline\terraexplorer\tools\vssver.scc => app\src\main\resources\com\skyline\terraexplorer\tools\vssver.scc
+* src\com\skyline\terraexplorer\views\vssver.scc => app\src\main\resources\com\skyline\terraexplorer\views\vssver.scc
+* src\com\skyline\terraexplorer\vssver.scc => app\src\main\resources\com\skyline\terraexplorer\vssver.scc
+* src\yuku\ambilwarna\vssver.scc => app\src\main\resources\yuku\ambilwarna\vssver.scc
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

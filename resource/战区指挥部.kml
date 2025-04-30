@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml>
+  <Document>
+    <Placemark>
+      <name>夏庄街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.452902735173,36.2565339456871,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>惜福镇街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.510548758739,36.3059489921953,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>六汪镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.779722222222,35.9441666666667,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>辛安街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.1344417,36.018875,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>张家楼镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.9015825987,35.7983666786,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>长江路街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.175833333333,35.9519444444445,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>大村镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.770277777778,35.8047222222222,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>珠海街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.974444444444,35.8808333333333,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>灵山卫街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.135833333333,35.9411111111111,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>灵山卫街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.157777777778,35.9241666666667,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>琅琊镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.854444444444,35.6883333333333,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>琅琊镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.905555555556,35.6922222222222,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>滨海街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.971944444444,35.8213888888889,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>胶南街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.0015939725,35.9066035705,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>薛家岛街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.208055555556,35.9605555555556,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>王台镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.0075,36.0780555555556,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>临港经济开发区战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.045621,35.925103,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>铁山街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.915729,35.907742,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>藏南镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.819166666667,35.7580555555556,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>灵珠山街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.073888888889,36.0136111111111,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>鳌山卫街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.663,36.366,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>田横镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.847,36.514,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>田横岛战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.874,36.469,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>温泉街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.654,36.452,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>龙山街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.517,36.386,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>里岔镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.783748490148,36.0699365737749,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>洋河镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.9115921673,36.1384884378,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>南墅镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.3339496435,37.0233910073,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>中韩街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.452329885457,36.1081702840494,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>沙子口街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.5442988873,36.116468773,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>北宅街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.516638731819,36.2265243688274,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>王哥庄街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.6272,36.264331,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>崂山林场战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.466067926576,36.0998952185754,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>大泽山镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.91868427214,36.9887505288459,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>店子镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.862326972974,36.9009901937116,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>云山镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.201246933255,36.8269260451404,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>古岘镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.220118955955,36.7340096132404,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>旧店镇战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.202010753635,36.9908189660457,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>李园街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.931094841355,36.7912868839404,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>东阁街道战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.961950973855,36.7844582317404,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>大泽山林场战区指挥部</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.046869711255,36.9917629638404,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
+

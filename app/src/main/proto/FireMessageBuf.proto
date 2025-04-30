@@ -1,0 +1,16 @@
+syntax = "proto3";
+option java_package = "com.bean";
+package bean;
+message FireMessage {
+    message FireMessageContent {
+        string alarmId = 1;
+        double lon = 2;
+        double lat = 3;
+        string alarmTime = 4;
+        bytes pic = 5;
+        string disposePerson = 6;
+        string disposeDateTime = 7;
+        uint32 alarmFindType = 8;
+        string alarmContent=9;
+    }
+}

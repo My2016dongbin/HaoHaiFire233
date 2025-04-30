@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml>
+  <Document>
+    <Placemark>
+      <name>城阳区森林防火指挥部</name>
+      <visibility>1</visibility>
+      
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.512912481575,36.3128889596481,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>黄岛区森林防火指挥部</name>
+      <visibility>1</visibility>
+      
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.018958694868,35.8388019764759,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>即墨市森林防火指挥部</name>
+      <visibility>1</visibility>
+      
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.441620802105,36.3919601175706,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>胶州市森林防火指挥部</name>
+      <visibility>1</visibility>
+      
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.0336706638,36.264682583,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>莱西市森林防火指挥部</name>
+      <visibility>1</visibility>
+      
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.5176854975,36.8884539156,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>崂山区森林防火指挥部</name>
+      <visibility>1</visibility>
+      
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.5416147921,36.1033649846,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>平度市森林防火指挥部</name>
+      <visibility>1</visibility>
+      
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.93701241518,36.7903553156032,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>awdawadad</name>
+      <visibility>1</visibility>
+      
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.628924649764,36.1674079539077,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
+

@@ -1,0 +1,488 @@
+﻿{
+  "kml": {
+    "Document": {
+      "Placemark": [
+        {
+          "name": "河里吴家工商希望小学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.2599583333,37.0845361111,0
+        "
+          }
+        },
+        {
+          "name": "长江路荒里山",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.131111111111,35.9844444444444,0
+        "
+          }
+        },
+        {
+          "name": "西葛加油站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.547438194857,36.3233686899547,0
+        "
+          }
+        },
+        {
+          "name": "棉花小学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.552846550672,36.2922693079126,0
+        "
+          }
+        },
+        {
+          "name": "大泽山重点目标1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.028720854367,36.9728100530586,0
+        "
+          }
+        },
+        {
+          "name": "大泽山重点目标2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.011737106867,36.9758399925586,0
+        "
+          }
+        },
+        {
+          "name": "大泽山619",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.013957975867,36.9468556302586,0
+        "
+          }
+        },
+        {
+          "name": "大泽山智藏寺",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.017831085767,36.9933615622586,0
+        "
+          }
+        },
+        {
+          "name": "大泽山天柱山",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.933931587767,36.9641781353586,0
+        "
+          }
+        },
+        {
+          "name": "云山云山观",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.159416852967,36.8858869178586,0
+        "
+          }
+        },
+        {
+          "name": "店子镇茶山",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.972324727571,36.922966994902,0
+        "
+          }
+        },
+        {
+          "name": "古岘康王坟",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.1882839203,36.7570748412,0
+        "
+          }
+        },
+        {
+          "name": "重要目标",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.071142672067,36.9596260546586,0
+        "
+          }
+        },
+        {
+          "name": "灵山岛小学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.16,35.7669444444444,0
+        "
+          }
+        },
+        {
+          "name": "敬老院",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.163333333333,35.7697222222222,0
+        "
+          }
+        },
+        {
+          "name": "青岛大学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4813058,36.1151823,0
+        "
+          }
+        },
+        {
+          "name": "中国海洋大学（浮山校区）",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4323798969,36.0729331813,0
+        "
+          }
+        },
+        {
+          "name": "中国海洋大学（崂山校区）",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4951601572,36.1616376036,0
+        "
+          }
+        },
+        {
+          "name": "青岛大学华文学院",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4804240331,36.1149855821,0
+        "
+          }
+        },
+        {
+          "name": "崂山第一中学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4346156478,36.122373786,0
+        "
+          }
+        },
+        {
+          "name": "崂山第二中学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.476642813,36.1037571352,0
+        "
+          }
+        },
+        {
+          "name": "崂山第三中学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4622270962,36.1100427864,0
+        "
+          }
+        },
+        {
+          "name": "青岛第二中学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4839510331,36.1123545821,0
+        "
+          }
+        },
+        {
+          "name": "崂山区浮山小学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4312453676,36.1092695571,0
+        "
+          }
+        },
+        {
+          "name": "崂山区山东头小学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.456757567,36.0908087796,0
+        "
+          }
+        },
+        {
+          "name": "崂山区第二实验小学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4458747687,36.1088732419,0
+        "
+          }
+        },
+        {
+          "name": "崂山区第六中学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5543159188,36.1240289159,0
+        "
+          }
+        },
+        {
+          "name": "海尔大学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4180707495,36.130222243,0
+        "
+          }
+        },
+        {
+          "name": "青岛市崂山区中韩小学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4301826479,36.124326786,0
+        "
+          }
+        },
+        {
+          "name": "崂山区第五中学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5239733902,36.1505133562,0
+        "
+          }
+        },
+        {
+          "name": "崂山区沙子口小学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5390412387,36.1210169957,0
+        "
+          }
+        },
+        {
+          "name": "青岛市崂山区第四中学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4710486716,36.1359964529,0
+        "
+          }
+        },
+        {
+          "name": "青岛市崂山区张村河小学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.480043757,36.1296505235,0
+        "
+          }
+        },
+        {
+          "name": "青岛第二实验初级中学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.433437032,36.0976458774,0
+        "
+          }
+        },
+        {
+          "name": "崂山区林蔚小学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.555254734613,36.2391297483648,0
+        "
+          }
+        },
+        {
+          "name": "青岛市崂山区第十一中学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.524913094678,36.2219197282843,0
+        "
+          }
+        },
+        {
+          "name": "崂山区午山小学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4861920331,36.1153135821,0
+        "
+          }
+        },
+        {
+          "name": "青岛高新职业学校",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4259009069,36.118145195,0
+        "
+          }
+        },
+        {
+          "name": "崂山区第八中学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6557522821,36.2620672159,0
+        "
+          }
+        },
+        {
+          "name": "东阁豹竹涧",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.992371557767,36.8262929373586,0
+        "
+          }
+        },
+        {
+          "name": "东阁老龙湾",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.997242449367,36.8860950119586,0
+        "
+          }
+        },
+        {
+          "name": "琅琊台度假区小学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8925,35.6919444444444,0
+        "
+          }
+        },
+        {
+          "name": "王台石北鞭炮厂",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.976111111111,35.9705555555556,0
+        "
+          }
+        },
+        {
+          "name": "积米崖水产供销油库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.156944444444,35.9216666666667,0
+        "
+          }
+        },
+        {
+          "name": "黄海学院",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.105277777778,35.9280555555556,0
+        "
+          }
+        },
+        {
+          "name": "薛家岛山里小学",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.287222222222,35.9813888888889,0
+        "
+          }
+        },
+        {
+          "name": "珠山国家森林公园",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0613725185,35.9834323783,0
+        "
+          }
+        },
+        {
+          "name": "青岛野生动物世界",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0535780192,35.9822516713,0
+        "
+          }
+        }
+      ]
+    }
+  }
+}

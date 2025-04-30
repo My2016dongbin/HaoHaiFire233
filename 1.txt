@@ -1,5 +1,0 @@
-http://192.168.1.122:9128/api/emos/repair/getRepairApplyList?XX-Token=d1677bac681624a6330ca9bb1e88fc3efc19ab8cccb4e0812af0487ec6f7ed9d&XX-Device-Type=mobile&page=1&apply_state=
-http://192.168.1.122:9128/api/emos/repair/getRepairApplyList?XX-Token=d1677bac681624a6330ca9bb1e88fc3efc19ab8cccb4e0812af0487ec6f7ed9d&XX-Device-Type=mobile&apply_time=2020-3-25&page=1&apply_state=
-
-
-

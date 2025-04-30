@@ -7,3 +7,10 @@
 /build
 /captures
 .externalNativeBuild
+/.gradle/3.5/fileContent/fileContent.lock
+/.idea/
+app/build/
+gradle/
+build/
+/app/app.iml
+/app/src/generated
