@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.ruyiruyi.rylibrary">
+    package="com.ruyiruyi.rylibrary">
 
     <application
-
         android:allowBackup="true"
         android:label="@string/app_name"
         android:supportsRtl="true">
-        <activity android:name=".base.BaseActivity"/>
-        <activity android:name=".base.BaseWebActivity">
-        </activity>
+        <activity android:name=".base.BaseActivity" />
+        <activity android:name=".base.BaseWebActivity" />
+        <activity android:name=".base.BaseFragmentActivity" />
+        <activity android:name=".base.FullBaseActivity"></activity>
     </application>
 
 </manifest>

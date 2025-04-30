@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+def VERSION_CODE = 1
+def VERSION_NAME = "1.0"
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode VERSION_CODE
+        versionName VERSION_NAME
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+
+    sourceSets{
+        main{
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []    //disable automatic ndk-build
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':hhlibrary')
+    compile project(':videolibrary')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+    compile project(':chatimmodel')
+
+
+
+
+ /*   compile 'com.tencent.jg:jg:1.1'     //腾讯推送
+    compile 'com.tencent.tpns:tpns:1.2.1.3-release' //腾讯推送*/
+}

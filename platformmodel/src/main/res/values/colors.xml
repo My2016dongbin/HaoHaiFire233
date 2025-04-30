@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4A90E2</color>
+    <color name="colorTop">#283345</color>
+    <color name="colorPrimaryDark">#4A90E2</color>
+    <color name="colorAccent">#4A90E2</color>
+
+
+    <color name="c1">#f1f1f1</color>
+    <color name="c2">#dedede</color>
+    <color name="c3">#cecece</color>
+    <color name="c4">#D3D3D3</color>
+    <color name="c5">#B3B3B3</color>
+    <color name="c6">#646464</color>
+    <color name="c7">#383838</color>
+    <color name="c8">#181818</color>
+    <color name="c9">#cc3333</color>
+    <color name="c10">#e79e99</color>
+    <color name="c11">#ffe8e7</color>
+    <color name="c12">#ffffff</color>
+    <color name="c13">#9FCEF5</color>
+    <color name="c14">#96D996</color>
+    <color name="c15">#F29C24</color>
+    <color name="c16">#0079FF</color>
+    <color name="c17">#79889F</color>
+    <color name="c18">#e8e8e8</color>
+    <color name="c19">#e11c00</color>
+    <color name="c20">#FF3B30</color>
+    <color name="c21">#f28f25</color>
+    <color name="c22">#29B766</color>
+    <color name="c23">#5474af</color>
+    <color name="c24">#FF7214</color>
+    <color name="c25">#585B6A</color>
+    <color name="c26">#424455</color>
+    <color name="c27">#15B3ED</color>
+    <color name="c28"> #0F8AC3</color>
+    <color name="c29">#f9e50d</color>
+    <color name="c30">#ff8989</color>
+    <color name="c31">#121111</color>
+    <color name="c32">#00faf8f8</color>
+    <color name="video">#181818</color>
+
+    <color name="darkgrey">#ff404040</color>
+    <color name="toasterro">#9fd524</color>
+    <color name="lightgrey">#ff888888</color>
+    <color name="semitransparent">#80000000</color>
+    <color name="lightransparent">#a0000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="navpage">#FFE1E8EB</color>
+    <color name="white">#FFFFFF</color>
+    <color name="titlecolor">#ff2081D9</color>
+    <color name="pressed_bgcolor">#22c5eaf8</color>
+    <color name="normalcolor">#ff333333</color>
+    <color name="line_color">#0E1720</color>
+</resources>

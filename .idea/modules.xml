@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/FireForestPlatform.iml" filepath="$PROJECT_DIR$/FireForestPlatform.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/disasterreduction/disasterreduction.iml" filepath="$PROJECT_DIR$/disasterreduction/disasterreduction.iml" />
-      <module fileurl="file://$PROJECT_DIR$/modelCore/drlibrary/drlibrary.iml" filepath="$PROJECT_DIR$/modelCore/drlibrary/drlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appnaturalresource/appnaturalresource.iml" filepath="$PROJECT_DIR$/appnaturalresource/appnaturalresource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatimmodel/chatimmodel.iml" filepath="$PROJECT_DIR$/chatimmodel/chatimmodel.iml" />
       <module fileurl="file://$PROJECT_DIR$/dsbridge/dsbridge.iml" filepath="$PROJECT_DIR$/dsbridge/dsbridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/firemodel/firemodel.iml" filepath="$PROJECT_DIR$/firemodel/firemodel.iml" />
       <module fileurl="file://$PROJECT_DIR$/hhlibrary/hhlibrary.iml" filepath="$PROJECT_DIR$/hhlibrary/hhlibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/huiyanweixing.iml" filepath="$PROJECT_DIR$/huiyanweixing.iml" />
-      <module fileurl="file://$PROJECT_DIR$/modelCore/modelCore.iml" filepath="$PROJECT_DIR$/modelCore/modelCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mapmodel/mapmodel.iml" filepath="$PROJECT_DIR$/mapmodel/mapmodel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platformmodel/platformmodel.iml" filepath="$PROJECT_DIR$/platformmodel/platformmodel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/videolibrary/videolibrary.iml" filepath="$PROJECT_DIR$/videolibrary/videolibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wlmedia/wlmedia.iml" filepath="$PROJECT_DIR$/wlmedia/wlmedia.iml" />
     </modules>
   </component>
 </project>

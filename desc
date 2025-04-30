@@ -1,0 +1,148 @@
+//zhengshi
+MD5:  E6:B6:50:A5:20:48:F2:B9:98:09:E0:A0:45:E0:75:86
+SHA1: 50:BA:88:51:75:21:66:85:32:9F:2E:E3:3F:67:41:71:7B:2C:B6:D4
+SHA256: 0D:48:AB:F9:CC:A5:60:3F:9E:58:18:D4:BC:80:54:44:6B:17:14:9E:38:96:49:D0:D0:12:98:E7:E0:65:08:4A
+//kaifa
+F3:7B:C5:3D:60:91:52:05:54:49:9C:C2:9F:40:3B:89:A7:EC:10:75
+
+//查看lib包结构分之命令  gradlew app:dependencies
+
+//失去焦点
+android:focusable="true"
+android:focusableInTouchMode="true"
+路由
+https://www.jianshu.com/p/c57214448c7f
+//跳转到
+@Route(path = "/test/activity")
+public class YourActivity extend Activity {
+        // 跳转并携带参数
+       @Autowired
+       String stringKey;
+       @Autowired
+       int intKey;
+       @Autowired
+       boolean booleanKey;
+
+       onCreate(){
+         //注入ARouter
+          ARouter.getInstance().inject(this);}
+       }
+}
+
+// 1. 直接跳转
+ARouter.getInstance().build("/test/activity").navigation();
+
+// 2. 跳转并携带参数
+ARouter.getInstance().build("/test/1")
+            .withLong("key1", 666L)
+            .withString("key3", "888")
+            .withObject("key4", new Test("Jack", "Rose"))
+            .navigation();
+携带 Serializable 和 Parcelable 序列化的对象
+TestSerializableBean serializableBean = new TestSerializableBean();
+serializableBean.setName("serializable");
+TestParcelableBean parcelableBean = new TestParcelableBean();
+parcelableBean.setName("parcelable");
+ARouter.getInstance().build("/app/login")
+        .withParcelable("parcelableBean", parcelableBean)
+        .withSerializable("serializableBean", serializableBean)
+        .navigation();
+目标界面
+@Autowired
+TestParcelableBean parcelableBean;
+@Autowired
+TestSerializableBean serializableBean;
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        Log.e(TAG, parcelableBean + "");
+        Log.e(TAG, serializableBean + "");
+
+
+查看当前branch列表，
+
+git branch -a：这个是查看全部branch，包括远程和本地，-a其实就是all
+
+git branch -r：查看远程，-r==romote
+
+git branch -l：查看本地，-l==local
+
+切换的话，直接git checkout [branch-name]即可。
+
+//gson string转时更要注意
+ List<CheckField> list = gson.fromJson(checkRecord.getCheckStr(), new TypeToken<List<CheckField>>(){}.getType());
+
+//开线程
+    class ImagePostThread extends Thread {
+
+        @Override
+        public void run() {
+            super.run();
+            for (int i = 0; i < list.size(); i++) {
+                postMoreImagesService(i);
+            }
+
+        }
+    }
+
+      new ImagePostThread().start();
+
+//shape用发
+
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape=["rectangle" | "oval" | "line" | "ring"] > // 定义形状
+    <corners //圆角属性
+        android:radius="integer"
+        android:topLeftRadius="integer"
+        android:topRightRadius="integer"
+        android:bottomLeftRadius="integer"
+        android:bottomRightRadius="integer" />
+    <gradient //渐变属性
+        android:angle="integer"
+        android:centerX="integer"
+        android:centerY="integer"
+        android:centerColor="integer"
+        android:endColor="color"
+        android:gradientRadius="integer"
+        android:startColor="color"
+        android:type=["linear" | "radial" | "sweep"]
+        android:useLevel=["true" | "false"] />
+    <padding //边距属性
+        android:left="integer"
+        android:top="integer"
+        android:right="integer"
+        android:bottom="integer" />
+    <size //大小属性
+        android:width="integer"
+        android:height="integer" />
+    <solid //填充属性
+        android:color="color" />
+    <stroke //描边属性
+        android:width="integer"
+        android:color="color"
+        android:dashWidth="integer"
+        android:dashGap="integer" />
+</shape>
+
+//发送广播
+Intent intent1= new Intent();
+intent1.setAction("fire_click");        //广播名
+intent1.putExtra("fire_id",fireIdJson); //广播参数
+context.sendBroadcast(intent1);
+
+//注册广播
+IntentFilter filterFireClick = new IntentFilter();
+filterFireClick.addAction("fire_click"); //广播名
+fireClickReceiver = new FireClickReceiver();
+registerReceiver(fireClickReceiver,filterFireClick);
+
+//接收广播处理
+class FireClickReceiver extends BroadcastReceiver {
+     @Override
+     public void onReceive(Context context, Intent intent) {
+               处理广播内容
+     }
+}

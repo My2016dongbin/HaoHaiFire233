@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PlayerActivity">
+
+    <com.haohai.ledge.videolibrary.video.StandardGSYVideoPlayer
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <com.haohai.ledge.videolibrary.video.MultiSampleVideo
+        android:id="@+id/video1_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="1dp"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="1dp">
+        <com.ywl5320.wlmedia.surface.WlSurfaceView
+            android:id="@+id/video1_player2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="1dp"/>
+        <com.ywl5320.wlmedia.widget.WlCircleLoadView
+            android:id="@+id/circleview"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</FrameLayout>
