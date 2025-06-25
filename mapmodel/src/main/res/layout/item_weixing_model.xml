@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/theme_primary">
+
+    <View
+        android:id="@+id/fire_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        android:layout_marginTop="10dp"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/fire_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_time_white"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/fire_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019-08-08 04:00:00"
+            android:textColor="@color/c12"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fire_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_location_white"/>
+        <TextView
+            android:id="@+id/address_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="山东省 青岛市 城阳区"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:textColor="@color/c12"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

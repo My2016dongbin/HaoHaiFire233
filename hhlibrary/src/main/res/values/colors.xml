@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="theme_primary">#7ad6f2</color>
-    <color name="theme_primary_top">#7ad6f2</color>
+<!--    <color name="theme_primary">#4A90E2</color>-->
+    <color name="theme_primary">#283345</color>
+    <color name="theme_primary_alpha">#bb283345</color>
+    <color name="theme_primary_top">#283345</color>
+    <color name="theme_primary_list">#0E1720</color>
+
+
+    <color name="theme_primary_top_trans">#bb283345</color>
 
     <color name="arc_blue">#10a679</color>
     <color name="color_fff">#ffffff</color>
@@ -12,6 +18,7 @@
     <color name="no_color">#00000000</color>
     <color name="choose_eara_item_press_color">#f4f4f4</color>
     <color name="app_line_gray">#d0d0d0</color>
+    <color name="c5mid">#939393</color>
 
     <color name="red1">#ff4000</color>
 
@@ -76,7 +83,7 @@
 
 
     <color name="c">#f9f7f7</color>
-    <color name="c0">#f1f0f0</color>
+    <color name="c0">#F4F4F4</color>
     <color name="c1">#f1f1f1</color>
     <color name="c2">#dedede</color>
     <color name="c3">#cecece</color>
@@ -85,7 +92,8 @@
     <color name="c6">#646464</color>
     <color name="c6mid">#565656</color>
     <color name="c7">#383838</color>
-    <color name="c8">#ff6c6c</color>
+    <color name="c71">#181818</color>
+    <color name="c8">#181818</color>
     <color name="c9">#cc3333</color>
     <color name="c10">#e79e99</color>
     <color name="c11">#ffe8e7</color>
@@ -106,8 +114,14 @@
     <color name="c26">#424455</color>
     <color name="c27">#15B3ED</color>
     <color name="c28">#0F8AC3</color>
-    <color name="tire_info_background">#dec30f24</color>
+    <color name="c29">#f9e50d</color>
+    <color name="c30">#ff8989</color>
+    <color name="c31">#000000</color>
+    <color name="c32">#00faf8f8</color>
+    <color name="tire_info_background">#C42C3F</color>
     <color name="web_top">#F2F2F2</color>
+    <color name="map">#4a90e2</color>
+    <color name="line">#334056</color>
 
     <color name="divider">#ffd2d2d2</color>
     <!--透明色-->

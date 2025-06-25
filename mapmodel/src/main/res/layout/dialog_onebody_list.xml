@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_primary">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="报警列表"
+            android:textSize="16sp"
+            android:textColor="@color/c12" />
+        <LinearLayout
+            android:id="@+id/shipin_fenlei_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="90dp"
+            android:gravity="center_vertical|right"
+            android:layout_gravity="right|center_vertical">
+            <TextView
+                android:id="@+id/shipin_fenlei_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部"
+                android:textColor="@color/c12"
+                android:layout_marginRight="5dp"
+                android:textSize="15sp"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/ic_down_c12"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fenlei_layout"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|right"
+            android:layout_gravity="right|center_vertical">
+            <TextView
+                android:id="@+id/fenlei_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未处理"
+                android:textColor="@color/c12"
+                android:layout_marginRight="5dp"
+                android:textSize="15sp"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:src="@drawable/ic_down_c12"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/onebody_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/onebody_info_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_primary"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

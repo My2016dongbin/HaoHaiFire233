@@ -43,6 +43,7 @@ public class ImageUtils {
     }
 
 
+
     /*
     * 图片转圆形
     * */
@@ -171,7 +172,7 @@ public class ImageUtils {
         topBm.recycle();
         topBm = null;
 
-        canvas.save(Canvas.ALL_SAVE_FLAG);
+      //  canvas.save(Canvas.ALL_SAVE_FLAG);
         canvas.restore();
 
         return newBitmap;
@@ -423,9 +424,6 @@ public class ImageUtils {
     *根据旋转角度旋转照片
     * */
     public static Bitmap rotaingImageView(int angle, Bitmap bitmap) {
-        if (bitmap == null) {
-            return null;
-        }
         Bitmap returnBm = null;
         // 根据旋转角度，生成旋转矩阵
         Matrix matrix = new Matrix();
@@ -471,6 +469,26 @@ public class ImageUtils {
             e.printStackTrace();
         }
         return degree;
+    }
+
+    public static String getRealPathFromURI(Context context, Uri contentUri) {
+        Cursor cursor = null;
+        try {
+            String[] proj = { MediaStore.Images.Media.DATA };
+            cursor = context.getContentResolver().query(contentUri,  proj, null, null, null);
+            int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+            cursor.moveToFirst();
+            return cursor.getString(column_index);
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+
+        finally {
+            if (cursor != null) {
+                cursor.close();
+            }
+        }
     }
 
     /**

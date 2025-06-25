@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">慧眼卫星</string>
+    <!--<string name="app_name">阿坝州铁塔慧眼</string>-->
+    <!--<string name="app_title">阿坝州铁塔慧眼</string>-->
+
+    <string name="app_name">即墨区自然卫士</string>
+    <string name="app_title">即墨区自然卫士</string>
+
+    <!--    <string name="app_name">黑龙江森林防火指挥平台</string>
+    <string name="app_title">黑龙江森林防火指挥平台</string>  -->
 </resources>
