@@ -15,20 +15,9 @@ android {
 
         javaCompileOptions {
             annotationProcessorOptions {
-                arguments = [moduleName: project.getName()]
+                arguments = [ moduleName : project.getName() ]
             }
         }
-        ndk {
-            //设置支持的SO库架构
-            /*abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64","armeabi"*/
-            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
-        }
-        manifestPlaceholders = [
-                XG_ACCESS_ID : "1500015815",
-                XG_ACCESS_KEY : "AO3YNOCJ0AK2",
-                HW_APPID: "103450845"
-
-        ]
 
     }
     buildTypes {
@@ -40,78 +29,94 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    def system_dependencies = rootProject.ext.system_dependencies
-    compile system_dependencies.appcompat_v7
-    compile system_dependencies.support_v4
-    compile system_dependencies.cardview_v7
-    compile system_dependencies.palette_v7
-    compile system_dependencies.recyclerview_v7
-    compile system_dependencies.design
-    compile system_dependencies.rxjava
-    compile system_dependencies.rxandroid
-    compile system_dependencies.rxbinding
-    compile system_dependencies.glide
-    compile system_dependencies.gson
-    // compile  system_dependencies.fresco
-    compile system_dependencies.xutils
-    compile('me.drakeet.multitype:multitype:2.2.2', {
+//    compile fileTree(dir: 'libs', include: ['*.jar'])
+//    def system_dependencies = rootProject.ext.system_dependencies
+//    compile  system_dependencies.appcompat_v7
+//    compile  system_dependencies.support_v4
+//    compile  system_dependencies.cardview_v7
+//    compile  system_dependencies.palette_v7
+//    compile  system_dependencies.recyclerview_v7
+//    compile  system_dependencies.design
+//    compile  system_dependencies.rxjava
+//    compile  system_dependencies.rxandroid
+//    compile  system_dependencies.rxbinding
+//    compile  system_dependencies.glide
+//    compile  system_dependencies.gson
+//   // compile  system_dependencies.fresco
+// //   compile  system_dependencies.indexablere
+//    compile  system_dependencies.xutils
+//    compile ('me.drakeet.multitype:multitype:2.2.2', {
+//        exclude group: 'com.android.support'
+//    })
+//
+//    //com.nineoldandroids:library动画兼容库
+//    //fresco图片加载库(需要在项目的Application中自行初始化操作)
+//    //flyco.pageindicator 轮播指示灯库
+//    //rebound Android弹性动画库
+//    //Materialicons是Google推出的图标库,属于MaterialDesign工程的一部分
+//    compile  'com.zhy:okhttputils:2.6.2'
+//    compile  'com.baoyz.pullrefreshlayout:library:1.2.0'
+//    compile  'de.hdodenhof:circleimageview:2.1.0'
+//    compile  'id.zelory:compressor:2.1.0'
+//    compile  'com.baoyz.swipemenulistview:library:1.3.0'
+//    compile  'com.nineoldandroids:library:2.4.0'
+    implementation  'com.facebook.fresco:fresco:0.12.0'
+    implementation  'com.flyco.pageindicator:FlycoPageIndicator_Lib:1.0.0@aar'
+    implementation  'com.facebook.rebound:rebound:0.3.8'
+    implementation  'com.malinskiy:materialicons:1.0.2'
+//    compile  'com.android.support.constraint:constraint-layout:1.0.2'
+//    compile  'junit:junit:4.12'
+//    compile 'com.google.code.gson:gson:2.6.2'
+//    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.1@aar'
+    implementation('com.zhihu.android:matisse:0.4.3', {
         exclude group: 'com.android.support'
     })
-    //com.nineoldandroids:library动画兼容库
+//    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+//    implementation('ch.ielse:imagewatcher:1.0.3', {
+//        exclude group: 'com.android.support'
+//    })
+//    //路由
+//    compile 'com.alibaba:arouter-api:1.3.1'
+//    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+//    compile 'com.github.wendux:DSBridge-Android:3.0-SNAPSHOT'
 
-    //fresco图片加载库(需要在项目的Application中自行初始化操作)
 
-    //flyco.pageindicator 轮播指示灯库
 
-    //rebound Android弹性动画库
 
-    //Materialicons是Google推出的图标库,属于MaterialDesign工程的一部分
-    compile('com.zhihu.android:matisse:0.4.3', {
+
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'com.github.AlpsDog:Banner:v1.0.6'
+    implementation 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+//    implementation 'com.github.wendux:DSBridge-Android:3.0.0'
+    implementation project(path: ':dsbridge')
+//    implementation 'com.amap.api:navi-3dmap:latest.integration'
+    implementation 'com.amap.api:location:5.5.1'
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation 'org.xutils:xutils:3.3.36'
+    implementation ('me.drakeet.multitype:multitype:3.5.0', {
         exclude group: 'com.android.support'
     })
-    compile('ch.ielse:imagewatcher:1.0.3', {
-        exclude group: 'com.android.support'
-    })
-    //路由
-    compile 'com.zhy:okhttputils:2.6.2'
-    compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
-    compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'id.zelory:compressor:2.1.0'
-    compile 'com.baoyz.swipemenulistview:library:1.3.0'
-    compile 'com.nineoldandroids:library:2.4.0'
-    compile 'com.facebook.fresco:fresco:0.12.0'
-    compile 'com.flyco.pageindicator:FlycoPageIndicator_Lib:1.0.0@aar'
-    compile 'com.facebook.rebound:rebound:0.3.8'
-    compile 'com.malinskiy:materialicons:1.0.2'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    compile 'junit:junit:4.12'
-    compile 'com.google.code.gson:gson:2.6.2'
-    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.1@aar'
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
-    compile 'com.alibaba:arouter-api:1.3.1'
-    //compile 'com.github.wendux:DSBridge-Android:3.0-SNAPSHOT'
-    compile project(':dsbridge')
-    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
-    compile 'com.tencent.wup:wup:1.0.0.E-Release'
-    compile 'com.tencent.jg:jg:1.1'
-    //腾讯推送
-    compile 'com.tencent.tpns:tpns:1.2.0.3-release'
-    //腾讯推送
-    compile 'com.tencent.tpns:xiaomi:1.2.1.0-release'
-    //小米推送
-    compile 'com.tencent.tpns:huawei:1.2.1.0-release'
-    //华为推送
-    compile 'com.tencent.tpns:meizu:1.2.2.0-release'
-    //meizu 推送
-    compile 'com.tencent.tpns:oppo:1.2.2.0-release'
-    //oppo 推送
-    compile 'com.rxjava.rxhttp:rxhttp:1.1.6'
-    annotationProcessor 'com.rxjava.rxhttp:rxhttp-compiler:1.1.6'
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:2.3'
-    //内存泄露检测
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.github.chrisbanes:PhotoView:2.0.0'
-    compile 'org.greenrobot:eventbus:3.1.1'
-    compile files('lib/vsg.jar')
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.1@aar'
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+//    implementation('com.zhihu.android:matisse:0.5.3-beta3', {
+//        exclude group: 'com.android.support'
+//    })
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.1'
+    implementation 'org.apache.httpcomponents:httpclient-android:4.3.5'
+
 }

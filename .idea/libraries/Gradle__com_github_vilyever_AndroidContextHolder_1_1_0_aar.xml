@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.vilyever:AndroidContextHolder:1.1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/93d1f1ff0e16db6b28cfa13c8c49fd6a/AndroidContextHolder-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/93d1f1ff0e16db6b28cfa13c8c49fd6a/AndroidContextHolder-1.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/93d1f1ff0e16db6b28cfa13c8c49fd6a/AndroidContextHolder-1.1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.vilyever/AndroidContextHolder/1.1.0/38ca183c7f55c8024c9aaef48d2b35b2e4af1c8d/AndroidContextHolder-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

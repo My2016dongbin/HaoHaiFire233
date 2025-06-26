@@ -1,0 +1,88 @@
+﻿{
+  "kml": {
+    "Document": {
+      "Placemark": [
+        {
+          "name": "城阳区森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.513069164469,36.3124773514894,0
+        "
+          }
+        },
+        {
+          "name": "黄岛区东区森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0943047483,36.0176077304,0
+        "
+          }
+        },
+        {
+          "name": "黄岛区西区森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0189775229,35.8369395814,0
+        "
+          }
+        },
+        {
+          "name": "即墨市森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.707222222222,36.4627777777777,0
+        "
+          }
+        },
+        {
+          "name": "胶州市森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9448359013,36.3554090557,0
+        "
+          }
+        },
+        {
+          "name": "莱西市森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.2800777777,37.0935861111,0
+        "
+          }
+        },
+        {
+          "name": "崂山区森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5416147921,36.1033649846,0
+        "
+          }
+        },
+        {
+          "name": "平度市森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.050484638475,36.9886899013001,0
+        "
+          }
+        }
+      ]
+    }
+  }
+}

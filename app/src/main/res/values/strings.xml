@@ -1,10 +1,391 @@
 <resources>
-    <!--<string name="app_name">阿坝州铁塔慧眼</string>-->
-    <!--<string name="app_title">阿坝州铁塔慧眼</string>-->
+    <string name="app_name">青岛智慧园林林业云平台</string>
+    <string name="hello_world">Hello World!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">青岛智慧园林林业云平台</string>
+    <string name="error_gif">x or y bound size should be at least %1$dpx and file size should be no more than %2$sM</string>
 
-    <string name="app_name">即墨区自然卫士</string>
-    <string name="app_title">即墨区自然卫士</string>
 
-    <!--    <string name="app_name">黑龙江森林防火指挥平台</string>
-    <string name="app_title">黑龙江森林防火指挥平台</string>  -->
+    <!--WisdomGarden-->
+    <!--    <string name="app_name">智慧园林</string>-->
+    <string name="previous">Previous</string>
+    <string name="action_settings">设置</string>
+    <string name="title_activity_qu">QuActivity</string>
+    <string name="title_activity_ceshi">ceshiActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
+
+
+    <!-- qd-grid-app -->
+    <string name="main_button">Main Button</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="ok">确认</string>
+    <string name="cancel">取消</string>
+    <string name="all">所有</string>
+    <string name="edit">编辑</string>
+    <string name="delete">删除</string>
+    <string name="save">保存</string>
+    <string name="none">None</string>
+    <string name="loading">加载地图中</string>
+    <string name="initializing">初始化应用程序</string>
+    <string name="loading_project_error">加载项目失败 %1$s: %2$s</string>
+    <string name="loading_error_title">加载失败</string>
+    <string name="meters">米</string>
+    <string name="meters_abbr">米</string>
+    <string name="km">千米</string>
+    <string name="km_abbr">千米</string>
+    <string name="feet">英尺</string>
+    <string name="feet_abbr">英尺</string>
+    <string name="mile">英里</string>
+    <string name="mile_abbr">英里</string>
+    <string name="square_meter">平方米</string>
+    <string name="square_km">平方千米</string>
+    <string name="square_feet">平方英尺</string>
+    <string name="square_mile">平方英里</string>
+    <string name="back">返回</string>
+
+    <string name="calculating">正在计算...</string>
+    <string name="version_string">森林防火检查系统 v%s</string>
+    <string name="retry">重试</string>
+    <string name="rename">重命名</string>
+    <!--周边资源查询 -->
+    <string name="searchresource_tool_name">周边资源</string>
+    <string name="searchresource_tool_delete">清除</string>
+    <string name="searchresource_tool_list">结果</string>
+
+    <string name="mm_menu">菜单</string>
+    <string name="mm_analyze">分析</string>
+    <string name="mm_gps">GPS</string>
+    <string name="mm_gps_on">开启我的位置</string>
+    <string name="mm_gps_off">关闭我的位置 </string>
+    <string name="mm_more">More</string>
+    <string name="mm_more_about">About</string>
+    <string name="mm_more_tutorial">Tutorial</string>
+    <string name="mm_more_share">截屏 &amp; 分享</string>
+    <string name="mm_analyze_distance">距离</string>
+    <string name="mm_analyze_area">面积</string>
+    <string name="mm_analyze_viewshed">视域</string>
+    <string name="mm_analyze_line_of_sight">Line of Sight</string>
+    <string name="mm_analyze_profile">剖面</string>
+    <string name="mm_analyze_shadow">阴影分析</string>
+    <string name="mm_whiteboard">标绘</string>
+
+    <!-- Tutorial -->
+    <string name="tutorial_skip">跳过</string>
+    <string name="tutorial_watch">查看</string>
+    <string name="tutorial_title">欢迎来到森林防火检查系统平台</string>
+    <string name="tutorial_sub_title">在使用森林防火检查系统之前，我们建议您在YouTube上观看简短教程</string>
+    <string name="tutorial_sub_title2">稍后观看，请转到：菜单>设置>教程</string>
+
+    <!-- About -->
+    <string name="about_version">Version %1$s (%2$s)</string>
+    <string name="about_patents">\t\t森林防火检查系统主要在实现数据的可携带化及其应急指挥。平台依托现有pc端平台，实现指挥的高效、数据的便携性。</string>
+    <string name="about_info_email">常规信息: 453604807@qq.com</string>
+    <string name="about_support_email">技术支持: 453604807@qq.com</string>
+    <string name="about_close">Close</string>
+    <string name="about_send_email">发送邮件...</string>
+
+    <!-- Places -->
+
+
+    <string name="title_activity_places">地点</string>
+    <string name="places_favorites">收藏</string>
+    <string name="places_locations">位置</string>
+    <string name="places_presentations">演示</string>
+    <string name="places_delete_location">删除这个位置?</string>
+
+
+    <!-- Favorites -->
+
+    <string name="title_activity_favorites">收藏</string>
+    <string name="favorites_default_name">我的位置</string>
+    <string name="favorite_icon_none">None</string>
+    <string name="favorite_icon_star_red">Red Star</string>
+    <string name="favorite_icon_star_green">Green Star</string>
+    <string name="favorite_icon_star_purple">Purple Star</string>
+    <string name="favorite_icon_star_blue">Blue Star</string>
+    <string name="favorite_icon_star_yellow">Yellow Star</string>
+    <string name="favorite_icon_star_fire">火点信息</string>
+    <string name="favorite_icon_rs_fire">卫星火点</string>
+    <string name="favorite_name">名称</string>
+    <string name="favorite_show_on_3d">在3D视图中展示</string>
+    <string name="favorite_icon_name">图标</string>
+    <string name="favorite_description">说明</string>
+    <string name="favorites_item_not_found">无法加载收藏部分的数据</string>
+    <!-- Favorites Select Icon -->
+
+    <string name="title_activity_favorites_icons">选择图标</string>
+
+
+    <!-- Settings -->
+    <string name="app_setting">设置</string>
+    <string name="title_activity_settings">配置管理</string>
+    <string name="settings_section_project">Project</string>
+    <string name="settings_units">单位</string>
+    <string name="settings_units_meters">meters and km/h</string>
+    <string name="settings_units_feet">feet and m/h</string>
+    <string name="settings_websearch">互联网搜索</string>
+    <string name="settings_websearch_on">启用互联网搜索</string>
+    <string name="settings_websearch_off">禁用互联网搜索</string>
+    <string name="settings_websearch_url">互联网搜索网址:</string>
+    <string name="settings_about">关于</string>
+    <string name="settings_tutorial">查看教程</string>
+
+    <string name="settings_section_view">界面</string>
+    <string name="settings_navigation_buttons">导航按钮</string>
+    <string name="settings_navigation_buttons_on">开</string>
+    <string name="settings_navigation_buttons_off">关</string>
+    <string name="settings_navigation_buttons_click">On map click</string>
+    <string name="settings_underground">Underground</string>
+    <string name="settings_underground_button">地下模式</string>
+    <string name="settings_underground_button_on">开</string>
+    <string name="settings_underground_button_off">关</string>
+    <string name="settings_underground_button_click">On map click</string>
+    <string name="settings_myposition">我的位置</string>
+    <string name="settings_myposition_on">显示我的位置图标</string>
+    <string name="settings_myposition_off">不展示我的位置图标</string>
+    <string name="settings_sunlight">Sunlight</string>
+    <string name="settings_sunlight_on">Sunlight enabled</string>
+    <string name="settings_sunlight_off">Sunlight disabled</string>
+    <string name="settings_gpstrail">显示GPS轨迹</string>
+    <string name="settings_gpstrail_on">在地形上显示GPS轨迹</string>
+    <string name="settings_gpstrail_off">不在地形上显示GPS踪迹</string>
+    <string name="settings_gpstrail_save">保存GPS踪迹</string>
+    <string name="settings_gpstrail_save_on">将GPS踪迹保存到磁盘</string>
+    <string name="settings_gpstrail_save_off">不要将GPS踪迹保存到磁盘</string>
+
+    <string name="menuButton_slideRight">菜单按钮向右滑动</string>
+    <string name="menuButton_slideUp">菜单按钮向上滑动</string>
+
+    <!-- Projects -->
+
+    <string name="title_activity_projects">项目</string>
+    <string name="projects_sg_usa">网络地图</string>
+    <string name="projects_sg_usa_path">网络项目</string>
+    <string name="projects_remove">从列表中删除</string>
+    <string name="projects_enter_url">输入完整的地址来加载网络项目...</string>
+    <string name="projects_current">[已加载]</string>
+
+
+    <!-- Layers -->
+
+    <string name="title_activity_layers">图层管理</string>
+    <string name="layers_objects">修改地形对象</string>
+    <string name="layers_mesh_layers">3D层</string>
+    <string name="layers_feature_layers">图层</string>
+    <string name="layers_raster_layers">光栅层</string>
+    <string name="layers_contour_map">等高线图</string>
+    <string name="layers_slope_map">坡度图</string>
+    <string name="layers_up">[UP]</string>
+    <string name="layers_show_by_group">按组排序</string>
+    <string name="layers_show_by_type">按类型排序</string>
+
+
+    <!-- Search -->
+
+    <string name="title_activity_search">搜索</string>
+    <string name="search_nodata">没有结果</string>
+    <string name="search_error">搜索失败: %s</string>
+    <string name="search_webresults">搜索地址</string>
+    <string name="search_recents">最近搜索</string>
+    <string name="search_searching">搜索中，请稍候.</string>
+    <string name="search_layers">Layers</string>
+    <string name="search_places">Places</string>
+    <string name="websearch_disabled">Web搜索被禁用</string>
+    <string name="search_hint">搜索数据</string>
+
+
+    <!-- Location tracker -->
+
+    <string name="locationTracker_enable">确认</string>
+    <string name="locationTracker_alert_title">提高您的位置精度</string>
+    <string name="locationTracker_alert_message">打开位置服务以启用对您的位置的访问</string>
+    <string name="locationTracker_alert_message_gps_only">打开GPS，提高位置精度</string>
+    <string name="locationTracker_alert_nogps_title">找不到GPS</string>
+    <string name="locationTracker_alert_nogps_message">此app需要高精度的位置服务.</string>
+
+
+    <!-- Presentation steps -->
+
+    <string name="title_activity_presentation_steps">演示步骤</string>
+
+
+    <!-- distance and profile tool -->
+
+    <string name="title_activity_terrain_profile">地形剖面</string>
+    <string name="measure_distance_aerial">垂直距离总计: %s</string>
+    <string name="measure_distance_horizontal">水平距离总计: %s</string>
+    <string name="measure_distance_ground">地面距离总计: %s</string>
+    <string name="measure_distance_elevation">仰角差: %s</string>
+    <string name="measure_distance_slope">坡度: %.2f °</string>
+    <string name="profile_x">X</string>
+    <string name="profile_y">Y</string>
+    <string name="profile_elevation">海拔</string>
+    <string name="profile_minSlope">Min. Slope</string>
+    <string name="profile_maxSlope">Max. Slope</string>
+    <string name="profile_total_aerial_distance">垂直距离总计: %s</string>
+    <string name="profile_total_horizontal_distance">水平距离距离总计: %s</string>
+    <string name="profile_total_ground_distance">地面距离总计: %s</string>
+    <string name="profile_show">展示</string>
+    <string name="profile_show_max_slopes">最大坡度点</string>
+    <string name="profile_show_max_altitude">最小/最大高度</string>
+    <string name="profile_show_waypoints">路线点</string>
+    <string name="profile_show_scale_altitude">高度变化</string>
+
+    <!--measure area tool -->
+
+    <string name="measure_area_area">面积: %s</string>
+    <string name="measure_area_perimeter">周长: %s</string>
+    <string name="measure_area_ground">地面: %s</string>
+
+
+    <!--viewshed tool -->
+
+    <string name="viewshed_tool_fov">水平视场角: %1$.2f °\r\n垂直视场角: %2$.2f °</string>
+    <string name="viewshed_tool_fov_horizontal">水平视场角</string>
+    <string name="viewshed_tool_fov_vertical">垂直视场角</string>
+    <string name="viewshed_tool_viewer_altitude">观察高度</string>
+    <string name="viewshed_tool_shadow_not_supported_title">视域分析</string>
+    <string name="viewshed_tool_shadow_not_supported">这个设备不支持视域分析</string>
+    <!-- los tool -->
+
+    <string name="los_tool_text">Target Altitude: %s</string>
+    <string name="los_tool_target_height">Target Altitude</string>
+
+
+    <!-- shadow tool -->
+
+    <string name="shadow_tool_choose_date">选择日期</string>
+    <string name="shadow_tool_shadow_not_supported_title">阴影分析</string>
+    <string name="shadow_tool_shadow_not_supported">此设备不支持阴影分析</string>
+
+    <!-- SGWorld Message -->
+
+    <string name="title_activity_message">详情</string>
+
+
+    <!-- layer edit -->
+
+    <string name="featurelayer_tool_edit_layer">编辑图层: %s</string>
+    <string name="featurelayer_tool_no_gps">无法确定GPS位置</string>
+    <string name="featurelayer_saved_failed">保存图层失败</string>
+
+    <!-- feature attributes -->
+
+    <string name="title_activity_attributes">属性</string>
+
+
+    <!-- edit feature -->
+
+    <string name="edit_feature_saved_changes">更改已保存</string>
+    <string name="edit_feature_delete_changes">从图层中删除功能?</string>
+    <string name="edit_feature_save_changes">保存更改?</string>
+
+
+    <!-- share tool -->
+
+    <string name="share_snapshot_failed">截屏失败</string>
+    <string name="share_snapshot_taken">截屏保存在图库中</string>
+    <string name="share_snapshot_share">分享截屏</string>
+
+    <!-- whiteboard tool -->
+
+    <string name="whiteboard_tooltext">编辑板: %s</string>
+    <string name="title_activity_whiteboards">白板集合</string>
+    <string name="whiteboard_default_name">板 </string>
+    <string name="Whiteboard_delete">删除白板 %s?</string>
+    <string name="whiteboard_new">白板名称</string>
+    <string name="whiteboard_new_row">点击这里添加新的白板</string>
+    <string name="whiteboard_set_color">选择颜色</string>
+    <string name="whiteboard_set_comment">注解</string>
+    <string name="whiteboard_set_text">文本</string>
+    <string name="whiteboard_set_altitude">高度</string>
+    <string name="whiteboardtool_select_board_title">创建新板?</string>
+    <string name="whiteboardtool_select_board_text">当前板是隐藏的 你想创建一个新的主板或使当前板可见吗？</string>
+    <string name="whiteboard_create_new_board">创建</string>
+    <string name="whiteboard_show_board">可见</string>
+    <string name="whiteboard_current">[当前]</string>
+    <string name="whiteboard_delete_feature">从白板上删除对象?</string>
+
+
+    <!-- gps tool -->
+
+    <string name="gpstool_nogps">获取位置失败</string>
+
+    <!--测试String-->
+    <string name="plan_management">预案管理</string>
+    <string name="resource_query">框选查询</string>
+    <string name="set_project">项目</string>
+    <!--动态标绘  -->
+    <string name="mm_plottool">动态标绘</string>
+    <string name="mm_plottool_drawpolyline">画线</string>
+    <string name="mm_plottool_drawpolygon">画面</string>
+    <string name="mm_plottool_drawarrow">箭头</string>
+    <string name="mm_plottool_deleteplot">清除</string>
+    <string name="mm_plottool_color">颜色</string>
+    <string name="mm_plottool_textlable">文本</string>
+    <string name="mm_plottool_texttitle">文本标注</string>
+    <string name="mm_plottool_selectcolor">选择颜色</string>
+    <string name="mm_plottool_deleteplotone">你确定删除此标绘？</string>
+    <string name="mm_plottool_alert">提示</string>
+    <string name="mm_plottool_ok">确定</string>
+    <string name="mm_plottool_stop">停止</string>
+    <string name="mm_plottool_cancel">取消</string>
+    <!--分析 -->
+    <string name="analyze_tool">分析</string>
+    <string name="analyze_tool_contourmap">等高线</string>
+    <string name="analyze_tool_slopemap">坡度图</string>
+    <string name="analyze_tool_viewshed">3D视域</string>
+    <string name="analyze_tool_title">提示</string>
+    <string name="analyze_tool_messagecontent">系统不支持视域的分析！</string>
+    <string name="analyze_tool_delete">删除</string>
+    <!--地点编辑界面-->
+    <string name="place_edit_name">名称</string>
+    <string name="place_edit_type">类型</string>
+    <string name="place_edit_content">内容</string>
+    <string name="place_edit_icon">图标</string>
+    <string name="place_edit_iconname">图标名称</string>
+    <string name="place_edit_showworld">在地图显示</string>
+    <string name="place_edit_position">位置</string>
+    <string name="place_edit_save">保存</string>
+
+    <!--地图初始化地点设置-->
+    <string name="place_initial_titile">地图初始化位置设置</string>
+    <string name="place_initial_position">位置</string>
+    <string name="place_initial_save">保存</string>
+    <!--框选查询-->
+    <string name="query_place_location">定位</string>
+    <string name="query_place_content">详情</string>
+
+    ///
+    <string name="settings_serveraddress">服务器配置</string>
+    <string name="titile_serveraddress">服务器地址配置</string>
+
+    <string name="login_account">注册</string>
+    <string name="login_out">退出登录</string>
+    <string name="down_fire">地图文件下载</string>
+    <!--卫星火点-->
+    <string name="rs_fire_toolname">卫星火点</string>
+    <string name="rs_fire_onehour">1小时</string>
+    <string name="rs_fire_threehour">3小时</string>
+    <string name="rs_fire_oneday">1天内</string>
+    <string name="rs_fire_threeday">3天内</string>
+    <string name="rs_fire_fiveday">5天内</string>
+
+    <!-- 重点点位文件-->
+    <string name="tool_res_title">重点资源</string>
+    <string name="title_activity_resource">重点资源</string>
+
+    <string name="key_down_fire">地图下载</string>
+    <string name="key_userOutLogin">退出登录</string>
+
+
+    <string name="exit_string">再按一次回到主应用</string>
 </resources>

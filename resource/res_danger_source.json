@@ -1,0 +1,288 @@
+﻿{
+  "kml": {
+    "Document": {
+      "Placemark": [
+        {
+          "name": "青岛碱业股份有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.383068,36.204646,0
+        "
+          }
+        },
+        {
+          "name": "青岛凯源祥化工有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.495895,36.844986,0
+        "
+          }
+        },
+        {
+          "name": "青岛安邦石化有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.29983,36.330264,0
+        "
+          }
+        },
+        {
+          "name": "青岛奥博海豪气体有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.011702,36.210032,0
+        "
+          }
+        },
+        {
+          "name": "黄岛油库调度中心",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.227902,36.052466,0
+        "
+          }
+        },
+        {
+          "name": "中国石化青岛炼油化工有限责任公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.174309,36.054027,0
+        "
+          }
+        },
+        {
+          "name": "青岛丽东化工有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.208694,36.048885,0
+        "
+          }
+        },
+        {
+          "name": "中石油燃料油有限责任公司青岛仓储分公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.223039,36.055968,0
+        "
+          }
+        },
+        {
+          "name": "中国石化青岛石油化工有限责任公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.3676,36.215353,0
+        "
+          }
+        },
+        {
+          "name": "青岛啤酒二厂",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.403558,36.138335,0
+        "
+          }
+        },
+        {
+          "name": "青岛乙炔气厂有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.375285,36.219221,0
+        "
+          }
+        },
+        {
+          "name": "青岛中颐华凯石化科技有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.369897,36.202004,0
+        "
+          }
+        },
+        {
+          "name": "青岛四方庞巴迪铁路运输设备有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.273313,36.346202,0
+        "
+          }
+        },
+        {
+          "name": "青岛思远化工有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.179808,36.043148,0
+        "
+          }
+        },
+        {
+          "name": "青岛澳东化工有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.183731,36.042981,0
+        "
+          }
+        },
+        {
+          "name": "青岛啤酒五厂",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.532254,36.110887,0
+        "
+          }
+        },
+        {
+          "name": "大唐黄岛发电有限责任公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.217641,36.041652,0
+        "
+          }
+        },
+        {
+          "name": "青岛昌华集团股份有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.505552,36.870783,0
+        "
+          }
+        },
+        {
+          "name": "青岛东方化工集团股份有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.513915,36.820094,0
+        "
+          }
+        },
+        {
+          "name": "青岛海晶化工集团有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.746633,35.645375,0
+        "
+          }
+        },
+        {
+          "name": "中国石油天燃气股份有限公司山东青岛销售有限公司岙山油库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.722072871048,36.3335803773712,0
+        "
+          }
+        },
+        {
+          "name": "中石化山东储运分公司第一油库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.336380915491,36.0894828185459,0
+        "
+          }
+        },
+        {
+          "name": "青岛能源泰能热电有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.35115,36.148095,0
+        "
+          }
+        },
+        {
+          "name": "青岛啤酒麦芽厂",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.343938,36.136988,0
+        "
+          }
+        },
+        {
+          "name": "青岛新永安化学品有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.341151,36.224463,0
+        "
+          }
+        },
+        {
+          "name": "青岛华恒助剂厂",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.376003,36.209435,0
+        "
+          }
+        },
+        {
+          "name": "华电青岛发电有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.335421,36.111591,0
+        "
+          }
+        },
+        {
+          "name": "青岛天柱化肥有限公司",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.602736,36.973881,0
+        "
+          }
+        }
+      ]
+    }
+  }
+}

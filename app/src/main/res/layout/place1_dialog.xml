@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingTop="20dp" >
+
+    <Button
+        android:id="@+id/place_bt_edit"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/button_shape_blue"
+        android:gravity="center"
+        android:text="编辑"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/place_bt_delete"
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:background= "@drawable/button_shape_blue"
+        android:gravity="center"
+        android:text="删除"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/place_bt_exit"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_shape_blue"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+</LinearLayout>

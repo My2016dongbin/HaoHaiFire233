@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.vilyever:AndroidResource:1.2.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e4ec6ad5da9d40fb20303cfc5cc39f5/jetified-AndroidResource-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e4ec6ad5da9d40fb20303cfc5cc39f5/jetified-AndroidResource-1.2.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5e4ec6ad5da9d40fb20303cfc5cc39f5/jetified-AndroidResource-1.2.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.vilyever/AndroidResource/1.2.0/887c6b5094aa0892ba95d6ec40a873c32878bdd1/AndroidResource-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

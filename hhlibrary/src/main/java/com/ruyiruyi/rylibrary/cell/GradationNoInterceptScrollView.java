@@ -3,9 +3,10 @@ package com.ruyiruyi.rylibrary.cell;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
-import android.support.v4.widget.NestedScrollView;
 import android.util.AttributeSet;
 import android.view.ViewConfiguration;
+
+import androidx.core.widget.NestedScrollView;
 
 /**
  * 带滚动监听的scrollview

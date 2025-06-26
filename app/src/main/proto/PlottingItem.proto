@@ -1,0 +1,24 @@
+syntax = "proto3";
+option java_package = "com.bean";
+package bean;
+message PlottingBean {
+    message PlottingSend {
+        int32 cmd = 1;
+        PlottingContent plottingContent = 4;
+    }
+    message PlottingContent {
+
+        string phoneNumber=1;
+        repeated PointLonLat points = 2;
+        string linecolor = 3;
+        string fillcolor = 4;
+        string linestyle = 5;
+        string name = 6;
+        string content = 7;
+    }
+    message PointLonLat {
+        double lon = 1;
+        double lat = 2;
+        double alt = 3;
+    }
+}

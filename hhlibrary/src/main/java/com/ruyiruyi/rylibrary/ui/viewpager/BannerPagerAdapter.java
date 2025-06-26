@@ -2,11 +2,12 @@ package com.ruyiruyi.rylibrary.ui.viewpager;
 
 
 import android.content.Context;
-import android.support.v4.view.PagerAdapter;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
+
+import androidx.viewpager.widget.PagerAdapter;
 
 import java.util.List;
 

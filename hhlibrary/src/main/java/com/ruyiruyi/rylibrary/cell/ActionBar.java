@@ -75,7 +75,7 @@ public class ActionBar extends FrameLayout {
 
     private void initView(Context context) {
         content = new FrameLayout(context);
-        content.setBackgroundColor(0xff283345);
+        content.setBackgroundColor(0xff60AD0C);
         addView(content,LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT,200));
 
         backgroundLayout = new FrameLayout(context);

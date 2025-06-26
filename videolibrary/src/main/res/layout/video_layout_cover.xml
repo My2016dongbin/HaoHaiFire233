@@ -124,7 +124,7 @@
             android:textSize="18sp" />
     </LinearLayout>
 
-    <com.haohai.ledge.videolibrary.enviews.ENDownloadView
+    <com.skyline.ledge.videolibrary.enviews.ENDownloadView
         android:id="@+id/loading"
         android:layout_width="28dp"
         android:layout_height="28dp"
@@ -132,7 +132,7 @@
         android:layout_centerVertical="true"
         android:visibility="invisible" />
 
-    <com.haohai.ledge.videolibrary.enviews.ENPlayView
+    <com.skyline.ledge.videolibrary.enviews.ENPlayView
         android:id="@+id/start"
         android:layout_width="40dp"
         android:layout_height="40dp"

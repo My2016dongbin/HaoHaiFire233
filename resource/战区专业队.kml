@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml>
+  <Document>
+    <Placemark>
+      <name>夏庄街道森林防火中队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.452918950947,36.256630828094,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>惜福镇街道森林防火中队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.510948487937,36.3060706237277,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>六汪镇森林资源管护中队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.813888888889,35.8841666666667,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>辛安街道森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.1276222,36.02126388,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>张家楼镇森林资源管护中队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.8903119564,35.7987560907,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>长江路街道森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.184444444444,35.9563888888889,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>大村镇森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.718333333333,35.8041666666667,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>珠海街道森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.974444444444,35.8808333333333,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>灵山卫森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.135833333333,35.9411111111111,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>琅琊镇森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.854444444444,35.6883333333333,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>琅琊台度假区森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.905555555556,35.6922222222222,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>琅琊台风景区森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.896388888889,35.6461111111111,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>滨海街道森管中队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.973888888889,35.8241666666667,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>胶南街道森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.0015939725,35.9066035705,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>薛家岛森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.218333333333,35.9638888888889,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>王台镇森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.989722222222,36.0344444444444,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>临港森管中队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.066388888889,35.9347222222222,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>铁山街道森林资源管护中队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.915729,35.907742,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>藏南镇森林资源管护中队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.8216266,35.7572173,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>灵珠山森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.074444444444,36.0141666666667,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>鳌山卫战区森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.656,36.357,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>田横镇森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.844,36.519,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>田横岛旅游度假区森林消防中队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.874,36.469,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>温泉街道森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.664,36.431,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>龙山街道（战区）森林消防中队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.514045710087,36.3867715717434,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>里岔镇森林防火中队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.8395377398,36.1052196747,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>洋河镇森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.9115921673,36.1384884378,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>南墅镇森林防火大队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.2800777777,37.0935861111,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>南墅镇森林防火大队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.2470027777,37.0611416666,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>中韩森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.452154400208,36.1081316178081,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>沙子口森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.5442988873,36.116468773,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>北宅森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.516507861464,36.2266254959202,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>王哥庄森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.6272,36.264331,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>崂山林场雕龙嘴消防队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.680518905145,36.2151487732603,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>大泽山镇森林防火专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.918516520139,36.9887160266613,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>店子森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.939031332255,36.9179426828677,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>云山森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.201442049057,36.8268855943033,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>古岘森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.187294272488,36.7578121907793,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>旧店镇大田森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.097193066731,36.9617944103341,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>旧店镇旧店森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.201808850273,36.9906372578255,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>旧店镇祝沟森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.240358830317,36.8728858883781,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>李园街道森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.923020928431,36.8410000717592,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>东阁街道森林消防专业队1</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          119.955016602871,36.8595524529453,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>东阁街道森林消防专业队2</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.021458553139,36.9135963083246,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>大泽山林场森林消防专业队</name>
+      <visibility>1</visibility>
+     
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>
+          120.046674595452,36.9918676601246,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
+

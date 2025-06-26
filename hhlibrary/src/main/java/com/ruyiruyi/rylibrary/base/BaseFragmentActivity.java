@@ -7,15 +7,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Build;
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
+
+import androidx.fragment.app.FragmentActivity;
 
 import com.ruyiruyi.rylibrary.R;
 import com.ruyiruyi.rylibrary.cell.ActionBar;
@@ -110,7 +109,7 @@ public class BaseFragmentActivity extends FragmentActivity {
         //解绑信鸽手机号
         XGPushManager.delAccount(getApplicationContext(),new DbConfig(getApplicationContext()).getPhone() );
         //反注册
-
+        XGPushManager.unregisterPush(this);
 
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         View dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_error, null);

@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: org.xutils:xutils:3.3.36@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/4e377b84d08515a88c8223f4e375e14c/xutils-3.3.36/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2fb2b87c5c2a8e61f9e6c901f01fe5f/jetified-xutils-3.3.36/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2fb2b87c5c2a8e61f9e6c901f01fe5f/jetified-xutils-3.3.36/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e2fb2b87c5c2a8e61f9e6c901f01fe5f/jetified-xutils-3.3.36/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.xutils/xutils/3.3.36/53f4e2fc3c88f4969192d25b7b672ff15006e44b/xutils-3.3.36-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.xutils/xutils/3.3.36/45c31e9a243f475802eadf1412455c26963e7a7d/xutils-3.3.36-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

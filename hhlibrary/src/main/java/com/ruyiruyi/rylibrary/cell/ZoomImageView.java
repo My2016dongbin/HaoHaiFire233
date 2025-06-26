@@ -11,7 +11,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 
-public class ZoomImageView extends ImageView {
+public class ZoomImageView extends androidx.appcompat.widget.AppCompatImageView {
 
     public static final int STATUS_INIT = 1;
 

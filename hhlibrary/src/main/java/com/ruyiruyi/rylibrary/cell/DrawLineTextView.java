@@ -9,7 +9,7 @@ import android.widget.TextView;
  * Created by Lenovo on 2019/1/7.
  */
 
-public class DrawLineTextView extends TextView {
+public class DrawLineTextView extends androidx.appcompat.widget.AppCompatTextView {
     public DrawLineTextView(Context context) {
         this(context, null);
     }

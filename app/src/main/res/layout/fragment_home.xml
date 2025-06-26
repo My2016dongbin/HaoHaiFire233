@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.skyline.terraexplorer.mainapps.MainActivity"
+    android:background="@color/white">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tb_demo"
+        android:layout_alignParentEnd="true"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:singleLine="true"
+            android:text="@string/app_name"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+    </androidx.appcompat.widget.Toolbar>
+    <com.geek.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
+        app:banner_auto_play="true"
+        app:banner_default_image="@drawable/ic_park"
+        app:banner_expose_width="20dp"
+        app:banner_interval_time="5000"
+        app:banner_multi_anim="ScaleIn"
+        app:banner_page_spacing="14dp"
+        app:banner_scroll_time="1000"
+        app:banner_show_indicator="true"
+        app:banner_show_model="Multi"
+        app:layout_scrollFlags="scroll" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:text="常用功能"
+            android:layout_gravity="left"
+            android:textColor="#ff303133"
+            android:textSize="18sp"
+            android:layout_marginLeft="20dp"/>
+        <Button
+            android:background="@mipmap/more"
+            android:layout_height="4dp"
+            android:layout_width="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <Button
+            android:id="@+id/zhlybutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="智慧园林" />
+        <Button
+            android:id="@+id/wghbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网格化" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lyzy_layout"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:background="@drawable/background_y"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/lyzy" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="林业资源"
+                android:textColor="@color/textcolor"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/yinhuanpaicha_layout"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:background="@drawable/background_b"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/yllh" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="营林绿化"
+                android:textColor="@color/textcolor"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/yhsw_layout"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:background="@drawable/background_p"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/hhsw" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="有害生物防治"
+                android:textColor="@color/textcolor"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lmzm_layout"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:background="@drawable/background_b"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/lmzm" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="林木种苗"
+                android:textColor="@color/textcolor"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ldzz_layout"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:background="@drawable/background_r"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/ldzz" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="林地征占"
+                android:textColor="@color/textcolor"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/swdyx_layout"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:background="@drawable/background_p"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/swdyx" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="生物多样性"
+                android:textColor="@color/textcolor"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/lyxz_layout"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:background="@drawable/background_p"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/lyxz" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="林业行政案件"
+                android:textColor="@color/textcolor"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lxr_layout"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:background="@drawable/background_y"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/lxr" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="联系人"
+                android:textColor="@color/textcolor"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/zhly_layout"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:background="@drawable/background_b"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/zhly" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="智慧园林"
+                android:textColor="@color/textcolor"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/slfh_layout"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:background="@drawable/background_r"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/slfh" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="森林防火"
+                android:textColor="@color/textcolor"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/famous_layout"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:background="@drawable/background_p"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/msgm" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="古树名木"
+                android:textColor="@color/textcolor"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lt_layout"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:background="@drawable/background_b"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:layout_marginRight="20dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/ic_lt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="绿地监管"
+                android:textColor="@color/textcolor"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

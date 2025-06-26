@@ -2,11 +2,12 @@ package com.ruyiruyi.rylibrary.cell;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
 
 import com.ruyiruyi.rylibrary.R;
 
@@ -45,12 +46,10 @@ public class ImageTextView extends TextView {
 
 
     public void setName(String nameStr){
-        Log.e(TAG, "setName: ==" + nameStr);
         setTextColor(Color.WHITE);
         setGravity(Gravity.CENTER);
         String shouzimu = "";
         if (nameStr.length()>0){
-            Log.e(TAG, "setName: ==" + getSpells(nameStr));
             shouzimu = getSpells(nameStr).substring(0,1);
         }else {
             shouzimu = "a";
@@ -88,7 +87,6 @@ public class ImageTextView extends TextView {
             char ch = characters.charAt(i);
             if ((ch >> 7) == 0) {
                 // 判断是否为汉字，如果左移7为为0就不是汉字，否则是汉字
-                return characters;
             } else {
                 char spell = getFirstLetter(ch);
                 buffer.append(String.valueOf(spell));

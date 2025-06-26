@@ -1,0 +1,3648 @@
+﻿{
+  "kml": {
+    "Document": {
+      "Placemark": [
+        {
+          "name": "大青山林区检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.2808777777,37.0784222222,0
+        "
+          }
+        },
+        {
+          "name": "沟崖检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.508406476703,36.1761658854227,0
+        "
+          }
+        },
+        {
+          "name": "东陈检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.521318424129,36.1818771788376,0
+        "
+          }
+        },
+        {
+          "name": "下葛检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5512404439,36.2003476571,0
+        "
+          }
+        },
+        {
+          "name": "慕武石检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.555641395639,36.1993098494142,0
+        "
+          }
+        },
+        {
+          "name": "周哥庄检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.539689211246,36.2125018395816,0
+        "
+          }
+        },
+        {
+          "name": "书院南山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5534720408,36.2312552211,0
+        "
+          }
+        },
+        {
+          "name": "大崂检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.556688808897,36.2457553128793,0
+        "
+          }
+        },
+        {
+          "name": "燕石检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.558631618924,36.2200738755851,0
+        "
+          }
+        },
+        {
+          "name": "观崂检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.583509939663,36.2040654044857,0
+        "
+          }
+        },
+        {
+          "name": "河东检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.600378562579,36.2230798807824,0
+        "
+          }
+        },
+        {
+          "name": "磅石检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.598413973371,36.2383456872816,0
+        "
+          }
+        },
+        {
+          "name": "东洞门检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.096944444444,36.0066666666667,0
+        "
+          }
+        },
+        {
+          "name": "西洞门检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.099166666667,36,0
+        "
+          }
+        },
+        {
+          "name": "上庄检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.106666666667,35.9880555555556,0
+        "
+          }
+        },
+        {
+          "name": "大泥沟头检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9044847488,35.8262993716,0
+        "
+          }
+        },
+        {
+          "name": "东李村检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9297913909,35.8143309878,0
+        "
+          }
+        },
+        {
+          "name": "西石岭检查站1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9292951822,35.8178262045,0
+        "
+          }
+        },
+        {
+          "name": "西石岭检查站2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.920669198,35.8248858054,0
+        "
+          }
+        },
+        {
+          "name": "土山屯检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9116784334,35.8402163812,0
+        "
+          }
+        },
+        {
+          "name": "王家洼子检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8952284456,35.8280413083,0
+        "
+          }
+        },
+        {
+          "name": "张家屯检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8966285587,35.8357284063,0
+        "
+          }
+        },
+        {
+          "name": "北马家庄检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8593324423,35.8462695099,0
+        "
+          }
+        },
+        {
+          "name": "北安子检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8390763998,35.8571483376,0
+        "
+          }
+        },
+        {
+          "name": "上疃检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8157921433,35.8286806632,0
+        "
+          }
+        },
+        {
+          "name": "台子沟检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.125555555556,35.9816666666667,0
+        "
+          }
+        },
+        {
+          "name": "八里庄检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.133888888889,35.9713888888889,0
+        "
+          }
+        },
+        {
+          "name": "花科子检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.158611111111,35.9380555555556,0
+        "
+          }
+        },
+        {
+          "name": "薛辛庄东山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.165833333333,35.9588888888889,0
+        "
+          }
+        },
+        {
+          "name": "太行山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.169722222222,35.9533333333333,0
+        "
+          }
+        },
+        {
+          "name": "书院水库检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.555971209974,36.3132823861642,0
+        "
+          }
+        },
+        {
+          "name": "棉花社区检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.545147906443,36.2972943689123,0
+        "
+          }
+        },
+        {
+          "name": "科埠社区检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.501940601141,36.3015760559943,0
+        "
+          }
+        },
+        {
+          "name": "超然社区检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.494923197354,36.2944608706,0
+        "
+          }
+        },
+        {
+          "name": "宫家村检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.487909805902,36.2807000546067,0
+        "
+          }
+        },
+        {
+          "name": "毛公山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.489939268009,36.2734538265076,0
+        "
+          }
+        },
+        {
+          "name": "李沙社区检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.479696354552,36.2677157978755,0
+        "
+          }
+        },
+        {
+          "name": "慧炬禅院检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.491574271512,36.2629766748321,0
+        "
+          }
+        },
+        {
+          "name": "山色峪社区村口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.50677859354,36.2587662393843,0
+        "
+          }
+        },
+        {
+          "name": "下蜜蜂检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.541798830827,36.2654274086641,0
+        "
+          }
+        },
+        {
+          "name": "小旱坝检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.46767625508,36.2551706528793,0
+        "
+          }
+        },
+        {
+          "name": "少山社区检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.445865955385,36.2359175384962,0
+        "
+          }
+        },
+        {
+          "name": "少山水库检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.453963556048,36.2357142526548,0
+        "
+          }
+        },
+        {
+          "name": "太和社区进山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.451847376116,36.2222319926925,0
+        "
+          }
+        },
+        {
+          "name": "南屋石社区进山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.457584740244,36.2113422003942,0
+        "
+          }
+        },
+        {
+          "name": "崔家沟社区检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.421748098102,36.2099231553621,0
+        "
+          }
+        },
+        {
+          "name": "丹山岭检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.430771875707,36.2296139611592,0
+        "
+          }
+        },
+        {
+          "name": "高家检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.003413469867,36.9778470534586,0
+        "
+          }
+        },
+        {
+          "name": "所里头检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.993942596567,36.9617819293586,0
+        "
+          }
+        },
+        {
+          "name": "谭家夼环山路检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.971429596567,36.9692989293586,0
+        "
+          }
+        },
+        {
+          "name": "茶山水库检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.961892596567,36.9474969293586,0
+        "
+          }
+        },
+        {
+          "name": "黄连顶检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.959998596567,36.9443659293586,0
+        "
+          }
+        },
+        {
+          "name": "云山观检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.162976144367,36.8812379069586,0
+        "
+          }
+        },
+        {
+          "name": "茶山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.967130577295,36.9129580062728,0
+        "
+          }
+        },
+        {
+          "name": "茶山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.968310749261,36.922577810774,0
+        "
+          }
+        },
+        {
+          "name": "六曲山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.1925164461,36.7564172652,0
+        "
+          }
+        },
+        {
+          "name": "大田后涧检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.071759580167,36.9583915452586,0
+        "
+          }
+        },
+        {
+          "name": "大田涧口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.068471191967,36.9788183870586,0
+        "
+          }
+        },
+        {
+          "name": "旧店方家检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.175113140167,36.9341023603586,0
+        "
+          }
+        },
+        {
+          "name": "河西郭管区1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9158299636,36.0998616718,0
+        "
+          }
+        },
+        {
+          "name": "河西郭管区2号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9427265268,36.1126124588,0
+        "
+          }
+        },
+        {
+          "name": "河西郭管区3号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9571967633,36.1142958944,0
+        "
+          }
+        },
+        {
+          "name": "红草岭1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.756666666667,35.7936111111111,0
+        "
+          }
+        },
+        {
+          "name": "东砚瓦2号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.800833333333,35.8508333333333,0
+        "
+          }
+        },
+        {
+          "name": "林子村3号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.698055555556,35.8336111111111,0
+        "
+          }
+        },
+        {
+          "name": "灵山岛码头检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.160954115274,35.7719046127673,0
+        "
+          }
+        },
+        {
+          "name": "毛家沟村",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.173611111111,35.7663888888889,0
+        "
+          }
+        },
+        {
+          "name": "李家村",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.174722222222,35.7847222222222,0
+        "
+          }
+        },
+        {
+          "name": "城口子村",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.158888888889,35.7447222222222,0
+        "
+          }
+        },
+        {
+          "name": "积米崖村",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.151111111111,35.9263888888889,0
+        "
+          }
+        },
+        {
+          "name": "积米崖村",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.154166666667,35.9216666666667,0
+        "
+          }
+        },
+        {
+          "name": "积米崖村",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.148055555556,35.9144444444444,0
+        "
+          }
+        },
+        {
+          "name": "孙家村检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.573729247529,36.2396456257443,0
+        "
+          }
+        },
+        {
+          "name": "毕家村检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.528449933729,36.2382089360502,0
+        "
+          }
+        },
+        {
+          "name": "南北岭检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.564100520822,36.2463562155977,0
+        "
+          }
+        },
+        {
+          "name": "东衣乌巷检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.534102699089,36.2401601164945,0
+        "
+          }
+        },
+        {
+          "name": "枣行检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5162644412,36.23686905,0
+        "
+          }
+        },
+        {
+          "name": "石门检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.511019988742,36.2217705183254,0
+        "
+          }
+        },
+        {
+          "name": "桃花涧检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.021572767267,36.9135820315586,0
+        "
+          }
+        },
+        {
+          "name": "老龙湾检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.995745776667,36.8801437285586,0
+        "
+          }
+        },
+        {
+          "name": "检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.054716824067,36.9861353143586,0
+        "
+          }
+        },
+        {
+          "name": "孙家白庙1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.608,36.355,0
+        "
+          }
+        },
+        {
+          "name": "新民村2号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.639,36.338,0
+        "
+          }
+        },
+        {
+          "name": "红星村3号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.589,36.35,0
+        "
+          }
+        },
+        {
+          "name": "垛石村4号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.627,36.354,0
+        "
+          }
+        },
+        {
+          "name": "东上庄村5号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.611,36.334,0
+        "
+          }
+        },
+        {
+          "name": "鳌角石村6号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.624,36.371,0
+        "
+          }
+        },
+        {
+          "name": "姜家白庙村7号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.586,36.379,0
+        "
+          }
+        },
+        {
+          "name": "大龙嘴村8号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6,36.338,0
+        "
+          }
+        },
+        {
+          "name": "沪沱村9号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.687,36.348,0
+        "
+          }
+        },
+        {
+          "name": "沪沱村10号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.701,36.349,0
+        "
+          }
+        },
+        {
+          "name": "盘龙庄村11号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.689,36.336,0
+        "
+          }
+        },
+        {
+          "name": "盘龙庄村12号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.693,36.336,0
+        "
+          }
+        },
+        {
+          "name": "于家沟村13号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.709,36.338,0
+        "
+          }
+        },
+        {
+          "name": "向阳庄村14号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.726,36.339,0
+        "
+          }
+        },
+        {
+          "name": "青岗岭村15号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.586,36.339,0
+        "
+          }
+        },
+        {
+          "name": "南邱村16号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.577,36.365,0
+        "
+          }
+        },
+        {
+          "name": "后寨村17号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.651,36.413,0
+        "
+          }
+        },
+        {
+          "name": "场元村18号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.648,36.404,0
+        "
+          }
+        },
+        {
+          "name": "高戈庄村19号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.629230811586,36.4042093925685,0
+        "
+          }
+        },
+        {
+          "name": "西绕村20号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.648,36.358,0
+        "
+          }
+        },
+        {
+          "name": "西王村检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.856845335035,36.530381966516,0
+        "
+          }
+        },
+        {
+          "name": "南王村检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.855447965047,36.488399749449,0
+        "
+          }
+        },
+        {
+          "name": "农林村检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.857,36.491,0
+        "
+          }
+        },
+        {
+          "name": "黑石庄检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.85482805243,36.4869524107799,0
+        "
+          }
+        },
+        {
+          "name": "沙戈庄检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.841,36.479,0
+        "
+          }
+        },
+        {
+          "name": "卧龙检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.748,36.504,0
+        "
+          }
+        },
+        {
+          "name": "南坦村检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.853,36.527,0
+        "
+          }
+        },
+        {
+          "name": "山口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.833157044426,36.541,0
+        "
+          }
+        },
+        {
+          "name": "森林防火检查站1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9817683354,35.9210867834,0
+        "
+          }
+        },
+        {
+          "name": "森林防火检查站2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9803414451,35.965835396,0
+        "
+          }
+        },
+        {
+          "name": "森林防火检查站3",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9575170278,35.9170462046,0
+        "
+          }
+        },
+        {
+          "name": "森林防火检查站4",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.977101974,35.9455258779,0
+        "
+          }
+        },
+        {
+          "name": "森林防火检查站5",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9884841413,35.9297709726,0
+        "
+          }
+        },
+        {
+          "name": "森林防火检查站6",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9901694107,35.962162201,0
+        "
+          }
+        },
+        {
+          "name": "森林防火检查站7",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9847036388,35.9133958046,0
+        "
+          }
+        },
+        {
+          "name": "森林防火检查站8",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0251417289,35.9366715118,0
+        "
+          }
+        },
+        {
+          "name": "石东检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.988611111111,35.9777777777778,0
+        "
+          }
+        },
+        {
+          "name": "山柴检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.000916666667,35.9783,0
+        "
+          }
+        },
+        {
+          "name": "山赵检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.015466666667,35.97175,0
+        "
+          }
+        },
+        {
+          "name": "沙中沙西合并检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0115,36.00425,0
+        "
+          }
+        },
+        {
+          "name": "王家屯检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.004283333333,36.00525,0
+        "
+          }
+        },
+        {
+          "name": "石西检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.98,35.9780555555556,0
+        "
+          }
+        },
+        {
+          "name": "韩家台检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.040833333333,36.0172222222222,0
+        "
+          }
+        },
+        {
+          "name": "沙东水库检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.01,36.0166666666667,0
+        "
+          }
+        },
+        {
+          "name": "插旗崖检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.048888888889,36.0258333333333,0
+        "
+          }
+        },
+        {
+          "name": "三角湾检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.060555555556,36.0447222222222,0
+        "
+          }
+        },
+        {
+          "name": "田横镇1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.845214151491,36.5573932374435,0
+        "
+          }
+        },
+        {
+          "name": "田横镇2号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.867590106329,36.5315050721108,0
+        "
+          }
+        },
+        {
+          "name": "田横镇3号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.870266499633,36.5259428929359,0
+        "
+          }
+        },
+        {
+          "name": "田横镇4号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.871,36.518,0
+        "
+          }
+        },
+        {
+          "name": "田横镇5号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.890028553532,36.5079000626378,0
+        "
+          }
+        },
+        {
+          "name": "宅科村西进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.005555555556,35.7447222222222,0
+        "
+          }
+        },
+        {
+          "name": "宅科西山北进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.001944444444,35.735,0
+        "
+          }
+        },
+        {
+          "name": "宅科北山进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.003888888889,35.7530555555556,0
+        "
+          }
+        },
+        {
+          "name": "南小庄西山进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0075,35.7575,0
+        "
+          }
+        },
+        {
+          "name": "南小庄东山西进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.016944444444,35.7575,0
+        "
+          }
+        },
+        {
+          "name": "南小庄东山东进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.018888888889,35.7594444444444,0
+        "
+          }
+        },
+        {
+          "name": "高峪西几进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.005555555556,35.7708333333333,0
+        "
+          }
+        },
+        {
+          "name": "峡沟路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.948055555556,35.8325,0
+        "
+          }
+        },
+        {
+          "name": "高峪水库南进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.008611111111,35.7733333333333,0
+        "
+          }
+        },
+        {
+          "name": "乔家洼南进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.013611111111,35.7861111111111,0
+        "
+          }
+        },
+        {
+          "name": "乔家洼北进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.013333333333,35.7877777777778,0
+        "
+          }
+        },
+        {
+          "name": "营海与乔家洼交界处进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.010833333333,35.7897222222222,0
+        "
+          }
+        },
+        {
+          "name": "营海村西进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.009166666667,35.7913888888889,0
+        "
+          }
+        },
+        {
+          "name": "营海养殖区下进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0075,35.7925,0
+        "
+          }
+        },
+        {
+          "name": "六和墓地南进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.005555555556,35.7938888888889,0
+        "
+          }
+        },
+        {
+          "name": "六和墓地北进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.005,35.7944444444444,0
+        "
+          }
+        },
+        {
+          "name": "凤凰村瓦瓦檐子进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.997777777778,35.8013888888889,0
+        "
+          }
+        },
+        {
+          "name": "石甲团山子进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.995555555556,35.8036111111111,0
+        "
+          }
+        },
+        {
+          "name": "山张村北进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.96,35.7733333333333,0
+        "
+          }
+        },
+        {
+          "name": "山张西水库进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.950277777778,35.775,0
+        "
+          }
+        },
+        {
+          "name": "石盆进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.945555555556,35.7825,0
+        "
+          }
+        },
+        {
+          "name": "石屋子沟坝南进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.947222222222,35.7858333333333,0
+        "
+          }
+        },
+        {
+          "name": "东营进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.95,35.7769444444444,0
+        "
+          }
+        },
+        {
+          "name": "山王路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.976944444444,35.7997222222222,0
+        "
+          }
+        },
+        {
+          "name": "杻杭饽饽石进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.943888888889,35.7927777777778,0
+        "
+          }
+        },
+        {
+          "name": "杻杭石东进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9475,35.7958333333333,0
+        "
+          }
+        },
+        {
+          "name": "凤凰村黄坛进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.987777777778,35.8019444444444,0
+        "
+          }
+        },
+        {
+          "name": "朱家小庄西山进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.964166666667,35.8183333333333,0
+        "
+          }
+        },
+        {
+          "name": "黄石坎西水库进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.950833333333,35.8119444444444,0
+        "
+          }
+        },
+        {
+          "name": "黄石坎东水库进山路口检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.958333333333,35.8166666666667,0
+        "
+          }
+        },
+        {
+          "name": "山王水库检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.983888888889,35.8038888888889,0
+        "
+          }
+        },
+        {
+          "name": "东大洼检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.041281,35.945105,0
+        "
+          }
+        },
+        {
+          "name": "北山村检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.054127,35.962246,0
+        "
+          }
+        },
+        {
+          "name": "卜落林检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.056781,35.942942,0
+        "
+          }
+        },
+        {
+          "name": "赵家河检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.053443,35.935165,0
+        "
+          }
+        },
+        {
+          "name": "西华山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.073936,35.905359,0
+        "
+          }
+        },
+        {
+          "name": "东山冯检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.053833,35.961972,0
+        "
+          }
+        },
+        {
+          "name": "东华山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.087103,35.960111,0
+        "
+          }
+        },
+        {
+          "name": "崮上检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.068111,35.945589,0
+        "
+          }
+        },
+        {
+          "name": "西山冯检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.050334,35.952623,0
+        "
+          }
+        },
+        {
+          "name": "小兰东检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.047262,35.923824,0
+        "
+          }
+        },
+        {
+          "name": "蒋家店子检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.082009,35.932561,0
+        "
+          }
+        },
+        {
+          "name": "大兰东检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.055436,35.922461,0
+        "
+          }
+        },
+        {
+          "name": "蒋家窑检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.066506,35.920442,0
+        "
+          }
+        },
+        {
+          "name": "北高家庄检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.077238,35.936206,0
+        "
+          }
+        },
+        {
+          "name": "林家庄检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.071587,35.930347,0
+        "
+          }
+        },
+        {
+          "name": "三家庄检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.059281,35.932782,0
+        "
+          }
+        },
+        {
+          "name": "前洼检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.067599,35.905262,0
+        "
+          }
+        },
+        {
+          "name": "店头检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.063931,35.910053,0
+        "
+          }
+        },
+        {
+          "name": "山前检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.092029,35.900088,0
+        "
+          }
+        },
+        {
+          "name": "新屯检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.079799,35.898314,0
+        "
+          }
+        },
+        {
+          "name": "东山村检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.066949,35.962997,0
+        "
+          }
+        },
+        {
+          "name": "陡崖子检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.039436,35.963178,0
+        "
+          }
+        },
+        {
+          "name": "长城检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.038935,35.977869,0
+        "
+          }
+        },
+        {
+          "name": "藏马山景区1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.7775552,35.8058236,0
+        "
+          }
+        },
+        {
+          "name": "藏马山景区2号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.7800497,35.7893028,0
+        "
+          }
+        },
+        {
+          "name": "藏马山景区3号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.760719,35.779711,0
+        "
+          }
+        },
+        {
+          "name": "山周村东山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.834722222222,35.9225,0
+        "
+          }
+        },
+        {
+          "name": "山周村南山东侧检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.837222222222,35.9086111111111,0
+        "
+          }
+        },
+        {
+          "name": "山周村南山西侧检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.831111111111,35.9077777777778,0
+        "
+          }
+        },
+        {
+          "name": "野潴村东山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.819444444444,35.9016666666667,0
+        "
+          }
+        },
+        {
+          "name": "夏家庄东山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.823888888889,35.8955555555556,0
+        "
+          }
+        },
+        {
+          "name": "下庵村东山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.820833333333,35.8852777777778,0
+        "
+          }
+        },
+        {
+          "name": "大庙口东山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.822222222222,35.8769444444444,0
+        "
+          }
+        },
+        {
+          "name": "1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.880433,35.864676,0
+        "
+          }
+        },
+        {
+          "name": "2号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.889166666667,35.8744444444444,0
+        "
+          }
+        },
+        {
+          "name": "3号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.89,35.8958333333333,0
+        "
+          }
+        },
+        {
+          "name": "4号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8775,35.8877777777778,0
+        "
+          }
+        },
+        {
+          "name": "5号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8875,35.8813888888889,0
+        "
+          }
+        },
+        {
+          "name": "6号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.869166666667,35.9333333333333,0
+        "
+          }
+        },
+        {
+          "name": "鱼鸣嘴1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.173333333333,35.8961111111111,0
+        "
+          }
+        },
+        {
+          "name": "鱼鸣嘴2号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.175,35.8952777777778,0
+        "
+          }
+        },
+        {
+          "name": "鱼鸣嘴3号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.174166666667,35.8941666666667,0
+        "
+          }
+        },
+        {
+          "name": "顾家岛1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.175,35.9038888888889,0
+        "
+          }
+        },
+        {
+          "name": "顾家岛2号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.177222222222,35.9019444444444,0
+        "
+          }
+        },
+        {
+          "name": "董家河1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.178333333333,35.9077777777778,0
+        "
+          }
+        },
+        {
+          "name": "董家河2号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.183611111111,35.9058333333333,0
+        "
+          }
+        },
+        {
+          "name": "施沟检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.236666666667,35.9997222222222,0
+        "
+          }
+        },
+        {
+          "name": "石岭子检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.189166666667,35.9138888888889,0
+        "
+          }
+        },
+        {
+          "name": "北屯检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.267222222222,35.9775,0
+        "
+          }
+        },
+        {
+          "name": "南庄一检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.285833333333,35.9761111111111,0
+        "
+          }
+        },
+        {
+          "name": "南庄二检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.290555555556,35.9847222222222,0
+        "
+          }
+        },
+        {
+          "name": "南庄二检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.291666666667,35.9827777777778,0
+        "
+          }
+        },
+        {
+          "name": "安子检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.227777777778,35.9758333333333,0
+        "
+          }
+        },
+        {
+          "name": "向阳检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.234444444444,35.9969444444444,0
+        "
+          }
+        },
+        {
+          "name": "宝窝检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.203611111111,35.9783333333333,0
+        "
+          }
+        },
+        {
+          "name": "六社区检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.214444444444,35.9783333333333,0
+        "
+          }
+        },
+        {
+          "name": "瓦屋庄检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.288611111111,35.9905555555556,0
+        "
+          }
+        },
+        {
+          "name": "北庄一检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.301111111111,35.9983333333333,0
+        "
+          }
+        },
+        {
+          "name": "北庄一检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.307222222222,36.0033333333333,0
+        "
+          }
+        },
+        {
+          "name": "北庄二检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.288333333333,36.0030555555556,0
+        "
+          }
+        },
+        {
+          "name": "杨七岭",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.113611111111,35.9577777777778,0
+        "
+          }
+        },
+        {
+          "name": "康大山体公园",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.141944444444,35.925,0
+        "
+          }
+        },
+        {
+          "name": "拖车口1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.877416405676,36.4331765804428,0
+        "
+          }
+        },
+        {
+          "name": "明惠山庄2号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.89,36.43,0
+        "
+          }
+        },
+        {
+          "name": "山东头3号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.903212272358,36.42590732707,0
+        "
+          }
+        },
+        {
+          "name": "东陆庵子4号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.894098936706,36.4358534740743,0
+        "
+          }
+        },
+        {
+          "name": "东陆簸箕掌5号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.89,36.43,0
+        "
+          }
+        },
+        {
+          "name": "催诏6号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.849453984461,36.4773099485714,0
+        "
+          }
+        },
+        {
+          "name": "东崔7号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.85,36.47,0
+        "
+          }
+        },
+        {
+          "name": "山南8号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.870892297877,36.4385723233965,0
+        "
+          }
+        },
+        {
+          "name": "上夼村9号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.854353539033,36.4784076584715,0
+        "
+          }
+        },
+        {
+          "name": "江家屯10号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.86,36.49,0
+        "
+          }
+        },
+        {
+          "name": "潘家11号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.88,36.48,0
+        "
+          }
+        },
+        {
+          "name": "潘家12号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.88,36.48,0
+        "
+          }
+        },
+        {
+          "name": "于家屯13号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.908007201408,36.4908030680895,0
+        "
+          }
+        },
+        {
+          "name": "房家14号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.919895303716,36.4985913590845,0
+        "
+          }
+        },
+        {
+          "name": "周戈庄15号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.932290231218,36.4961568553526,0
+        "
+          }
+        },
+        {
+          "name": "泊子16号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.9,36.48,0
+        "
+          }
+        },
+        {
+          "name": "北丁17号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.876466500406,36.4141402621502,0
+        "
+          }
+        },
+        {
+          "name": "1号",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.745,36.501,0
+        "
+          }
+        },
+        {
+          "name": "2号",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.737,36.494,0
+        "
+          }
+        },
+        {
+          "name": "3号",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.724,36.485,0
+        "
+          }
+        },
+        {
+          "name": "4号",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.716,36.477,0
+        "
+          }
+        },
+        {
+          "name": "5号",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.715,36.491,0
+        "
+          }
+        },
+        {
+          "name": "6号",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.712,36.485,0
+        "
+          }
+        },
+        {
+          "name": "7号",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.711,36.496,0
+        "
+          }
+        },
+        {
+          "name": "8号",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.737,36.448,0
+        "
+          }
+        },
+        {
+          "name": "9号",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.672324796427,36.4519107702123,0
+        "
+          }
+        },
+        {
+          "name": "10号",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.685,36.441,0
+        "
+          }
+        },
+        {
+          "name": "11号",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.635528240343,36.4225716970189,0
+        "
+          }
+        },
+        {
+          "name": "上夼东检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.561,36.397,0
+        "
+          }
+        },
+        {
+          "name": "上夼西检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.558,36.399,0
+        "
+          }
+        },
+        {
+          "name": "朱家庵检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.58,36.384,0
+        "
+          }
+        },
+        {
+          "name": "窝洛子检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.579,36.384,0
+        "
+          }
+        },
+        {
+          "name": "兰岙路南侧检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.574547902409,36.3847263619843,0
+        "
+          }
+        },
+        {
+          "name": "棉花涧检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.552757921355,36.3681570444264,0
+        "
+          }
+        },
+        {
+          "name": "大下庄村东山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.879722222222,35.9297222222222,0
+        "
+          }
+        },
+        {
+          "name": "墩上村检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.846388888889,35.9122222222222,0
+        "
+          }
+        },
+        {
+          "name": "东南崖检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.883055555556,35.9155555555556,0
+        "
+          }
+        },
+        {
+          "name": "后石沟村前检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.881944444444,35.9341666666667,0
+        "
+          }
+        },
+        {
+          "name": "后石沟村后检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.873055555556,35.9422222222222,0
+        "
+          }
+        },
+        {
+          "name": "辛兴南山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.929166666667,35.9361111111111,0
+        "
+          }
+        },
+        {
+          "name": "苗家南山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.954166666667,35.9622222222222,0
+        "
+          }
+        },
+        {
+          "name": "张仓西南山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9,35.9088888888889,0
+        "
+          }
+        },
+        {
+          "name": "木厂口社区1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.064444444444,35.9888888888889,0
+        "
+          }
+        },
+        {
+          "name": "木厂口社区3号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.055277777778,35.9858333333333,0
+        "
+          }
+        },
+        {
+          "name": "木厂口社区2号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.058055555556,35.9908333333333,0
+        "
+          }
+        },
+        {
+          "name": "独垛子社区1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.038333333333,35.9855555555556,0
+        "
+          }
+        },
+        {
+          "name": "独垛子社区2号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.060277777778,35.9955555555556,0
+        "
+          }
+        },
+        {
+          "name": "大南庄1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.059722222222,36.0069444444444,0
+        "
+          }
+        },
+        {
+          "name": "小南庄1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.069444444444,36.0055555555556,0
+        "
+          }
+        },
+        {
+          "name": "小南庄2号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.071944444444,35.9988888888889,0
+        "
+          }
+        },
+        {
+          "name": "刘家庄1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.047777777778,36.0016666666667,0
+        "
+          }
+        },
+        {
+          "name": "西阿陀1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.030277777778,36.0052777777778,0
+        "
+          }
+        },
+        {
+          "name": "柳东山1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.091111111111,36.0097222222222,0
+        "
+          }
+        },
+        {
+          "name": "窝洛子1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.093888888889,36.04,0
+        "
+          }
+        },
+        {
+          "name": "大桥1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.098888888889,36.0138888888889,0
+        "
+          }
+        },
+        {
+          "name": "大桥检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.568138361,36.3193956582,0
+        "
+          }
+        },
+        {
+          "name": "秦家土寨检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6273293495,36.323907968,0
+        "
+          }
+        },
+        {
+          "name": "峡口庙检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5885338783,36.3202946833,0
+        "
+          }
+        },
+        {
+          "name": "双石屋检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.600025129054,36.208541349242,0
+        "
+          }
+        },
+        {
+          "name": "柳树台检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.580721293491,36.2013208105119,0
+        "
+          }
+        },
+        {
+          "name": "导弹营检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.691247688346,36.1388522785529,0
+        "
+          }
+        },
+        {
+          "name": "黑涧沟检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.465761216693,36.2521569716064,0
+        "
+          }
+        },
+        {
+          "name": "少山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.461950290983,36.2272737321913,0
+        "
+          }
+        },
+        {
+          "name": "石门检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.496790853165,36.2160591897717,0
+        "
+          }
+        },
+        {
+          "name": "太平庄检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.44987603705,36.2412189239347,0
+        "
+          }
+        },
+        {
+          "name": "天门涧检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.622605058858,36.1292161380144,0
+        "
+          }
+        },
+        {
+          "name": "响石检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.500278338206,36.2470423840885,0
+        "
+          }
+        },
+        {
+          "name": "宋家庄村南1号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8535549641,36.0935817341,0
+        "
+          }
+        },
+        {
+          "name": "董张路口2号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.858216252269,36.0732115867432,0
+        "
+          }
+        },
+        {
+          "name": "山上人家饭店3号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.873736215095,36.100256027225,0
+        "
+          }
+        },
+        {
+          "name": "薛家庄村南4号检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.7869825363,36.0484483761,0
+        "
+          }
+        },
+        {
+          "name": "西台南山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5930614471,36.30978668,0
+        "
+          }
+        },
+        {
+          "name": "东台南山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6020253897,36.3110100212,0
+        "
+          }
+        },
+        {
+          "name": "江家土寨检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.618467331,36.3084963153,0
+        "
+          }
+        },
+        {
+          "name": "唐家庄检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.607354939,36.2938750159,0
+        "
+          }
+        },
+        {
+          "name": "老涧沟检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6085726619,36.2692002206,0
+        "
+          }
+        },
+        {
+          "name": "西山万年水库检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6177270413,36.2634498658,0
+        "
+          }
+        },
+        {
+          "name": "姜家村检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6233167649,36.2514633695,0
+        "
+          }
+        },
+        {
+          "name": "晓望二龙山检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6460753084,36.2508901687,0
+        "
+          }
+        },
+        {
+          "name": "曲家庄大水池检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6573110819,36.242142392,0
+        "
+          }
+        },
+        {
+          "name": "朱家洼西检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4669815302,36.1166262267,0
+        "
+          }
+        },
+        {
+          "name": "中韩孙家检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4646533728,36.1223938586,0
+        "
+          }
+        },
+        {
+          "name": "金家岭检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4665604234,36.1120564264,0
+        "
+          }
+        },
+        {
+          "name": "409医院检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.498406291,36.1476607895,0
+        "
+          }
+        },
+        {
+          "name": "枯桃天马涧检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4987388849,36.1387585058,0
+        "
+          }
+        },
+        {
+          "name": "董家埠水库东沿检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5449479818,36.136150442,0
+        "
+          }
+        },
+        {
+          "name": "大河东检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5881825089,36.1558214031,0
+        "
+          }
+        },
+        {
+          "name": "东麦窑检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6119817495,36.1312113509,0
+        "
+          }
+        },
+        {
+          "name": "于哥庄检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5204164982,36.1264236022,0
+        "
+          }
+        },
+        {
+          "name": "西登瀛检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5544617773,36.1421007689,0
+        "
+          }
+        },
+        {
+          "name": "西麦窑检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6030607223,36.1257519888,0
+        "
+          }
+        },
+        {
+          "name": "秦家土寨护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6254625347,36.324806941,0
+        "
+          }
+        },
+        {
+          "name": "大桥护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5723333411,36.3200699259,0
+        "
+          }
+        },
+        {
+          "name": "峡口庙护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5886626244,36.3206923257,0
+        "
+          }
+        },
+        {
+          "name": "西台护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5966234207,36.3145199944,0
+        "
+          }
+        },
+        {
+          "name": "西台南山护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5974388123,36.3127045112,0
+        "
+          }
+        },
+        {
+          "name": "曲家沟护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5987048149,36.3094538242,0
+        "
+          }
+        },
+        {
+          "name": "东台南山护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6055283546,36.3099552688,0
+        "
+          }
+        },
+        {
+          "name": "东台小口护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6064832211,36.306730405,0
+        "
+          }
+        },
+        {
+          "name": "江家土寨护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6146693226,36.3099639144,0
+        "
+          }
+        },
+        {
+          "name": "江家土寨公墓护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.623520613,36.308649777,0
+        "
+          }
+        },
+        {
+          "name": "何家老爷山护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6178879738,36.2946338161,0
+        "
+          }
+        },
+        {
+          "name": "浦里西山护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6232094765,36.3035572855,0
+        "
+          }
+        },
+        {
+          "name": "唐家庄护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6116116047,36.2940976832,0
+        "
+          }
+        },
+        {
+          "name": "唐家庄水厂护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6096589565,36.292783279,0
+        "
+          }
+        },
+        {
+          "name": "庙石秀水山庄护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6025457382,36.2874908462,0
+        "
+          }
+        },
+        {
+          "name": "秀水山庄南坡护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5992627144,36.2841007334,0
+        "
+          }
+        },
+        {
+          "name": "庙石西山护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5960440636,36.2826650803,0
+        "
+          }
+        },
+        {
+          "name": "囤山营房护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5902504921,36.2748117622,0
+        "
+          }
+        },
+        {
+          "name": "槽门口护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.602889061,36.2726839651,0
+        "
+          }
+        },
+        {
+          "name": "陡沟子护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.601644516,36.2700198122,0
+        "
+          }
+        },
+        {
+          "name": "小五岔护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5960226059,36.2688780045,0
+        "
+          }
+        },
+        {
+          "name": "黑涧护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5879116111,36.2623036357,0
+        "
+          }
+        },
+        {
+          "name": "劈石口护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5858516693,36.2583241435,0
+        "
+          }
+        },
+        {
+          "name": "囤山水池护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6036186218,36.2729261574,0
+        "
+          }
+        },
+        {
+          "name": "小山河护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6103134155,36.271230802,0
+        "
+          }
+        },
+        {
+          "name": "老涧沟护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6131887436,36.2684108966,0
+        "
+          }
+        },
+        {
+          "name": "荷花村护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.630569458,36.2829418354,0
+        "
+          }
+        },
+        {
+          "name": "朱顶山护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6290888793,36.2799320769,0
+        "
+          }
+        },
+        {
+          "name": "王山口护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6381654739,36.2898084918,0
+        "
+          }
+        },
+        {
+          "name": "石箭口护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6221365929,36.2753307288,0
+        "
+          }
+        },
+        {
+          "name": "西山北坡护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6232309355,36.2671479611,0
+        "
+          }
+        },
+        {
+          "name": "勤子夼护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6219649315,36.269812212,0
+        "
+          }
+        },
+        {
+          "name": "西山万年水库护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6259346008,36.2612828288,0
+        "
+          }
+        },
+        {
+          "name": "西山公墓护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6229519844,36.266282925,0
+        "
+          }
+        },
+        {
+          "name": "棺材石护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6270933151,36.2591200582,0
+        "
+          }
+        },
+        {
+          "name": "姜家村护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6322646141,36.2517315823,0
+        "
+          }
+        },
+        {
+          "name": "马头涧护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6248617172,36.245796071,0
+        "
+          }
+        },
+        {
+          "name": "八毛疆护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6455898285,36.2587740093,0
+        "
+          }
+        },
+        {
+          "name": "晓望西山护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6439375881,36.2576666427,0
+        "
+          }
+        },
+        {
+          "name": "晓望二龙山护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6507718563,36.2508836797,0
+        "
+          }
+        },
+        {
+          "name": "南龙营护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6507825853,36.2496031563,0
+        "
+          }
+        },
+        {
+          "name": "曲家庄大水池护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6626057625,36.2419541878,0
+        "
+          }
+        },
+        {
+          "name": "中石屋护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6643867493,36.2413657746,0
+        "
+          }
+        },
+        {
+          "name": "庙子疆护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6602239609,36.239565895,0
+        "
+          }
+        },
+        {
+          "name": "老沟护林房",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.676393915991,36.2248862098503,0
+        "
+          }
+        },
+        {
+          "name": "大桥检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.568138361,36.3193956582,0
+        "
+          }
+        },
+        {
+          "name": "秦家土寨检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6273293495,36.323907968,0
+        "
+          }
+        },
+        {
+          "name": "峡口庙检查站",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5885338783,36.3202946833,0
+        "
+          }
+        }
+      ]
+    }
+  }
+}

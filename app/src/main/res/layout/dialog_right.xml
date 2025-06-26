@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c12">
+
+
+    <RelativeLayout
+        android:id="@+id/myDialogView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/list_item_click"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView" />
+        <Button
+            android:id="@+id/parkbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_amount_layout"
+            android:text="公园信息"
+            android:layout_below="@+id/citybutton"
+            android:layout_alignParentStart="true" />
+        <Button
+            android:id="@+id/citybutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_amount_layout"
+            android:text="区市信息"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+</LinearLayout>

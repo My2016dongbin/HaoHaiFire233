@@ -1,0 +1,20 @@
+syntax = "proto3";
+option java_package = "com.bean";
+package bean;
+message SignMessage {
+    message SignSend {
+        string userName = 1;
+        string pwd = 2;
+        string dep = 3;
+        string phoneNumber = 4;
+        string profession = 5;
+        string registerTime = 6;
+    }
+    message SignRecieve {
+        Flag flag = 1;
+    }
+    enum Flag {
+        SUCCESS = 0;
+        FAILED = 1;
+    }
+}

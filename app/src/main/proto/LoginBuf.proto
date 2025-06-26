@@ -1,0 +1,20 @@
+syntax = "proto3";
+option java_package = "com.bean";
+package bean;
+message LoginMessage {
+    message LoginSend {
+        string userName = 1;
+        string pwd = 2;
+        string dep = 3;
+        string phoneNumber = 4;
+        string profession = 5;
+        string loginTime = 6;
+    }
+    message LoginRecieve {
+        Flag flag = 1;
+    }
+    enum Flag {
+        SUCCESS = 0;
+        FAILED = 1;
+    }
+}

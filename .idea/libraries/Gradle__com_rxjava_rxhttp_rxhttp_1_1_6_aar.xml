@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.rxjava.rxhttp:rxhttp:1.1.6@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/175fdedc75f15fc5d8e8e2c223e216f8/rxhttp-1.1.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/175fdedc75f15fc5d8e8e2c223e216f8/rxhttp-1.1.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/175fdedc75f15fc5d8e8e2c223e216f8/rxhttp-1.1.6/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rxjava.rxhttp/rxhttp/1.1.6/f7c12a821a66f93eba90853b0713e7ec1c0d5ea1/rxhttp-1.1.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.rxjava.rxhttp/rxhttp/1.1.6/655c0c8f7a5e6581063db8bb00bcbe66bad78e54/rxhttp-1.1.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

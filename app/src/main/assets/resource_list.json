@@ -1,0 +1,92 @@
+{
+  "kml": {
+    "Document": {
+      "Resource": [
+        {
+          "id": "1",
+          "name": "护林房",
+          "img": "res_foreast_house.png",
+          "json": "res_foreast_house.json"
+        },
+        {
+          "id": "2",
+          "name": "检查站",
+          "img": "res_check_station.png",
+          "json": "res_check_station.json"
+        },
+        {
+          "id": "3",
+          "name": "瞭望塔",
+          "img": "res_observation_tower.png",
+          "json": "res_observation_tower.json"
+        },
+        {
+          "id": "4",
+          "name": "墓地",
+          "img": "res_cemetery.png",
+          "json": "res_cemetery.json"
+        },
+        {
+          "id": "5",
+          "name": "区市物资库",
+          "img": "res_material.png",
+          "json": "res_city_material.json"
+        },
+        {
+          "id": "6",
+          "name": "区市指挥部",
+          "img": "res_city_command.png",
+          "json": "res_city_command.json"
+        },
+        {
+          "id": "7",
+          "name": "区市专业队",
+          "img": "res_city_team.png",
+          "json": "res_city_team.json"
+        },
+        {
+          "id": "8",
+          "name": "视频监控点",
+          "img": "res_video_monitor.png",
+          "json": "res_video_monitor.json"
+        },
+        {
+          "id": "9",
+          "name": "水源地",
+          "img": "res_water_source.png",
+          "json": "res_water_source.json"
+        },
+        {
+          "id": "10",
+          "name": "危险源",
+          "img": "res_danger_source.png",
+          "json": "res_danger_source.json"
+        },
+        {
+          "id": "11",
+          "name": "战区物资库",
+          "img": "res_war_material.png",
+          "json": "res_war_material.json"
+        },
+        {
+          "id": "12",
+          "name": "战区指挥部",
+          "img": "res_war_command.png",
+          "json": "res_war_command.json"
+        },
+        {
+          "id": "13",
+          "name": "战区专业队",
+          "img": "res_war_team.png",
+          "json": "res_war_team.json"
+        },
+        {
+          "id": "14",
+          "name": "重点防火目标",
+          "img": "res_key_target.png",
+          "json": "res_key_target.json"
+        }
+      ]
+    }
+  }
+}

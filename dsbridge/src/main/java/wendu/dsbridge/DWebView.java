@@ -2,6 +2,7 @@ package wendu.dsbridge;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -11,8 +12,6 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.support.annotation.Keep;
-import android.support.v7.app.AlertDialog;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
@@ -32,6 +31,8 @@ import android.webkit.WebStorage;
 import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+
+import androidx.annotation.Keep;
 
 import org.json.JSONArray;
 import org.json.JSONException;

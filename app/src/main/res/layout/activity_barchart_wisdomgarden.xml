@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.ruyiruyi.rylibrary.cell.ActionBar
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/action_bar">
+
+        <TextView
+            android:id="@+id/barNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="图表 "
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"/>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chart1"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_marginTop="40dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

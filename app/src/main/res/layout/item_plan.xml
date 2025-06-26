@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/c12"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="130dp"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="资源点名称"
+                android:textColor="@color/c7"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="经度:"
+                    android:textColor="@color/c7"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/jingdu_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="123.123123123"
+                    android:textColor="@color/c7"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="纬度:"
+                    android:textColor="@color/c7"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/weidu_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="123.123123123"
+                    android:textColor="@color/c7"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="地址:"
+                    android:textColor="@color/c7"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/address_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="123.123123123"
+                    android:textColor="@color/c7"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/yinhuan_view"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:text="隐患排查"
+                android:textColor="@color/c12"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/check_button"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:text="资源检查"
+                android:textColor="@color/c12"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/daohang_button"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:text="到这里"
+                android:textColor="@color/c12"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/ditu_view"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:text="地图"
+                android:textColor="@color/c12"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/c2" />
+</LinearLayout>

@@ -1,0 +1,19 @@
+syntax = "proto3";
+option java_package = "com.bean";
+package bean;
+message JMTransfer
+{
+     string version = 1;//接口版本号
+     string deviceId = 2;//设备uuid
+     uint32 cmd = 3;//请求接口命令字
+     uint64 seq = 4;//请求序列号
+     uint32 format = 5;//请求1，应答2，通知3，响应4
+     uint32 flag = 6;//1 rsa加密 2aes加密
+     string platform = 7;//mobile-ios mobile-android pc-windows pc-mac
+     string platformVersion = 8;//客户端版本号
+     string token = 9;//客户端凭证
+     string appKey = 10;//客户端key
+     string timeStamp = 11;//时间戳
+     string sign = 12;//签名 md5(secret++(body base64)++(timeStamp)++secret)
+     bytes body = 20;//请求数据
+}

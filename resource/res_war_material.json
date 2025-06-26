@@ -1,0 +1,498 @@
+﻿{
+  "kml": {
+    "Document": {
+      "Placemark": [
+        {
+          "name": "惜福镇街道演礼储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.539612730178,36.3181141626302,0
+        "
+          }
+        },
+        {
+          "name": "惜福镇街道储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.510741867752,36.3059953891397,0
+        "
+          }
+        },
+        {
+          "name": "夏庄街道森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.452811507288,36.2566089725894,0
+        "
+          }
+        },
+        {
+          "name": "夏庄街道山色峪物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.507190302958,36.2589504293554,0
+        "
+          }
+        },
+        {
+          "name": "六汪镇物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.813888888889,35.8841666666667,0
+        "
+          }
+        },
+        {
+          "name": "辛安街道物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.127622222,36.02126388,0
+        "
+          }
+        },
+        {
+          "name": "张家楼镇物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8950272799,35.7985668266,0
+        "
+          }
+        },
+        {
+          "name": "长江路街道物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.184444444444,35.9563888888889,0
+        "
+          }
+        },
+        {
+          "name": "大村镇街道物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.718333333333,35.8041666666667,0
+        "
+          }
+        },
+        {
+          "name": "珠海街道街道物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.976944444444,35.8811111111111,0
+        "
+          }
+        },
+        {
+          "name": "灵山卫街道物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.135833333333,35.9411111111111,0
+        "
+          }
+        },
+        {
+          "name": "积米崖港区物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.157777777778,35.9241666666667,0
+        "
+          }
+        },
+        {
+          "name": "积米崖港区物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.163055555556,35.7705555555556,0
+        "
+          }
+        },
+        {
+          "name": "琅琊镇物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.854444444444,35.6883333333333,0
+        "
+          }
+        },
+        {
+          "name": "琅琊台度假区物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.904722222222,35.6925,0
+        "
+          }
+        },
+        {
+          "name": "琅琊台风景区物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.899166666667,35.6463888888889,0
+        "
+          }
+        },
+        {
+          "name": "滨海街道森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.972777777778,35.8216666666667,0
+        "
+          }
+        },
+        {
+          "name": "胶南街道森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0015939725,35.9066035705,0
+        "
+          }
+        },
+        {
+          "name": "薛家岛防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.208055555556,35.9605555555556,0
+        "
+          }
+        },
+        {
+          "name": "王台镇物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.989722222222,36.0344444444444,0
+        "
+          }
+        },
+        {
+          "name": "临港防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.066388888889,35.9347222222222,0
+        "
+          }
+        },
+        {
+          "name": "铁山街道物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.915729,35.907742,0
+        "
+          }
+        },
+        {
+          "name": "藏南镇物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8216266,35.7572173,0
+        "
+          }
+        },
+        {
+          "name": "灵珠山街道物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.074444444444,36.0141666666667,0
+        "
+          }
+        },
+        {
+          "name": "森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.656,36.357,0
+        "
+          }
+        },
+        {
+          "name": "田横镇战区森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.844,36.519,0
+        "
+          }
+        },
+        {
+          "name": "田横岛森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.874,36.469,0
+        "
+          }
+        },
+        {
+          "name": "温泉街道物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.664,36.431,0
+        "
+          }
+        },
+        {
+          "name": "龙山街道森林防火物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.514045710087,36.3867715717434,0
+        "
+          }
+        },
+        {
+          "name": "镇物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8395377398,36.1052196747,0
+        "
+          }
+        },
+        {
+          "name": "镇物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9115921673,36.1384884378,0
+        "
+          }
+        },
+        {
+          "name": "大青山森林防火储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.2799361111,37.0940611111,0
+        "
+          }
+        },
+        {
+          "name": "街道物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.437159631815,36.1192639261238,0
+        "
+          }
+        },
+        {
+          "name": "街道物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5442988873,36.116468773,0
+        "
+          }
+        },
+        {
+          "name": "街道物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.516608988557,36.2266492905302,0
+        "
+          }
+        },
+        {
+          "name": "街道物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6272,36.264331,0
+        "
+          }
+        },
+        {
+          "name": "雕龙嘴物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.680518905145,36.2151487732603,0
+        "
+          }
+        },
+        {
+          "name": "物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.918425,36.988768,0
+        "
+          }
+        },
+        {
+          "name": "镇物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.86212947771,36.9007950779091,0
+        "
+          }
+        },
+        {
+          "name": "镇物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.201477740972,36.8270402592687,0
+        "
+          }
+        },
+        {
+          "name": "镇物资储备库1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.220552017858,36.7339929570133,0
+        "
+          }
+        },
+        {
+          "name": "镇物资储备库2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.187479870446,36.7577550837152,0
+        "
+          }
+        },
+        {
+          "name": "大田物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.097069334759,36.9618324817102,0
+        "
+          }
+        },
+        {
+          "name": "旧店物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.202141974814,36.9906134632155,0
+        "
+          }
+        },
+        {
+          "name": "祝沟物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.240596776418,36.8730048614284,0
+        "
+          }
+        },
+        {
+          "name": "街道物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.930887030444,36.7920400535064,0
+        "
+          }
+        },
+        {
+          "name": "街道物资储备库1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.954930942275,36.8595524529453,0
+        "
+          }
+        },
+        {
+          "name": "街道物资储备库2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.021358615777,36.9136676921548,0
+        "
+          }
+        },
+        {
+          "name": "大泽山林场物资储备库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.050617888291,36.9885994817819,0
+        "
+          }
+        }
+      ]
+    }
+  }
+}

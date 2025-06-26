@@ -1,0 +1,27 @@
+syntax = "proto3";
+option java_package = "com.bean";
+package bean;
+ message RsFire
+{
+     message RsFireSend
+     {
+         int32 cmd = 1;
+         string phoneNumber=2;
+     }
+     message RsFireRecieve
+     {
+         string phoneNumber=1;
+         repeated RsFireContent rsFireContent=2;
+     }
+     message RsFireContent
+     {
+         string alarmId=1;
+         double lon=2;
+         double lat=3;
+         string alarmTime=4;
+         string alarmGentle=5;
+         string alarmArea=6;
+         double pixelArea=7;
+         int32 pixelNumber=8;
+     }
+}

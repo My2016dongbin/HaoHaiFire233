@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/c12"
-    tools:context=".ui.acticity.LoginActivity">
+    android:background="@color/white"
+    tools:context="com.skyline.terraexplorer.mainapps.activity.LoginActivity">
 
 
     <FrameLayout
@@ -15,52 +15,51 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_head_bg" />
+            android:src="@mipmap/login_tit"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="20dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="60dp"
-            android:text="@string/app_title"
-            android:textColor="@color/c12"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="140dp"
+            android:text="欢迎登录"
+            android:textColor="@color/login_tit"
             android:textSize="25sp"
             android:textStyle="bold" />
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="180dp"
+            android:text="青岛智慧园林林业云平台"
+            android:textColor="#ff303133"
+            android:textSize="20sp"
+            />
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="280dp"
+            android:layout_height="350dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:layout_marginTop="150dp"
-            android:background="@drawable/ic_login_box_bg"
-            android:orientation="vertical"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="请输入您的用户名和密码:"
-                android:textColor="@color/c5"
-                android:textSize="15sp" />
-
+            android:layout_marginTop="190dp"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/login_input_bg"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:background="@drawable/background_linearlayout">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/ic_user_name" />
+                    android:src="@mipmap/login_name" />
 
                 <EditText
                     android:id="@+id/username_edit"
@@ -71,7 +70,7 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/edit_bg_select"
                     android:inputType="text"
-                    android:textColor="@color/c4"
+                    android:textColor="@color/black"
                     android:textCursorDrawable="@drawable/edit_cursor_color" />
             </LinearLayout>
 
@@ -79,15 +78,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/login_input_bg"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:background="@drawable/background_linearlayout">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="10dp"
-                    android:src="@drawable/ic_password1" />
+                    android:src="@mipmap/login_pwd" />
 
                 <EditText
                     android:id="@+id/password_edit"
@@ -98,22 +96,38 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/edit_bg_select"
                     android:inputType="textPassword"
-                    android:textColor="@color/c4"
+                    android:textColor="@color/black"
                     android:textCursorDrawable="@drawable/edit_cursor_color" />
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/chongzhi_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginTop="10dp"
+                android:text="重置密码"
+                android:layout_gravity="right|center_vertical"
+                android:textColor="@color/login_tit" />
 
             <TextView
                 android:id="@+id/login_button"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="40dp"
-                android:background="@drawable/bg_button"
+                android:layout_marginTop="90dp"
+                android:background="@drawable/background_login"
                 android:gravity="center"
                 android:text="登录"
-                android:textColor="@color/c12" />
-
+                android:textColor="@color/white" />
 
         </LinearLayout>
+        <ImageView
+            android:id="@+id/imagebuttom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@mipmap/login_bg"
+            android:layout_gravity="bottom" />
     </FrameLayout>
 
 </LinearLayout>

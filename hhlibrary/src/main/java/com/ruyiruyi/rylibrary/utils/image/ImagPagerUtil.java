@@ -4,7 +4,6 @@ package com.ruyiruyi.rylibrary.utils.image;
 import android.app.Activity;
 import android.app.Dialog;
 import android.graphics.Bitmap;
-import android.support.v4.view.PagerAdapter;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Display;
@@ -14,6 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -149,8 +150,7 @@ public class ImagPagerUtil {
     }
     private void showPic(ImageView imageView, String url) {
         imageView.setImageBitmap(null);
-        Glide.with(mActivity).load(url).placeholder(R.drawable.ic_jaizai)
-                .error(R.drawable.ic_no_pic).into(imageView);
+        Glide.with(mActivity).load(url).into(imageView);
        /* mLL_progress.setVisibility(View.VISIBLE);
         imageLoader.displayImage(url, imageView, options, animateFirstListener, new ImageLoadingProgressListener() {
             @Override

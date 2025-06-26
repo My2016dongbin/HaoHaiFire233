@@ -3,9 +3,10 @@ package com.ruyiruyi.rylibrary.cell;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
-import android.support.design.widget.CollapsingToolbarLayout;
 import android.util.AttributeSet;
 import android.view.ViewConfiguration;
+
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 /**
  * 带滚动监听的CoordinatorLayout

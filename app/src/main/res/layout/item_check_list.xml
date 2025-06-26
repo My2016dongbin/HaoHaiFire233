@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/c12"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/check_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_card"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:minLines="1"
+                        android:singleLine="true"
+                        android:text="检查名称:"
+                        android:textColor="@color/c7"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/check_name_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minLines="1"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/c7"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:minLines="1"
+                        android:singleLine="true"
+                        android:text="检查时间:"
+                        android:textColor="@color/c7"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/check_time_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minLines="1"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/c7"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:minLines="1"
+                        android:singleLine="true"
+                        android:text="检查人:"
+                        android:textColor="@color/c7"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/check_men_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minLines="1"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/c7"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,5858 @@
+﻿{
+  "kml": {
+    "Document": {
+      "Placemark": [
+        {
+          "name": "北泊平塘",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.292925,37.0725027777,0
+        "
+          }
+        },
+        {
+          "name": "榛子沟西平塘",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.2696527777,37.0828777777,0
+        "
+          }
+        },
+        {
+          "name": "榛子沟北平塘",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.2736944444,37.0902166666,0
+        "
+          }
+        },
+        {
+          "name": "河里吴家东平塘",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.2602194444,37.0841694444,0
+        "
+          }
+        },
+        {
+          "name": "西馆张家东平塘",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.2654722222,37.0949722222,0
+        "
+          }
+        },
+        {
+          "name": "警区南平塘",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.280875,37.0924472222,0
+        "
+          }
+        },
+        {
+          "name": "山后水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.3016055555,37.097725,0
+        "
+          }
+        },
+        {
+          "name": "青山水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.286818306054,37.0862,0
+        "
+          }
+        },
+        {
+          "name": "大青山水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.2991888888,37.0887638888,0
+        "
+          }
+        },
+        {
+          "name": "午山水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.489115136433,36.1219370263522,0
+        "
+          }
+        },
+        {
+          "name": "石老人水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.492777214899,36.1017329399698,0
+        "
+          }
+        },
+        {
+          "name": "朱家洼水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.470766833715,36.1142364637273,0
+        "
+          }
+        },
+        {
+          "name": "孙家南山水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5341494077,36.1382126375,0
+        "
+          }
+        },
+        {
+          "name": "山东头1号水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.446163605708,36.0933583086181,0
+        "
+          }
+        },
+        {
+          "name": "山东头2号水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.442788781269,36.0944241507997,0
+        "
+          }
+        },
+        {
+          "name": "流清河水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6031090021,36.1332736754,0
+        "
+          }
+        },
+        {
+          "name": "将军槽水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.597766,36.207767,0
+        "
+          }
+        },
+        {
+          "name": "大河东水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.591993928,36.1422198999,0
+        "
+          }
+        },
+        {
+          "name": "登灜水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5815815924,36.1436667967,0
+        "
+          }
+        },
+        {
+          "name": "董家埠水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5429846048,36.133960383,0
+        "
+          }
+        },
+        {
+          "name": "大石村水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.551155223883,36.1828097797592,0
+        "
+          }
+        },
+        {
+          "name": "姜哥庄水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5215001106,36.1065025601,0
+        "
+          }
+        },
+        {
+          "name": "东台水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6051743031,36.3121598577,0
+        "
+          }
+        },
+        {
+          "name": "南泥湾水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6078243256,36.3113904199,0
+        "
+          }
+        },
+        {
+          "name": "秦家土寨水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.624993,36.322598,0
+        "
+          }
+        },
+        {
+          "name": "龙潭水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.654631,36.140904,0
+        "
+          }
+        },
+        {
+          "name": "姜家村水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.636128,36.260122,0
+        "
+          }
+        },
+        {
+          "name": "晓望水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6459116936,36.2457181969,0
+        "
+          }
+        },
+        {
+          "name": "白云洞水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6762742995,36.2139131075,0
+        "
+          }
+        },
+        {
+          "name": "泉心河水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.674674,36.192025,0
+        "
+          }
+        },
+        {
+          "name": "青山水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.678017585742,36.1529305477715,0
+        "
+          }
+        },
+        {
+          "name": "张家河水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6168794632,36.3037129184,0
+        "
+          }
+        },
+        {
+          "name": "塘子观水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6448817253,36.2466872917,0
+        "
+          }
+        },
+        {
+          "name": "石门水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.504206186957,36.2154208190762,0
+        "
+          }
+        },
+        {
+          "name": "三水水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.586874738869,36.2315135129201,0
+        "
+          }
+        },
+        {
+          "name": "四水水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.59136406679,36.2282248010604,0
+        "
+          }
+        },
+        {
+          "name": "东陈水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.521091210812,36.1802159019,0
+        "
+          }
+        },
+        {
+          "name": "洪元水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.512021515757,36.1857696570007,0
+        "
+          }
+        },
+        {
+          "name": "大埠东社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.434676,36.109165,0
+        "
+          }
+        },
+        {
+          "name": "王家村社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.480185176637,36.1045459339497,0
+        "
+          }
+        },
+        {
+          "name": "王家村社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4873287678,36.107716081,0
+        "
+          }
+        },
+        {
+          "name": "午山社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4754519463,36.1147367984,0
+        "
+          }
+        },
+        {
+          "name": "枯桃社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.495253,36.144445,0
+        "
+          }
+        },
+        {
+          "name": "枯桃社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4944634438,36.1472146125,0
+        "
+          }
+        },
+        {
+          "name": "枯桃社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4918134212,36.1482455716,0
+        "
+          }
+        },
+        {
+          "name": "枯桃社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4938465357,36.1474225381,0
+        "
+          }
+        },
+        {
+          "name": "枯桃社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4909068346,36.1482282447,0
+        "
+          }
+        },
+        {
+          "name": "张村社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4770577,36.140577,0
+        "
+          }
+        },
+        {
+          "name": "张村社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4641008377,36.1530709732,0
+        "
+          }
+        },
+        {
+          "name": "南张社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.475829,36.13882,0
+        "
+          }
+        },
+        {
+          "name": "南张社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.474615097,36.1396769367,0
+        "
+          }
+        },
+        {
+          "name": "董家下庄社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.460313,36.128589,0
+        "
+          }
+        },
+        {
+          "name": "李家下庄社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.462430295634,36.1166352266181,0
+        "
+          }
+        },
+        {
+          "name": "东韩社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.438434,36.129178,0
+        "
+          }
+        },
+        {
+          "name": "石老人社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.504964268294,36.0968256357726,0
+        "
+          }
+        },
+        {
+          "name": "石老人社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.491821861117,36.1012079971741,0
+        "
+          }
+        },
+        {
+          "name": "郑张社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.479462,36.138541,0
+        "
+          }
+        },
+        {
+          "name": "郑张社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4797649384,36.1381866438,0
+        "
+          }
+        },
+        {
+          "name": "刘家下庄社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.471197,36.130253,0
+        "
+          }
+        },
+        {
+          "name": "西麦窑社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6063866615,36.127329179,0
+        "
+          }
+        },
+        {
+          "name": "大河东社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5919349193,36.1422242321,0
+        "
+          }
+        },
+        {
+          "name": "西登瀛社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.567244,36.138118,0
+        "
+          }
+        },
+        {
+          "name": "西姜哥庄社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5213069916,36.1063118622,0
+        "
+          }
+        },
+        {
+          "name": "石湾社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5083680153,36.1129686763,0
+        "
+          }
+        },
+        {
+          "name": "上庄水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.093333333333,35.9841666666667,0
+        "
+          }
+        },
+        {
+          "name": "上庄小庵沟塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.088888888889,35.9858333333333,0
+        "
+          }
+        },
+        {
+          "name": "冷家沟大口井",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.106944444444,36.0419444444444,0
+        "
+          }
+        },
+        {
+          "name": "南下庄狸沟水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.116111111111,35.9888888888889,0
+        "
+          }
+        },
+        {
+          "name": "上庄双垛口塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.091666666667,35.9941666666667,0
+        "
+          }
+        },
+        {
+          "name": "西洞门塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.098611111111,36.0002777777778,0
+        "
+          }
+        },
+        {
+          "name": "东洞门团石水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.096111111111,36.0041666666667,0
+        "
+          }
+        },
+        {
+          "name": "山陈水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.118888888889,36.0388888888889,0
+        "
+          }
+        },
+        {
+          "name": "东洞门元宝石塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.094722222222,36.0061111111111,0
+        "
+          }
+        },
+        {
+          "name": "河湾水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8089659215,35.8287611258,0
+        "
+          }
+        },
+        {
+          "name": "大头水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9073547125,35.832388372,0
+        "
+          }
+        },
+        {
+          "name": "王家洼子水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.895606637,35.8302355288,0
+        "
+          }
+        },
+        {
+          "name": "朱家屯水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8675775528,35.821980366,0
+        "
+          }
+        },
+        {
+          "name": "陡阳水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8454600573,35.8349586563,0
+        "
+          }
+        },
+        {
+          "name": "东石岭水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9322026968,35.8232851618,0
+        "
+          }
+        },
+        {
+          "name": "书院社区蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.55564777159,36.3160295296547,0
+        "
+          }
+        },
+        {
+          "name": "东葛社区蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.566055380454,36.3193306023994,0
+        "
+          }
+        },
+        {
+          "name": "东水长水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.562547687922,36.2823581198603,0
+        "
+          }
+        },
+        {
+          "name": "刁口蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.552320090793,36.289443543212,0
+        "
+          }
+        },
+        {
+          "name": "书院水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.54360215624,36.3143919621485,0
+        "
+          }
+        },
+        {
+          "name": "友爱山庄蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.539487101752,36.2965217778434,0
+        "
+          }
+        },
+        {
+          "name": "霞沟水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.515682966305,36.3094079529168,0
+        "
+          }
+        },
+        {
+          "name": "科埠水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.509031659305,36.2988024631837,0
+        "
+          }
+        },
+        {
+          "name": "军援水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.495697797809,36.2908192307251,0
+        "
+          }
+        },
+        {
+          "name": "超然蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.506010015578,36.2874994446598,0
+        "
+          }
+        },
+        {
+          "name": "建一山庄东水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.513934907408,36.2814844745397,0
+        "
+          }
+        },
+        {
+          "name": "宫家村水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.492011901903,36.2817240305076,0
+        "
+          }
+        },
+        {
+          "name": "小风口水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.482640103664,36.2714124186598,0
+        "
+          }
+        },
+        {
+          "name": "河崖蓄水罐",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.530662969178,36.2623439865594,0
+        "
+          }
+        },
+        {
+          "name": "下蜜蜂蓄水罐",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.542810986352,36.2617651045698,0
+        "
+          }
+        },
+        {
+          "name": "四方石蓄水罐",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.558138246333,36.2743711694681,0
+        "
+          }
+        },
+        {
+          "name": "太平岭蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.460142435109,36.2447447744787,0
+        "
+          }
+        },
+        {
+          "name": "小水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4587739706,36.2559263347615,0
+        "
+          }
+        },
+        {
+          "name": "少山水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.455340803084,36.2365263859491,0
+        "
+          }
+        },
+        {
+          "name": "下书院水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.46291608425,36.2229762462605,0
+        "
+          }
+        },
+        {
+          "name": "高峡平湖",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.468446850074,36.2166100093013,0
+        "
+          }
+        },
+        {
+          "name": "云头崮水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.441300517205,36.2116210294673,0
+        "
+          }
+        },
+        {
+          "name": "横丹岭水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.442980758674,36.2226544888435,0
+        "
+          }
+        },
+        {
+          "name": "丹山蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.427840651599,36.2259168881694,0
+        "
+          }
+        },
+        {
+          "name": "崔家沟蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.424289406899,36.2113145656315,0
+        "
+          }
+        },
+        {
+          "name": "罗圈涧蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.433587809869,36.2111140786787,0
+        "
+          }
+        },
+        {
+          "name": "南屋石拦水坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.464142214898,36.2076647733198,0
+        "
+          }
+        },
+        {
+          "name": "所里头水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.008921596567,36.9581889293586,0
+        "
+          }
+        },
+        {
+          "name": "所里头水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.988487719067,36.9530546334586,0
+        "
+          }
+        },
+        {
+          "name": "高家水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.046064017767,36.9663576368586,0
+        "
+          }
+        },
+        {
+          "name": "高家水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.047300516167,36.9671998464586,0
+        "
+          }
+        },
+        {
+          "name": "漩口水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.041112659967,36.9695614123586,0
+        "
+          }
+        },
+        {
+          "name": "高家水源地3",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.023694394667,36.9722657653586,0
+        "
+          }
+        },
+        {
+          "name": "高家水源地4",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.035775064067,36.9696171290586,0
+        "
+          }
+        },
+        {
+          "name": "高家水源地5",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.005138872667,36.9754328648586,0
+        "
+          }
+        },
+        {
+          "name": "高家水源地5",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.019386766967,36.9725443382586,0
+        "
+          }
+        },
+        {
+          "name": "高家水源地6",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.017385839067,36.9921211730586,0
+        "
+          }
+        },
+        {
+          "name": "高家水源地7",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.991234301167,36.9817580980586,0
+        "
+          }
+        },
+        {
+          "name": "谭家夼水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.960077761167,36.9728871958586,0
+        "
+          }
+        },
+        {
+          "name": "谭家夼水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.978638647567,36.9686827983586,0
+        "
+          }
+        },
+        {
+          "name": "谭家夼水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.974025248067,36.9645124581586,0
+        "
+          }
+        },
+        {
+          "name": "西刘家水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.971986769267,36.9466112609586,0
+        "
+          }
+        },
+        {
+          "name": "西刘家水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.977190254767,36.9466627071586,0
+        "
+          }
+        },
+        {
+          "name": "西刘家水源地3",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.981020449167,36.9526023719586,0
+        "
+          }
+        },
+        {
+          "name": "南昌村水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.930315969967,36.9685585058586,0
+        "
+          }
+        },
+        {
+          "name": "仙山水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.222730396767,36.7956215442586,0
+        "
+          }
+        },
+        {
+          "name": "仙山水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.207672475367,36.8011112154586,0
+        "
+          }
+        },
+        {
+          "name": "仙山水源地3",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.210056959167,36.7996980278586,0
+        "
+          }
+        },
+        {
+          "name": "古迹山水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.116150139367,36.8077086095586,0
+        "
+          }
+        },
+        {
+          "name": "三山水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.132318495267,36.8248952436586,0
+        "
+          }
+        },
+        {
+          "name": "云山观水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.146265982167,36.8761659358586,0
+        "
+          }
+        },
+        {
+          "name": "云山观水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.163394568967,36.8814417228586,0
+        "
+          }
+        },
+        {
+          "name": "茶山水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.982627092397,36.9315746391957,0
+        "
+          }
+        },
+        {
+          "name": "茶山水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.970031438863,36.9133826242365,0
+        "
+          }
+        },
+        {
+          "name": "上洄水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.952629266774,36.9336242923858,0
+        "
+          }
+        },
+        {
+          "name": "上洄水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.955386577642,36.9112659446149,0
+        "
+          }
+        },
+        {
+          "name": "老山水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.946664033925,36.9051943725478,0
+        "
+          }
+        },
+        {
+          "name": "小豁口水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.943187891042,36.8914269928719,0
+        "
+          }
+        },
+        {
+          "name": "棘子嶂水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.921770452058,36.877313843587,0
+        "
+          }
+        },
+        {
+          "name": "萝卜刘水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.910971878564,36.8864211298631,0
+        "
+          }
+        },
+        {
+          "name": "蓬莱前水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.184693990767,36.7654234687586,0
+        "
+          }
+        },
+        {
+          "name": "蓬莱前水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.187824128667,36.7617512830586,0
+        "
+          }
+        },
+        {
+          "name": "山上水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.243072269967,36.7722796068586,0
+        "
+          }
+        },
+        {
+          "name": "八里庄水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.215230940367,36.7898436484586,0
+        "
+          }
+        },
+        {
+          "name": "朱家井水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.927199243067,36.8494273918586,0
+        "
+          }
+        },
+        {
+          "name": "文王山水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.886279462367,36.7925715569586,0
+        "
+          }
+        },
+        {
+          "name": "栾家水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.909405468467,36.8678320676586,0
+        "
+          }
+        },
+        {
+          "name": "夼村水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.918905852867,36.8446151774586,0
+        "
+          }
+        },
+        {
+          "name": "黄道口水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.923020361467,36.8616390113586,0
+        "
+          }
+        },
+        {
+          "name": "西桃山水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.913369773467,36.8443189652586,0
+        "
+          }
+        },
+        {
+          "name": "大田涧口水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.061508177267,36.9815524076586,0
+        "
+          }
+        },
+        {
+          "name": "大田后涧水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.073030947267,36.9579050229586,0
+        "
+          }
+        },
+        {
+          "name": "大田前涧水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.088963268767,36.9453336678586,0
+        "
+          }
+        },
+        {
+          "name": "大田彭家水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.090883730467,36.9275394577586,0
+        "
+          }
+        },
+        {
+          "name": "大田张戈庄水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.067666529167,36.9375476043586,0
+        "
+          }
+        },
+        {
+          "name": "大田张戈庄水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.072086809667,36.9243918084586,0
+        "
+          }
+        },
+        {
+          "name": "大田口子水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.038835464467,36.9508361684586,0
+        "
+          }
+        },
+        {
+          "name": "大田口子水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.045275448367,36.9494150309586,0
+        "
+          }
+        },
+        {
+          "name": "大田河庄口水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.038127361367,36.9288130609586,0
+        "
+          }
+        },
+        {
+          "name": "大田郝家水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.047123490367,36.9229101383586,0
+        "
+          }
+        },
+        {
+          "name": "大田簸萁掌水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.083834885167,36.9190310711586,0
+        "
+          }
+        },
+        {
+          "name": "大田南董家水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.069973228967,36.9096338615586,0
+        "
+          }
+        },
+        {
+          "name": "大田龙山前水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.079157112667,36.8962244281586,0
+        "
+          }
+        },
+        {
+          "name": "大田长大路水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.068004487567,36.9596131952586,0
+        "
+          }
+        },
+        {
+          "name": "大田长大路水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.063568113867,36.9581857916586,0
+        "
+          }
+        },
+        {
+          "name": "大田长大路水源地3",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.055923818167,36.9580957743586,0
+        "
+          }
+        },
+        {
+          "name": "大田满家水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.055103062167,36.9990298193586,0
+        "
+          }
+        },
+        {
+          "name": "大田西葛水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.077247379767,37.0122541093586,0
+        "
+          }
+        },
+        {
+          "name": "大田东葛水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.086833594867,37.0109176481586,0
+        "
+          }
+        },
+        {
+          "name": "大田陈家水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.130253194367,37.0044063469586,0
+        "
+          }
+        },
+        {
+          "name": "大田青山水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.121847151267,36.9450764318586,0
+        "
+          }
+        },
+        {
+          "name": "大田金家沟水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.116622208167,36.9347605490586,0
+        "
+          }
+        },
+        {
+          "name": "大田后大寨水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.122726915867,36.9181218527586,0
+        "
+          }
+        },
+        {
+          "name": "大田栾家寨水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.130269287667,36.9127949873586,0
+        "
+          }
+        },
+        {
+          "name": "大田无名店水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.137275217567,36.8965032791586,0
+        "
+          }
+        },
+        {
+          "name": "大田三甲水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.151566027167,36.8822247996586,0
+        "
+          }
+        },
+        {
+          "name": "前潘家水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.146909712367,36.9515156472586,0
+        "
+          }
+        },
+        {
+          "name": "方家水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.179675577667,36.9415350600586,0
+        "
+          }
+        },
+        {
+          "name": "新李家庄水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.157166479667,36.9733243369586,0
+        "
+          }
+        },
+        {
+          "name": "九里夼水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.204030035567,37.0291548889586,0
+        "
+          }
+        },
+        {
+          "name": "九里夼水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.219758509167,37.0405455889586,0
+        "
+          }
+        },
+        {
+          "name": "东上夼水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.190812109467,37.0283840280586,0
+        "
+          }
+        },
+        {
+          "name": "北黄同水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.246859549067,36.9582029378586,0
+        "
+          }
+        },
+        {
+          "name": "南黄同水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.247481821567,36.9427355435586,0
+        "
+          }
+        },
+        {
+          "name": "李家庄水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.232954977567,36.9349663658586,0
+        "
+          }
+        },
+        {
+          "name": "东店子水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.229671953667,36.9275051516586,0
+        "
+          }
+        },
+        {
+          "name": "大王头水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.213256834567,36.9347433975586,0
+        "
+          }
+        },
+        {
+          "name": "大路上水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.206733702267,36.9183019817586,0
+        "
+          }
+        },
+        {
+          "name": "隋家水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.201430974967,36.9106160978586,0
+        "
+          }
+        },
+        {
+          "name": "大洪埠水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.199309347667,36.9058206060586,0
+        "
+          }
+        },
+        {
+          "name": "小洪埠水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.194889067167,36.9051342856586,0
+        "
+          }
+        },
+        {
+          "name": "九山后水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.172186850067,36.9140216576586,0
+        "
+          }
+        },
+        {
+          "name": "山里程家水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.178624151767,36.9132667859586,0
+        "
+          }
+        },
+        {
+          "name": "山里石家水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.157745836767,36.9036929926586,0
+        "
+          }
+        },
+        {
+          "name": "高家流河水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.181563852867,36.8918012863586,0
+        "
+          }
+        },
+        {
+          "name": "荒里水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.137222222222,35.9822222222222,0
+        "
+          }
+        },
+        {
+          "name": "台子沟小塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.128888888889,35.9819444444444,0
+        "
+          }
+        },
+        {
+          "name": "台子沟大口井",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.124444444444,35.9808333333333,0
+        "
+          }
+        },
+        {
+          "name": "台子沟塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.125,35.9786111111111,0
+        "
+          }
+        },
+        {
+          "name": "八里庄蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.136388888889,35.97,0
+        "
+          }
+        },
+        {
+          "name": "周家夼蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.134722222222,35.9538888888889,0
+        "
+          }
+        },
+        {
+          "name": "周家夼水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.131944444444,35.9552777777778,0
+        "
+          }
+        },
+        {
+          "name": "戴戈庄水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.141111111111,35.9644444444444,0
+        "
+          }
+        },
+        {
+          "name": "丁家河水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.198333333333,35.9666666666667,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.927624933731,36.1182446244396,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.911727535769,36.1040421146335,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地3",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.953146378753,36.1054792078843,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地4",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.932129550983,36.1075556605761,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地5",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.935399140099,36.0944316267191,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地6",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.894850289648,36.0913190469551,0
+        "
+          }
+        },
+        {
+          "name": "皂户东山1号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.803611111111,35.8811111111111,0
+        "
+          }
+        },
+        {
+          "name": "后沟村东2号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.81,35.8666666666667,0
+        "
+          }
+        },
+        {
+          "name": "东砚瓦3号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.799444444444,35.8541666666667,0
+        "
+          }
+        },
+        {
+          "name": "黄岭村4号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.7825,35.8366666666667,0
+        "
+          }
+        },
+        {
+          "name": "耿家沟5号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.777222222222,35.9038888888889,0
+        "
+          }
+        },
+        {
+          "name": "韩家庄6号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.695277777778,35.8147222222222,0
+        "
+          }
+        },
+        {
+          "name": "徐家庄7号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.703888888889,35.805,0
+        "
+          }
+        },
+        {
+          "name": "东龙古8号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.72,35.8319444444444,0
+        "
+          }
+        },
+        {
+          "name": "前龙古9号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.7075,35.8338888888889,0
+        "
+          }
+        },
+        {
+          "name": "桃山10号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.686944444444,35.8497222222222,0
+        "
+          }
+        },
+        {
+          "name": "上藏马11号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.777777777778,35.8275,0
+        "
+          }
+        },
+        {
+          "name": "藏马二村12号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.761388888889,35.8047222222222,0
+        "
+          }
+        },
+        {
+          "name": "广家庄14号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.756388888889,35.7986111111111,0
+        "
+          }
+        },
+        {
+          "name": "孟家官庄16号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.748333333333,35.7888888888889,0
+        "
+          }
+        },
+        {
+          "name": "双墩17号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.745555555556,35.7816666666667,0
+        "
+          }
+        },
+        {
+          "name": "积米崖1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.15,35.9211111111111,0
+        "
+          }
+        },
+        {
+          "name": "积米崖2号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.165833333333,35.7736111111111,0
+        "
+          }
+        },
+        {
+          "name": "红草岭15号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.754722222222,35.7913888888889,0
+        "
+          }
+        },
+        {
+          "name": "藏马三村13号水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.768055555556,35.815,0
+        "
+          }
+        },
+        {
+          "name": "南宅科社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.520104,36.135154,0
+        "
+          }
+        },
+        {
+          "name": "中崂社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.530683,36.121333,0
+        "
+          }
+        },
+        {
+          "name": "彭家庄社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5090546608,36.131492306,0
+        "
+          }
+        },
+        {
+          "name": "坡前沟社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4992055893,36.1337069301,0
+        "
+          }
+        },
+        {
+          "name": "汉河社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5370140076,36.1483408695,0
+        "
+          }
+        },
+        {
+          "name": "南龙口社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5176055431,36.1633185521,0
+        "
+          }
+        },
+        {
+          "name": "北龙口社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5119299889,36.164600488,0
+        "
+          }
+        },
+        {
+          "name": "西九水社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.528712809613,36.1800458626995,0
+        "
+          }
+        },
+        {
+          "name": "段家埠社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.543408,36.126617,0
+        "
+          }
+        },
+        {
+          "name": "南崂社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5320358276,36.1154041672,0
+        "
+          }
+        },
+        {
+          "name": "南窑社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5954432487,36.1139740841,0
+        "
+          }
+        },
+        {
+          "name": "南窑社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5958294868,36.1108711477,0
+        "
+          }
+        },
+        {
+          "name": "岭西社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.572934,36.137475,0
+        "
+          }
+        },
+        {
+          "name": "西登瀛社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.563492775,36.1338542362,0
+        "
+          }
+        },
+        {
+          "name": "栲栳岛社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5682992935,36.1220775438,0
+        "
+          }
+        },
+        {
+          "name": "东姜哥庄社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.53463133911,36.1092069525,0
+        "
+          }
+        },
+        {
+          "name": "东姜哥庄社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.531978,36.106205,0
+        "
+          }
+        },
+        {
+          "name": "石湾社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5121928453,36.1129426747,0
+        "
+          }
+        },
+        {
+          "name": "石湾社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5209207535,36.1105417785,0
+        "
+          }
+        },
+        {
+          "name": "董家埠社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5429792404,36.1339235566,0
+        "
+          }
+        },
+        {
+          "name": "坡前沟社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.4994416237,36.133871566,0
+        "
+          }
+        },
+        {
+          "name": "松山后社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5178093936,36.1449793773,0
+        "
+          }
+        },
+        {
+          "name": "汉河社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5305981636,36.1489473112,0
+        "
+          }
+        },
+        {
+          "name": "东九水社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.539608,36.17173,0
+        "
+          }
+        },
+        {
+          "name": "东九水社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5405384302,36.1712523592,0
+        "
+          }
+        },
+        {
+          "name": "桑园社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6376075745,36.2737132723,0
+        "
+          }
+        },
+        {
+          "name": "桑园社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6380045414,36.2691461578,0
+        "
+          }
+        },
+        {
+          "name": "浦里社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6350541115,36.3072145754,0
+        "
+          }
+        },
+        {
+          "name": "浦里社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6388092041,36.3063413373,0
+        "
+          }
+        },
+        {
+          "name": "王山口社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6368136406,36.2911746326,0
+        "
+          }
+        },
+        {
+          "name": "王山口社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6413412094,36.2877329917,0
+        "
+          }
+        },
+        {
+          "name": "曲家庄社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6625521183,36.243875153,0
+        "
+          }
+        },
+        {
+          "name": "长岭社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.682152053243,36.1853070990605,0
+        "
+          }
+        },
+        {
+          "name": "囤山社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.610953,36.283348,0
+        "
+          }
+        },
+        {
+          "name": "黄山社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.685058686155,36.1665161445889,0
+        "
+          }
+        },
+        {
+          "name": "黄山社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.687131759623,36.1688296410187,0
+        "
+          }
+        },
+        {
+          "name": "庙石社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6050884724,36.2892290869,0
+        "
+          }
+        },
+        {
+          "name": "庙石社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6054317951,36.28824322339,0
+        "
+          }
+        },
+        {
+          "name": "庙石社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6066602465,36.2866563043,0
+        "
+          }
+        },
+        {
+          "name": "解家河社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5890381336,36.2755815605,0
+        "
+          }
+        },
+        {
+          "name": "解家河社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5892634392,36.2776400854,0
+        "
+          }
+        },
+        {
+          "name": "解家河社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.594988,36.272282,0
+        "
+          }
+        },
+        {
+          "name": "黄泥崖社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5977606773,36.2764637924,0
+        "
+          }
+        },
+        {
+          "name": "西山社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6302690506,36.2662872502,0
+        "
+          }
+        },
+        {
+          "name": "会场社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.649524134923,36.2992342434298,0
+        "
+          }
+        },
+        {
+          "name": "姜家村社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6352257729,36.2596910354,0
+        "
+          }
+        },
+        {
+          "name": "张家河社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6164503098,36.3027445312,0
+        "
+          }
+        },
+        {
+          "name": "黄山口社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.685836145894,36.1600947340687,0
+        "
+          }
+        },
+        {
+          "name": "高家社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6201410294,36.2803991158,0
+        "
+          }
+        },
+        {
+          "name": "东台社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6115365028,36.3108544028,0
+        "
+          }
+        },
+        {
+          "name": "西台社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5981308222,36.3141007088,0
+        "
+          }
+        },
+        {
+          "name": "大桥社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.574221611,36.3252737114,0
+        "
+          }
+        },
+        {
+          "name": "大桥社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5726015568,36.3204329939,0
+        "
+          }
+        },
+        {
+          "name": "大桥社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5864524841,36.3222828749,0
+        "
+          }
+        },
+        {
+          "name": "返岭社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.680857394594,36.2069172361223,0
+        "
+          }
+        },
+        {
+          "name": "返岭社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6773900986,36.2067800687,0
+        "
+          }
+        },
+        {
+          "name": "何家社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.621407032,36.2903533013,0
+        "
+          }
+        },
+        {
+          "name": "何家社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6197440624,36.2919012318,0
+        "
+          }
+        },
+        {
+          "name": "秦家土寨社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6278657913,36.3245216911,0
+        "
+          }
+        },
+        {
+          "name": "秦家土寨社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.624110699,36.3241327121,0
+        "
+          }
+        },
+        {
+          "name": "秦家土寨社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6259024143,36.3265789248,0
+        "
+          }
+        },
+        {
+          "name": "王哥庄社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6285524368,36.2651237617,0
+        "
+          }
+        },
+        {
+          "name": "曲家庄社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6630188227,36.2462330299,0
+        "
+          }
+        },
+        {
+          "name": "曲家庄社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6473493576,36.2455884063,0
+        "
+          }
+        },
+        {
+          "name": "囤山社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6050240993,36.276483894,0
+        "
+          }
+        },
+        {
+          "name": "梁家社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6153774261,36.277847665,0
+        "
+          }
+        },
+        {
+          "name": "庙石社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6052708626,36.2882691678,0
+        "
+          }
+        },
+        {
+          "name": "庙石社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6050884724,36.2893155655,0
+        "
+          }
+        },
+        {
+          "name": "庙石社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6069338322,36.287577327,0
+        "
+          }
+        },
+        {
+          "name": "港西社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6691503525,36.2637223621,0
+        "
+          }
+        },
+        {
+          "name": "港西社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6691074371,36.2643279082,0
+        "
+          }
+        },
+        {
+          "name": "港西社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.673050388759,36.2611521616755,0
+        "
+          }
+        },
+        {
+          "name": "港西社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6624984741,36.260677259,0
+        "
+          }
+        },
+        {
+          "name": "峰山西社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.671864748,36.2541541104,0
+        "
+          }
+        },
+        {
+          "name": "晓望社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6558251381,36.255797926,0
+        "
+          }
+        },
+        {
+          "name": "西山社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6295394897,36.2667413953,0
+        "
+          }
+        },
+        {
+          "name": "荷花社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6328117847,36.282336433,0
+        "
+          }
+        },
+        {
+          "name": "张家河社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6168580055,36.3030385069,0
+        "
+          }
+        },
+        {
+          "name": "唐家庄社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6141328812,36.2929908181,0
+        "
+          }
+        },
+        {
+          "name": "唐家庄社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6091225147,36.2917974609,0
+        "
+          }
+        },
+        {
+          "name": "黄山口社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.685704425019,36.1615693738163,0
+        "
+          }
+        },
+        {
+          "name": "高家社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6201195717,36.280278032,0
+        "
+          }
+        },
+        {
+          "name": "东台社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6073522568,36.3112348024,0
+        "
+          }
+        },
+        {
+          "name": "东台社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6052279472,36.312038823,0
+        "
+          }
+        },
+        {
+          "name": "东台社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6091547012,36.3100417245,0
+        "
+          }
+        },
+        {
+          "name": "西台社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5919241908,36.314606446,0
+        "
+          }
+        },
+        {
+          "name": "沟涯社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.509419653855,36.1805169745296,0
+        "
+          }
+        },
+        {
+          "name": "东陈社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.526869455834,36.1807833465942,0
+        "
+          }
+        },
+        {
+          "name": "枣行社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.514015930526,36.2339664542147,0
+        "
+          }
+        },
+        {
+          "name": "午山蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.486100231786,36.1232557479796,0
+        "
+          }
+        },
+        {
+          "name": "大河东蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.59202075,36.1421895757,0
+        "
+          }
+        },
+        {
+          "name": "砖塔岭蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6106138229,36.1431079686,0
+        "
+          }
+        },
+        {
+          "name": "后登赢蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5770862103,36.1402141283,0
+        "
+          }
+        },
+        {
+          "name": "流清河蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6010222435,36.1351019941,0
+        "
+          }
+        },
+        {
+          "name": "西麦窑蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.603275991,36.1332130201,0
+        "
+          }
+        },
+        {
+          "name": "大石村蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.553969927738,36.1876671951765,0
+        "
+          }
+        },
+        {
+          "name": "竹窝蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5755090661,36.1958714949,0
+        "
+          }
+        },
+        {
+          "name": "晓望蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6459975243,36.2466440288,0
+        "
+          }
+        },
+        {
+          "name": "解家河蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5894136429,36.2775968399,0
+        "
+          }
+        },
+        {
+          "name": "张家河蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6166219711,36.3035227004,0
+        "
+          }
+        },
+        {
+          "name": "姜家村蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6309556964,36.2567322899,0
+        "
+          }
+        },
+        {
+          "name": "返岭蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.67507267,36.1914383701,0
+        "
+          }
+        },
+        {
+          "name": "七峪蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.501186759808,36.2166475280479,0
+        "
+          }
+        },
+        {
+          "name": "东陈蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.528998932886,36.1815276484879,0
+        "
+          }
+        },
+        {
+          "name": "北涧蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.510271890622,36.2381263016641,0
+        "
+          }
+        },
+        {
+          "name": "观崂蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.581446373679,36.2063254521006,0
+        "
+          }
+        },
+        {
+          "name": "慕武石蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.56074717366,36.1992521306213,0
+        "
+          }
+        },
+        {
+          "name": "泉心河牧场",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6733560862,36.1904339553,0
+        "
+          }
+        },
+        {
+          "name": "仰口庙岭",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6705719233,36.2354943797,0
+        "
+          }
+        },
+        {
+          "name": "石湾社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.5083680153,36.1129686763,0
+        "
+          }
+        },
+        {
+          "name": "秦家土寨监控点",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.6246900506,36.3239944039,0
+        "
+          }
+        },
+        {
+          "name": "水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.035453198967,36.9980251591586,0
+        "
+          }
+        },
+        {
+          "name": "水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.041160939767,36.9937471713586,0
+        "
+          }
+        },
+        {
+          "name": "水源地3",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.047016201967,36.9926717455586,0
+        "
+          }
+        },
+        {
+          "name": "水源地4",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.043612478767,36.9933572777586,0
+        "
+          }
+        },
+        {
+          "name": "水源地5",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.037266372267,36.9952767349586,0
+        "
+          }
+        },
+        {
+          "name": "小鹤口水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.947407005867,36.8852905216586,0
+        "
+          }
+        },
+        {
+          "name": "乔家磨山子水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.984196184667,36.8849451245586,0
+        "
+          }
+        },
+        {
+          "name": "石胡同水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.990880249567,36.8888581033586,0
+        "
+          }
+        },
+        {
+          "name": "老龙湾水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.997017143767,36.8863953527586,0
+        "
+          }
+        },
+        {
+          "name": "宝店东山水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.009779094267,36.8664673207586,0
+        "
+          }
+        },
+        {
+          "name": "潘家南山水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.979014156867,36.8545698159586,0
+        "
+          }
+        },
+        {
+          "name": "桃源洞水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.974905012667,36.8308379491586,0
+        "
+          }
+        },
+        {
+          "name": "梨沟水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.996153472467,36.8195790509586,0
+        "
+          }
+        },
+        {
+          "name": "下马水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.011340139867,36.9258584405586,0
+        "
+          }
+        },
+        {
+          "name": "下马水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.013872145167,36.9266088992586,0
+        "
+          }
+        },
+        {
+          "name": "下马水源地3",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.021527169767,36.9345504437586,0
+        "
+          }
+        },
+        {
+          "name": "陡沟水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.013083575767,36.8952806172586,0
+        "
+          }
+        },
+        {
+          "name": "下马水源地4",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.020953176967,36.9181390078586,0
+        "
+          }
+        },
+        {
+          "name": "上马水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.013485907067,36.9096810435586,0
+        "
+          }
+        },
+        {
+          "name": "上马水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.007971285367,36.9169638701586,0
+        "
+          }
+        },
+        {
+          "name": "陡沟水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.016489981167,36.8971467775586,0
+        "
+          }
+        },
+        {
+          "name": "英兰埠水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.012541769567,36.8758054784586,0
+        "
+          }
+        },
+        {
+          "name": "丁家水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.994302748267,36.8437952249586,0
+        "
+          }
+        },
+        {
+          "name": "大宝山水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.034637807367,36.8077214945586,0
+        "
+          }
+        },
+        {
+          "name": "赵家庄水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.075112341467,36.8048309098586,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.645,36.358,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.623,36.341,0
+        "
+          }
+        },
+        {
+          "name": "院上水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.616273638016,36.3397561052469,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.609,36.341,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.613,36.334,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.602,36.339,0
+        "
+          }
+        },
+        {
+          "name": "西上庄水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.596785848509,36.3288387600046,0
+        "
+          }
+        },
+        {
+          "name": "马家沟水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.587321227236,36.3328869756022,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.584,36.338,0
+        "
+          }
+        },
+        {
+          "name": "水场水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.574107075745,36.3505062618413,0
+        "
+          }
+        },
+        {
+          "name": "南邱水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.577685911147,36.3622331871786,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.608,36.355,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.589,36.374,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.589,36.39,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.613,36.39,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.617,36.384,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.631,36.407,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.69,36.342,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.695,36.35,0
+        "
+          }
+        },
+        {
+          "name": "红星水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.590242705023,36.3451885722847,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.709,36.342,0
+        "
+          }
+        },
+        {
+          "name": "大梧桐圈水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.856429555736,36.5216722607587,0
+        "
+          }
+        },
+        {
+          "name": "北坦村水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.844680025519,36.5323800873834,0
+        "
+          }
+        },
+        {
+          "name": "西风山水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.849762680277,36.4875127108222,0
+        "
+          }
+        },
+        {
+          "name": "劈石口庙蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.858,36.492,0
+        "
+          }
+        },
+        {
+          "name": "卧龙水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.748,36.504,0
+        "
+          }
+        },
+        {
+          "name": "小丈水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.824,36.535,0
+        "
+          }
+        },
+        {
+          "name": "东王村水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.854115466883,36.487600250551,0
+        "
+          }
+        },
+        {
+          "name": "华楼山蓄水池",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.497812351787,36.2385906722782,0
+        "
+          }
+        },
+        {
+          "name": "华楼山蓄水塘坝2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.497895287142,36.2375382536142,0
+        "
+          }
+        },
+        {
+          "name": "将军槽水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.616421338056,36.1324739590885,0
+        "
+          }
+        },
+        {
+          "name": "崂山水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.484316186542,36.2544796478454,0
+        "
+          }
+        },
+        {
+          "name": "八水河水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.657469236947,36.1383411474031,0
+        "
+          }
+        },
+        {
+          "name": "大河东水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.586393726634,36.1540066938056,0
+        "
+          }
+        },
+        {
+          "name": "大石村水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.557138644299,36.1849566340192,0
+        "
+          }
+        },
+        {
+          "name": "雕龙嘴水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.671756665353,36.2137213984322,0
+        "
+          }
+        },
+        {
+          "name": "东风水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.614166666667,36.1358333333333,0
+        "
+          }
+        },
+        {
+          "name": "青山水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.67755047151,36.15206914003,0
+        "
+          }
+        },
+        {
+          "name": "泉心河水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.669566621559,36.1922698114423,0
+        "
+          }
+        },
+        {
+          "name": "泉心河小水坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.656373637361,36.1863766168851,0
+        "
+          }
+        },
+        {
+          "name": "石门水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.50341493176,36.2146650418657,0
+        "
+          }
+        },
+        {
+          "name": "晓望水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.641605482588,36.2450309642872,0
+        "
+          }
+        },
+        {
+          "name": "山樊家塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.863031760946,35.7163247406204,0
+        "
+          }
+        },
+        {
+          "name": "董家溜村前塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.879039936073,35.7189132054802,0
+        "
+          }
+        },
+        {
+          "name": "火石山水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.878341090877,35.6956930423126,0
+        "
+          }
+        },
+        {
+          "name": "库山沟水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.867410005284,35.700820914047,0
+        "
+          }
+        },
+        {
+          "name": "五龙沟水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.894153955845,35.7096418425294,0
+        "
+          }
+        },
+        {
+          "name": "胡家山水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.866545411334,35.622127043782,0
+        "
+          }
+        },
+        {
+          "name": "西桥子水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.886815431569,35.6905978638724,0
+        "
+          }
+        },
+        {
+          "name": "陈家台后村水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.892222222222,35.6530555555556,0
+        "
+          }
+        },
+        {
+          "name": "趴古沟水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.901111111111,35.6561111111111,0
+        "
+          }
+        },
+        {
+          "name": "土粉沟水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.902777777778,35.6555555555556,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0014151484,35.9588328243,0
+        "
+          }
+        },
+        {
+          "name": "2号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9645212083,35.9181490115,0
+        "
+          }
+        },
+        {
+          "name": "2号水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9643796922,35.9215957712,0
+        "
+          }
+        },
+        {
+          "name": "2号水源地3",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9658886922,35.9234657712,0
+        "
+          }
+        },
+        {
+          "name": "3号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.953571393,35.9317433223,0
+        "
+          }
+        },
+        {
+          "name": "3号水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9535713937,35.9317433223,0
+        "
+          }
+        },
+        {
+          "name": "3号水源地3",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9573803937,35.9337893223,0
+        "
+          }
+        },
+        {
+          "name": "4号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9725144051,35.9424018195,0
+        "
+          }
+        },
+        {
+          "name": "5号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.977137974,35.9471218779,0
+        "
+          }
+        },
+        {
+          "name": "6号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0173033109,35.9495082428,0
+        "
+          }
+        },
+        {
+          "name": "7号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0194423147,35.9333786189,0
+        "
+          }
+        },
+        {
+          "name": "8号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0057992218,35.9485565554,0
+        "
+          }
+        },
+        {
+          "name": "9号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9890824107,35.961431201,0
+        "
+          }
+        },
+        {
+          "name": "9号水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9933224107,35.960438201,0
+        "
+          }
+        },
+        {
+          "name": "10号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9788457132,35.9176090471,0
+        "
+          }
+        },
+        {
+          "name": "10号水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9743907132,35.9183110471,0
+        "
+          }
+        },
+        {
+          "name": "11号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9755714451,35.964474396,0
+        "
+          }
+        },
+        {
+          "name": "11号水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9765054451,35.962020396,0
+        "
+          }
+        },
+        {
+          "name": "13号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9531061056,35.9082018016,0
+        "
+          }
+        },
+        {
+          "name": "13号水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9481831056,35.9082598016,0
+        "
+          }
+        },
+        {
+          "name": "大横河水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.969444444444,35.9855555555556,0
+        "
+          }
+        },
+        {
+          "name": "石灰窑水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.995277777778,35.9827777777778,0
+        "
+          }
+        },
+        {
+          "name": "西草夼水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9575,36.0252777777778,0
+        "
+          }
+        },
+        {
+          "name": "莱疃水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.961388888889,36.0033333333333,0
+        "
+          }
+        },
+        {
+          "name": "东草夼水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.969166666667,36.0369444444444,0
+        "
+          }
+        },
+        {
+          "name": "王家屯水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.966388888889,36.0083333333333,0
+        "
+          }
+        },
+        {
+          "name": "西草夼水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.954444444444,36.0213888888889,0
+        "
+          }
+        },
+        {
+          "name": "沙西水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.000277777778,36.0036111111111,0
+        "
+          }
+        },
+        {
+          "name": "葛家沟水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.991388888889,35.9761111111111,0
+        "
+          }
+        },
+        {
+          "name": "插旗崖水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.04,36.0238888888889,0
+        "
+          }
+        },
+        {
+          "name": "山赵水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.018611111111,35.9772222222222,0
+        "
+          }
+        },
+        {
+          "name": "小屯水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.018611111111,36.0344444444444,0
+        "
+          }
+        },
+        {
+          "name": "莱疃大陡沟水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.965277777778,35.9994444444444,0
+        "
+          }
+        },
+        {
+          "name": "七口村",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.834,36.593,0
+        "
+          }
+        },
+        {
+          "name": "崔家沟",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.828702567374,36.5490594865251,0
+        "
+          }
+        },
+        {
+          "name": "时家",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.861672824112,36.5517323106368,0
+        "
+          }
+        },
+        {
+          "name": "时家",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.866056480687,36.5273289919963,0
+        "
+          }
+        },
+        {
+          "name": "绿豆圈",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.931942392608,36.503958422457,0
+        "
+          }
+        },
+        {
+          "name": "河西荆条山",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.841,36.584,0
+        "
+          }
+        },
+        {
+          "name": "王家屯",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.846524107799,36.552,0
+        "
+          }
+        },
+        {
+          "name": "北颜荆条山",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.833,36.587,0
+        "
+          }
+        },
+        {
+          "name": "上庄响马山",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.834,36.563,0
+        "
+          }
+        },
+        {
+          "name": "芝坊大山",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.87711897305,36.5542974326257,0
+        "
+          }
+        },
+        {
+          "name": "田庄台山",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.84531471523,36.5608286788076,0
+        "
+          }
+        },
+        {
+          "name": "苏口黄家庵子",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.875,36.524,0
+        "
+          }
+        },
+        {
+          "name": "后车大望山",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.894,36.539,0
+        "
+          }
+        },
+        {
+          "name": "后车大望山",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.896,36.532,0
+        "
+          }
+        },
+        {
+          "name": "后车大望山",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.899,36.532,0
+        "
+          }
+        },
+        {
+          "name": "前车",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.900552034953,36.5222664996327,0
+        "
+          }
+        },
+        {
+          "name": "前车",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.892356919151,36.5185241077988,0
+        "
+          }
+        },
+        {
+          "name": "龙湾头",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.875494990914,36.5123324981633,0
+        "
+          }
+        },
+        {
+          "name": "龙湾头",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.89,36.512,0
+        "
+          }
+        },
+        {
+          "name": "龙湾头",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.901523481421,36.5115145899548,0
+        "
+          }
+        },
+        {
+          "name": "龙湾头",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.900800125276,36.5066192862391,0
+        "
+          }
+        },
+        {
+          "name": "东百里",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.919,36.553,0
+        "
+          }
+        },
+        {
+          "name": "西百里",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.903,36.54,0
+        "
+          }
+        },
+        {
+          "name": "福台岭",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.903226048796,36.5342676893632,0
+        "
+          }
+        },
+        {
+          "name": "福台岭",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.908828678808,36.5231142141283,0
+        "
+          }
+        },
+        {
+          "name": "杜家长岭山",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.91,36.5161713211924,0
+        "
+          }
+        },
+        {
+          "name": "营子",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.926,36.521,0
+        "
+          }
+        },
+        {
+          "name": "老山庵",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.844,36.541,0
+        "
+          }
+        },
+        {
+          "name": "杜家",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.910475265824,36.5114943015117,0
+        "
+          }
+        },
+        {
+          "name": "龙湾头",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.888,36.503,0
+        "
+          }
+        },
+        {
+          "name": "苏口",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.871,36.529,0
+        "
+          }
+        },
+        {
+          "name": "上庄",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.834,36.563,0
+        "
+          }
+        },
+        {
+          "name": "河西",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.835,36.574,0
+        "
+          }
+        },
+        {
+          "name": "七口",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.839715091057,36.6021415149052,0
+        "
+          }
+        },
+        {
+          "name": "北颜",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.833521728338,36.5871499060434,0
+        "
+          }
+        },
+        {
+          "name": "水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.968055555556,35.8080555555556,0
+        "
+          }
+        },
+        {
+          "name": "水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.945833333333,35.7880555555556,0
+        "
+          }
+        },
+        {
+          "name": "水源地3",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.948055555556,35.8325,0
+        "
+          }
+        },
+        {
+          "name": "水源地4",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.958055555556,35.8166666666667,0
+        "
+          }
+        },
+        {
+          "name": "水源地5",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.951111111111,35.8122222222222,0
+        "
+          }
+        },
+        {
+          "name": "水源地6",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.940555555556,35.8097222222222,0
+        "
+          }
+        },
+        {
+          "name": "水源地7",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.936666666667,35.7780555555556,0
+        "
+          }
+        },
+        {
+          "name": "水源地8",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.951111111111,35.7719444444444,0
+        "
+          }
+        },
+        {
+          "name": "水源地9",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120,35.7452777777778,0
+        "
+          }
+        },
+        {
+          "name": "水源地10",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.008055555556,35.7744444444444,0
+        "
+          }
+        },
+        {
+          "name": "水源地11",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.999166666667,35.7961111111111,0
+        "
+          }
+        },
+        {
+          "name": "水源地12",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.983611111111,35.8041666666667,0
+        "
+          }
+        },
+        {
+          "name": "水源地13",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.965,35.7705555555556,0
+        "
+          }
+        },
+        {
+          "name": "水源地14",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.949166666667,35.775,0
+        "
+          }
+        },
+        {
+          "name": "水源地15",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.945277777778,35.7944444444444,0
+        "
+          }
+        },
+        {
+          "name": "水源地16",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.948888888889,35.7983333333333,0
+        "
+          }
+        },
+        {
+          "name": "水源地17",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.005833333333,35.7461111111111,0
+        "
+          }
+        },
+        {
+          "name": "水源地18",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.003333333333,35.7536111111111,0
+        "
+          }
+        },
+        {
+          "name": "水源地19",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.006655534289,35.7534830936088,0
+        "
+          }
+        },
+        {
+          "name": "水源地20",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.008055555556,35.7563888888889,0
+        "
+          }
+        },
+        {
+          "name": "水源地21",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.011666666667,35.7594444444444,0
+        "
+          }
+        },
+        {
+          "name": "水源地22",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.020396228846,35.7595735059093,0
+        "
+          }
+        },
+        {
+          "name": "水源地23",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.996111111111,35.7569444444444,0
+        "
+          }
+        },
+        {
+          "name": "水源地24",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.002777777778,35.7655555555556,0
+        "
+          }
+        },
+        {
+          "name": "水源地25",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.014166666667,35.7825,0
+        "
+          }
+        },
+        {
+          "name": "水源地26",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.005277777778,35.7913888888889,0
+        "
+          }
+        },
+        {
+          "name": "水源地27",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.993055555556,35.8036111111111,0
+        "
+          }
+        },
+        {
+          "name": "水源地28",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.983888888889,35.8,0
+        "
+          }
+        },
+        {
+          "name": "藏马山景区防火水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.750162001789,35.7760964427883,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.839444444444,35.9294444444444,0
+        "
+          }
+        },
+        {
+          "name": "2号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.834722222222,35.9222222222222,0
+        "
+          }
+        },
+        {
+          "name": "2号水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.826388888889,35.9169444444444,0
+        "
+          }
+        },
+        {
+          "name": "2号水源地3",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.829166666667,35.9088888888889,0
+        "
+          }
+        },
+        {
+          "name": "2号水源地4",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.831111111111,35.9058333333333,0
+        "
+          }
+        },
+        {
+          "name": "2号水源地5",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.826944444444,35.9052777777778,0
+        "
+          }
+        },
+        {
+          "name": "3号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.823055555556,35.8938888888889,0
+        "
+          }
+        },
+        {
+          "name": "3号水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8275,35.8913888888889,0
+        "
+          }
+        },
+        {
+          "name": "4号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.82,35.8858333333333,0
+        "
+          }
+        },
+        {
+          "name": "5号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8025,35.8877777777778,0
+        "
+          }
+        },
+        {
+          "name": "5号水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.7975,35.8855555555556,0
+        "
+          }
+        },
+        {
+          "name": "6号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.835555555556,35.8702777777778,0
+        "
+          }
+        },
+        {
+          "name": "6号水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.837222222222,35.8733333333333,0
+        "
+          }
+        },
+        {
+          "name": "6号水源地3",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.834166666667,35.8736111111111,0
+        "
+          }
+        },
+        {
+          "name": "7号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.833611111111,35.8944444444444,0
+        "
+          }
+        },
+        {
+          "name": "7号水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.834444444444,35.8938888888889,0
+        "
+          }
+        },
+        {
+          "name": "7号水源地3",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.816944444444,35.9044444444444,0
+        "
+          }
+        },
+        {
+          "name": "7号水源地4",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8275,35.8997222222222,0
+        "
+          }
+        },
+        {
+          "name": "杨家崮水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.875555555556,35.8761111111111,0
+        "
+          }
+        },
+        {
+          "name": "塔山河水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.9325,35.8397222222222,0
+        "
+          }
+        },
+        {
+          "name": "梁家庄塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.863611111111,35.8547222222222,0
+        "
+          }
+        },
+        {
+          "name": "汕上果园后塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.890277777778,35.8963888888889,0
+        "
+          }
+        },
+        {
+          "name": "汕上花沟水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.904166666667,35.8944444444444,0
+        "
+          }
+        },
+        {
+          "name": "汕上石门塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.876944444444,35.8877777777778,0
+        "
+          }
+        },
+        {
+          "name": "汕上南山后塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.881944444444,35.8891666666667,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.126666666667,35.9461111111111,0
+        "
+          }
+        },
+        {
+          "name": "2号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.116944444444,35.9586111111111,0
+        "
+          }
+        },
+        {
+          "name": "3号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.116944444444,35.9433333333333,0
+        "
+          }
+        },
+        {
+          "name": "4号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.113333333333,35.9644444444444,0
+        "
+          }
+        },
+        {
+          "name": "5号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.112777777778,35.9313888888889,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.296784073773,36.0051789815567,0
+        "
+          }
+        },
+        {
+          "name": "2号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.190970298109,35.908408432123,0
+        "
+          }
+        },
+        {
+          "name": "3号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.190983239376,35.8990875252935,0
+        "
+          }
+        },
+        {
+          "name": "4号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.177307033213,35.9006558816323,0
+        "
+          }
+        },
+        {
+          "name": "5号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.1794490701,35.8984021072572,0
+        "
+          }
+        },
+        {
+          "name": "6号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.178024003402,35.8955467540501,0
+        "
+          }
+        },
+        {
+          "name": "3号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.909571697019,36.4915704442639,0
+        "
+          }
+        },
+        {
+          "name": "4号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.904318721726,36.4921772068203,0
+        "
+          }
+        },
+        {
+          "name": "5号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.850033312454,36.4780892928123,0
+        "
+          }
+        },
+        {
+          "name": "6号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.870749530217,36.4857883540197,0
+        "
+          }
+        },
+        {
+          "name": "水源地1团彪水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.543,36.339,0
+        "
+          }
+        },
+        {
+          "name": "马莲河塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.573,36.341,0
+        "
+          }
+        },
+        {
+          "name": "上夼担山塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.566,36.398,0
+        "
+          }
+        },
+        {
+          "name": "寨山塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.574,36.381,0
+        "
+          }
+        },
+        {
+          "name": "南泊塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.560801378031,36.3690974318521,0
+        "
+          }
+        },
+        {
+          "name": "石龙庄塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.549,36.383,0
+        "
+          }
+        },
+        {
+          "name": "棉花涧塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.562,36.365,0
+        "
+          }
+        },
+        {
+          "name": "水场塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.565,36.353,0
+        "
+          }
+        },
+        {
+          "name": "水蛟塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.565488415884,36.3340713838302,0
+        "
+          }
+        },
+        {
+          "name": "柳沟东北山塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.568,36.345,0
+        "
+          }
+        },
+        {
+          "name": "柳沟北山塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.564,36.346,0
+        "
+          }
+        },
+        {
+          "name": "羊山西山塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.539,36.327,0
+        "
+          }
+        },
+        {
+          "name": "松山塘坝",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.531,36.327,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.934354413641,36.4988935506323,0
+        "
+          }
+        },
+        {
+          "name": "2号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.909125863203,36.5043362525601,0
+        "
+          }
+        },
+        {
+          "name": "李家店子水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.95743,35.952577,0
+        "
+          }
+        },
+        {
+          "name": "辛兴南山水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.941151,35.940051,0
+        "
+          }
+        },
+        {
+          "name": "曹城山北沟水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.941135,35.923272,0
+        "
+          }
+        },
+        {
+          "name": "韩家村西山水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.907285,35.904982,0
+        "
+          }
+        },
+        {
+          "name": "瓮口水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.897317731551,35.9323388460396,0
+        "
+          }
+        },
+        {
+          "name": "大下庄水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.875607,35.924489,0
+        "
+          }
+        },
+        {
+          "name": "西北庄水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.867566,35.913301,0
+        "
+          }
+        },
+        {
+          "name": "大下庄水源地2",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.871511,35.927762,0
+        "
+          }
+        },
+        {
+          "name": "小珠山水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0506114959,36.0200516995,0
+        "
+          }
+        },
+        {
+          "name": "青石湾水库",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.0734907389,36.0008631808,0
+        "
+          }
+        },
+        {
+          "name": "孙家下庄社区",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.464333864439,36.1213465594096,0
+        "
+          }
+        },
+        {
+          "name": "华楼山蓄水塘坝1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          120.498823276934,36.2371932317683,0
+        "
+          }
+        },
+        {
+          "name": "1号水源地1",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.8629426956,36.0885055785,0
+        "
+          }
+        },
+        {
+          "name": "2号地水源",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.857749939,36.0878813317,0
+        "
+          }
+        },
+        {
+          "name": "3号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.791705605453,36.0458228237263,0
+        "
+          }
+        },
+        {
+          "name": "4号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.872104119615,36.0786297455625,0
+        "
+          }
+        },
+        {
+          "name": "5号水源地",
+          "visibility": "1",
+          "Point": {
+            "altitudeMode": "clampToGround",
+            "coordinates": "
+          119.869298742357,36.0771955765352,0
+        "
+          }
+        }
+      ]
+    }
+  }
+}

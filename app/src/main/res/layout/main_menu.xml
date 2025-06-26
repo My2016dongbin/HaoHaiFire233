@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_menu_header_height">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/mm_top" />
+
+        <ImageButton
+            android:id="@+id/main_menu_header_back"
+            android:layout_width="@dimen/main_menu_header_height"
+            android:layout_height="@dimen/main_menu_header_height"
+            android:background="@android:color/transparent"
+            android:contentDescription="@null"
+            android:padding="@dimen/button_padding"
+            android:scaleType="fitCenter"
+            android:src="@drawable/back" />
+
+        <com.skyline.terraexplorer.views.BorderFrameLayout
+            android:id="@+id/main_menu_header_separator"
+            android:layout_width="@dimen/border_width"
+            android:layout_height="@dimen/main_menu_header_height"
+            android:layout_toRightOf="@+id/main_menu_header_back"
+            android:background="#ff888888"
+            app:bottomBorderColor="@color/border_color"
+            app:bottomBorderWidth="@dimen/border_width"
+            app:topBorderColor="@color/border_color"
+            app:topBorderWidth="@dimen/border_width" />
+
+        <TextView
+            android:id="@+id/main_menu_header_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_menu_header_height"
+            android:gravity="center"
+            android:text="Sample"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_large" />
+
+    </RelativeLayout>
+
+    <com.skyline.terraexplorer.views.BorderFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_control_background"
+        android:paddingLeft="@dimen/border_width"
+        android:paddingRight="@dimen/border_width"
+        app:leftBorderColor="@color/border_color"
+        app:leftBorderWidth="@dimen/border_width"
+        app:rightBorderColor="@color/border_color"
+        app:rightBorderWidth="@dimen/border_width">
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:cacheColorHint="#00000000"
+            android:divider="#ff888888"
+            android:dividerHeight="0.1dp"
+            android:drawSelectorOnTop="false"
+            android:groupIndicator="@android:color/transparent"
+            android:scrollingCache="false" />
+    </com.skyline.terraexplorer.views.BorderFrameLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/mm_bottom" />
+
+</LinearLayout>

@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import com.ruyiruyi.rylibrary.R;
 
-public class NumberIndicator extends TextView {
+public class NumberIndicator extends androidx.appcompat.widget.AppCompatTextView {
 
     public NumberIndicator(Context context) {
         super(context);

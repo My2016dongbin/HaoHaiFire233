@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/qu_layout"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_height="wrap_content"
+    >
+    <ImageView
+        android:id="@+id/check_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_checked"/>
+
+    <TextView
+        android:id="@+id/qu_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="111"
+        android:textSize="15sp"
+        android:textColor="@color/c7"/>
+</LinearLayout>

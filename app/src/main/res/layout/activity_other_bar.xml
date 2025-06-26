@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c12"
+    android:orientation="vertical"
+    tools:context="com.skyline.garden.wisdomgarden.ui.activity.OtherBarActivity">
+
+    <com.ruyiruyi.rylibrary.cell.ActionBar
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年份选择:"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/year_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数据选择:"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/data_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="市区选择:"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/qu_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/chakan_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="查看图表"
+                android:textSize="15sp"
+                android:textColor="@color/c12"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_button"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

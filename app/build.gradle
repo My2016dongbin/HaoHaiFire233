@@ -1,52 +1,59 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.protobuf'
 
-def VERSION_CODE = 57
-def VERSION_NAME = "1.5.7"
-
-def keystoreFilepath = ''
 def keyfile = file('s.keystore.temp')
+def keystoreFilepath = ''
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+keystoreFilepath = properties.getProperty("keystore.path")
+
+if (keystoreFilepath) {
+    keyfile = file(keystoreFilepath)
+}
+
 
 android {
-    compileSdkVersion rootProject.compileSdkVersion
-    buildToolsVersion rootProject.buildToolsVersion
+    compileSdkVersion 29
+    buildToolsVersion "30.0.3"
+    useLibrary "org.apache.http.legacy"
+
     defaultConfig {
-        applicationId "com.haohai.platform.fireforestplatform"
-        minSdkVersion rootProject.minSdkVersion
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        targetSdkVersion rootProject.targetSdkVersion
-        versionCode VERSION_CODE
-        versionName VERSION_NAME
-        multiDexEnabled true
-
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [moduleName: project.getName()]
-            }
+        applicationId "com.skyline.terraexplorer"
+        minSdkVersion 26
+        targetSdkVersion 29
+        versionCode 11
+        versionName "1.1.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        packagingOptions {
+            //解决编译时com.android.builder.merge.DuplicateRelativeFileException: More than one file was found with OS independent path 'META-INF/rxjava.properties'这个错误
+            exclude 'META-INF/rxjava.properties'
         }
 
-        ndk {
-            //设置支持的SO库架构
-            /*abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64","armeabi"*/
-            /*abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'*/
-            abiFilters 'armeabi', 'armeabi-v7a'
-        }
         manifestPlaceholders = [
-                XG_ACCESS_ID : "1500015815",
-                XG_ACCESS_KEY: "AO3YNOCJ0AK2",
-                HW_APPID     : "103450845"
+                JPUSH_PKGNAME: "com.skyline.terraexplorer",
+                JPUSH_APPKEY : "c156f37c8c84543573a7aef9", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+                XG_ACCESS_ID : "1500040370",
+                XG_ACCESS_KEY : "ASK8CFJD7L2D",
+                //HW_APPID: "103450845"
         ]
-        jackOptions {
-            enabled true
+
+        multiDexEnabled true
+        ndk {
+            //根据需要 自行选择添加的对应cpu类型的.so库。
+            abiFilters 'armeabi','armeabi-v7a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
         }
     }
 
     signingConfigs {
         config {
-            keyAlias 'haohai'
-            keyPassword 'haohaiadmin'
-            storeFile file('../app/sign.jks')
-//            storeFile file('C:/workspaces/haohai/FireForestPlatform/app/sign.jks')
-            storePassword 'haohaiadmin'
+            keyAlias 'key0'
+            keyPassword '123456'
+            storeFile file('../app/signs.jks')
+            //storeFile file('C:/workspaces/haohai/FireForestPlatform/app/signs.jks')
+            storePassword '123456'
         }
     }
 
@@ -57,135 +64,142 @@ android {
             println("====== buildTypes.debug ======")
             signingConfig signingConfigs.debug
         }
-
         release {
+            signingConfig signingConfigs.config
             //是否混淆
             minifyEnabled false
-            //是否移除无用资源
-            zipAlignEnabled true
-            //混淆配置
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            //签名文件存在，则签名
-            if (keyfile.exists()) {
-                println("WITH -> buildTypes -> release: using jks key")
-                signingConfig signingConfigs.config
-            } else {
-                println("WITH -> buildTypes -> release: using default key")
+            shrinkResources false
+            ndk{
+                abiFilters "armeabi-v7a"
             }
-            applicationVariants.all { variant ->
-                variant.outputs.each { output ->
-                    def outputFile = output.outputFile
-                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                        /*  def fileName = "haohai_dapingtai${defaultConfig.versionName}_${variant.productFlavors[0].name}.apk"*/
-                        def fileName = "jimo_${defaultConfig.versionName}.apk"
-                        output.outputFile = new File(outputFile.parent, fileName)
-                    }
-                }
-            }
-            signingConfig signingConfigs.config
         }
     }
+//    dataBinding {
+//        enabled = true
+//    }
+
     lintOptions {
-        checkReleaseBuilds false
         abortOnError false
     }
-
-    android {
-        productFlavors {
-            /*  xiaomi {。
-                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
-            }*/
-            /*  kuan {
-                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "kuan"]
-            }*/
-            xiaomi {
-                manifestPlaceholders = [
-                        UMENG_CHANNEL_VALUE: "xiaomi",
-                ]
-            }
-            /*   qh360 {
-                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "qh360"]
-            }
-            baidu {
-                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "baidu"]
-            }
-            wandoujia {
-                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "wandoujia"]
-            }
-            oppo {
-                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "oppo"]
-            }
-            vivo {
-                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "vivo"]
-            }*/
-           /* oppo {
-                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "oppo"]
-            }
-            huawei {
-                manifestPlaceholders = [
-                        UMENG_CHANNEL_VALUE: "huawei",
-
-                ]
-
-            }*/
-            /*
-            yingyongbao {
-                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "yingyongbao"]
-            }
-            anzhi {
-                manifestPlaceholders = [UMENG_CHANNEL_VALUE: "anzhi"]
-            }*/
-        }
+    buildFeatures{
+        dataBinding = true
+        // for view binding :
+        // viewBinding = true
     }
-
-    packagingOptions {
-        exclude 'META-INF/rxjava.properties'
-    }
-    dexOptions {
-        javaMaxHeapSize "6g"
-        dexInProcess true
-        preDexLibraries true
-        /*incremental true*/
-    }
-    aaptOptions {
-        cruncherEnabled = false
-        useNewCruncher = false
-    }
-
     compileOptions {
-        sourceCompatibility org.gradle.api.JavaVersion.VERSION_1_8
-        targetCompatibility org.gradle.api.JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
-
-    dataBinding {
-        enabled = true
-    }
-
-    sourceSets {
-        main {
-            jniLibs.srcDir 'libs'
-            jni.srcDirs = []    //disable automatic ndk-build
+    flavorDimensions "app"
+    productFlavors {
+        /*  xiaomi {
+              manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+          }*/
+        /*  kuan {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "kuan"]
+        }*/
+        xiaomi {
+            dimension 'app'
+            manifestPlaceholders = [
+                    UMENG_CHANNEL_VALUE: "xiaomi",
+            ]
         }
     }
+}
 
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/commons-jexl-2.1.1.jar')
+    implementation files('libs/tileviewlib-1.0.11.jar')
+    implementation files('libs/AMap3DMap_7.1.0_AMapNavi_7.1.0_20191030.jar')
+    implementation files('libs/poi-3.15.jar')
+    implementation files('libs/sdlv.jar')
+    implementation files('libs/netty-all-4.0.56.Final.jar')
+    implementation files('libs/poi-scratchpad-3.15.jar')
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(path: ':hhlibrary')
+    implementation files('libs/AMap3DMap_7.1.0_AMapNavi_7.1.0_20191030.jar')
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation 'com.github.AlpsDog:Banner:v1.0.6'
+    implementation 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+//    implementation 'com.github.wendux:DSBridge-Android:3.0.0'
+    implementation 'com.amap.api:location:5.5.1'
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation 'org.xutils:xutils:3.3.36'
+    implementation ('me.drakeet.multitype:multitype:3.5.0', {
+        exclude group: 'com.android.support'
+    })
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.1@aar'
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    implementation('com.zhihu.android:matisse:0.4.3', {
+        exclude group: 'com.android.support'
+    })
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.squareup.okhttp3:okhttp:3.14.1'
+    implementation 'org.apache.httpcomponents:httpclient-android:4.3.5'
+
+    //WisdomGarden
+//    implementation 'com.github.wendux:DSBridge-Android:3.0-SNAPSHOT'
+    implementation project(path: ':dsbridge')
+    implementation 'com.rxjava.rxhttp:rxhttp:1.1.6'
+    implementation 'com.github.RmondJone:LockTableView:1.1.2'
+    annotationProcessor 'com.rxjava.rxhttp:rxhttp-compiler:1.1.6'
+
+
+    //qd-grid-app
+    implementation 'cn.jiguang.sdk:jpush:3.3.4'
+    implementation 'cn.jiguang.sdk:jcore:2.1.2'
+    implementation('ch.ielse:imagewatcher:1.0.3', {
+        exclude group: 'com.android.support'
+    })
+    implementation 'com.github.vilyever:AndroidSocketClient:3.0.3'
+    implementation 'com.google.protobuf:protobuf-java:3.1.0'
+    implementation 'com.google.protobuf:protoc:3.1.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    implementation 'com.blankj:utilcode:1.16.0'
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.liulishuo.filedownloader:library:1.7.7'
+
+//    implementation 'commons-logging:commons-logging:1.2'
+    api 'com.github.chrisbanes:PhotoView:2.0.0'
+
+
+    implementation 'com.tencent.jg:jg:1.1'     //腾讯推送
+    implementation 'com.tencent.tpns:tpns:1.2.0.3-release' //腾讯推送
+
+    implementation project(':hhlibrary')
+    implementation project(':videolibrary')
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
 }
 
 
-dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile project(':platformmodel')
-    //路由在 主模块 跟 model中要分别引包
-    compile project(':firemodel')
-    compile project(':mapmodel')
-    /*    compile 'com.tencent.jg:jg:1.1'
-        compile 'com.tencent.tpns:tpns:1.2.1.3-release'*/
-    compile 'com.alibaba:arouter-api:1.3.1'
-    compile 'com.xdandroid:hellodaemon:+'
-    compile 'com.android.support:support-v4:26.0.0-alpha1'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.1.4'
+protobuf {
+    protoc {
+        artifact = 'com.google.protobuf:protoc:3.1.0'
+    }
+    generateProtoTasks {
+        all().each { task ->
+            task.builtins {
+                remove java
+            }
+            task.builtins {
+                java {}
+                cpp {}
+            }
+        }
+    }
+    generatedFilesBaseDir = "$projectDir/src/generated"
 }

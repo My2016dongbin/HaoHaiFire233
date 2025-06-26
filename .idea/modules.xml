@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/zhly-master.iml" filepath="$PROJECT_DIR$/.idea/modules/zhly-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/zhly-master.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/zhly-master.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dsbridge/zhly-master.dsbridge.iml" filepath="$PROJECT_DIR$/.idea/modules/dsbridge/zhly-master.dsbridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/hhlibrary/zhly-master.hhlibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/hhlibrary/zhly-master.hhlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/videolibrary/zhly-master.videolibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/videolibrary/zhly-master.videolibrary.iml" />
+    </modules>
+  </component>
+</project>

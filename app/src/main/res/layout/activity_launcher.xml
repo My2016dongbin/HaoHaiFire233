@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.acticity.LauncherActivity">
+    tools:context="com.skyline.terraexplorer.wisdomgarden.ui.activity.LauncherActivity">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -13,4 +13,3 @@
         android:scaleType="fitXY"
         android:src="@drawable/ic_guodu" />
 </FrameLayout>
-

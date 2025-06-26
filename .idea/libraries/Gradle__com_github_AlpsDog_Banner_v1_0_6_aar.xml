@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.AlpsDog:Banner:v1.0.6@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6f9c259b40fafaf7a7951163d02754ce/jetified-Banner-v1.0.6/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6f9c259b40fafaf7a7951163d02754ce/jetified-Banner-v1.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6f9c259b40fafaf7a7951163d02754ce/jetified-Banner-v1.0.6/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.AlpsDog/Banner/v1.0.6/9ac0f0315236f04ba405f73f950bd5cc13d22f03/Banner-v1.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

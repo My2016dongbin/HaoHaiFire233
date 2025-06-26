@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c12"
+    android:orientation="vertical"
+    tools:context="com.skyline.terraexplorer.wisdomgarden.ui.activity.OtherBarChartActivity">
+    <com.ruyiruyi.rylibrary.cell.ActionBar
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/action_bar">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="70dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="年份:"
+                        android:textSize="15sp"
+                        android:textColor="@color/c7"/>
+
+                    <TextView
+                        android:id="@+id/nianfen_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/c7"
+                        android:text=""
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/nianfen_button"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:text="选择"
+                    android:gravity="center"
+                    android:textColor="@color/c12"
+                    android:background="@drawable/bg_button"
+                    android:layout_gravity="right"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="70dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="数据:"
+                        android:textSize="15sp"
+                        android:textColor="@color/c7"/>
+
+                    <TextView
+                        android:id="@+id/shuju_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/c7"
+                        android:text=""
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/shuju_button"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:text="选择"
+                    android:gravity="center"
+                    android:textColor="@color/c12"
+                    android:background="@drawable/bg_button"
+                    android:layout_gravity="right"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="70dp"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="城区:"
+                        android:textSize="15sp"
+                        android:textColor="@color/c7"/>
+
+                    <TextView
+                        android:id="@+id/chengqu_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/c7"
+                        android:text=""
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/chengqu_button"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    android:text="选择"
+                    android:gravity="center"
+                    android:textColor="@color/c12"
+                    android:background="@drawable/bg_button"
+                    android:layout_gravity="right"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/shengcheng_button"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="生成图表"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:textColor="@color/c12"
+                android:background="@drawable/bg_button" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="备注:年份跟城区只能多选一项,选择完成后点击生成图表查看新图表。"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:id="@+id/barNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="图表 "
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/chart1"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

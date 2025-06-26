@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/resource_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_demo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="智慧园林"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <wendu.dsbridge.DWebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"></wendu.dsbridge.DWebView>
+
+        <LinearLayout
+            android:id="@+id/qu_data_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/ic_card"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.9"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/city_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="青岛市→"
+                        android:textColor="@color/c7"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/district_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/city_view"
+                        android:text="市南区"
+                        android:textColor="@color/c7"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/go_button"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:layout_alignBottom="@+id/district_view"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="right"
+                        android:background="@drawable/bg_button"
+                        android:gravity="center"
+                        android:text="详情>>"
+                        android:textColor="@color/c12"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="日期: 2019-12-12 10:36"
+
+                        android:textColor="@color/c7"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/shijian_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/c7"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/jingdu_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="经度:"
+                        android:textColor="@color/c7"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/jingdu_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="120.303114141241"
+                        android:textColor="@color/c7"
+                        android:visibility="gone"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="人口(万)："
+                        android:textColor="@color/c7"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/renkou_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/c7"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="纬度:"
+                        android:visibility="gone"
+                        android:textColor="@color/c7"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/weidu_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="36.1021312321314"
+                        android:visibility="gone"
+                        android:textColor="@color/c7"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/textViewaera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="面积(平方公里)："
+                        android:textColor="@color/c7"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/mianji_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/c7"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/c2"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="right" />
+            <FrameLayout
+                android:id="@+id/visible_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1">
+                <ImageView
+                    android:id="@+id/visible_view"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_go"/>
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</FrameLayout>

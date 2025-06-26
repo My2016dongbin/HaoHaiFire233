@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 import com.ruyiruyi.rylibrary.R;
 
-public class CustomEditText extends EditText {
+public class CustomEditText extends androidx.appcompat.widget.AppCompatEditText {
     private EditText edit;
     private Paint mPaint;
     private Rect mBound;

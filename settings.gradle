@@ -1,2 +1,2 @@
-include ':app', ':hhlibrary', ':platformmodel', ':videolibrary', ':firemodel', ':mapmodel', ':chatimmodel', ':appnaturalresource'
+include ':app', ':hhlibrary', ':videolibrary'
 include ':dsbridge'

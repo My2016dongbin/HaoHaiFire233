@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/c12"
+    >
+
+    <FrameLayout
+        android:id="@+id/park_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+
+        <TextView
+            android:id="@+id/city_button"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:text="查看详情"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/bg_button_cheng"
+            android:textColor="@color/c12"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="90dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="青岛市"
+                android:textColor="@color/c6"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/citypople_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="人口"
+                android:textColor="@color/c6"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/area_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="面积"
+                android:textColor="@color/c6"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/c1"/>
+
+</LinearLayout>

@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-<!--    <color name="theme_primary">#4A90E2</color>-->
-    <color name="theme_primary">#283345</color>
-    <color name="theme_primary_alpha">#bb283345</color>
-    <color name="theme_primary_top">#283345</color>
-    <color name="theme_primary_list">#0E1720</color>
-
-
-    <color name="theme_primary_top_trans">#bb283345</color>
+    <color name="theme_primary">#60AD0C</color>
+    <color name="theme_primary_top">#60AD0C</color>
 
     <color name="arc_blue">#10a679</color>
     <color name="color_fff">#ffffff</color>
@@ -18,7 +12,6 @@
     <color name="no_color">#00000000</color>
     <color name="choose_eara_item_press_color">#f4f4f4</color>
     <color name="app_line_gray">#d0d0d0</color>
-    <color name="c5mid">#939393</color>
 
     <color name="red1">#ff4000</color>
 
@@ -118,10 +111,8 @@
     <color name="c30">#ff8989</color>
     <color name="c31">#000000</color>
     <color name="c32">#00faf8f8</color>
-    <color name="tire_info_background">#C42C3F</color>
+    <color name="tire_info_background">#dec30f24</color>
     <color name="web_top">#F2F2F2</color>
-    <color name="map">#4a90e2</color>
-    <color name="line">#334056</color>
 
     <color name="divider">#ffd2d2d2</color>
     <!--透明色-->

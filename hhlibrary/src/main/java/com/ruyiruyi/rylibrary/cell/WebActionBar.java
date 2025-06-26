@@ -1,9 +1,10 @@
 package com.ruyiruyi.rylibrary.cell;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.annotation.Nullable;
 
 /**
  * @作者 倾春

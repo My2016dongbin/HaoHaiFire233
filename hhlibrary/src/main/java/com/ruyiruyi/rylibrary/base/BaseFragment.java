@@ -1,7 +1,8 @@
 package com.ruyiruyi.rylibrary.base;
 
 import android.app.ProgressDialog;
-import android.support.v4.app.Fragment;
+
+import androidx.fragment.app.Fragment;
 
 /**
  * Created by geyang on 2019/12/4.

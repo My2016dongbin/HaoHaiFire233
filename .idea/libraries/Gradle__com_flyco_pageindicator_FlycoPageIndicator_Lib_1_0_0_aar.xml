@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.flyco.pageindicator:FlycoPageIndicator_Lib:1.0.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/229d428a1339d83b56df383d3b9f4042/jetified-FlycoPageIndicator_Lib-1.0.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/229d428a1339d83b56df383d3b9f4042/jetified-FlycoPageIndicator_Lib-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/229d428a1339d83b56df383d3b9f4042/jetified-FlycoPageIndicator_Lib-1.0.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.flyco.pageindicator/FlycoPageIndicator_Lib/1.0.0/2ec4b67502dcffbd6e908b0d459e95516c0f4001/FlycoPageIndicator_Lib-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.flyco.pageindicator/FlycoPageIndicator_Lib/1.0.0/adb65fc846eafdc6c7b56084b4e697a7d60dba0a/FlycoPageIndicator_Lib-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
