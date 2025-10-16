@@ -508,26 +508,41 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
     private View gaojiInflater;
     private TextView huanchongText;
     private LinearLayout weixingAllLayout;
-    private ImageView weixingAllImage;
-    private LinearLayout weixingFY3Layout;
-    private ImageView weixingFY3Image;
-    private LinearLayout weixingFY4Layout;
-    private ImageView weixingFY4Image;
     private LinearLayout weixingNPPLayout;
-    private ImageView weixingNPPImage;
+    private LinearLayout weixingFY4Layout;
+    private LinearLayout weixingFY3Layout;
     private LinearLayout weixingHima8Layout;
-    private ImageView weixingHima8Image;
-    private LinearLayout weixingNOAA18Layout;
-    private ImageView weixingNOAA18Image;
+    private LinearLayout weixingHima9Layout;
+    private LinearLayout weixingNOAA15Layout;
     private LinearLayout weixingNOAA19Layout;
-    private ImageView weixingNOAA19Image;
+    private LinearLayout weixingNOAA20Layout;
+    private LinearLayout weixingNOAA21Layout;
+    private LinearLayout weixingMODISLayout;
+    private LinearLayout weixingGK2aLayout;
+    private TextView weixingAllText;
+    private TextView weixingNppText;
+    private TextView weixingFY4Text;
+    private TextView weixingFY3Text;
+    private TextView weixingHima8Text;
+    private TextView weixingHima9Text;
+    private TextView weixingNoaa15Text;
+    private TextView weixingNoaa19Text;
+    private TextView weixingNoaa20Text;
+    private TextView weixingNoaa21Text;
+    private TextView weixingMODISText;
+    private TextView weixingGK2aText;
     public boolean weixingAllChoose = true;
     public boolean weixingNPPChoose = true;
     public boolean weixingFY4Choose = true;
     public boolean weixingFY3Choose = true;
     public boolean weixingHIMA8Choose = true;
-    public boolean weixingNOAA18Choose = true;
+    public boolean weixingHIMA9Choose = true;
+    public boolean weixingNOAA15Choose = true;
     public boolean weixingNOAA19Choose = true;
+    public boolean weixingNOAA20Choose = true;
+    public boolean weixingNOAA21Choose = true;
+    public boolean weixingMODISChoose = true;
+    public boolean weixingGK2aChoose = true;
     private LinearLayout tiankongAllLayout;
     private ImageView tiankongAllImage;
     private LinearLayout tiankongWurenjiLayout;
@@ -620,13 +635,6 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
     public String currentFireNo = "";
     private TextView findButton;
     private ProgressDialog gaojiFindDialog;
-    private TextView weixingAllText;
-    private TextView weixingFY3Text;
-    private TextView weixingFY4Text;
-    private TextView weixingNppText;
-    private TextView weixingHima8Text;
-    private TextView weixingNoaa18Text;
-    private TextView weixingNOAA19Te;
     private TextView tiankongAllText;
     private TextView tiankongWurenjiText;
     private TextView tiankongXuanfuqiText;
@@ -2786,26 +2794,29 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         gaojiEndTimeText = ((TextView) gaojiInflater.findViewById(R.id.gaoji_endtime_text));
         //卫星监测
         weixingAllLayout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_all_layout));
-       // weixingAllImage = ((ImageView) gaojiInflater.findViewById(R.id.weixing_all_image));
         weixingAllText = (TextView) gaojiInflater.findViewById(R.id.weixing_all_text);
-        weixingFY3Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_fy3_layout));
-    //    weixingFY3Image = ((ImageView) gaojiInflater.findViewById(R.id.weixing_fy3_image));
-        weixingFY3Text = ((TextView) gaojiDialog.findViewById(R.id.weixing_fy3_text));
-        weixingFY4Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_fy4_layout));
-    //    weixingFY4Image = ((ImageView) gaojiInflater.findViewById(R.id.weixing_fy4_image));
-        weixingFY4Text = ((TextView) gaojiInflater.findViewById(R.id.weixing_fy4_text));
         weixingNPPLayout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_npp_layout));
-     //   weixingNPPImage = ((ImageView) gaojiInflater.findViewById(R.id.weixing_npp_image));
         weixingNppText = ((TextView) gaojiInflater.findViewById(R.id.weixing_npp_text));
+        weixingFY4Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_fy4_layout));
+        weixingFY4Text = ((TextView) gaojiInflater.findViewById(R.id.weixing_fy4_text));
+        weixingFY3Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_fy3_layout));
+        weixingFY3Text = ((TextView) gaojiDialog.findViewById(R.id.weixing_fy3_text));
         weixingHima8Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_himawar8_layout));
-     //   weixingHima8Image = ((ImageView) gaojiInflater.findViewById(R.id.weixing_himawar8_image));
         weixingHima8Text = ((TextView) gaojiInflater.findViewById(R.id.weixing_himawar8_text));
-        weixingNOAA18Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_noaa18_layout));
-      //  weixingNOAA18Image = ((ImageView) gaojiInflater.findViewById(R.id.weixing_noaa18_image));
-        weixingNoaa18Text = ((TextView) gaojiInflater.findViewById(R.id.weixing_noaa18_text));
+        weixingHima9Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_himawar9_layout));
+        weixingHima9Text = ((TextView) gaojiInflater.findViewById(R.id.weixing_himawar9_text));
+        weixingNOAA15Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_noaa15_layout));
+        weixingNoaa15Text = ((TextView) gaojiInflater.findViewById(R.id.weixing_noaa15_text));
         weixingNOAA19Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_noaa19_layout));
-     //   weixingNOAA19Image = ((ImageView) gaojiInflater.findViewById(R.id.weixing_noaa19_image));
-        weixingNOAA19Te = ((TextView) gaojiInflater.findViewById(R.id.weixing_noaa19_text));
+        weixingNoaa19Text = ((TextView) gaojiInflater.findViewById(R.id.weixing_noaa19_text));
+        weixingNOAA20Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_noaa20_layout));
+        weixingNoaa20Text = ((TextView) gaojiInflater.findViewById(R.id.weixing_noaa20_text));
+        weixingNOAA21Layout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_noaa21_layout));
+        weixingNoaa21Text = ((TextView) gaojiInflater.findViewById(R.id.weixing_noaa21_text));
+        weixingMODISLayout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_modis_layout));
+        weixingMODISText = ((TextView) gaojiInflater.findViewById(R.id.weixing_modis_text));
+        weixingGK2aLayout = ((LinearLayout) gaojiInflater.findViewById(R.id.weixing_gk2a_layout));
+        weixingGK2aText = ((TextView) gaojiInflater.findViewById(R.id.weixing_gk2a_text));
 
         //天空监测
         tiankongAllLayout = ((LinearLayout) gaojiInflater.findViewById(R.id.tiankong_all_layout));
@@ -2902,13 +2913,6 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     @Override
                     public void call(Void aVoid) {
                         //卫星初始化
-/*                        weixingAllImage.setImageResource(R.drawable.choose);
-                        weixingNPPImage.setImageResource(R.drawable.choose);
-                        weixingFY4Image.setImageResource(R.drawable.choose);
-                        weixingFY3Image.setImageResource(R.drawable.choose);
-                        weixingHima8Image.setImageResource(R.drawable.choose);
-                        weixingNOAA18Image.setImageResource(R.drawable.choose);
-                        weixingNOAA19Image.setImageResource(R.drawable.choose);*/
                         weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
                         weixingAllText.setTextColor(getResources().getColor(R.color.c12));
                         weixingNppText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -2919,23 +2923,35 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                         weixingFY3Text.setTextColor(getResources().getColor(R.color.c12));
                         weixingHima8Text.setBackgroundResource(R.drawable.bg_text_lan);
                         weixingHima8Text.setTextColor(getResources().getColor(R.color.c12));
-                        weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_lan);
-                        weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c12));
-                        weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_lan);
-                        weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c12));
+                        weixingHima9Text.setBackgroundResource(R.drawable.bg_text_lan);
+                        weixingHima9Text.setTextColor(getResources().getColor(R.color.c12));
+                        weixingNoaa15Text.setBackgroundResource(R.drawable.bg_text_lan);
+                        weixingNoaa15Text.setTextColor(getResources().getColor(R.color.c12));
+                        weixingNoaa19Text.setBackgroundResource(R.drawable.bg_text_lan);
+                        weixingNoaa19Text.setTextColor(getResources().getColor(R.color.c12));
+                        weixingNoaa20Text.setBackgroundResource(R.drawable.bg_text_lan);
+                        weixingNoaa20Text.setTextColor(getResources().getColor(R.color.c12));
+                        weixingNoaa21Text.setBackgroundResource(R.drawable.bg_text_lan);
+                        weixingNoaa21Text.setTextColor(getResources().getColor(R.color.c12));
+                        weixingMODISText.setBackgroundResource(R.drawable.bg_text_lan);
+                        weixingMODISText.setTextColor(getResources().getColor(R.color.c12));
+                        weixingGK2aText.setBackgroundResource(R.drawable.bg_text_lan);
+                        weixingGK2aText.setTextColor(getResources().getColor(R.color.c12));
 
                         weixingAllChoose = true;
                         weixingNPPChoose = true;
-                        weixingFY3Choose = true;
                         weixingFY4Choose = true;
+                        weixingFY3Choose = true;
                         weixingHIMA8Choose = true;
+                        weixingHIMA9Choose = true;
+                        weixingNOAA15Choose = true;
                         weixingNOAA19Choose = true;
-                        weixingNOAA18Choose = true;
+                        weixingNOAA20Choose = true;
+                        weixingNOAA21Choose = true;
+                        weixingMODISChoose = true;
+                        weixingGK2aChoose = true;
 
                         //天空初始化
-                       // tiankongAllImage.setImageResource(R.drawable.choose_no);
-                      //  tiankongWurenjiImage.setImageResource(R.drawable.choose_no);
-                       // tiankongXuanfuqiImage.setImageResource(R.drawable.choose_no);
                         tiankongAllText.setBackgroundResource(R.drawable.bg_text_hui);
                         tiankongAllText.setTextColor(getResources().getColor(R.color.c6));
                         tiankongXuanfuqiText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -3536,18 +3552,16 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                         if (weixingAllChoose){
                             weixingAllChoose = false;
                             weixingNPPChoose = false;
-                            weixingFY3Choose = false;
                             weixingFY4Choose = false;
+                            weixingFY3Choose = false;
                             weixingHIMA8Choose = false;
+                            weixingHIMA9Choose = false;
+                            weixingNOAA15Choose = false;
                             weixingNOAA19Choose = false;
-                            weixingNOAA18Choose = false;
-/*                            weixingAllImage.setImageResource(R.drawable.choose_no);
-                            weixingNPPImage.setImageResource(R.drawable.choose_no);
-                            weixingFY3Image.setImageResource(R.drawable.choose_no);
-                            weixingFY4Image.setImageResource(R.drawable.choose_no);
-                            weixingHima8Image.setImageResource(R.drawable.choose_no);
-                            weixingNOAA18Image.setImageResource(R.drawable.choose_no);
-                            weixingNOAA19Image.setImageResource(R.drawable.choose_no);*/
+                            weixingNOAA20Choose = false;
+                            weixingNOAA21Choose = false;
+                            weixingMODISChoose = false;
+                            weixingGK2aChoose = false;
                             weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingAllText.setTextColor(getResources().getColor(R.color.c6));
                             weixingNppText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -3558,26 +3572,34 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             weixingFY3Text.setTextColor(getResources().getColor(R.color.c6));
                             weixingHima8Text.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingHima8Text.setTextColor(getResources().getColor(R.color.c6));
-                            weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_hui);
-                            weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c6));
-                            weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_hui);
-                            weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c6));
+                            weixingHima9Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingHima9Text.setTextColor(getResources().getColor(R.color.c6));
+                            weixingNoaa15Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingNoaa15Text.setTextColor(getResources().getColor(R.color.c6));
+                            weixingNoaa19Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingNoaa19Text.setTextColor(getResources().getColor(R.color.c6));
+                            weixingNoaa20Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingNoaa20Text.setTextColor(getResources().getColor(R.color.c6));
+                            weixingNoaa21Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingNoaa21Text.setTextColor(getResources().getColor(R.color.c6));
+                            weixingMODISText.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingMODISText.setTextColor(getResources().getColor(R.color.c6));
+                            weixingGK2aText.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingGK2aText.setTextColor(getResources().getColor(R.color.c6));
 
                         }else {
                             weixingAllChoose = true;
                             weixingNPPChoose = true;
-                            weixingFY3Choose = true;
                             weixingFY4Choose = true;
+                            weixingFY3Choose = true;
                             weixingHIMA8Choose = true;
+                            weixingHIMA9Choose = true;
+                            weixingNOAA15Choose = true;
                             weixingNOAA19Choose = true;
-                            weixingNOAA18Choose = true;
-                         /*   weixingAllImage.setImageResource(R.drawable.choose);
-                            weixingNPPImage.setImageResource(R.drawable.choose);
-                            weixingFY3Image.setImageResource(R.drawable.choose);
-                            weixingFY4Image.setImageResource(R.drawable.choose);
-                            weixingHima8Image.setImageResource(R.drawable.choose);
-                            weixingNOAA18Image.setImageResource(R.drawable.choose);
-                            weixingNOAA19Image.setImageResource(R.drawable.choose);*/
+                            weixingNOAA20Choose = true;
+                            weixingNOAA21Choose = true;
+                            weixingMODISChoose = true;
+                            weixingGK2aChoose = true;
                             weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingAllText.setTextColor(getResources().getColor(R.color.c12));
                             weixingNppText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -3588,10 +3610,20 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             weixingFY3Text.setTextColor(getResources().getColor(R.color.c12));
                             weixingHima8Text.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingHima8Text.setTextColor(getResources().getColor(R.color.c12));
-                            weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_lan);
-                            weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c12));
-                            weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_lan);
-                            weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c12));
+                            weixingHima9Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingHima9Text.setTextColor(getResources().getColor(R.color.c12));
+                            weixingNoaa15Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingNoaa15Text.setTextColor(getResources().getColor(R.color.c12));
+                            weixingNoaa19Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingNoaa19Text.setTextColor(getResources().getColor(R.color.c12));
+                            weixingNoaa20Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingNoaa20Text.setTextColor(getResources().getColor(R.color.c12));
+                            weixingNoaa21Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingNoaa21Text.setTextColor(getResources().getColor(R.color.c12));
+                            weixingMODISText.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingMODISText.setTextColor(getResources().getColor(R.color.c12));
+                            weixingGK2aText.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingGK2aText.setTextColor(getResources().getColor(R.color.c12));
                         }
                     }
                 });
@@ -3602,55 +3634,23 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     public void call(Void aVoid) {  //&&qie
                         if (weixingNPPChoose){  //从已选中变为未选中
                             weixingNPPChoose = false;
-                    //     weixingNPPImage.setImageResource(R.drawable.choose_no);
                             weixingNppText.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingNppText.setTextColor(getResources().getColor(R.color.c6));
-                            if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA18Choose || !weixingNOAA19Choose){   //判断全部未选中
+                            if (!weixingNPPChoose || !weixingFY4Choose || !weixingFY3Choose || !weixingHIMA8Choose || !weixingHIMA9Choose
+                                    || !weixingNOAA15Choose || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingNOAA21Choose
+                                    || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
                                 weixingAllChoose = false;
-                              //  weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
                                 weixingAllText.setTextColor(getResources().getColor(R.color.c6));
                             }
                         }else {
                             weixingNPPChoose = true;
-                      //      weixingNPPImage.setImageResource(R.drawable.choose);
                             weixingNppText.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingNppText.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose){
+                            if (weixingNPPChoose || weixingFY4Choose || weixingFY3Choose || weixingHIMA8Choose || weixingHIMA9Choose
+                                    || weixingNOAA15Choose || weixingNOAA19Choose || weixingNOAA20Choose || weixingNOAA21Choose
+                                    || weixingMODISChoose || weixingGK2aChoose){
                                 weixingAllChoose = true;
-                           //     weixingAllImage.setImageResource(R.drawable.choose);
-                                weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
-                                weixingAllText.setTextColor(getResources().getColor(R.color.c12));
-                            }
-                        }
-                    }
-                });
-
-        RxViewAction.clickNoDouble(weixingFY3Layout)
-                .subscribe(new Action1<Void>() {
-                    @Override
-                    public void call(Void aVoid) {
-                        if (weixingFY3Choose){  //从已选中变为未选中
-                            weixingFY3Choose = false;
-                     //       weixingFY3Image.setImageResource(R.drawable.choose_no);
-                            weixingFY3Text.setBackgroundResource(R.drawable.bg_text_hui);
-                            weixingFY3Text.setTextColor(getResources().getColor(R.color.c6));
-                            if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA18Choose || !weixingNOAA19Choose){   //判断全部未选中
-                                weixingAllChoose = false;
-                             //   weixingAllImage.setImageResource(R.drawable.choose_no);
-                                weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
-                                weixingAllText.setTextColor(getResources().getColor(R.color.c6));
-                            }
-                        }else {
-                            weixingFY3Choose = true;
-                           // weixingFY3Image.setImageResource(R.drawable.choose);
-                            weixingFY3Text.setBackgroundResource(R.drawable.bg_text_lan);
-                            weixingFY3Text.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose){
-                                weixingAllChoose = true;
-                        //        weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
                                 weixingAllText.setTextColor(getResources().getColor(R.color.c12));
                             }
@@ -3664,24 +3664,57 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     public void call(Void aVoid) {
                         if (weixingFY4Choose){  //从已选中变为未选中
                             weixingFY4Choose = false;
-                       //     weixingFY4Image.setImageResource(R.drawable.choose_no);
                             weixingFY4Text.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingFY4Text.setTextColor(getResources().getColor(R.color.c6));
-                            if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA18Choose || !weixingNOAA19Choose){   //判断全部未选中
+                            if (!weixingNPPChoose || !weixingFY4Choose || !weixingFY3Choose || !weixingHIMA8Choose || !weixingHIMA9Choose
+                                    || !weixingNOAA15Choose || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingNOAA21Choose
+                                    || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
                                 weixingAllChoose = false;
-                               // weixingAllImage.setImageResource(R.drawable.choose_no);
+                                // weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
                                 weixingAllText.setTextColor(getResources().getColor(R.color.c6));
                             }
                         }else {
                             weixingFY4Choose = true;
-                        //    weixingFY4Image.setImageResource(R.drawable.choose);
                             weixingFY4Text.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingFY4Text.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose){
+                            if (weixingNPPChoose || weixingFY4Choose || weixingFY3Choose || weixingHIMA8Choose || weixingHIMA9Choose
+                                    || weixingNOAA15Choose || weixingNOAA19Choose || weixingNOAA20Choose || weixingNOAA21Choose
+                                    || weixingMODISChoose || weixingGK2aChoose){
                                 weixingAllChoose = true;
-                               // weixingAllImage.setImageResource(R.drawable.choose);
+                                // weixingAllImage.setImageResource(R.drawable.choose);
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c12));
+                            }
+                        }
+                    }
+                });
+
+        RxViewAction.clickNoDouble(weixingFY3Layout)
+                .subscribe(new Action1<Void>() {
+                    @Override
+                    public void call(Void aVoid) {
+                        if (weixingFY3Choose){  //从已选中变为未选中
+                            weixingFY3Choose = false;
+                            weixingFY3Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingFY3Text.setTextColor(getResources().getColor(R.color.c6));
+                            if (!weixingNPPChoose || !weixingFY4Choose || !weixingFY3Choose || !weixingHIMA8Choose || !weixingHIMA9Choose
+                                    || !weixingNOAA15Choose || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingNOAA21Choose
+                                    || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
+                                weixingAllChoose = false;
+                             //   weixingAllImage.setImageResource(R.drawable.choose_no);
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c6));
+                            }
+                        }else {
+                            weixingFY3Choose = true;
+                            weixingFY3Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingFY3Text.setTextColor(getResources().getColor(R.color.c12));
+                            if (weixingNPPChoose || weixingFY4Choose || weixingFY3Choose || weixingHIMA8Choose || weixingHIMA9Choose
+                                    || weixingNOAA15Choose || weixingNOAA19Choose || weixingNOAA20Choose || weixingNOAA21Choose
+                                    || weixingMODISChoose || weixingGK2aChoose){
+                                weixingAllChoose = true;
+                        //        weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
                                 weixingAllText.setTextColor(getResources().getColor(R.color.c12));
                             }
@@ -3695,11 +3728,11 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     public void call(Void aVoid) {
                         if (weixingHIMA8Choose){  //从已选中变为未选中
                             weixingHIMA8Choose = false;
-                         //   weixingHima8Image.setImageResource(R.drawable.choose_no);
                             weixingHima8Text.setBackgroundResource(R.drawable.bg_text_hui);
                             weixingHima8Text.setTextColor(getResources().getColor(R.color.c6));
-                            if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA18Choose || !weixingNOAA19Choose){   //判断全部未选中
+                            if (!weixingNPPChoose || !weixingFY4Choose || !weixingFY3Choose || !weixingHIMA8Choose || !weixingHIMA9Choose
+                                    || !weixingNOAA15Choose || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingNOAA21Choose
+                                    || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
                                 weixingAllChoose = false;
                              //   weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
@@ -3707,10 +3740,11 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             }
                         }else {
                             weixingHIMA8Choose = true;
-                      //      weixingHima8Image.setImageResource(R.drawable.choose);
                             weixingHima8Text.setBackgroundResource(R.drawable.bg_text_lan);
                             weixingHima8Text.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose){
+                            if (weixingNPPChoose || weixingFY4Choose || weixingFY3Choose || weixingHIMA8Choose || weixingHIMA9Choose
+                                    || weixingNOAA15Choose || weixingNOAA19Choose || weixingNOAA20Choose || weixingNOAA21Choose
+                                    || weixingMODISChoose || weixingGK2aChoose){
                                 weixingAllChoose = true;
                              //   weixingAllImage.setImageResource(R.drawable.choose);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
@@ -3720,30 +3754,61 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     }
                 });
 
-        RxViewAction.clickNoDouble(weixingNOAA18Layout)
+        RxViewAction.clickNoDouble(weixingHima9Layout)
                 .subscribe(new Action1<Void>() {
                     @Override
                     public void call(Void aVoid) {
-                        if (weixingNOAA18Choose){  //从已选中变为未选中
-                            weixingNOAA18Choose = false;
-                       //     weixingNOAA18Image.setImageResource(R.drawable.choose_no);
-                            weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_hui);
-                            weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c6));
-                            if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA18Choose || !weixingNOAA19Choose){   //判断全部未选中
+                        if (weixingHIMA9Choose){  //从已选中变为未选中
+                            weixingHIMA9Choose = false;
+                            weixingHima9Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingHima9Text.setTextColor(getResources().getColor(R.color.c6));
+                            if (!weixingNPPChoose || !weixingFY4Choose || !weixingFY3Choose || !weixingHIMA8Choose || !weixingHIMA9Choose
+                                    || !weixingNOAA15Choose || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingNOAA21Choose
+                                    || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
                                 weixingAllChoose = false;
-                         //       weixingAllImage.setImageResource(R.drawable.choose_no);
+                             //   weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
                                 weixingAllText.setTextColor(getResources().getColor(R.color.c6));
                             }
                         }else {
-                            weixingNOAA18Choose = true;
-                         //   weixingNOAA18Image.setImageResource(R.drawable.choose);
-                            weixingNoaa18Text.setBackgroundResource(R.drawable.bg_text_lan);
-                            weixingNoaa18Text.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose){
+                            weixingHIMA9Choose = true;
+                            weixingHima9Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingHima9Text.setTextColor(getResources().getColor(R.color.c12));
+                            if (weixingNPPChoose || weixingFY4Choose || weixingFY3Choose || weixingHIMA8Choose || weixingHIMA9Choose
+                                    || weixingNOAA15Choose || weixingNOAA19Choose || weixingNOAA20Choose || weixingNOAA21Choose
+                                    || weixingMODISChoose || weixingGK2aChoose){
                                 weixingAllChoose = true;
-                          //      weixingAllImage.setImageResource(R.drawable.choose);
+                             //   weixingAllImage.setImageResource(R.drawable.choose);
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c12));
+                            }
+                        }
+                    }
+                });
+
+        RxViewAction.clickNoDouble(weixingNOAA15Layout)
+                .subscribe(new Action1<Void>() {
+                    @Override
+                    public void call(Void aVoid) {
+                        if (weixingNOAA15Choose){  //从已选中变为未选中
+                            weixingNOAA15Choose = false;
+                            weixingNoaa15Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingNoaa15Text.setTextColor(getResources().getColor(R.color.c6));
+                            if (!weixingNPPChoose || !weixingFY4Choose || !weixingFY3Choose || !weixingHIMA8Choose || !weixingHIMA9Choose
+                                    || !weixingNOAA15Choose || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingNOAA21Choose
+                                    || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
+                                weixingAllChoose = false;
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c6));
+                            }
+                        }else {
+                            weixingNOAA15Choose = true;
+                            weixingNoaa15Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingNoaa15Text.setTextColor(getResources().getColor(R.color.c12));
+                            if (weixingNPPChoose || weixingFY4Choose || weixingFY3Choose || weixingHIMA8Choose || weixingHIMA9Choose
+                                    || weixingNOAA15Choose || weixingNOAA19Choose || weixingNOAA20Choose || weixingNOAA21Choose
+                                    || weixingMODISChoose || weixingGK2aChoose){
+                                weixingAllChoose = true;
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
                                 weixingAllText.setTextColor(getResources().getColor(R.color.c12));
                             }
@@ -3757,24 +3822,143 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     public void call(Void aVoid) {
                         if (weixingNOAA19Choose){  //从已选中变为未选中
                             weixingNOAA19Choose = false;
-                      //      weixingNOAA19Image.setImageResource(R.drawable.choose_no);
-                            weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_hui);
-                            weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c6));
-                            if (!weixingNPPChoose || !weixingFY3Choose || !weixingFY4Choose || !weixingHIMA8Choose
-                                    || !weixingNOAA18Choose || !weixingNOAA19Choose){   //判断全部未选中
+                            weixingNoaa19Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingNoaa19Text.setTextColor(getResources().getColor(R.color.c6));
+                            if (!weixingNPPChoose || !weixingFY4Choose || !weixingFY3Choose || !weixingHIMA8Choose || !weixingHIMA9Choose
+                                    || !weixingNOAA15Choose || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingNOAA21Choose
+                                    || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
                                 weixingAllChoose = false;
-                             //   weixingAllImage.setImageResource(R.drawable.choose_no);
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
                                 weixingAllText.setTextColor(getResources().getColor(R.color.c6));
                             }
                         }else {     //从未选中变为已选中
                             weixingNOAA19Choose = true;
-                        //    weixingNOAA19Image.setImageResource(R.drawable.choose);
-                            weixingNOAA19Te.setBackgroundResource(R.drawable.bg_text_lan);
-                            weixingNOAA19Te.setTextColor(getResources().getColor(R.color.c12));
-                            if (weixingNPPChoose && weixingFY3Choose && weixingFY4Choose && weixingHIMA8Choose && weixingNOAA18Choose && weixingNOAA19Choose){
+                            weixingNoaa19Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingNoaa19Text.setTextColor(getResources().getColor(R.color.c12));
+                            if (weixingNPPChoose || weixingFY4Choose || weixingFY3Choose || weixingHIMA8Choose || weixingHIMA9Choose
+                                    || weixingNOAA15Choose || weixingNOAA19Choose || weixingNOAA20Choose || weixingNOAA21Choose
+                                    || weixingMODISChoose || weixingGK2aChoose){
                                 weixingAllChoose = true;
-                     //           weixingAllImage.setImageResource(R.drawable.choose);
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c12));
+                            }
+                        }
+                    }
+                });
+
+        RxViewAction.clickNoDouble(weixingNOAA20Layout)
+                .subscribe(new Action1<Void>() {
+                    @Override
+                    public void call(Void aVoid) {
+                        if (weixingNOAA20Choose){  //从已选中变为未选中
+                            weixingNOAA20Choose = false;
+                            weixingNoaa20Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingNoaa20Text.setTextColor(getResources().getColor(R.color.c6));
+                            if (!weixingNPPChoose || !weixingFY4Choose || !weixingFY3Choose || !weixingHIMA8Choose || !weixingHIMA9Choose
+                                    || !weixingNOAA15Choose || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingNOAA21Choose
+                                    || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
+                                weixingAllChoose = false;
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c6));
+                            }
+                        }else {     //从未选中变为已选中
+                            weixingNOAA20Choose = true;
+                            weixingNoaa20Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingNoaa20Text.setTextColor(getResources().getColor(R.color.c12));
+                            if (weixingNPPChoose || weixingFY4Choose || weixingFY3Choose || weixingHIMA8Choose || weixingHIMA9Choose
+                                    || weixingNOAA15Choose || weixingNOAA19Choose || weixingNOAA20Choose || weixingNOAA21Choose
+                                    || weixingMODISChoose || weixingGK2aChoose){
+                                weixingAllChoose = true;
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c12));
+                            }
+                        }
+                    }
+                });
+
+        RxViewAction.clickNoDouble(weixingNOAA21Layout)
+                .subscribe(new Action1<Void>() {
+                    @Override
+                    public void call(Void aVoid) {
+                        if (weixingNOAA21Choose){  //从已选中变为未选中
+                            weixingNOAA21Choose = false;
+                            weixingNoaa21Text.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingNoaa21Text.setTextColor(getResources().getColor(R.color.c6));
+                            if (!weixingNPPChoose || !weixingFY4Choose || !weixingFY3Choose || !weixingHIMA8Choose || !weixingHIMA9Choose
+                                    || !weixingNOAA15Choose || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingNOAA21Choose
+                                    || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
+                                weixingAllChoose = false;
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c6));
+                            }
+                        }else {     //从未选中变为已选中
+                            weixingNOAA21Choose = true;
+                            weixingNoaa21Text.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingNoaa21Text.setTextColor(getResources().getColor(R.color.c12));
+                            if (weixingNPPChoose || weixingFY4Choose || weixingFY3Choose || weixingHIMA8Choose || weixingHIMA9Choose
+                                    || weixingNOAA15Choose || weixingNOAA19Choose || weixingNOAA20Choose || weixingNOAA21Choose
+                                    || weixingMODISChoose || weixingGK2aChoose){
+                                weixingAllChoose = true;
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c12));
+                            }
+                        }
+                    }
+                });
+
+        RxViewAction.clickNoDouble(weixingMODISLayout)
+                .subscribe(new Action1<Void>() {
+                    @Override
+                    public void call(Void aVoid) {
+                        if (weixingMODISChoose){  //从已选中变为未选中
+                            weixingMODISChoose = false;
+                            weixingMODISText.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingMODISText.setTextColor(getResources().getColor(R.color.c6));
+                            if (!weixingNPPChoose || !weixingFY4Choose || !weixingFY3Choose || !weixingHIMA8Choose || !weixingHIMA9Choose
+                                    || !weixingNOAA15Choose || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingNOAA21Choose
+                                    || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
+                                weixingAllChoose = false;
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c6));
+                            }
+                        }else {     //从未选中变为已选中
+                            weixingMODISChoose = true;
+                            weixingMODISText.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingMODISText.setTextColor(getResources().getColor(R.color.c12));
+                            if (weixingNPPChoose || weixingFY4Choose || weixingFY3Choose || weixingHIMA8Choose || weixingHIMA9Choose
+                                    || weixingNOAA15Choose || weixingNOAA19Choose || weixingNOAA20Choose || weixingNOAA21Choose
+                                    || weixingMODISChoose || weixingGK2aChoose){
+                                weixingAllChoose = true;
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c12));
+                            }
+                        }
+                    }
+                });
+
+        RxViewAction.clickNoDouble(weixingGK2aLayout)
+                .subscribe(new Action1<Void>() {
+                    @Override
+                    public void call(Void aVoid) {
+                        if (weixingGK2aChoose){  //从已选中变为未选中
+                            weixingGK2aChoose = false;
+                            weixingGK2aText.setBackgroundResource(R.drawable.bg_text_hui);
+                            weixingGK2aText.setTextColor(getResources().getColor(R.color.c6));
+                            if (!weixingNPPChoose || !weixingFY4Choose || !weixingFY3Choose || !weixingHIMA8Choose || !weixingHIMA9Choose
+                                    || !weixingNOAA15Choose || !weixingNOAA19Choose || !weixingNOAA20Choose || !weixingNOAA21Choose
+                                    || !weixingMODISChoose || !weixingGK2aChoose){   //判断全部未选中
+                                weixingAllChoose = false;
+                                weixingAllText.setBackgroundResource(R.drawable.bg_text_hui);
+                                weixingAllText.setTextColor(getResources().getColor(R.color.c6));
+                            }
+                        }else {     //从未选中变为已选中
+                            weixingGK2aChoose = true;
+                            weixingGK2aText.setBackgroundResource(R.drawable.bg_text_lan);
+                            weixingGK2aText.setTextColor(getResources().getColor(R.color.c12));
+                            if (weixingNPPChoose || weixingFY4Choose || weixingFY3Choose || weixingHIMA8Choose || weixingHIMA9Choose
+                                    || weixingNOAA15Choose || weixingNOAA19Choose || weixingNOAA20Choose || weixingNOAA21Choose
+                                    || weixingMODISChoose || weixingGK2aChoose){
+                                weixingAllChoose = true;
                                 weixingAllText.setBackgroundResource(R.drawable.bg_text_lan);
                                 weixingAllText.setTextColor(getResources().getColor(R.color.c12));
                             }
@@ -3813,13 +3997,28 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             if (weixingHIMA8Choose){
                 satellite = satellite + ",Himawari-8";
             }
-            if (weixingNOAA18Choose){
-                satellite = satellite + ",NOAA-18";
+            if (weixingHIMA9Choose){
+                satellite = satellite + ",Himawari-9";
+            }
+            if (weixingNOAA15Choose){
+                satellite = satellite + ",NOAA-15";
             }
             if (weixingNOAA19Choose){
                 satellite = satellite + ",NOAA-19";
             }
-            if (weixingNPPChoose || weixingFY3Choose || weixingFY4Choose || weixingHIMA8Choose || weixingNOAA18Choose || weixingNOAA19Choose){
+            if (weixingNOAA20Choose){
+                satellite = satellite + ",NOAA-20";
+            }
+            if (weixingNOAA21Choose){
+                satellite = satellite + ",NOAA-21";
+            }
+            if (weixingMODISChoose){
+                satellite = satellite + ",MODIS";
+            }
+            if (weixingGK2aChoose){
+                satellite = satellite + ",GK2a";
+            }
+            if (weixingNPPChoose || weixingFY4Choose || weixingFY3Choose || weixingHIMA8Choose || weixingHIMA9Choose || weixingNOAA15Choose || weixingNOAA19Choose || weixingNOAA20Choose || weixingNOAA21Choose || weixingMODISChoose || weixingGK2aChoose){
                 satellite = satellite.substring(1,satellite.length());
             }
 
@@ -3971,8 +4170,18 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                                 String latitude = fireObj.getString("Latitude");
                                 int observationFrequency = fireObj.getInt("ObservationFrequency");
                                 String observationDateTime = fireObj.getString("ObservationDateTime");
-                                int strength = fireObj.getInt("Strength");
-                                int strengthLevel = fireObj.getInt("StrengthLevel");
+                                int strength = 0;
+                                int strengthLevel = 0;
+                                try{
+                                    strength = fireObj.getInt("Strength");
+                                }catch(Exception e){
+                                    //
+                                }
+                                try{
+                                    strengthLevel = fireObj.getInt("StrengthLevel");
+                                }catch(Exception e){
+                                    //
+                                }
                                 double woodland = fireObj.getDouble("Woodland");
                                 double grassland = fireObj.getDouble("Grassland");
                                 double farmland = fireObj.getDouble("Farmland");
@@ -4288,8 +4497,18 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                                 String latitude = fireObj.getString("Latitude");
                                 int observationFrequency = fireObj.getInt("ObservationFrequency");
                                 String observationDateTime = fireObj.getString("ObservationDateTime");
-                                int strength = fireObj.getInt("Strength");
-                                int strengthLevel = fireObj.getInt("StrengthLevel");
+                                int strength = 0;
+                                int strengthLevel = 0;
+                                try{
+                                    strength = fireObj.getInt("Strength");
+                                }catch(Exception e){
+                                    //
+                                }
+                                try{
+                                    strengthLevel = fireObj.getInt("StrengthLevel");
+                                }catch(Exception e){
+                                    //
+                                }
                                 double woodland = fireObj.getDouble("Woodland");
                                 double grassland = fireObj.getDouble("Grassland");
                                 double farmland = fireObj.getDouble("Farmland");
@@ -4321,6 +4540,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                                         putStorageTime,dataSourceFile,fireNo,districtNum);
                                 fireInfoList.add(fireInfo);
                             }catch (Exception e){
+                                Log.e(TAG, "e " + e.toString() );
                                 continue;
                             }
 
@@ -4715,7 +4935,6 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         Log.e(TAG, "bingo: currentFire.getVisibleLightImageAddress() push = " + currentFire.getVisibleLightImageAddress() );
 
 
-        //   Glide.with(this).load("http://27.223.18.10:2018" + fireInfo.getiRImageAddress()).into(huodianTwoImage);
         Log.e(TAG, "jpush12" );
 
         fireInfoListDialog.hide();
