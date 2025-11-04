@@ -35,6 +35,20 @@
                     android:gravity="center"
                     android:background="@color/c30"
                     android:layout_marginLeft="40dp"/>
+                <View
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/fankui_list"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:text="反馈详情"
+                    android:textColor="@color/c12"
+                    android:gravity="center"
+                    android:background="@color/c3"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="10dp"/>
             </LinearLayout>
 
             <LinearLayout
@@ -292,16 +306,14 @@
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_gravity="center"/>
 
                 <ImageView
                     android:id="@+id/huodian_image_two"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:src="@mipmap/ic_launcher"/>
+                    android:layout_gravity="center"/>
 
             </LinearLayout>
 

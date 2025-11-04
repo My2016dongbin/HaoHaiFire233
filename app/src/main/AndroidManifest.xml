@@ -77,6 +77,7 @@
             android:windowSoftInputMode="stateVisible|adjustPan" />
         <activity android:name=".ui.activity.FeedBackActivity" />
         <activity android:name=".ui.activity.TestActivity" />
+        <activity android:name=".ui.activity.FeedBackListActivity" />
 
         <service android:name=".ui.service.AlarmPointService" />
 

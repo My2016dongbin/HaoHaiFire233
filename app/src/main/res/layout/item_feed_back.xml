@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"  >
+
+    <View
+        android:id="@+id/fire_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/c2"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="详细地址"
+            android:textColor="@color/c6"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详细地址详细地址详细地址详细地址详细地址详细地址详细地址"
+            android:textColor="@color/c6"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="实际经纬度"
+            android:textColor="@color/c6"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/lat_lng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="120.222555,36.888666"
+            android:textColor="@color/c6"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="火情描述"
+            android:textColor="@color/c6"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="火情描述"
+            android:textColor="@color/c6"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:text="现场图片"
+            android:textColor="@color/c6"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"/>
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <LinearLayout
+                android:id="@+id/ll_picture"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/picture1"
+                    android:scaleType="fitXY"
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:id="@+id/picture2"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="fitXY"
+                    android:layout_width="140dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+
+
+</LinearLayout>
