@@ -12,7 +12,7 @@ var tokens = ['3783f3a9b0b82e78a7e9db88ac310aaf', '21799afc1b7f1d85a0e4f20e00750
 // 天地图服务负载子域
 var subdomains = ['0', '1', '2', '3', '4', '5', '6', '7'];
 
-var token = tokens[Math.floor((Math.random() * tokens.length))];
+var token = '8f639db44240306cb43dad7579830a27';
 
 var tdtUrl = 'https://t' + subdomains[Math.floor((Math.random() * subdomains.length))]+'.tianditu.gov.cn/';
 

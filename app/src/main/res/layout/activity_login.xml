@@ -68,7 +68,7 @@
             android:background="@drawable/edit_bg_select"
             android:hint="请输入您的用户名"
             android:inputType="text"
-            android:maxLength="11"
+            android:maxLength="20"
             android:paddingBottom="5dp"
             android:paddingTop="5dp"
             android:textColor="@color/c12"
