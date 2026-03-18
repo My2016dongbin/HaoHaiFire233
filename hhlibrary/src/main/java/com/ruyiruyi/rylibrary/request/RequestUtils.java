@@ -9,7 +9,7 @@ public class RequestUtils {
     public static String REQUEST_LOGIN_URL_TEST = "http://192.168.1.131:10101/";            //开发地址
     public static String REQUEST_URL_HUAWEI = "http://223.80.108.114:10100/";            //华为云ip地址
 //    public static String REQUEST_URL_ABAZHOU= "http://112.44.67.43:10160/";
-    public static String REQUEST_URL_XINJIANG= "http://36.109.193.62:18011/";
+    public static String REQUEST_URL_XINJIANG= "http://60.13.240.12:8097/";
     public static String REQUEST_URL_DAPINGTAI= "http://121.36.68.43:10100/";            //大平台开发地址
     public static String REQUEST_LOGIN_URL_HUAWEI = "http://192.168.1.131:10101/";            //开发地址
 
@@ -23,5 +23,5 @@ public class RequestUtils {
     public static String LOGIN_URL = REQUEST_URL_XINJIANG  ;
 
 //    public static String REQUEST_QUANXIAN = "http://112.44.67.43/auth/";
-    public static String REQUEST_QUANXIAN = "http://36.109.193.62:18011/auth/";
+    public static String REQUEST_QUANXIAN = "http://60.13.240.12:8097/auth/";
 }

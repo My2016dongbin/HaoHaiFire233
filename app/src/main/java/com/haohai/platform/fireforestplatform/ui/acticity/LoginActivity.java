@@ -217,8 +217,9 @@ public class LoginActivity extends HhBaseActivity {
                         Set<String> tagSet = new LinkedHashSet<String>();
                         tagSet.add(gridNo);
                         tagSet.add(id);
-                        tagSet.add(groupId);
+                        tagSet.add("xj_" + groupId);
                         tagSet.add("tkstest");
+                        Log.d("TPush", "tagSet " + tagSet.toString());
                         XGPushManager.setTags(getApplicationContext(),"setTag",tagSet);
                         //开启华为推送
                         XGPushConfig.enableOtherPush(getApplicationContext(), true);
