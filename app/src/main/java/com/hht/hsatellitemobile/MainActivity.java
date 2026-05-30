@@ -60,6 +60,9 @@ import com.hht.hsatellitemobile.ui.multitype.FireInfoList;
 import com.hht.hsatellitemobile.ui.multitype.FireInfoViewBinder;
 import com.hht.hsatellitemobile.ui.multitype.GroundFire;
 import com.hht.hsatellitemobile.ui.multitype.GroundFireViewBinder;
+import com.hht.hsatellitemobile.ui.mqtt.MqttAlarmData;
+import com.hht.hsatellitemobile.ui.mqtt.MqttAlarmManager;
+import com.hht.hsatellitemobile.ui.mqtt.TopAlarmNotificationService;
 import com.hht.hsatellitemobile.ui.service.AlarmPointService;
 import com.hht.hsatellitemobile.ui.service.TrackService;
 import com.hht.hsatellitemobile.utils.JsApi;
@@ -459,6 +462,10 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
     };
 
     private void getFireInfo(String id) {
+        getFireInfo(id, false);
+    }
+
+    private void getFireInfo(String id, final boolean flyToFire) {
         RequestParams params = new RequestParams(RequestUtils.REQUEST_URL + "Satellite/GetFireInfoById");
         params.addParameter("Token",token);
         params.addParameter("id",id);
@@ -648,6 +655,9 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
 
 
 
+                    if (flyToFire) {
+                        flyToFireOnMap(fireInfo);
+                    }
                     fireDialog.show();
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -946,6 +956,9 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
     private TextView fenleiView;
     private AlertDialog.Builder builder;
     private  int choose1 = 0;
+    private MqttAlarmManager mqttAlarmManager;
+    private TopAlarmNotificationService topAlarmNotificationService;
+    private MediaPlayer mqttAlarmPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -1036,6 +1049,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         timeTest();     //时间测试
 
         initView();
+        initMqttAlarm();
         initDateTime();
         isopenFireDialog = false;
 
@@ -1096,6 +1110,103 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             },0, 10000);//每隔一秒使用handler发送一下消息,也就是每隔一秒执行一次,一直重复执行
 
         }*/
+    }
+
+    private void initMqttAlarm() {
+        topAlarmNotificationService = new TopAlarmNotificationService(new TopAlarmNotificationService.AlarmClickListener() {
+            @Override
+            public void onAlarmClick(MqttAlarmData alarmData) {
+                handleMqttAlarmClick(alarmData);
+            }
+        });
+        mqttAlarmManager = new MqttAlarmManager();
+        mqttAlarmManager.connect(getApplicationContext(), new MqttAlarmManager.AlarmCallback() {
+            @Override
+            public void onDeviceAlarm(MqttAlarmData alarmData) {
+                handleMqttDeviceAlarm(alarmData);
+            }
+        });
+    }
+
+    private void handleMqttDeviceAlarm(MqttAlarmData alarmData) {
+        warnImage.setVisibility(View.VISIBLE);
+        User user = new DbConfig(getApplicationContext()).getUser();
+        if (user != null && user.getIsyunyin() == 1) {
+            playMqttAlarmVoice();
+        }
+        if (topAlarmNotificationService != null) {
+            topAlarmNotificationService.showNotification(this, alarmData);
+        }
+    }
+
+    private void handleMqttAlarmClick(MqttAlarmData alarmData) {
+        warnImage.setVisibility(View.VISIBLE);
+        openHomeMapPageForAlarm();
+        if (alarmData == null || alarmData.getAlarmId() == null || alarmData.getAlarmId().trim().length() == 0) {
+            Toast.makeText(this, "报警信息缺少火点ID", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        getFireInfo(alarmData.getAlarmId(), true);
+    }
+
+    private void openHomeMapPageForAlarm() {
+        if (fireInfoListDialog != null && fireInfoListDialog.isShowing()) {
+            fireInfoListDialog.hide();
+        }
+        if (groundFireListDialog != null && groundFireListDialog.isShowing()) {
+            groundFireListDialog.hide();
+        }
+        if (groundFireInfoDialog != null && groundFireInfoDialog.isShowing()) {
+            groundFireInfoDialog.hide();
+        }
+        if (fireDialog != null && fireDialog.isShowing()) {
+            fireDialog.hide();
+        }
+        if (dWebView != null) {
+            dWebView.setVisibility(View.VISIBLE);
+        }
+        if (loadingImage != null) {
+            loadingImage.setVisibility(View.GONE);
+        }
+    }
+
+    private void flyToFireOnMap(FireInfo fireInfo) {
+        if (dWebView == null || fireInfo == null) {
+            return;
+        }
+        try {
+            dWebView.callHandler("android_fly_to", new Object[]{Double.parseDouble(fireInfo.getLongitude()), Double.parseDouble(fireInfo.getLatitude())}, new OnReturnValue<String>() {
+                @Override
+                public void onValue(String retValue) {
+                    Log.e(TAG, "mqtt alarm fly to fire: " + retValue);
+                }
+            });
+        } catch (Exception e) {
+            Log.e(TAG, "mqtt alarm fly failed", e);
+        }
+    }
+
+    private void playMqttAlarmVoice() {
+        try {
+            if (mqttAlarmPlayer != null) {
+                mqttAlarmPlayer.release();
+            }
+            mqttAlarmPlayer = MediaPlayer.create(this, R.raw.find_fire);
+            if (mqttAlarmPlayer != null) {
+                mqttAlarmPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                    @Override
+                    public void onCompletion(MediaPlayer mp) {
+                        mp.release();
+                        if (mqttAlarmPlayer == mp) {
+                            mqttAlarmPlayer = null;
+                        }
+                    }
+                });
+                mqttAlarmPlayer.start();
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "playMqttAlarmVoice failed", e);
+        }
     }
 
     /**
@@ -5939,6 +6050,16 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
     protected void onDestroy() {
         super.onDestroy();
         Log.e(TAG, "onDestroy: zoule");
+        if (mqttAlarmManager != null) {
+            mqttAlarmManager.disconnect();
+        }
+        if (topAlarmNotificationService != null) {
+            topAlarmNotificationService.release();
+        }
+        if (mqttAlarmPlayer != null) {
+            mqttAlarmPlayer.release();
+            mqttAlarmPlayer = null;
+        }
         /*timer.cancel();*/ //todo 230403 轮询去除
 //        unregisterReceiver(fireClickReceiver);
        // unregisterReceiver(outLoginReceiver);

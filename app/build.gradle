@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
-def VERSION_CODE = 52
-def VERSION_NAME = "3.2.2"
+def VERSION_CODE = 53
+def VERSION_NAME = "3.2.3"
 def keystoreFilepath = ''
 def keyfile = file('s.keystore.temp')
 
@@ -184,6 +184,7 @@ dependencies {
     // 此处以JCore 2.1.2 版本为例。
     compile 'com.android.support:multidex:1.0.0'
     compile 'com.squareup.okhttp3:okhttp:(insert latest version)'
+    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0'
     compile 'com.android.support:appcompat-v7:26.0.1'
 
     // 注意：分包之后不会有默认的Header和Footer需要手动添加！还是原来的三种方法！

@@ -1982,7 +1982,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
             tagSet.add("Woodland");
             tagSet.add("Grassland");
             tagSet.add("Otherland");
-            XGPushManager.setTags(getApplicationContext(),"setTag",tagSet);
+            //XGPushManager.setTags(getApplicationContext(),"setTag",tagSet);
         }else {
             if (dimaoLindiChoose){
                 if(dimaoStr.isEmpty()){
@@ -1992,7 +1992,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                 }
                 tagSet.add("Woodland");
             }else{
-                XGPushManager.cleanTags(getApplicationContext(),"Woodland");
+                //XGPushManager.cleanTags(getApplicationContext(),"Woodland");
             }
             if (dimaoCaodiChoose){
                 if(dimaoStr.isEmpty()){
@@ -2002,7 +2002,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                 }
                 tagSet.add("Grassland");
             }else{
-                XGPushManager.cleanTags(getApplicationContext(),"Grassland");
+                //XGPushManager.cleanTags(getApplicationContext(),"Grassland");
             }
             if (dimaoNongtianChoose){
                 if(dimaoStr.isEmpty()){
@@ -2012,7 +2012,7 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                 }
                 tagSet.add("Farmland");
             }else{
-                XGPushManager.cleanTags(getApplicationContext(),"Farmland");
+                //XGPushManager.cleanTags(getApplicationContext(),"Farmland");
             }
             if (dimaoQitaChoose){
                 if(dimaoStr.isEmpty()){
@@ -2022,14 +2022,14 @@ public class SettingActivity extends HhBaseActivity implements DatePicker.OnDate
                 }
                 tagSet.add("Otherland");
             }else{
-                XGPushManager.cleanTags(getApplicationContext(),"Otherland");
+                //XGPushManager.cleanTags(getApplicationContext(),"Otherland");
             }
             if (dimaoLindiChoose || dimaoCaodiChoose || dimaoNongtianChoose || dimaoQitaChoose){
                 dimaoStr.substring(1,dimaoStr.length());
             }
 
         }
-        XGPushManager.setTags(getApplicationContext(),"setTag",tagSet);
+        //XGPushManager.setTags(getApplicationContext(),"setTag",tagSet);
         Log.e(TAG, "updateSetting: tagSet " + tagSet );
 
 

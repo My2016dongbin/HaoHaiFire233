@@ -254,7 +254,7 @@ public class LoginActivity extends HhBaseActivity {
                     final String countyName = jsonObject.getString("CountyName");
 
 
-                    //RequestParams requestParams = new RequestParams(RequestUtils.REQUEST_URL + "Account/GetLandTypeRole");
+                    /*//RequestParams requestParams = new RequestParams(RequestUtils.REQUEST_URL + "Account/GetLandTypeRole");
                     RequestParams requestParams = new RequestParams(RequestUtils.REQUEST_URL + "SatelliteFireAlarmConfig/GetFireAlarmConfigByUser");
                     requestParams.addParameter("token",token);
                     requestParams.addParameter("userId",userId);
@@ -305,7 +305,7 @@ public class LoginActivity extends HhBaseActivity {
                                     }
 
                                     tagString = tagSet.toString();
-                                    XGPushManager.setTags(getApplicationContext(),"setTag",tagSet);
+                                    //XGPushManager.setTags(getApplicationContext(),"setTag",tagSet);
                                     Log.e(TAG, "onSuccess: tagSet " + tagSet.toString() );
                                 }else{
                                     Set<String> tagSet = new LinkedHashSet<String>();
@@ -357,7 +357,7 @@ public class LoginActivity extends HhBaseActivity {
 
                                     tagSet.add("test20230411");
                                     tagString = tagSet.toString();
-                                    XGPushManager.setTags(getApplicationContext(),"setTag",tagSet);
+                                    //XGPushManager.setTags(getApplicationContext(),"setTag",tagSet);
                                     Log.e(TAG, "onSuccess: tagSet " + tagSet.toString() );
                                 }
 
@@ -431,9 +431,46 @@ public class LoginActivity extends HhBaseActivity {
                         public void onFinished() {
 
                         }
-                    });
+                    });*/
 
 
+
+
+                    User user = new User();
+                    user.setId(1);
+                    if(userName!=null&&userName.contains("山东省应急管理厅")){
+                        user.setPushTag(normalTag);
+                    }
+                    user.setUsername(userNameStr);
+                    user.setPassword(passwordStr);
+                    user.setToken(token);
+                    user.setIsLogin("1");
+                    user.setUserId(userId);
+                    user.setCompanyName(companyName);
+                    user.setProvinceName(provinceName);
+                    user.setProvinceNo(provinceNo);
+                    user.setCityName(cityName);
+                    user.setCityNo(cityNo);
+                    user.setCountyName(countyName);
+                    user.setCountyNo(countyNo);
+                    //user.setTagSet(tagString);
+                    user.setJpushStr("");
+                    user.setJpush(false);
+
+                    DbConfig dbConfig = new DbConfig(getApplicationContext());
+                    DbManager db = dbConfig.getDbManager();
+                    try {
+                        db.saveOrUpdate(user);
+                    } catch (DbException e) {
+                        e.printStackTrace();
+                    }
+
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString("token",token);
+                    bundle.putString("START_TYPE","APP");
+                    intent.putExtras(bundle);
+                    startActivity(intent);
 
 
                 } catch (JSONException e) {
