@@ -284,13 +284,14 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     huodianCodeText.setText(fireInfo.getFireNo());
                     xiangyuanmianjiView.setText(fireInfo.getPixelArea()+"");
                     xiangyuanshuView.setText(fireInfo.getPixelNumber()+"");
+                    resetFireDetailImages();
 
                     Log.e(TAG, "handleMessage:Noaa " + fireInfo.getVisibleLightImageAddress());
                     Log.e(TAG, "handleMessage:Noaa " + fireInfo.getiRImageAddress());
 
                     try {
                         Log.e(TAG, "WTF: " + fireInfo.getVisibleLightImageAddress() );
-                        if (fireInfo.getVisibleLightImageAddress().equals("null") || fireInfo.getVisibleLightImageAddress().equals("") || fireInfo.getVisibleLightImageAddress().length()==0){
+                        if (isEmptyImageAddress(fireInfo.getVisibleLightImageAddress())){
                             huodianOneImage.setVisibility(View.GONE);
                         }else {
                             huodianOneImage.setVisibility(View.VISIBLE);
@@ -338,7 +339,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             }
                         }
 
-                        if (fireInfo.getiRImageAddress().equals("null") || fireInfo.getiRImageAddress().equals("")){
+                        if (isEmptyImageAddress(fireInfo.getiRImageAddress())){
                             huodianTwoImage.setVisibility(View.GONE);
                         }else {
                             huodianTwoImage.setVisibility(View.VISIBLE);
@@ -489,37 +490,37 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             return;
                         }
                     }
-                    String id = fireObj.getString("Id");
-                    String longitude = fireObj.getString("Longitude");
-                    String latitude = fireObj.getString("Latitude");
-                    int observationFrequency = fireObj.getInt("ObservationFrequency");
-                    String observationDateTime = fireObj.getString("ObservationDateTime");
+                    String id = jsonString(fireObj, "Id");
+                    String longitude = jsonString(fireObj, "Longitude");
+                    String latitude = jsonString(fireObj, "Latitude");
+                    int observationFrequency = jsonInt(fireObj, "ObservationFrequency");
+                    String observationDateTime = jsonString(fireObj, "ObservationDateTime");
 //                                int strength = fireObj.getInt("Strength");
 //                                int strengthLevel = fireObj.getInt("StrengthLevel");
-                    double woodland = fireObj.getDouble("Woodland");
-                    double grassland = fireObj.getDouble("Grassland");
-                    double farmland = fireObj.getDouble("Farmland");
-                    double otherland = fireObj.getDouble("Otherland");
-                    double area = fireObj.getDouble("Area");
-                    double credibility = fireObj.getDouble("Credibility");
-                    double pixelArea = fireObj.getDouble("PixelArea");
-                    int pixelNumber = fireObj.getInt("PixelNumber");
-                    String country = fireObj.getString("Country");
-                    String countryCode = fireObj.getString("CountryCode");
-                    String province = fireObj.getString("Province");
-                    String provinceCode = fireObj.getString("ProvinceCode");
-                    String city = fireObj.getString("City");
-                    String cityCode = fireObj.getString("CityCode");
-                    String county = fireObj.getString("County");
-                    String countyCode = fireObj.getString("CountyCode");
-                    String formattedAddress = fireObj.getString("FormattedAddress");
-                    String visibleLightImageAddress = fireObj.getString("VisibleLightImageAddress");
-                    String irImageAddress = fireObj.getString("IRImageAddress");
-                    String satellite = fireObj.getString("Satellite");
-                    String putStorageTime = fireObj.getString("PutStorageTime");
-                    String dataSourceFile = fireObj.getString("DataSourceFile");
-                    String fireNo = fireObj.getString("FireNo");
-                    String districtNum = fireObj.getString("DistrictNum");
+                    double woodland = jsonDouble(fireObj, "Woodland");
+                    double grassland = jsonDouble(fireObj, "Grassland");
+                    double farmland = jsonDouble(fireObj, "Farmland");
+                    double otherland = jsonDouble(fireObj, "Otherland");
+                    double area = jsonDouble(fireObj, "Area");
+                    double credibility = jsonDouble(fireObj, "Credibility");
+                    double pixelArea = jsonDouble(fireObj, "PixelArea");
+                    int pixelNumber = jsonInt(fireObj, "PixelNumber");
+                    String country = jsonString(fireObj, "Country");
+                    String countryCode = jsonString(fireObj, "CountryCode");
+                    String province = jsonString(fireObj, "Province");
+                    String provinceCode = jsonString(fireObj, "ProvinceCode");
+                    String city = jsonString(fireObj, "City");
+                    String cityCode = jsonString(fireObj, "CityCode");
+                    String county = jsonString(fireObj, "County");
+                    String countyCode = jsonString(fireObj, "CountyCode");
+                    String formattedAddress = jsonString(fireObj, "FormattedAddress");
+                    String visibleLightImageAddress = jsonString(fireObj, "VisibleLightImageAddress");
+                    String irImageAddress = jsonString(fireObj, "IRImageAddress");
+                    String satellite = jsonString(fireObj, "Satellite");
+                    String putStorageTime = jsonString(fireObj, "PutStorageTime");
+                    String dataSourceFile = jsonString(fireObj, "DataSourceFile");
+                    String fireNo = jsonString(fireObj, "FireNo");
+                    String districtNum = jsonString(fireObj, "DistrictNum");
                     FireInfo fireInfo = new FireInfo(id,longitude,latitude,observationFrequency,observationDateTime,0,0,woodland,grassland,farmland,otherland,area,credibility,pixelArea,
                             pixelNumber,country,countryCode,province,provinceCode,city,cityCode,county,countyCode,formattedAddress,visibleLightImageAddress,irImageAddress,satellite,
                             putStorageTime,dataSourceFile,fireNo,districtNum);
@@ -563,7 +564,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
 
                     try {
                         Log.e(TAG, "WTF: " + fireInfo.getVisibleLightImageAddress() );
-                        if (fireInfo.getVisibleLightImageAddress().equals("null") || fireInfo.getVisibleLightImageAddress().equals("") || fireInfo.getVisibleLightImageAddress().length()==0){
+                        if (isEmptyImageAddress(fireInfo.getVisibleLightImageAddress())){
                             huodianOneImage.setVisibility(View.GONE);
                         }else {
                             huodianOneImage.setVisibility(View.VISIBLE);
@@ -611,7 +612,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             }
                         }
 
-                        if (fireInfo.getiRImageAddress().equals("null") || fireInfo.getiRImageAddress().equals("")){
+                        if (isEmptyImageAddress(fireInfo.getiRImageAddress())){
                             huodianTwoImage.setVisibility(View.GONE);
                         }else {
                             huodianTwoImage.setVisibility(View.VISIBLE);
@@ -675,7 +676,8 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                 } catch (JSONException e) {
                     e.printStackTrace();
                     if (flyToFire) {
-                        Toast.makeText(MainActivity.this, "报警详情解析失败", Toast.LENGTH_SHORT).show();
+                        Log.e(TAG, "报警详情解析失败"  );
+                        //Toast.makeText(MainActivity.this, "报警详情解析失败", Toast.LENGTH_SHORT).show();
                     }
                 }
 
@@ -747,6 +749,57 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             return data;
         }
         return null;
+    }
+
+    private String jsonString(JSONObject jsonObject, String key) {
+        if (jsonObject == null || key == null) {
+            return "";
+        }
+        Object value = jsonObject.opt(key);
+        if (value == null || JSONObject.NULL.equals(value)) {
+            return "";
+        }
+        return String.valueOf(value);
+    }
+
+    private int jsonInt(JSONObject jsonObject, String key) {
+        if (jsonObject == null || key == null || jsonObject.isNull(key)) {
+            return 0;
+        }
+        return jsonObject.optInt(key, 0);
+    }
+
+    private double jsonDouble(JSONObject jsonObject, String key) {
+        if (jsonObject == null || key == null || jsonObject.isNull(key)) {
+            return 0;
+        }
+        return jsonObject.optDouble(key, 0);
+    }
+
+    private void resetFireDetailImages() {
+        clearFireDetailImage(huodianOneImage);
+        clearFireDetailImage(huodianTwoImage);
+    }
+
+    private void clearFireDetailImage(ImageView imageView) {
+        if (imageView == null) {
+            return;
+        }
+        try {
+            Glide.clear(imageView);
+        } catch (Exception e) {
+            Log.e(TAG, "clear fire detail image failed", e);
+        }
+        imageView.setImageDrawable(null);
+        imageView.setVisibility(View.GONE);
+    }
+
+    private boolean isEmptyImageAddress(String imageAddress) {
+        if (imageAddress == null) {
+            return true;
+        }
+        String value = imageAddress.trim();
+        return value.length() == 0 || "null".equalsIgnoreCase(value);
     }
 
     private void updateFireListFromAlarm(FireInfo fireInfo) {
@@ -1058,9 +1111,11 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
     private TextView fenleiView;
     private AlertDialog.Builder builder;
     private  int choose1 = 0;
+    private static final long MQTT_ALARM_VOICE_INTERVAL_MS = 5000L;
     private MqttAlarmManager mqttAlarmManager;
     private TopAlarmNotificationService topAlarmNotificationService;
     private MediaPlayer mqttAlarmPlayer;
+    private long lastMqttAlarmVoiceAt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -1233,7 +1288,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
     private void handleMqttDeviceAlarm(MqttAlarmData alarmData) {
         warnImage.setVisibility(View.VISIBLE);
         User user = new DbConfig(getApplicationContext()).getUser();
-        if (user != null && user.getIsyunyin() == 1) {
+        if (user != null && user.getIsyunyin() == 1 && shouldPlayMqttAlarmVoice()) {
             playMqttAlarmVoice();
         }
         if (topAlarmNotificationService != null) {
@@ -1315,6 +1370,15 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         } catch (Exception e) {
             Log.e(TAG, "playMqttAlarmVoice failed", e);
         }
+    }
+
+    private boolean shouldPlayMqttAlarmVoice() {
+        long now = System.currentTimeMillis();
+        if (now - lastMqttAlarmVoiceAt < MQTT_ALARM_VOICE_INTERVAL_MS) {
+            return false;
+        }
+        lastMqttAlarmVoiceAt = now;
+        return true;
     }
 
     /**
@@ -5431,10 +5495,11 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         huodianCodeText.setText(currentFire.getFireNo());
         xiangyuanmianjiView.setText(currentFire.getPixelArea()+"");
         xiangyuanshuView.setText(currentFire.getPixelNumber()+"");
+        resetFireDetailImages();
 
 
         try {
-            if (currentFire.getVisibleLightImageAddress().equals("null")){
+            if (isEmptyImageAddress(currentFire.getVisibleLightImageAddress())){
                 huodianOneImage.setVisibility(View.GONE);
             }else {
                 huodianOneImage.setVisibility(View.VISIBLE);
@@ -5485,13 +5550,13 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                 }
             }
 
-            if (currentFire.getiRImageAddress().equals("null")){
+            if (isEmptyImageAddress(currentFire.getiRImageAddress())){
                 huodianTwoImage.setVisibility(View.GONE);
             }else {
                 huodianTwoImage.setVisibility(View.VISIBLE);
                 try {
                     Log.e(TAG, "WTF: " + currentFire.getVisibleLightImageAddress() );
-                    if (currentFire.getVisibleLightImageAddress().equals("null") || currentFire.getVisibleLightImageAddress().equals("") || currentFire.getVisibleLightImageAddress().length()==0){
+                    if (isEmptyImageAddress(currentFire.getVisibleLightImageAddress())){
                         huodianOneImage.setVisibility(View.GONE);
                     }else {
                         huodianOneImage.setVisibility(View.VISIBLE);
@@ -5533,7 +5598,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                         }
                     }
 
-                    if (currentFire.getiRImageAddress().equals("null") || currentFire.getiRImageAddress().equals("")){
+                    if (isEmptyImageAddress(currentFire.getiRImageAddress())){
                         huodianTwoImage.setVisibility(View.GONE);
                     }else {
                         huodianTwoImage.setVisibility(View.VISIBLE);
@@ -5736,16 +5801,17 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
         huodianCodeText.setText(fireInfo.getFireNo());
         xiangyuanmianjiView.setText(fireInfo.getPixelArea()+"");
         xiangyuanshuView.setText(fireInfo.getPixelNumber()+"");
+        resetFireDetailImages();
 
 
-        if (fireInfo.getVisibleLightImageAddress().equals("null")||fireInfo.getVisibleLightImageAddress().length()==0){
+        if (isEmptyImageAddress(fireInfo.getVisibleLightImageAddress())){
             huodianOneImage.setVisibility(View.GONE);
         }else {
             huodianOneImage.setVisibility(View.VISIBLE);
 
             try {
                 Log.e(TAG, "WTF: " + fireInfo.getVisibleLightImageAddress() );
-                if (fireInfo.getVisibleLightImageAddress().equals("null") || fireInfo.getVisibleLightImageAddress().equals("") || fireInfo.getVisibleLightImageAddress().length()==0){
+                if (isEmptyImageAddress(fireInfo.getVisibleLightImageAddress())){
                     huodianOneImage.setVisibility(View.GONE);
                 }else {
                     huodianOneImage.setVisibility(View.VISIBLE);
@@ -5787,7 +5853,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     }
                 }
 
-                if (fireInfo.getiRImageAddress().equals("null") || fireInfo.getiRImageAddress().equals("")){
+                if (isEmptyImageAddress(fireInfo.getiRImageAddress())){
                     huodianTwoImage.setVisibility(View.GONE);
                 }else {
                     huodianTwoImage.setVisibility(View.VISIBLE);

@@ -34,12 +34,16 @@ public class MqttAlarmManager {
     private static final String MQTT_ACCOUNT = "weixing2";
     private static final String MQTT_PASSWORD = "Haohai!@3$%";
     private static final String ALARM_TOPIC = "/Satellite/Haohai/";
+    private static final long RECONNECT_DELAY_MS = 3000L;
+    private static final int MAX_LOG_PAYLOAD_LENGTH = 300;
 
     private final Handler mainHandler = new Handler(Looper.getMainLooper());
     private MqttAsyncClient client;
     private MqttConnectOptions connectOptions;
     private String subscribedTopicId;
     private AlarmCallback callback;
+    private boolean reconnectScheduled;
+    private boolean disconnectedByUser;
 
     public void connect(Context context, AlarmCallback alarmCallback) {
         this.callback = alarmCallback;
@@ -53,6 +57,7 @@ public class MqttAlarmManager {
             return;
         }
         disconnect();
+        disconnectedByUser = false;
         subscribedTopicId = topicId;
 
         try {
@@ -62,7 +67,9 @@ public class MqttAlarmManager {
                 @Override
                 public void connectionLost(Throwable cause) {
                     Log.e(TAG, "connectionLost", cause);
-                    reconnect();
+                    if (!disconnectedByUser) {
+                        reconnect();
+                    }
                 }
 
                 @Override
@@ -85,6 +92,7 @@ public class MqttAlarmManager {
                 @Override
                 public void onSuccess(IMqttToken asyncActionToken) {
                     Log.d(TAG, "connect success");
+                    reconnectScheduled = false;
                     subscribeAlarmTopic();
                 }
 
@@ -93,6 +101,7 @@ public class MqttAlarmManager {
                     Log.e(TAG, "connect failed", exception);
                     if (isFailedAuthentication(exception)) {
                         Log.e(TAG, "connect failed: authentication denied, stop reconnect");
+                        stopReconnect();
                         return;
                     }
                     reconnect();
@@ -105,6 +114,9 @@ public class MqttAlarmManager {
     }
 
     public void disconnect() {
+        disconnectedByUser = true;
+        reconnectScheduled = false;
+        mainHandler.removeCallbacksAndMessages(null);
         if (client == null) {
             return;
         }
@@ -119,10 +131,15 @@ public class MqttAlarmManager {
     }
 
     private void reconnect() {
+        if (reconnectScheduled || disconnectedByUser || client == null) {
+            return;
+        }
+        reconnectScheduled = true;
         mainHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                if (client == null || client.isConnected()) {
+                reconnectScheduled = false;
+                if (disconnectedByUser || client == null || client.isConnected()) {
                     return;
                 }
                 try {
@@ -130,6 +147,7 @@ public class MqttAlarmManager {
                         @Override
                         public void onSuccess(IMqttToken asyncActionToken) {
                             Log.d(TAG, "reconnect success");
+                            reconnectScheduled = false;
                             subscribeAlarmTopic();
                         }
 
@@ -138,6 +156,7 @@ public class MqttAlarmManager {
                             Log.e(TAG, "reconnect failed", exception);
                             if (isFailedAuthentication(exception)) {
                                 Log.e(TAG, "reconnect failed: authentication denied, stop reconnect");
+                                stopReconnect();
                                 return;
                             }
                             reconnect();
@@ -148,7 +167,13 @@ public class MqttAlarmManager {
                     reconnect();
                 }
             }
-        }, 3000L);
+        }, RECONNECT_DELAY_MS);
+    }
+
+    private void stopReconnect() {
+        disconnectedByUser = true;
+        reconnectScheduled = false;
+        mainHandler.removeCallbacksAndMessages(null);
     }
 
     private void subscribeAlarmTopic() {
@@ -173,7 +198,7 @@ public class MqttAlarmManager {
             return;
         }
         String payload = new String(message.getPayload(), Charset.forName("UTF-8"));
-        Log.d(TAG, "messageArrived: " + payload + " topic=" + topic);
+        Log.d(TAG, "messageArrived: topic=" + topic + " payload=" + trimLogPayload(payload));
         try {
             JSONObject model = new JSONObject(payload);
             final MqttAlarmData alarmData = parseAlarmData(model);
@@ -198,6 +223,16 @@ public class MqttAlarmManager {
         String content = parseAlarmContent(model);
         String dedupeKey = parseDedupeKey(model, content, timeText, alarmId);
         return new MqttAlarmData(alarmId, "卫星火警推送", timeText, content, dedupeKey, model.toString());
+    }
+
+    private String trimLogPayload(String payload) {
+        if (payload == null) {
+            return "";
+        }
+        if (payload.length() <= MAX_LOG_PAYLOAD_LENGTH) {
+            return payload;
+        }
+        return payload.substring(0, MAX_LOG_PAYLOAD_LENGTH) + "...(" + payload.length() + ")";
     }
 
     private String parseAlarmId(JSONObject model) {

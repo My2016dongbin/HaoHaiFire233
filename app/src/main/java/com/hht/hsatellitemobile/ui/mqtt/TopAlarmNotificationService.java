@@ -17,8 +17,8 @@ import android.widget.TextView;
 import com.hht.hsatellitemobile.R;
 
 import java.util.ArrayDeque;
-import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Queue;
 
@@ -27,13 +27,14 @@ public class TopAlarmNotificationService {
         void onAlarmClick(MqttAlarmData alarmData);
     }
 
-    private static final int MAX_QUEUE_LENGTH = 50;
+    private static final int MAX_QUEUE_LENGTH = 10;
+    private static final int MAX_DEDUPE_LENGTH = 30;
     private static final long DEDUPE_WINDOW_MS = 1500L;
     private static final long DISPLAY_DURATION_MS = 5000L;
 
     private final Handler handler = new Handler(Looper.getMainLooper());
     private final Queue<MqttAlarmData> queue = new ArrayDeque<MqttAlarmData>();
-    private final Map<String, Long> dedupeMap = new HashMap<String, Long>();
+    private final Map<String, Long> dedupeMap = new LinkedHashMap<String, Long>();
     private final AlarmClickListener clickListener;
 
     private FrameLayout currentView;
@@ -61,8 +62,9 @@ public class TopAlarmNotificationService {
                 return;
             }
             dedupeMap.put(dedupeKey, now);
+            trimDedupeMap();
         }
-        if (queue.size() >= MAX_QUEUE_LENGTH) {
+        while (queue.size() >= MAX_QUEUE_LENGTH) {
             queue.poll();
         }
         queue.offer(data);
@@ -261,6 +263,17 @@ public class TopAlarmNotificationService {
             if (now - entry.getValue() >= DEDUPE_WINDOW_MS) {
                 iterator.remove();
             }
+        }
+    }
+
+    private void trimDedupeMap() {
+        if (dedupeMap.size() <= MAX_DEDUPE_LENGTH) {
+            return;
+        }
+        Iterator<String> iterator = dedupeMap.keySet().iterator();
+        while (dedupeMap.size() > MAX_DEDUPE_LENGTH && iterator.hasNext()) {
+            iterator.next();
+            iterator.remove();
         }
     }
 
