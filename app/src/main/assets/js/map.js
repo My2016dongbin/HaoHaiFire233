@@ -645,6 +645,13 @@ dsBridge.register('android_fly_to', function (arg1,arg2,responseCallback) {
     return "chenggong";
 });
 
+//andoird 请求定位到指定火点并高亮当前火点
+dsBridge.register('android_focus_fire', function (lon, lat, id, responseCallback) {
+    SelectMarker(map, sourceMarker, id || "mqtt_alarm", null, null, lon, lat, null, null, null);
+    flyTo(lon, lat);
+    return "chenggong";
+});
+
 
 //移动地图中心点
 function flyTo(lon, lat) {
@@ -693,4 +700,3 @@ geolocation.once('change:position', function() {
   view.setCenter(geolocation.getPosition());
   view.setResolution(2.388657133911758);
 });
-

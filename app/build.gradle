@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
-def VERSION_CODE = 53
-def VERSION_NAME = "3.2.3"
+def VERSION_CODE = 54
+def VERSION_NAME = "3.2.4"
 def keystoreFilepath = ''
 def keyfile = file('s.keystore.temp')
 

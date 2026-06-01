@@ -466,6 +466,10 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
     }
 
     private void getFireInfo(String id, final boolean flyToFire) {
+        getFireInfo(id, flyToFire, null);
+    }
+
+    private void getFireInfo(String id, final boolean flyToFire, final MqttAlarmData fallbackAlarmData) {
         RequestParams params = new RequestParams(RequestUtils.REQUEST_URL + "Satellite/GetFireInfoById");
         params.addParameter("Token",token);
         params.addParameter("id",id);
@@ -474,9 +478,17 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             public void onSuccess(String result) {
                 Log.e("GetFireInfoById",result);
 
-                JSONObject fireObj = null;
                 try {
-                    fireObj = new JSONObject(result);
+                    JSONObject fireObj = parseFireInfoResult(result);
+                    if (fireObj == null) {
+                        fireObj = parseMqttAlarmPayload(fallbackAlarmData);
+                        if (fireObj == null && flyToFire) {
+                            Toast.makeText(MainActivity.this, "未查询到报警详情", Toast.LENGTH_SHORT).show();
+                        }
+                        if (fireObj == null) {
+                            return;
+                        }
+                    }
                     String id = fireObj.getString("Id");
                     String longitude = fireObj.getString("Longitude");
                     String latitude = fireObj.getString("Latitude");
@@ -512,6 +524,7 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                             pixelNumber,country,countryCode,province,provinceCode,city,cityCode,county,countyCode,formattedAddress,visibleLightImageAddress,irImageAddress,satellite,
                             putStorageTime,dataSourceFile,fireNo,districtNum);
 
+                    updateFireListFromAlarm(fireInfo);
                     currentFire = fireInfo;
                     currentFireId = fireInfo.getId();
                     currentFireLa = fireInfo.getLatitude();
@@ -661,13 +674,19 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
                     fireDialog.show();
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    if (flyToFire) {
+                        Toast.makeText(MainActivity.this, "报警详情解析失败", Toast.LENGTH_SHORT).show();
+                    }
                 }
 
             }
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-
+                Log.e(TAG, "getFireInfo error", ex);
+                if (flyToFire) {
+                    Toast.makeText(MainActivity.this, "报警详情加载失败", Toast.LENGTH_SHORT).show();
+                }
             }
 
             @Override
@@ -677,9 +696,92 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
 
             @Override
             public void onFinished() {
-
+                if (flyToFire) {
+                    hideDialogProgress(gaojiFindDialog);
+                }
             }
         });
+    }
+
+    private JSONObject parseFireInfoResult(String result) throws JSONException {
+        if (result == null) {
+            return null;
+        }
+        String value = result.trim();
+        if (value.length() == 0 || "null".equalsIgnoreCase(value)) {
+            return null;
+        }
+        JSONObject jsonObject = new JSONObject(value);
+        if (jsonObject.has("Id")) {
+            return jsonObject;
+        }
+        JSONObject data = jsonObject.optJSONObject("data");
+        if (data != null && data.has("Id")) {
+            return data;
+        }
+        JSONObject valueObject = jsonObject.optJSONObject("value");
+        if (valueObject != null && valueObject.has("Id")) {
+            return valueObject;
+        }
+        JSONObject resultObject = jsonObject.optJSONObject("result");
+        if (resultObject != null && resultObject.has("Id")) {
+            return resultObject;
+        }
+        return null;
+    }
+
+    private JSONObject parseMqttAlarmPayload(MqttAlarmData fallbackAlarmData) throws JSONException {
+        if (fallbackAlarmData == null || fallbackAlarmData.getPayload() == null) {
+            return null;
+        }
+        String payload = fallbackAlarmData.getPayload().trim();
+        if (payload.length() == 0 || "null".equalsIgnoreCase(payload)) {
+            return null;
+        }
+        JSONObject jsonObject = new JSONObject(payload);
+        if (jsonObject.has("Id")) {
+            return jsonObject;
+        }
+        JSONObject data = jsonObject.optJSONObject("data");
+        if (data != null && data.has("Id")) {
+            return data;
+        }
+        return null;
+    }
+
+    private void updateFireListFromAlarm(FireInfo fireInfo) {
+        if (fireInfo == null || fireInfo.getId() == null) {
+            return;
+        }
+        if (fireInfoList == null) {
+            fireInfoList = new ArrayList<>();
+        }
+        int existsIndex = -1;
+        for (int i = 0; i < fireInfoList.size(); i++) {
+            FireInfo item = fireInfoList.get(i);
+            if (item != null && fireInfo.getId().equals(item.getId())) {
+                existsIndex = i;
+                break;
+            }
+        }
+        if (existsIndex >= 0) {
+            fireInfoList.set(existsIndex, fireInfo);
+        } else {
+            fireInfoList.add(0, fireInfo);
+            total = String.valueOf(fireInfoList.size());
+        }
+        if (total == null) {
+            total = String.valueOf(fireInfoList.size());
+        }
+        if (fireCountText != null) {
+            fireCountText.setText(total);
+        }
+        if (adapter != null) {
+            boolean oldOpenFireDialog = isopenFireDialog;
+            isopenFireDialog = false;
+            initFireData();
+            isopenFireDialog = oldOpenFireDialog;
+        }
     }
 
 
@@ -1146,7 +1248,8 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             Toast.makeText(this, "报警信息缺少火点ID", Toast.LENGTH_SHORT).show();
             return;
         }
-        getFireInfo(alarmData.getAlarmId(), true);
+        showDialogProgress(gaojiFindDialog, "加载中...");
+        getFireInfo(alarmData.getAlarmId(), true, alarmData);
     }
 
     private void openHomeMapPageForAlarm() {
@@ -1175,10 +1278,15 @@ public class MainActivity extends HhBaseActivity implements GroundFireViewBinder
             return;
         }
         try {
-            dWebView.callHandler("android_fly_to", new Object[]{Double.parseDouble(fireInfo.getLongitude()), Double.parseDouble(fireInfo.getLatitude())}, new OnReturnValue<String>() {
+            Object[] args = new Object[]{
+                    Double.parseDouble(fireInfo.getLongitude()),
+                    Double.parseDouble(fireInfo.getLatitude()),
+                    fireInfo.getId()
+            };
+            dWebView.callHandler("android_focus_fire", args, new OnReturnValue<String>() {
                 @Override
                 public void onValue(String retValue) {
-                    Log.e(TAG, "mqtt alarm fly to fire: " + retValue);
+                    Log.e(TAG, "mqtt alarm focus fire: " + retValue);
                 }
             });
         } catch (Exception e) {

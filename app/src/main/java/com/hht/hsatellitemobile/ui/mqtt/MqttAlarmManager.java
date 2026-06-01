@@ -193,11 +193,31 @@ public class MqttAlarmManager {
     }
 
     private MqttAlarmData parseAlarmData(JSONObject model) {
-        String alarmId = safeString(model.opt("Id"));
+        String alarmId = parseAlarmId(model);
         String timeText = parseAlarmTime(model);
         String content = parseAlarmContent(model);
         String dedupeKey = parseDedupeKey(model, content, timeText, alarmId);
-        return new MqttAlarmData(alarmId, "卫星火警推送", timeText, content, dedupeKey);
+        return new MqttAlarmData(alarmId, "卫星火警推送", timeText, content, dedupeKey, model.toString());
+    }
+
+    private String parseAlarmId(JSONObject model) {
+        String[] keys = new String[]{"Id", "id", "FireId", "fireId", "FireAlarmId", "fireAlarmId", "FireNo", "fireNo", "linkId"};
+        for (String key : keys) {
+            String value = safeString(model.opt(key));
+            if (!TextUtils.isEmpty(value)) {
+                return value;
+            }
+        }
+        JSONObject data = model.optJSONObject("data");
+        if (data != null) {
+            for (String key : keys) {
+                String value = safeString(data.opt(key));
+                if (!TextUtils.isEmpty(value)) {
+                    return value;
+                }
+            }
+        }
+        return "";
     }
 
     private String parseAlarmTime(JSONObject model) {
