@@ -4,15 +4,18 @@ buildscript {
     repositories {
         mavenCentral()
         maven{ url'https://maven.aliyun.com/nexus/content/groups/public/'}
-//        jcenter()
-        maven { url 'https://jitpack.io' }
         maven {
-            url "https://repo.eclipse.org/content/repositories/paho-releases/"
+            url 'https://jitpack.io'
         }
+        maven {
+            url 'https://esri.bintray.com/arcgis'
+        }
+        mavenCentral()
+        //备用镜像源：
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
-        maven { url "https://s01.oss.sonatype.org/content/groups/public" }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
@@ -27,12 +30,18 @@ allprojects {
     repositories {
         mavenCentral()
         maven{ url'https://maven.aliyun.com/nexus/content/groups/public/'}
-//        jcenter()
+        maven {
+            url 'https://jitpack.io'
+        }
+        maven {
+            url 'https://esri.bintray.com/arcgis'
+        }
+        mavenCentral()
+        //备用镜像源：
         maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
         maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
-        maven { url "https://s01.oss.sonatype.org/content/groups/public" }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
     }
 }
 
