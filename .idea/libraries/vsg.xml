@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="vsg">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/vsg.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

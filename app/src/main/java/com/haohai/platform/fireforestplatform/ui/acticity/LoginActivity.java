@@ -267,7 +267,8 @@ public class LoginActivity extends HhBaseActivity implements AuthStateManager.Au
                         Set<String> tagSet = new LinkedHashSet<String>();
                         tagSet.add(gridNo);
                         tagSet.add(id);
-                        tagSet.add(groupId);
+                        tagSet.add("jm_" + gridNo);
+                        tagSet.add("jm_" + groupId);
                         tagSet.add("JiMo231113");
                         XGPushManager.setTags(getApplicationContext(),"setTag",tagSet);
                         new Thread() {

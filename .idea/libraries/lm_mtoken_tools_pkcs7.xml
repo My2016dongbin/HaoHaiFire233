@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="lm_mtoken_tools_pkcs7">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/lm_mtoken_tools_pkcs7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

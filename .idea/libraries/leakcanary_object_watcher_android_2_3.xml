@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="leakcanary-object-watcher-android-2.3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/6ba214ee529430d671cebc57f89e8d5cc225bb8f/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/6ba214ee529430d671cebc57f89e8d5cc225bb8f/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

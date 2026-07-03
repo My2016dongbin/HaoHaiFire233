@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="wup-1.0.0.E-Release">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/1a7b4b3a7e97227d49cdc5a36ca84ae102777910/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/1a7b4b3a7e97227d49cdc5a36ca84ae102777910/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/1a7b4b3a7e97227d49cdc5a36ca84ae102777910/output/jars/libs/wup-1.0.0.E-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tencent.wup/wup/1.0.0.E-Release/cc63d9ccc4fe876c5cd0f10fed0b035742f6e8c4/wup-1.0.0.E-Release-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -2,17 +2,23 @@
 
 buildscript {
     repositories {
-        maven{ url'https://maven.aliyun.com/nexus/content/groups/public/'}
-        jcenter{url 'http://jcenter.bintray.com'}
-/*        maven {
-            url "https://maven.google.com"
-        }*/
-        maven { url 'https://jitpack.io' }
-        maven {
-            url "https://repo.eclipse.org/content/repositories/paho-releases/"
-        }
-        maven {url 'https://developer.huawei.com/repo/'}     // 华为 maven 仓库地址
         mavenCentral()
+        maven{ url'https://maven.aliyun.com/nexus/content/groups/public/'}
+        maven {
+            url 'https://jitpack.io'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        maven {
+            url 'https://esri.bintray.com/arcgis'
+        }
+        mavenCentral()
+        //备用镜像源：
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
@@ -26,15 +32,23 @@ buildscript {
 
 allprojects {
     repositories {
-        maven{ url'https://maven.aliyun.com/nexus/content/groups/public/'}
-        jcenter{url 'http://jcenter.bintray.com'}
-
-/*        maven {
-            url "https://maven.google.com"
-        }*/
-        maven { url 'https://jitpack.io' }
-        maven {url 'https://developer.huawei.com/repo/'}     // 华为 maven 仓库地址
         mavenCentral()
+        maven{ url'https://maven.aliyun.com/nexus/content/groups/public/'}
+        maven {
+            url 'https://jitpack.io'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+        maven {
+            url 'https://esri.bintray.com/arcgis'
+        }
+        mavenCentral()
+        //备用镜像源：
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
     }
 }
 
