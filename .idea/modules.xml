@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FireForestPlatform.iml" filepath="$PROJECT_DIR$/FireForestPlatform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HaoHaiFire233.iml" filepath="$PROJECT_DIR$/HaoHaiFire233.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/appnaturalresource/appnaturalresource.iml" filepath="$PROJECT_DIR$/appnaturalresource/appnaturalresource.iml" />
       <module fileurl="file://$PROJECT_DIR$/chatimmodel/chatimmodel.iml" filepath="$PROJECT_DIR$/chatimmodel/chatimmodel.iml" />
