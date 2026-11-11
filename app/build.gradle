@@ -45,7 +45,7 @@ android {
         config {
             keyAlias 'haohai'
             keyPassword 'haohaiadmin'
-            storeFile file('app/sign.jks')
+            storeFile file('sign.jks')
 //            storeFile file('C:/workspaces/haohai/FireForestPlatform/app/sign.jks')
             storePassword 'haohaiadmin'
         }
