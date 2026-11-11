@@ -23,5 +23,5 @@ public class RequestUtils {
     public static String LOGIN_URL = REQUEST_URL_XINJIANG  ;
 
 //    public static String REQUEST_QUANXIAN = "http://112.44.67.43/auth/";
-    public static String REQUEST_QUANXIAN = "http://36.109.193.62:18011/auth/";
+    public static String REQUEST_QUANXIAN = "https://60.13.240.12:8099/auth/";
 }
